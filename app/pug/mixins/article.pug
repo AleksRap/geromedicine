@@ -1,0 +1,13 @@
+mixin article(title, img, text1, text2, text3)
+    .wrap-950_pd
+        .wrap-950
+            h2.title.title_gray= title
+            hr.title__hr.title__hr_width
+            if img
+                .article__pic-wrap
+                    img.article__pic(src= img)
+            p= text1
+            if text2
+                p=text2
+            if text3
+                p=text3

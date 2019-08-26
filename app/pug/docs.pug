@@ -1,0 +1,67 @@
+extends layout/layout
+include mixins/article
+
+block head
+    - var title = 'Лицензии и документы';
+    - var pageId = 1;
+
+block header
+   include layout/header
+
+block content
+    main
+        .page-wrapper.container-fluid
+            .breadcrumbs
+                a(href="index.html") главная
+                span /
+                a(href="about-us.html") о клинике
+                span /
+                span лицензии и документы
+
+            article.article
+                +article('лицензии и документы','','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames quis et egestas dictumst rhoncus dignissim rutrum. Ac eu augue urna, cursus a a imperdiet vulputate nibh. Mauris, at facilisis est mattis commodo rhoncus posuere. Massa duis vestibulum quis maecenas sit diam.')
+            -
+                var docs = [{
+                    href: '#',
+                    text: 'Лицензия “Описание лицензии1”'
+                }, {
+                    href: '#',
+                    text: 'Лицензия “Описание лицензии2”'
+                }, {
+                    href: '#',
+                    text: 'Лицензия “Описание лицензии3”'
+                }, {
+                    href: '#',
+                    text: 'Лицензия “Описание лицензии4”'
+                }, {
+                    href: '#',
+                    text: 'Лицензия “Описание лицензии5”'
+                }, {
+                    href: '#',
+                    text: 'Лицензия “Описание лицензии6”'
+                }];
+
+            .docs
+                .wrap-950_pd
+                    .wrap-950
+                        .row
+                            each doc in docs
+                                .col-12.col-md-6
+                                    .doc
+                                        a(href=doc.link)
+                                        .doc__pic
+                                        span.doc__text=doc.text
+
+
+
+
+        include components/ask-form
+
+
+
+
+
+
+block footer
+  include layout/footer
+

@@ -1,0 +1,36 @@
+header.header
+  .container-fluid.navbar-first.no-gutters
+    .page-wrapper
+      nav.navbar.navbar_edit.navbar-expand-xl.justify-content-center
+        p.navbar-first__text.navbar-first__text_display.mr-auto Клиника патронажа и геронтологии «Геромедицина»<br>Россия, Москва, Открытое шоссе, д. 48, стр. 2
+        .collapse.navbar-collapse
+          ul.nav.justify-content-end.ml-auto
+            li.nav-item
+              a.nav-link.nav-link_search(href="search.html") поиск
+            li.nav-item
+              a.nav-link.nav-link_cabinet(href="#") личный кабинет
+            li.nav-item
+              a.nav-link.nav-link_comment.popup-with-form(href="#form-popup-feedback") оставить отзыв
+        a.link-number(href="tel:88002000000") 8 800 200 00 00
+  .container-fluid.navbar-second.navbar-second-body
+    .page-wrapper
+      .row
+        .col-12
+          nav.navbar.navbar-expand-xl
+            include ../components/logo
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
+              div.navbar-toggler-icon
+            .collapse.navbar-collapse.justify-content-end(id="navbarNavDropdown")
+              include ../components/navdesktop
+              include ../components/navmobil
+  include ../components/popup/feedback
+  include ../components/popup/doctor-call
+  include ../components/popup/appointment
+  include ../components/popup/thanks-feedback
+  include ../components/popup/thanks-appointment
+
+
+
+
+
+

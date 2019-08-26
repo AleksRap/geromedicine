@@ -1,0 +1,106 @@
+extends layout/layout
+include mixins/cards
+
+block head
+    - var title = 'О специалисте';
+    - var pageId = 3;
+
+block header
+   include layout/header
+
+block content
+    main
+        .page-wrapper.container-fluid
+            .breadcrumbs
+                a(href="index.html") главная
+                span /
+                a(href="our-specialist.html") специалисты
+
+            .wrap-950_pd
+                .wrap-950
+                    .profile
+                        .profile__info
+                            img.profile__pic(src="img/doctor-4.jpg")
+                            .profile__text
+                                h3.title.title_gray волков геннадий<br>анатольевич
+                                span Кардиолог
+                                span Стаж: 15 лет
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                button.btn.button-first.button-first_padding запись на прием
+                                    a.no-opacity.link_full.popup-with-form(href="#form-popup-appointment")
+                        p.profile__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A elementum suspendisse sed congue lobortis id. Dui ullamcorper mauris eget vitae, donec. Sed auctor duis porta lectus accumsan. Sed amet ultricies diam diam mus. Arcu curabitur in sed aliquet in id pharetra aliquet. Est a, non lobortis in lectus orci aliquam congue diam. Eleifend venenatis, augue amet elementum quis aliquam. Sed eget dictumst vitae risus ridiculus mollis nisi aliquam. Velit condimentum fames neque id mollis risus, massa, risus neque,. Urna tincidunt a, malesuada tellus sed habitasse. Mauris metus eget sapien varius. Semper feugiat quam viverra faucibus non. Volutpat neque risus sed facilisis a, ac.Ipsum, odio et dictum lectus phasellus egestas gravida sit. Turpis malesuada vitae et, felis, suspendisse est sed massa dolor. Sit molestie pretium non consequat sapien adipiscing. Quis aliquet odio arcu, eu vestibulum quam ultricies. Risus scelerisque mattis magna mattis.
+
+
+                    .our-specialist
+                        h2.title.title_gray Другие специалисты<br>этого направления
+                        hr.title__hr
+
+                    include components/specialist
+
+
+
+            .price.price_margin
+                .wrap-950_pd
+                    .wrap-950
+                        h2.title.title_gray.title_margin стоимость услуг
+                        .price__table
+                            .price__row
+                                span Прием (осмотр, консультация) врача-кардиолога первичный
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием (осмотр, консультация) врача-кардиолога повторный
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+
+
+        .page-wrapper.container-fluid
+            .wrap-950_pd
+                .wrap-950
+                    h2.title.title_margin.title_display.title_red Отзывы
+            .wrap-950_pd
+                .wrap-950
+                    include components/comments
+            
+        include components/ask-form
+
+
+
+
+
+
+block footer
+  include layout/footer
+

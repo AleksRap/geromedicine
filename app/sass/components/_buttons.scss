@@ -1,0 +1,113 @@
+.button-first {
+  position: relative;
+  cursor: pointer;
+  border-radius: 0;
+  color: #E9EFE8;
+  background-color: #679100;
+  padding: 1.3em 2em;
+  font-weight: 600;
+
+  &:hover {
+    color: #E9EFE8;
+  }
+
+  &_padding {
+    padding: 20px 35px 20px 50px;
+  }
+
+  &_mt {
+    margin-top: 45px;
+  }
+
+  &_border {
+    border: 2px solid #E9EFE8;
+  }
+}
+
+.button-second {
+  position: relative;
+  cursor: pointer;
+  border-radius: 0;
+  border: 2px solid #E9EFE8;
+  background: transparent;
+  color: #F55E21;
+  padding: 1.3em 2em;
+  font-weight: 600;
+
+  &:hover {
+    border: 2px solid #679100;
+    background-color: #679100;
+    color: #fff;
+  }
+
+  &_white-border-no-top {
+    border-color: white;
+    border-top: 0;
+
+    &:hover {
+      border-top: 0;
+    }
+  }
+
+  &_width {
+    width: 50%;
+  }
+
+  &_padding {
+    padding: 20px 50px;
+  }
+
+  &_active {
+    background-color: #E9EFE8;
+  }
+}
+
+.button-appointment, .button-doctor-call {
+  position: fixed;
+  width: 180px;
+  height: 80px;
+}
+
+.button-appointment {
+  bottom: 0;
+  left: calc(100vw - 97px);
+  background: url("../svg/button-appointment.svg") 0 0/contain no-repeat;
+  z-index: 12;
+  transition: left .25s ease-in;
+
+  &::before {
+    content: '';
+    width: 17px;
+    height: 80px;
+    position: fixed;
+    left: calc(100vw - 17px);
+    bottom: 0;
+    background-color: #679100;
+  }
+
+  &:hover {
+    left: calc(100vw - 180px);
+  }
+}
+
+.button-doctor-call {
+  bottom: 79px;
+  left: calc(100vw - 97px);
+  background: url("../svg/button-doctor-call.svg") 0 0/contain no-repeat;
+  z-index: 11;
+  transition: left .25s ease-in;
+
+  &::before {
+    content: '';
+    width: 17px;
+    height: 80px;
+    position: fixed;
+    left: calc(100vw - 17px);
+    bottom: 0;
+    background-color: #F55E21;
+  }
+
+  &:hover {
+    left: calc(100vw - 180px);
+  }
+}

@@ -1,0 +1,107 @@
+extends layout/layout
+include mixins/article
+
+block head
+    - var title = 'Кардиология';
+    - var pageId = 2;
+
+block header
+   include layout/header
+
+block content
+    main
+        .page-wrapper.container-fluid
+            .breadcrumbs
+                a(href="index.html") главная
+                span /
+                a(href="price.html") услуги и цены
+                span /
+                span кардиология
+
+            article.article
+                +article(
+                    'Кардиология',
+                    'img/name-service-cardiology.jpg',
+                    'Заболевания сердечно-сосудистой системы лидируют среди прочей патологии, в том числе по инвалидности и смертности. Поэтому кардиолог является одним из самых актуальных специалистов в современной медицине. ',
+                    'Одно из достоинств нашей клиники в том, что консультация кардиолога и обследование проходит на одной базе, при необходимости врач может присутствовать на любой диагностике. Такой подход позволяет более полно и быстро проводить обследование и ставить максимально достоверные диагнозы.',
+                    'Разработка индивидуальной схемы лечения входит в стоимость платного приема врача кардиолога. При составлении терапии наши специалисты руководствуются международными рекомендациями, российскими стандартами и собственным практическим опытом. Медикаментозная терапия дополнятся физиотерапевтическими методиками.'
+                )
+
+            .wrap-950_pd
+                .wrap-950
+                    include components/appointment
+
+                    .our-specialist
+                        h2.title.title_gray cпециалисты
+                        hr.title__hr
+
+                    include components/specialist
+
+
+
+            .price.price_margin
+                .wrap-950_pd
+                    .wrap-950
+                        h2.title.title_gray.title_margin услуги
+                        span.price__text Услуги патронажа рассчитывается индивидуально, звоните!
+                        .price__table
+                            .price__row
+                                span Прием (осмотр, консультация) врача-кардиолога первичный
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием (осмотр, консультация) врача-кардиолога повторный
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+                            .price__row
+                                span Прием, консультация врача-специалиста к.м.н.
+                                span.price__cost 1 500₽
+                                a.card-spoiler-full(href="service-cardiology.html")
+
+
+        .page-wrapper.container-fluid.mb-200-60
+            .wrap-950_pd
+                .wrap-950
+                    h2.title.title_margin.title_display Отзывы
+            .wrap-950_pd
+                .wrap-950
+                    include components/comments
+            
+        include components/ask-form
+
+
+
+
+
+
+block footer
+  include layout/footer
+

@@ -1,0 +1,90 @@
+extends layout/layout
+include mixins/cards
+
+block head
+    - var title = 'Отзывы';
+    - var pageId = 5;
+
+block header
+    include layout/header
+
+block content
+    main
+        .page-wrapper.container-fluid
+            .breadcrumbs
+                a(href="index.html") главная
+                span /
+                span отзывы
+
+
+            .recommendations.recommendations_margin
+                .wrap-950_pd
+                    .wrap-950
+                        h2.title.title_gray отзывы
+                        hr.title__hr.title__hr_margin
+
+                        .form-inline_wrap
+                            form.form-inline
+                                .select
+                                    select(id="selectItem")
+                                        option(disabled selected) выбрать направление
+                                        option(value="all") все
+                                        option(value="direction-1") направление 1
+                                        option(value="direction-2") направление 2
+                                        option(value="direction-3") направление 3
+                            form.form-inline.form-inline_margin-left.form-inline_margin-top.form-inline_margin-right
+                                .select
+                                    select(id="selectAmenities")
+                                        option(selected value="all") все услуги направления
+                                        option(value="cardiology" data-amenities data-direction="direction-1") кардиология
+                                        option(value="patronage" data-amenities data-direction="direction-3") патронаж
+                                        option(value="amenities-3" data-amenities data-direction="direction-1") amenities-3
+                                        option(value="amenities-4" data-amenities data-direction="direction-2") amenities-4
+                                        option(value="amenities-5" data-amenities data-direction="direction-1") amenities-5
+                            form.form-inline
+                                input.form-control.form-control_no-border.flex-grow-1(type="search" placeholder="поиск" aria-label="Search")
+                                button.btn.btn-search(type="submit")
+
+                        hr.our-specialist__hr
+
+
+                .wrap-950_pd
+                    .wrap-950
+                        .comments__wrap(data-index="direction-1" data-amenities-item="cardiology" data-card)
+                            .comments__names
+                                h5.comments__name Виктор
+                                time.comments__date 8 августа 2019
+                            .comments__text
+                                p Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил и провел диагностику. Помог принять правильное решение о госпитализации. Утром чувствовал себя намного лучше. Спасибо!
+                        .comments__wrap(data-index="direction-2" data-amenities-item="cardiology" data-card)
+                            .comments__names
+                                h5.comments__name Петр
+                                time.comments__date 8 августа 2019
+                            .comments__text
+                                p Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил и провел диагностику. Помог принять правильное решение о госпитализации. Утром чувствовал себя намного лучше. Спасибо!
+                        .comments__wrap(data-index="direction-1" data-amenities-item="amenities-4" data-card)
+                            .comments__names
+                                h5.comments__name Маша
+                                time.comments__date 8 августа 2019
+                            .comments__text
+                                p Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил и провел диагностику. Помог принять правильное решение о госпитализации. Утром чувствовал себя намного лучше. Спасибо!
+                        .comments__wrap(data-index="direction-3" data-amenities-item="amenities-4" data-card)
+                            .comments__names
+                                h5.comments__name Иннокентий
+                                time.comments__date 8 августа 2019
+                            .comments__text
+                                p Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил и провел диагностику. Помог принять правильное решение о госпитализации. Утром чувствовал себя намного лучше. Спасибо!
+
+                .wrap-950_pd.recommendations__pagination_margin
+                    .wrap-950
+                        include components/pagination
+
+        include components/ask-form
+
+
+
+
+
+
+block footer
+    include layout/footer

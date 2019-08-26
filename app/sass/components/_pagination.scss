@@ -1,0 +1,131 @@
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #E9EFE8;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #679100;
+      border-color: #679100;
+    }
+
+    &:first-child .arrow {
+      transform: rotate(90deg);
+      width: 17px;
+      height: 9px;
+      background: url("../svg/arrow-down.svg") no-repeat;
+      background-size: contain;
+    }
+
+    &.arrow-right {
+      border-right: 2px solid #E9EFE8;
+
+      &:hover {
+        border-right-color: #679100;
+      }
+    }
+
+    &.arrow-right .arrow{
+      transform: rotate(-90deg);
+      width: 17px;
+      height: 9px;
+      background: url("../svg/arrow-down.svg") no-repeat;
+      background-size: contain;
+    }
+
+    &_disabled {
+      pointer-events: none;
+      opacity: 0.5;
+      filter: grayscale(1);
+
+      &:hover {
+        cursor: default;
+        background-color: transparent;
+      }
+    }
+
+    &_active {
+      background-color: #E9EFE8
+    }
+
+    & a {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+
+      &:hover {
+        opacity: 1;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.pagination-2 {
+  display:flex;
+  justify-content:space-between;
+  border-top: 2px solid #E9EFE8;
+
+  .swiper-navigation-prev:hover .arrow, .swiper-navigation-next:hover .arrow {
+    background: url("../svg/arrow-down-white.svg") no-repeat;
+  }
+
+  &_no-border {
+    border: 0;
+  }
+
+  & .pagination__item {
+    border-top: 0;
+  }
+
+  & .button-second {
+    line-height: 10px;
+    height: 60px;
+    border-right: 2px solid #E9EFE8;
+    border-top: 0;
+    margin-left: auto;
+
+    &:hover {
+      border-right: 2px solid #679100;
+    }
+
+    &_order {
+      order: -1;
+      margin-left: auto;
+      margin-right: -2px;
+    }
+  }
+}
+
+@media (max-width: 578px) {
+  .pagination-2 {
+    & .button-second {
+      flex: 1 1 auto;
+      line-height: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .pagination-2_second {
+
+    & .button-second {
+      margin-left: -2px;
+    }
+  }
+}

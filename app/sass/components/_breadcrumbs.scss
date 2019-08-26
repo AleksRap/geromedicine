@@ -1,0 +1,15 @@
+.breadcrumbs {
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  & a, & span {
+    color: #C2C2C2;
+  }
+
+  & span {
+    opacity: 0.5;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+

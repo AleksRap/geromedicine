@@ -1,0 +1,28 @@
+.recommendations {
+
+  &_margin {
+    margin-bottom: 140px;
+  }
+
+  &__pagination_margin {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .recommendations {
+
+    &_margin {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .recommendations {
+
+    &_margin {
+      margin-bottom: 60px;
+    }
+  }
+}

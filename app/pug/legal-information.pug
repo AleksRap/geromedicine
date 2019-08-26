@@ -1,0 +1,58 @@
+extends layout/layout
+include mixins/article
+
+block head
+    - var title = 'Правовая информация';
+    - var pageId = 1;
+
+block header
+   include layout/header
+
+block content
+    main
+        .page-wrapper.container-fluid
+            .breadcrumbs
+                a(href="index.html") главная
+                span /
+                a(href="about-us.html") о клинике
+                span /
+                span правовая информация
+
+
+            article.article
+                +article('правовая информация', '', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet congue quam. Cras venenatis augue nunc, sed molestie orci faucibus sed. Maecenas cursus odio augue, in posuere augue iaculis eu. Aliquam vel suscipit nunc, in lobortis leo. Fusce ac lacinia elit, eu euismod ligula. Suspendisse ornare venenatis condimentum. Nullam sagittis et lacus ac posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus vel dolor ac libero ultricies pellentesque.', 'Donec laoreet suscipit risus in bibendum. Sed at sodales sem. Nullam molestie, arcu sit amet tincidunt mattis, sem felis congue metus, sed aliquam dui nulla nec diam. In lobortis nunc velit, sit amet luctus tellus mollis in. Suspendisse feugiat mi id dolor mattis viverra. Nunc diam diam, egestas ut arcu quis, convallis aliquam odio. Pellentesque sodales euismod tortor, sit amet sollicitudin lorem. Nulla mattis magna eget ante aliquam, at gravida lectus venenatis. Proin mauris ipsum, porta at est quis, porta scelerisque mi. In at pretium lectus.', 'Curabitur volutpat, risus eu rutrum condimentum, nibh diam mollis ex, in consequat sapien lectus in lorem. Pellentesque dignissim tempor erat vitae laoreet. Mauris quis porttitor nulla. Nam tincidunt placerat massa quis maximus. Cras at eros a urna tincidunt vulputate et eget felis. Cras risus tortor, facilisis a tristique at, tempus et felis. Duis consequat justo eget elit suscipit viverra.')
+
+            .docs
+                .wrap-950_pd
+                    .wrap-950
+                        .row
+
+                            -
+                                var docs = [{
+                                href: '#',
+                                text: 'Документ “Описание документа”'
+                                }, {
+                                href: '#',
+                                text: 'Документ “Описание документа”'
+                                }];
+                            each doc in docs
+                                .col-12.col-md-6
+                                    .doc
+                                        a(href=doc.link)
+                                        .doc__pic
+                                        span.doc__text=doc.text
+
+
+
+
+
+        include components/ask-form
+
+
+
+
+
+
+block footer
+  include layout/footer
+

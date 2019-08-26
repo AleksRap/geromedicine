@@ -1,0 +1,9 @@
+.appointment.appointment_margin-bottom
+    .appointment__link.appointment__link_margin-bottom.appointment__link_color Запишитесь на прием, выбрав клинику и удобное время!
+    .appointment__wrap
+        if doctor === 1
+            button.btn.btn-sm.lign-middle.button-first вызов врача
+                a.popup-with-form.no-opacity.link_full(href="#form-popup")
+        else
+            button.btn.btn-sm.lign-middle.button-first запись на прием
+                a.popup-with-form.no-opacity.link_full(href="#form-popup-appointment")

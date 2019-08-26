@@ -1,0 +1,241 @@
+.wrap-950 {
+  max-width: 950px;
+  &_pd {
+    padding-left: calc(28% - 266px);
+    padding-right: calc(70% - 665px);
+  }
+}
+
+
+.about__article {
+  .article {
+
+    & p {
+
+      &:first-of-type {
+        margin-top: 120px;
+      }
+    }
+  }
+}
+
+.about__article_mb {
+  .article {
+
+    & p {
+
+      &:last-of-type {
+        margin-bottom: 53px;
+      }
+    }
+  }
+}
+
+
+.about {
+
+  & p {
+    margin-top: 40px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+
+    &:first-of-type {
+      margin-top: 120px;
+    }
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 18px;
+  }
+}
+
+.directions {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  margin-left: -60px;
+  padding: 60px;
+  border: 2px solid #E9EFE8;
+
+  & h3 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  & ul {
+    list-style: none;
+  }
+
+  & li {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 220%;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      margin-top: -5px;
+      left: -25px;
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: #E9EFE8;
+      border-radius: 50%;
+    }
+  }
+}
+
+
+.certificates {
+  margin-top: 120px;
+
+  &__wrap {
+    margin-bottom: 160px;
+  }
+
+  & .title {
+    margin-bottom: 60px;
+  }
+
+  & img {
+    width: 100%;
+    max-width: 282px;
+    object-fit: contain;
+  }
+}
+
+
+.slider {
+  box-sizing: content-box;
+
+  &_margin-bottom {
+    margin-bottom: 240px;
+  }
+
+  & img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: 50%;
+  }
+
+  &__first {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    background: transparent url("../img/poster.jpg") 50%/cover no-repeat;
+  }
+
+  & .lSPager li:not(.active) img {
+    opacity: 0.3;
+  }
+
+  & .lSPager li {
+    padding: 5px;
+    height: 150px;
+
+    & a {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  & .lSPager .active {
+    border: 2px solid #E9EFE8;
+  }
+
+  .size {
+    width: 100%;
+  }
+
+  .lSAction > a {
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  .lSAction > .lSNext {
+    background-position: -64px 0;
+  }
+
+  .lSSlideOuter .lSPager.lSGallery li.active {
+    border-radius: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .slider {
+
+    &_margin-bottom {
+      margin-bottom: 150px;
+    }
+  }
+
+  .about {
+
+    & p {
+
+      &:first-of-type {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  .directions {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 0;
+    padding: 40px 20px;
+
+    & li {
+      font-size: 16px;
+    }
+  }
+
+  .certificates {
+
+    &__wrap {
+      margin-bottom: 40px;
+    }
+
+    & .title {
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .slider {
+    & .lSPager li {
+      padding: 5px;
+      height: 100px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .slider {
+
+    &_margin-bottom {
+      margin-bottom: 70px;
+    }
+
+    & .lSPager li {
+      padding: 2px;
+      height: 50px;
+    }
+
+    .lSAction>a {
+      background-image: none;
+    }
+  }
+}

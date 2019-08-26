@@ -1,0 +1,46 @@
+.ask-form {
+  background-color: #E9EFE8;
+  padding-top: 95px;
+  padding-bottom: 95px;
+
+  &__title {
+    display:flex;
+    justify-content: center;
+  }
+
+  &__form {
+    display:flex;
+    flex-direction: column;
+
+    & input, & textarea {
+      padding: 20px;
+      border: 2px solid #FFFFFF;
+      background-color: #E9EFE8;
+
+      &:not(:first-child) {
+        margin-top: -2px;
+      }
+
+      &::placeholder {
+        color: #434343;
+        font-weight: 600;
+      }
+    }
+
+    & textarea {
+      resize: none;
+      min-height: 120px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ask-form {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__title {
+      justify-content: flex-start;
+    }
+  }
+}

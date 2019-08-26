@@ -1,0 +1,9 @@
+.specialists {
+  width: calc(100% - 2px);
+  overflow: hidden;
+
+  & .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+}

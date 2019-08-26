@@ -1,0 +1,389 @@
+@import "components/fonts";
+@import "components/buttons";
+@import "components/breadcrumbs";
+@import "components/article";
+@import "components/pagination";
+@import "components/map";
+@import "components/ask-form";
+@import "components/comments";
+@import "components/title";
+@import "components/appointment";
+@import "components/specialist";
+@import "components/datepicker";
+@import "layout/header";
+@import "layout/footer";
+@import "components/cards";
+@import "pages/index";
+@import "pages/about-us";
+@import "pages/doctor-profile";
+@import "pages/price";
+@import "pages/recommendations";
+
+html,
+body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: #434343;
+}
+
+.popup-view {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.no-opacity {
+  opacity: 1 !important;
+}
+
+.link_full {
+  width: 100%;
+  height: 100%;
+  content: '.';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.page-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+a {
+  cursor: pointer;
+  color: #434343;
+
+  &:hover {
+    color: #434343;
+    opacity: 0.6;
+    text-decoration: none;
+  }
+
+  &:active {
+    border: 0;
+  }
+}
+
+.form-inline {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  &_wrap {
+    display: flex;
+
+    & .form-inline {
+      flex-shrink: 1;
+
+      &:last-child {
+        flex-shrink: 30;
+      }
+    }
+  }
+
+  &_margin-left {
+    margin-left: -2px;
+  }
+
+  &_margin-right {
+    margin-right: auto;
+  }
+
+  & .select {
+    position: relative;
+    width: 100%;
+
+    &::after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      margin-top: -5px;
+      right: 10px;
+      border: 0;
+      width: 25px;
+      height: 12px;
+      background: url("../svg/arrow-down.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  & select {
+    background: transparent;
+    font-weight: 600;
+    width: 100%;
+    height: 50px;
+    border: 2px solid #E9EFE8;
+    padding: 12px 50px 12px 30px;
+    appearance: none;
+  }
+
+  & [type=search] {
+    width: 100%;
+    text-align: right;
+    padding-right: 40px;
+  }
+
+  .form-control_no-border {
+    border: 0;
+  }
+}
+
+.our-specialist__hr {
+  width: 100%;
+  margin-top: -2px;
+  border: 0;
+  height: 2px;
+  background: #E9EFE8;
+  margin-bottom: 40px;
+}
+
+.our-specialist_margin {
+  margin-top: 60px;
+  margin-bottom: 160px;
+}
+
+
+
+.docs {
+  margin-bottom: 230px;
+}
+
+.doc {
+  margin-top: 20px;
+  margin-bottom: 70px;
+  position: relative;
+  min-height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &__pic {
+    width: 25%;
+    height: 100px;
+    background: url("../svg/doc.svg") 0 50%/contain no-repeat;
+  }
+
+  &__text {
+    padding-left: 30px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 164%;
+  }
+
+  & a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+.all-contacts {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .contacts {
+    margin-right: 90px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.mb-200-60 {
+  margin-bottom: 200px;
+}
+
+.search {
+  margin-top: 80px;
+  margin-bottom: 260px;
+
+  & input::placeholder {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  & .button-second {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -2px;
+  }
+}
+
+.amenities-name {
+
+  .article p:last-child {
+    margin-bottom: 40px;
+  }
+
+  .title_margin {
+    margin-bottom: 80px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .mb-200-60 {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 986px) {
+  .all-contacts {
+    padding-top: 0;
+    justify-content: flex-start;
+
+    .contacts {
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-right: 115px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .search {
+    margin-top: 60px;
+
+    & .button-second {
+      text-align: left;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: -2px;
+      margin-left: 0;
+    }
+  }
+
+  .docs {
+    margin-bottom: 60px;
+  }
+
+  .doc {
+    margin-bottom: 40px;
+  }
+
+  .form-inline {
+    width: 100%;
+
+    &_wrap {
+      flex-direction: column;
+    }
+
+    &_margin-top {
+      margin-top: -2px;
+    }
+
+    &_margin-left {
+      margin-left: 0;
+    }
+  }
+
+  .no-gutters-md {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .no-gutters-md>.col, .no-gutters-md>[class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .our-specialist_margin {
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-contacts {
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search {
+
+    & [type=search] {
+      padding-left: 60px;
+      padding-right: 5px;
+    }
+  }
+
+  .amenities-name {
+
+    .title_margin {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+a.active.focus,
+a.active:focus,
+a.focus,
+a:active.focus,
+a:active:focus,
+a:focus,
+button.active.focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button:active:focus,
+button:focus,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: 0!important;
+  outline-color: transparent!important;
+  outline-width: 0!important;
+  outline-style: none!important;
+  box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 0!important;
+  outline-color: transparent!important;
+  outline-width: 0!important;
+  outline-style: none!important;
+  box-shadow: inset 0 0 0 2px #679100 !important;
+}

@@ -1,0 +1,252 @@
+.amenities {
+
+  &__head {
+    width: 100%;
+    position: relative;
+    margin-bottom: 80px;
+  }
+
+  &__pic {
+    width: 100%;
+    height: 280px;
+    background: url("../img/amenities.jpg") 50%/100% no-repeat;
+    transition: background .25s ease-in;
+  }
+
+  &__text {
+    padding: 20px 40px 80px 40px;
+    width: 90%;
+    height: 100%;
+    top: 40px;
+    left: 50%;
+    margin-left: -45%;
+    position: absolute;
+    border: 2px solid #E9EFE8;
+
+    & .title {
+      position: absolute;
+      margin-top: 135px;
+      transition: margin-top .25s ease-in;
+    }
+
+    & p {
+      position: absolute;
+      top: 50px;
+      opacity: 0;
+      margin-top: 150px;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 164%;
+      color: #fff;
+      transition: opacity .25s ease-in, margin-top .25s ease-in;
+    }
+  }
+
+  &__next {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    right: 50px;
+    bottom: 80px;
+  }
+
+  &__next {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__description {
+    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 80px;
+  }
+
+  &__cost {
+    font-weight: 600;
+    font-size: 20px;
+
+  }
+
+  & .accordion {
+    margin-bottom: 160px;
+  }
+}
+
+.card-spoiler {
+  position: relative;
+  border: 2px solid #E9EFE8;
+  border-bottom: 0;
+
+  &:last-child {
+    border-bottom: 2px solid #E9EFE8;
+  }
+}
+
+.card-spoiler-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.card-b-header {
+  padding: 20px 40px;
+  position: relative;
+
+  &:hover {
+    background-color: #679100;
+    color: #fff;
+
+    & .plus {
+      background: url("../svg/plus-white.svg") 50%/contain no-repeat;
+    }
+
+    & a {
+      opacity: 1;
+    }
+  }
+
+  & a {
+    font-weight: 600;
+  }
+}
+
+.plus {
+  position:absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 15px;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url("../svg/plus.svg") 50%/contain no-repeat;
+}
+
+[aria-expanded=true] + .plus {
+  background:url("../svg/minus.svg") 50%/contain no-repeat;
+}
+
+.card-b-body{
+  padding: 15px 40px 60px 150px;
+  background-color: #E9EFE8;
+}
+
+.card-b-block {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: normal;
+  font-size: 18px;
+
+  & .col-2 {
+    min-width: 120px;
+    display:flex;
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 992px) {
+  .amenities {
+
+    &__head {
+
+      &:hover {
+
+        & .amenities__pic {
+          background-size: 120%;
+        }
+
+        & p {
+          opacity: 1;
+          margin-top: 20px;
+        }
+
+        & .title {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .amenities {
+
+    &__text {
+      flex-direction: column;
+
+      & .title {
+        align-self: flex-start;
+      }
+    }
+
+    &__pic {
+      height: 200px;
+    }
+
+    & .accordion {
+      margin-bottom: 80px;
+    }
+  }
+
+  .card-b-header {
+    padding: 10px 20px;
+  }
+
+  .card-b-body{
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .amenities {
+
+    &__name {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 164%;
+    }
+
+    &__cost {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  .amenities {
+
+    &__text {
+      height: 90%;
+
+      & .title {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .amenities {
+
+    &__text {
+      height: 85%;
+    }
+  }
+}
