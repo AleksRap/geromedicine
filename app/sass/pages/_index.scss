@@ -381,6 +381,23 @@ body {
   }
 }
 
+@media (max-width: 1366px) {
+  .swiper-container {
+
+    .swiper-slide {
+      height: 420px;
+    }
+
+    .swiper-button-next {
+      top: -210px;
+    }
+
+    .swiper-button-prev {
+      top: -210px;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .about-us {
     margin-top: -2px;

@@ -8,57 +8,57 @@
                     .popup__form-area
                         .row.no-gutters.w-100
                             .col-12.col-md-4
-                                label.popup__item-wrap.h-100(for="name")
+                                label.popup__item-wrap.h-100(for="appointment-name")
                                     span.required-field Ваше имя
                             .col-12.col-md-8.d-flex.justify-content-end
-                                input.popup__field.inputbox(id="name" type="text" placeholder="введите имя" required)
+                                input.popup__field.inputbox(id="appointment-name" type="text" placeholder="введите имя" required)
                     .popup__form-area
                         .row.no-gutters.w-100
                             .col-12.col-md-4
-                                label.popup__item-wrap.h-100(for="tel")
+                                label.popup__item-wrap.h-100(for="appointment-tel")
                                     span.required-field Телефон
                             .col-12.col-md-8.d-flex.justify-content-end
-                                input.popup__field.inputbox(id="tel" type="tel" placeholder="+7-___-_______" required)
+                                input.popup__field.inputbox(id="appointment-tel" type="tel" placeholder="+7-___-_______" required)
                     .popup__form-area
                         .row.no-gutters.w-100
                             .col-12.col-md-4
-                                label.popup__item-wrap.h-100(for="email")
+                                label.popup__item-wrap.h-100(for="appointment-email")
                                     span E-mail
                             .col-12.col-md-8.d-flex.justify-content-end
-                                input.popup__field.inputbox(id="email" type="email" placeholder="введите e-mail")
+                                input.popup__field.inputbox(id="appointment-email" type="email" placeholder="введите e-mail")
                     .popup__form-area
                         .row.no-gutters.w-100
                             .col-12.col-md-4
-                                label.popup__item-wrap.h-100(for="direction")
+                                label.popup__item-wrap.h-100(for="appointment-direction")
                                     span.required-field Направление
                             .col-12.col-md-8.d-flex.justify-content-end
                                 .select-wrapper.d-flex.justify-content-end
-                                    select.popup__field(id="direction" required)
-                                        option(selected disabeled) Выбрать направление
+                                    select.popup__field(id="appointment-direction" required)
+                                        option(selected disabled value="") Выбрать направление
                                         option направление 1
                                         option направление 2
                                         option направление 3
                     .popup__form-area
                         .row.no-gutters.w-100
                             .col-12.col-md-4
-                                label.popup__item-wrap.h-100(for="amenities")
+                                label.popup__item-wrap.h-100(for="appointment-amenities")
                                     span.required-field Услуга
                             .col-12.col-md-8.d-flex.justify-content-end
                                 .select-wrapper.d-flex.justify-content-end
-                                    select.popup__field(id="amenities" required)
-                                        option(selected disabeled) Выбрать услугу
+                                    select.popup__field(id="appointment-amenities" required)
+                                        option(selected disabled value="") Выбрать услугу
                                         option услуга 1
                                         option услуга 2
                                         option услуга 3
                     .popup__form-area
                         .row.no-gutters.w-100
                             .col-12.col-md-4
-                                label.popup__item-wrap.h-100(for="doctor")
+                                label.popup__item-wrap.h-100(for="appointment-doctor")
                                     span Врач
                             .col-12.col-md-8.d-flex.justify-content-end
                                 .select-wrapper.d-flex.justify-content-end
-                                    select.popup__field.popup__field_bb(id="doctor")
-                                        option(selected disabeled) Выбрать врача
+                                    select.popup__field.popup__field_bb(id="appointment-doctor")
+                                        option(selected disabled value="") Выбрать врача
                                         option доктор 1
                                         option доктор 2
                                         option доктор 3
@@ -69,7 +69,7 @@
                         .datepicker(id="datepicker")
                     .popup__form-area.w-100
                         .select-wrapper.d-flex.justify-content-end.w-100
-                            select.popup__field.popup__field_bb.w-100(id="time")
+                            select.popup__field.popup__field_bb.w-100(id="appointment-time")
                                 option(selected) 10:30-13:00
                                 option 13:00-14:00
                                 option 14:30-15:00
@@ -79,16 +79,16 @@
             .popup__form-area
                 .row.no-gutters.w-100.mt-5
                     .col-12.col-md-2
-                        label.popup__item-wrap.mt-3(for="comment")
+                        label.popup__item-wrap.mt-3(for="appointment-comment")
                             span Сообщение
                     .col-12.col-md-10.d-flex.justify-content-end
-                        textarea.popup__textarea.popup__field.popup__field_bb.inputbox(id="comment" placeholder="введите ваш комментарий")
+                        textarea.popup__textarea.popup__field.popup__field_bb.inputbox(id="appointment-comment" placeholder="введите ваш комментарий")
 
-            .row
+            .row.mb-5
                 .col-12.col-md-6
-                    label.popup__item-wrap.popup__item-wrap_mt-30(for="checkbox")
-                        input.popup__checkbox.inputbox(id="checkbox" type="checkbox" checked)
-                        .popup__checkbox-fake
+                    label.popup__item-wrap.popup__item-wrap_mt-30(for="appointment-checkbox")
+                        input.popup__checkbox.inputbox(id="appointment-checkbox" type="checkbox" checked)
+                        span.popup__checkbox-fake
                         span.popup__checkbox-text Нажимая на кнопку, вы даете согласие на обработку персональных данных.
                     span.required-field.required-field_left.popup__item-wrap.popup__item-wrap_mt-30 Обязательное поле для заполнения
                 .col-12.col-md-5.offset-md-1

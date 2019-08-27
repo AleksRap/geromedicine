@@ -173,21 +173,31 @@
 }
 
 
+@media (max-width: 992px) {
+  .certificates {
+    margin-top: 60px;
+  }
+
+  .about {
+
+    &__article {
+
+      .article p {
+
+        &:first-of-type {
+          margin-top: 60px;
+        }
+      }
+    }
+  }
+}
+
+
 @media (max-width: 768px) {
   .slider {
 
     &_margin-bottom {
       margin-bottom: 150px;
-    }
-  }
-
-  .about {
-
-    & p {
-
-      &:first-of-type {
-        margin-top: 60px;
-      }
     }
   }
 
@@ -223,6 +233,23 @@
 }
 
 @media (max-width: 576px) {
+  .about {
+
+    &__article {
+
+      .article p {
+
+        &:first-of-type {
+          margin-top: 40px;
+        }
+
+        &:last-of-type {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
   .slider {
 
     &_margin-bottom {

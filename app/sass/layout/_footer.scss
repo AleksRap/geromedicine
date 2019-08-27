@@ -182,6 +182,19 @@
   }
 }
 
+@media (max-width: 642px) {
+  .contacts {
+
+    &_md_mt {
+      margin-top: 40px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
 @media (max-width: 576px) {
   .footer-info {
 

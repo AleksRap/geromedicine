@@ -292,6 +292,11 @@ a {
     }
   }
 
+  .form-inline .form-control_md_border-bottom {
+    border-radius: 0;
+    border-bottom: 2px solid #E9EFE8;
+  }
+
   .docs {
     margin-bottom: 60px;
   }

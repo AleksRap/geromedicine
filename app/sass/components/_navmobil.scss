@@ -112,3 +112,13 @@
     display: none;
   }
 }
+
+@media (max-width: 576px) {
+  .mobil-menu {
+
+    & .button-first, & .button-second {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

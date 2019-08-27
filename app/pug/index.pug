@@ -19,7 +19,7 @@ block content
                                 .swiper-slide__caption
                                     h5 Отличные цены на обследование
                                     .swiper-slide__text-wrap
-                                        p МРТ, Энцефолограмма, ЭКГМРТ, Энцефолограмма, ЭКГМРТ, Энцефолограмма, ЭКГМРТ, Энцефолограмма, ЭКГМРТ, Энцефолограмма, ЭКГ
+                                        p МРТ, Энцефолограмма, ЭКГ
                                         p.swiper-slide__text от 1900000000р
                                 button.button-second(onclick="location.href='name-service-cardiology.html'") подробнее
                 </div>
@@ -89,9 +89,8 @@ block content
                                 article.about-us__body(data-dotdotdot="about-body")
                                     h2.title о клинике
                                     p.about-us__text Mauris pellentesque pellentesque ullamcorper. Praesent in aliquam justo. Donec fermentum, augue sed dapibus tempor, purus diam euismod justo, et interdum lacus nunc eget quam. Sed rhoncus non urna at malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in dolor fringilla, bibendum odio eget, imperdiet nisl. Aliquam molestie nunc quis ligula laoreet, et maximus urna consequat.
-                                        .about-us__buttons
-                                            button.about-us__button.btn.button-second подробнее
-                                                a(href="about-us.html").no-opacity.link_full
+                                    .about-us__buttons
+                                        a(href="about-us.html").no-opacity.about-us__button.btn.button-second подробнее
         .page-wrapper
             .row.container-fluid
                 .col-lg-12
@@ -122,8 +121,7 @@ block content
                         .col-lg-3.col-sm-6.col-12
                             +article-no-img('20 июля','Найден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозга','article.html')
             .page-wrapper.container-fluid
-                button.btn.button-second смотреть все
-                    a(href="articles-health.html").no-opacity.link_full
+                a(href="articles-health.html").no-opacity.btn.button-second смотреть все
 
 
         include components/map

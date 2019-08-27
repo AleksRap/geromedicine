@@ -1,8 +1,8 @@
 mixin article-img(img, data, title, link)
     .card.card_margin
-        img.card__img.card__img_grayscale(src=img)
+        img.card__img.card__img_grayscale(src=img alt="Обложка статьи")
         .card__description
-            time.card__data= data
+            time(datetime="2011-11").card__data= data
             h3.card__title(data-dotdotdot="article-img")= title
             a(href=link).card__link читать
             a(href=link).card__link_full
@@ -10,7 +10,7 @@ mixin article-img(img, data, title, link)
 
 mixin article-img-horizontal(img, title, link)
     .card.card_horizontal.card_horizontal_margin
-        img.card__img.card__img_grayscale(src=img)
+        img.card__img.card__img_grayscale(src=img alt = "Обложка статьи")
         .card__description
             h3.card__title(data-dotdotdot="article-img")= title
             a(href=link).card__link читать
@@ -20,7 +20,7 @@ mixin article-img-horizontal(img, title, link)
 mixin article-no-img(data, title, link)
     .card.card_background.card_display
         .card__description.card__description_margin
-            time.card__data= data
+            time(datetime="2011-11").card__data= data
             h3.card__title.card__title_height(data-dotdotdot="article-no-img")= title
             a(href=link).card__link читать
             a(href=link).card__link_full
@@ -28,7 +28,7 @@ mixin article-no-img(data, title, link)
 
 mixin card-doctor(img, title, profession, link)
     .card.card_doctor
-        img.card__img(src= img)
+        img.card__img(src= img alt="Фото специалиста")
         .card__description
             h3.card__title= title
             span= profession

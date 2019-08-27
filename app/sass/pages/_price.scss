@@ -109,9 +109,17 @@
   &:hover {
     background-color: #679100;
     color: #fff;
+    
+    a {
+      color: #fff;
+    }
 
     & .plus {
       background: url("../svg/plus-white.svg") 50%/contain no-repeat;
+    }
+
+    & .plus[aria-expanded=true] {
+      background: url("../svg/minus-white.svg") 50%/contain no-repeat;
     }
 
     & a {
@@ -185,6 +193,17 @@
 @media (max-width: 992px) {
   .amenities {
 
+    &__head {
+
+      & p {
+        display: none;
+      }
+
+      & .title {
+        margin-top: 0;
+      }
+    }
+
     &__text {
       flex-direction: column;
 
@@ -214,6 +233,11 @@
 @media (max-width: 576px) {
   .amenities {
 
+    &__description {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
     &__name {
       font-weight: normal;
       font-size: 14px;
@@ -227,17 +251,29 @@
       letter-spacing: 0.05em;
     }
   }
+
+  .price {
+
+    .title_margin {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 @media (max-width: 410px) {
   .amenities {
 
+    &__head {
+      margin-bottom: 40px;
+    }
+
     &__text {
       height: 90%;
+      display: flex;
+    }
 
-      & .title {
-        display: none;
-      }
+    &__next {
+      bottom: 40px;
     }
   }
 }

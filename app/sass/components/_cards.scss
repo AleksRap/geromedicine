@@ -161,10 +161,17 @@
 
     & .card__img {
       width: 100%;
+      min-height: 200px;
     }
 
     & .card__description {
       width: 100%;
+      padding: 20px;
+      margin-top: 0;
+    }
+
+    &__title {
+      margin-bottom: 20px;
     }
   }
 
@@ -183,6 +190,7 @@
 }
 
 @media (max-width: 400px) {
+
   .card_doctor {
 
     & .card__description {
