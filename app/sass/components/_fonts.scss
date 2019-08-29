@@ -33,3 +33,10 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Akrobat';
+  src: local('Akrobat Bold'), local('Akrobat-Semi-Bold'), url('../fonts/Akrobat_Semi_Bold.woff2') format('woff2'), url('../fonts/Akrobat_Semi_Bold.woff') format('woff'), url('../fonts/Akrobat_Semi_Bold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
