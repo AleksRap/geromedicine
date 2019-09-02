@@ -55,6 +55,10 @@
 @media (max-width: 576px) {
   .title {
 
+    &_margin {
+      margin-bottom: 30px;
+    }
+
     &_display {
       display: none;
     }

@@ -1,0 +1,58 @@
+extends layout/layout
+include mixins/cards
+
+block head
+    - var title = 'Акции';
+    - var pageId = 5;
+
+block header
+    include layout/header
+
+block content
+    main
+        .page-wrapper.container-fluid
+            .breadcrumbs
+                a(href="index.html") главная
+                span /
+                span программы
+
+
+            .amenities
+                .wrap-950_pd
+                    .wrap-950
+                        h2.title.title_gray акции
+                        hr.title__hr.title__hr_width
+
+                        .stock
+                            .amenities__head
+                                .amenities__pic
+                                .amenities__text
+                                    span.title.title_white скидки на день рождения<br>— подарите себе здоровье!
+                                    span.amenities__next подробнее
+                                    a.amenities__link(href="stock-article.html")
+
+
+                        .programme
+                            .articles.articles_mb
+                                section.page-wrapper
+                                    h2.title.title_margin Статьи
+                                    .articles_img.row
+                                        - var time = 0;
+                                        .col-md-6.col-12
+                                            +article-img('img/article-img-2.jpg','вчера', 'Комплексная проверка организма со скидкой 20%', 'stock-article.html')
+                                        .col-md-6.col-12
+                                            +article-img('img/article-img-1.jpg','21 июля', 'МРТ со скидкой 40% для ветеранов', 'stock-article.html')
+                                        .col-md-6.col-12
+                                            +article-img('img/article-img-2.jpg','вчера', 'Проверь свое сердце! Скидки на кардиологию', 'stock-article.html')
+                                        .col-md-6.col-12
+                                            +article-img('img/article-img-1.jpg','21 июля', 'АКЦИЯ! все кслуги патронажа со скидкой 15%', 'stock-article.html')
+
+
+
+
+        include components/ask-form
+
+
+
+block footer
+    include layout/footer

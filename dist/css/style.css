@@ -572,6 +572,8 @@
     font-size: 28px; } }
 
 @media (max-width: 576px) {
+  .title_margin {
+    margin-bottom: 30px; }
   .title_display {
     display: none; } }
 
@@ -1497,6 +1499,8 @@ a.logo:hover {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 600; }
+  .card_margin {
+    margin-bottom: 20px; }
   .card_background {
     background-color: #E9EFE8;
     border: 0; }
@@ -1556,7 +1560,7 @@ a.logo:hover {
             flex: 1 0 auto;
     margin-top: 40px;
     padding-left: 40px;
-    padding-right: 40px;
+    padding-right: 80px;
     padding-bottom: 20px; }
     .card__description_margin {
       margin-top: 30px; }
@@ -1568,7 +1572,8 @@ a.logo:hover {
     margin-bottom: 40px;
     font-size: 20px;
     line-height: 24px;
-    letter-spacing: 0.05em; }
+    letter-spacing: 0.05em;
+    min-height: 72px; }
     .card__title_height {
       height: 260px; }
   .card__link {
@@ -1603,7 +1608,8 @@ a.logo:hover {
   .card__title {
     font-size: 18px;
     line-height: 22px;
-    letter-spacing: 0.05em; }
+    letter-spacing: 0.05em;
+    min-height: auto; }
   .card_doctor .card__title {
     font-size: 14px; }
   .card_doctor .card__description span {
@@ -1613,6 +1619,10 @@ a.logo:hover {
     margin-bottom: 20px; } }
 
 @media (max-width: 576px) {
+  .card__description {
+    margin-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px; }
   .card_horizontal {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1964,6 +1974,9 @@ body {
   margin-top: 60px;
   margin-bottom: 100px; }
 
+.articles_mb {
+  margin-bottom: 140px; }
+
 .articles__wrap {
   border-bottom: 2px solid #E9EFE8; }
 
@@ -2029,6 +2042,8 @@ body {
     margin-bottom: 70px; } }
 
 @media (max-width: 768px) {
+  .articles_mb {
+    margin-bottom: 100px; }
   .about-us__body .title {
     margin-top: 50px; }
   .articles_no-img {
@@ -2036,6 +2051,8 @@ body {
     margin-bottom: 0; } }
 
 @media (max-width: 576px) {
+  .articles_mb {
+    margin-bottom: 60px; }
   .about-us_margin {
     margin-bottom: 120px; }
   .info {
@@ -2575,6 +2592,9 @@ body {
   .recommendations_margin {
     margin-bottom: 60px; } }
 
+.programme .card__description {
+  margin-top: 0; }
+
 .error-404 {
   height: 100vh;
   letter-spacing: 0.05em;
@@ -2829,6 +2849,12 @@ a {
     padding-bottom: 10px;
     margin-left: -2px; }
 
+.stock .amenities__pic {
+  background: url("../img/stock.jpg") 50%/100% no-repeat; }
+
+.stock .title {
+  margin-top: 0; }
+
 .amenities-name .article p:last-child {
   margin-bottom: 40px; }
 
@@ -2837,7 +2863,9 @@ a {
 
 @media (max-width: 992px) {
   .mb-200-60 {
-    margin-bottom: 60px; } }
+    margin-bottom: 60px; }
+  .stock .amenities__pic {
+    background: url("../img/stock.jpg") 50%/180% no-repeat; } }
 
 @media (max-width: 986px) {
   .all-contacts {
@@ -2897,6 +2925,8 @@ a {
   .search [type=search] {
     padding-left: 60px;
     padding-right: 5px; }
+  .stock .title {
+    font-size: 18px; }
   .amenities-name .title_margin {
     margin-bottom: 40px; } }
 

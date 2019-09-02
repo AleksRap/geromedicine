@@ -370,6 +370,10 @@ body {
 
 .articles {
 
+  &_mb {
+    margin-bottom: 140px;
+  }
+
   &__wrap {
     border-bottom: 2px solid #E9EFE8;
   }
@@ -485,6 +489,13 @@ body {
 
 @media (max-width: 768px) {
 
+  .articles {
+
+    &_mb {
+      margin-bottom: 100px;
+    }
+  }
+
   .about-us {
 
     &__body {
@@ -502,6 +513,13 @@ body {
 }
 
 @media (max-width: 576px) {
+  .articles {
+
+    &_mb {
+      margin-bottom: 60px;
+    }
+  }
+
   .about-us {
 
     &_margin {

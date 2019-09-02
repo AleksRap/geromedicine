@@ -18,6 +18,7 @@
 @import "pages/doctor-profile";
 @import "pages/price";
 @import "pages/recommendations";
+@import "pages/programme";
 @import "pages/404";
 
 html,
@@ -242,6 +243,16 @@ a {
   }
 }
 
+.stock {
+  .amenities__pic {
+    background: url("../img/stock.jpg") 50%/100% no-repeat;
+  }
+
+  .title {
+    margin-top: 0;
+  }
+}
+
 .amenities-name {
 
   .article p:last-child {
@@ -257,6 +268,12 @@ a {
 @media (max-width: 992px) {
   .mb-200-60 {
     margin-bottom: 60px;
+  }
+
+  .stock {
+    .amenities__pic {
+      background: url("../img/stock.jpg") 50%/180% no-repeat;
+    }
   }
 }
 
@@ -350,6 +367,13 @@ a {
     & [type=search] {
       padding-left: 60px;
       padding-right: 5px;
+    }
+  }
+
+  .stock {
+
+    .title {
+      font-size: 18px;
     }
   }
 
