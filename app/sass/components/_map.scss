@@ -1,7 +1,5 @@
 .map {
   margin-top: 180px;
-  border-top: 2px solid #E9EFE8;
-  border-left: 2px solid #E9EFE8;
 
   & .title_margin {
     margin-bottom: 90px;
@@ -10,6 +8,8 @@
   &__description {
     height: 100%;
     padding: 106px 40px 40px 124px;
+    border-top: 2px solid #E9EFE8;
+    border-left: 2px solid #E9EFE8;
   }
 
   &__text {
@@ -53,7 +53,6 @@
 
 @media (max-width: 768px) {
   .map {
-    border-right: 2px solid #E9EFE8;
 
     &_margin {
       margin-top: 70px;
@@ -62,6 +61,7 @@
     &__description {
       padding-top: 30px;
       padding-left: 30px;
+      border-right: 2px solid #E9EFE8;
     }
 
     &__img {

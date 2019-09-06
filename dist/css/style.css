@@ -38,7 +38,7 @@
   border-radius: 0;
   color: #E9EFE8;
   background-color: #679100;
-  padding: 1.3em 2em;
+  padding: 1.3em 4em;
   font-weight: 600; }
   .button-first:hover {
     color: #E9EFE8; }
@@ -215,6 +215,8 @@
       cursor: pointer;
       background-color: #679100;
       border-color: #679100; }
+      .pagination__item:hover.arrow-right .arrow {
+        background: url("../svg/arrow-down-white.svg") no-repeat; }
     .pagination__item:first-child .arrow {
       -webkit-transform: rotate(90deg);
           -ms-transform: rotate(90deg);
@@ -223,6 +225,8 @@
       height: 9px;
       background: url("../svg/arrow-down.svg") no-repeat;
       background-size: contain; }
+      .pagination__item:first-child .arrow:hover {
+        background: url("../svg/arrow-down-white.svg") no-repeat; }
     .pagination__item.arrow-right {
       border-right: 2px solid #E9EFE8; }
       .pagination__item.arrow-right:hover {
@@ -312,14 +316,14 @@
     margin-left: -2px; } }
 
 .map {
-  margin-top: 180px;
-  border-top: 2px solid #E9EFE8;
-  border-left: 2px solid #E9EFE8; }
+  margin-top: 180px; }
   .map .title_margin {
     margin-bottom: 90px; }
   .map__description {
     height: 100%;
-    padding: 106px 40px 40px 124px; }
+    padding: 106px 40px 40px 124px;
+    border-top: 2px solid #E9EFE8;
+    border-left: 2px solid #E9EFE8; }
   .map__text {
     font-size: 20px;
     line-height: 24px;
@@ -352,20 +356,19 @@
     padding-bottom: 60px; } }
 
 @media (max-width: 768px) {
-  .map {
+  .map_margin {
+    margin-top: 70px; }
+  .map__description {
+    padding-top: 30px;
+    padding-left: 30px;
     border-right: 2px solid #E9EFE8; }
-    .map_margin {
-      margin-top: 70px; }
-    .map__description {
-      padding-top: 30px;
-      padding-left: 30px; }
-    .map__img {
-      height: 260px;
-      overflow: hidden; }
-    .map__text {
-      font-size: 18px; }
-    .map .title_margin {
-      margin-bottom: 37px; } }
+  .map__img {
+    height: 260px;
+    overflow: hidden; }
+  .map__text {
+    font-size: 18px; }
+  .map .title_margin {
+    margin-bottom: 37px; } }
 
 .ask-form {
   background-color: #E9EFE8;
@@ -858,8 +861,8 @@ a.logo:hover {
   background: url("../svg/search.svg") no-repeat;
   background-size: contain; }
   .btn-search_left {
-    left: 30px;
-    bottom: 7px;
+    left: 5px;
+    bottom: 10px;
     right: auto; }
 
 @media (min-width: 1200px) {
@@ -1599,6 +1602,11 @@ a.logo:hover {
     .card_doctor .card__title {
       font-weight: 600;
       margin: 0; }
+
+.card-2 {
+  height: 380px; }
+  .card-2 img {
+    min-height: 50%; }
 
 @media (max-width: 1200px) {
   .card_display {

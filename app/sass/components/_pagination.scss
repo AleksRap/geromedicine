@@ -17,6 +17,10 @@
       cursor: pointer;
       background-color: #679100;
       border-color: #679100;
+
+      &.arrow-right .arrow {
+        background: url("../svg/arrow-down-white.svg") no-repeat;
+      }
     }
 
     &:first-child .arrow {
@@ -25,6 +29,10 @@
       height: 9px;
       background: url("../svg/arrow-down.svg") no-repeat;
       background-size: contain;
+
+      &:hover {
+        background: url("../svg/arrow-down-white.svg") no-repeat;
+      }
     }
 
     &.arrow-right {
