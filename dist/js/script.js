@@ -320,6 +320,41 @@ if(document.querySelector('#selectItem')) {
 }
 
 
+// Maskedinput
+jQuery(function($){
+  $("#call-tel").mask("+7 (999) 999-9999");
+  $("#appointment-tel").mask("+7 (999) 999-9999");
+});
+
+
+// Проверка согласия на обработку персональных данных
+$(document).ready(function(){
+  if ( !(document.querySelector("#appointment-checkbox").hasAttribute('checked')) ) {
+    $("[value='запись на прием']").addClass('button-first_noactive')
+  }
+  if ( !(document.querySelector("#call-checkbox").hasAttribute('checked')) ) {
+    $("[value='вызов врача']").addClass('button-first_noactive')
+  }
+
+  $('#appointment-checkbox').on('click', function () {
+    $("[value='запись на прием']").toggleClass('button-first_noactive')
+  });
+
+  $('#call-checkbox').on('click', function () {
+    $("[value='вызов врача']").toggleClass('button-first_noactive')
+  });
+});
+
+
+// Fancybox
+$('[data-fancybox="gallery"]').fancybox({
+  toolbar: false,
+  transitionEffect: "zoom-in-out",
+  loop: true
+});
+
+
+
 
 
 

@@ -6,11 +6,36 @@
     margin-bottom: 80px;
   }
 
+  &__wrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    &::after {
+      position:absolute;
+      left: 50%;
+      margin-left: -45%;
+      content: '';
+      width: 90%;
+      height: 100%;
+      top: 40px;
+      border: 2px solid #E9EFE8;
+    }
+  }
+
   &__pic {
     width: 100%;
-    height: 280px;
-    background: url("../img/amenities.jpg") 50%/100% no-repeat;
-    transition: background .25s ease-in;
+    height: 28vw;
+    max-height: 280px;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50%;
+      transition: transform .25s ease-in;
+    }
   }
 
   &__text {
@@ -21,17 +46,16 @@
     left: 50%;
     margin-left: -45%;
     position: absolute;
-    border: 2px solid #E9EFE8;
 
     & .title {
-      position: absolute;
-      margin-top: 135px;
+      display: inline-block;
+      max-width: 75%;
       transition: margin-top .25s ease-in;
     }
 
     & p {
-      position: absolute;
-      top: 50px;
+      display: inline-block;
+      max-width: 75%;
       opacity: 0;
       margin-top: 150px;
       font-family: 'Inter', sans-serif;
@@ -45,8 +69,6 @@
   }
 
   &__next {
-    display: inline-block;
-    width: 100%;
     text-align: right;
     position: absolute;
     right: 50px;
@@ -69,7 +91,7 @@
   &__description {
     font-weight: normal;
     font-size: 18px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
 
   &__cost {
@@ -177,7 +199,10 @@
       &:hover {
 
         & .amenities__pic {
-          background-size: 120%;
+
+          & img {
+            transform: scale(1.2);
+          }
         }
 
         & p {
@@ -212,11 +237,12 @@
 
       & .title {
         align-self: flex-start;
+        font-size: 30px;
       }
     }
 
-    &__pic {
-      height: 200px;
+    &__next {
+      font-size: 18px;
     }
 
     & .accordion {
@@ -233,8 +259,31 @@
   }
 }
 
+@media (max-width: 768px) {
+  .amenities {
+
+    &__text {
+      padding: 20px;
+
+      & .title {
+        font-size: 25px;
+      }
+    }
+
+    &__next {
+      font-size: 16px;
+      right: 30px;
+      bottom: 60px;
+    }
+  }
+}
+
 @media (max-width: 576px) {
   .amenities {
+
+    &__pic {
+      height: 50vw;
+    }
 
     &__description {
       font-size: 16px;
@@ -266,6 +315,13 @@
 @media (max-width: 410px) {
   .amenities {
 
+    &__wrap {
+
+      &::after {
+        top: 20px;
+      }
+    }
+
     &__head {
       margin-bottom: 40px;
     }
@@ -273,19 +329,16 @@
     &__text {
       height: 90%;
       display: flex;
+      top: 20px;
+
+      & .title {
+        font-size: 20px;
+      }
     }
 
     &__next {
-      bottom: 40px;
-    }
-  }
-}
-
-@media (max-width: 370px) {
-  .amenities {
-
-    &__text {
-      height: 85%;
+      bottom: 20px;
+      font-size: 14px;
     }
   }
 }

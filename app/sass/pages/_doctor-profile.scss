@@ -31,7 +31,9 @@
   }
 
   &__pic {
+    min-width: 50%;
     max-width: 50%;
+    max-height: 400px;
     object-fit: cover;
     object-position: 50%;
     order: 2;
@@ -117,10 +119,13 @@
 
     &__pic {
       max-width: 100%;
+      min-width: 100%;
       margin-top: 10px;
       margin-bottom: 40px;
       width: 100%;
       order: -1;
+      max-height: 285px;
+      min-height: 285px;
     }
 
     &__description {

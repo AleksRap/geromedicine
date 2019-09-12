@@ -1,7 +1,11 @@
 extends layout/layout
 
+block head
+    - var title = '404';
+
 block content
     .error-404.d-flex.flex-column.justify-content-center.align-items-center
         h1.error-404__title 404
-        p.error-404__text «Страница не найдена»<br> Что-то пошло не так
+        .error-404__text
+            p «Страница не найдена»<br> Что-то пошло не так
         a.error-404__btn.no-opacity.popup-with-form.btn.btn-sm.lign-middle.button-first.w-100(href="#form-popup-appointment") вернуться назад

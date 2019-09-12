@@ -26,7 +26,12 @@
   &__pic {
     width: 100%;
     object-fit: contain;
-    filter: grayscale(1);
+    height: 30vw;
+    max-height: 400px;
+
+    &_grayscale {
+      filter: grayscale(1);
+    }
   }
 
   & p {

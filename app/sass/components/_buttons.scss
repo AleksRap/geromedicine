@@ -11,6 +11,12 @@
     color: #E9EFE8;
   }
 
+  &_noactive {
+    pointer-events: none;
+    background-color: #c2c2c2;
+    border-color: gray;
+  }
+
   &_padding {
     padding: 20px 50px 20px 50px;
   }

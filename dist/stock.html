@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="libs/magnific-popup/css/magnific-popup.css">
   <link rel="stylesheet" type="text/css" href="libs/swiper/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="libs/datepicker/css/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/fancybox/css/fancybox.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -207,7 +208,7 @@
                   </label>
                 </div>
                 <div class="col-12 col-md-9 d-flex justify-content-end">
-                  <input class="popup__field inputbox" id="call-tel" type="tel" placeholder="+7-___-_______" required>
+                  <input class="popup__field inputbox" id="call-tel" type="tel" placeholder="+7-(___)-_______" required>
                 </div>
               </div>
             </div>
@@ -279,7 +280,7 @@
                       </label>
                     </div>
                     <div class="col-12 col-md-8 d-flex justify-content-end">
-                      <input class="popup__field inputbox" id="appointment-tel" type="tel" placeholder="+7-___-_______" required>
+                      <input class="popup__field inputbox" id="appointment-tel" type="tel" placeholder="+7-(___)-_______" required>
                     </div>
                   </div>
                 </div>
@@ -411,22 +412,27 @@
             <div class="wrap-950">
               <h2 class="title title_gray">акции</h2>
               <hr class="title__hr title__hr_width">
-              <div class="stock">
-                <div class="amenities__head">
-                  <div class="amenities__pic"></div>
-                  <div class="amenities__text"><span class="title title_white">скидки на день рождения<br>— подарите себе здоровье!</span><span class="amenities__next">подробнее</span>
-                    <a class="amenities__link" href="stock-article.html"></a>
+              <div class="amenities__head">
+                <div class="amenities__wrap">
+                  <div class="amenities__pic">
+                    <img src="../img/stock.jpg" alt="фото" />
+                  </div>
+                  <div class="amenities__text">
+                    <h3 class="title title_white">скидки на день рождения — подарите себе здоровье!</h3>
+                    <br/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque viverra semper nunc pellentesque euismod. Arcu ultricies non vel elit. Текст не более трех строк</p><span class="amenities__next">подробнее</span>
+                    <a class="amenities__link"
+                    href="name-service-patronage.html"></a>
                   </div>
                 </div>
               </div>
               <div class="programme">
                 <div class="articles articles_mb">
                   <section class="page-wrapper">
-                    <h2 class="title title_margin">Статьи</h2>
                     <div class="articles_img row">
                       <div class="col-md-6 col-12">
                         <div class="card card-2 card_margin">
-                          <img class="card__img card__img_grayscale" src="img/article-img-2.jpg" alt="Обложка статьи" />
+                          <img class="card__img card__img_mh" src="img/article-img-2.jpg" alt="Обложка статьи" />
                           <div class="card__description">
                             <h3 class="card__title" data-dotdotdot="article-img">Комплексная проверка организма со скидкой 20%</h3><a class="card__link" href="stock-article.html">подробнее</a>
                             <a class="card__link_full" href="stock-article.html"></a>
@@ -435,7 +441,7 @@
                       </div>
                       <div class="col-md-6 col-12">
                         <div class="card card-2 card_margin">
-                          <img class="card__img card__img_grayscale" src="img/article-img-1.jpg" alt="Обложка статьи" />
+                          <img class="card__img card__img_mh" src="img/article-img-1.jpg" alt="Обложка статьи" />
                           <div class="card__description">
                             <h3 class="card__title" data-dotdotdot="article-img">МРТ со скидкой 40% для ветеранов</h3><a class="card__link" href="stock-article.html">подробнее</a>
                             <a class="card__link_full" href="stock-article.html"></a>
@@ -444,7 +450,7 @@
                       </div>
                       <div class="col-md-6 col-12">
                         <div class="card card-2 card_margin">
-                          <img class="card__img card__img_grayscale" src="img/article-img-2.jpg" alt="Обложка статьи" />
+                          <img class="card__img card__img_mh" src="img/article-img-2.jpg" alt="Обложка статьи" />
                           <div class="card__description">
                             <h3 class="card__title" data-dotdotdot="article-img">Проверь свое сердце! Скидки на кардиологию</h3><a class="card__link" href="stock-article.html">подробнее</a>
                             <a class="card__link_full" href="stock-article.html"></a>
@@ -453,7 +459,7 @@
                       </div>
                       <div class="col-md-6 col-12">
                         <div class="card card-2 card_margin">
-                          <img class="card__img card__img_grayscale" src="img/article-img-1.jpg" alt="Обложка статьи" />
+                          <img class="card__img card__img_mh" src="img/article-img-1.jpg" alt="Обложка статьи" />
                           <div class="card__description">
                             <h3 class="card__title" data-dotdotdot="article-img">АКЦИЯ! все кслуги патронажа со скидкой 15%</h3><a class="card__link" href="stock-article.html">подробнее</a>
                             <a class="card__link_full" href="stock-article.html"></a>
@@ -549,6 +555,8 @@
   <script src="libs/lightslider/js/lightslider.min.js"></script>
   <script src="libs/magnific-popup/js/jquery.magnific-popup.min.js"></script>
   <script src="libs/swiper/js/swiper.min.js"></script>
+  <script src="libs/maskedinput/js/maskedinput.min.js"></script>
+  <script src="libs/fancybox/js/fancybox.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

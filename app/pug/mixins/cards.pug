@@ -1,6 +1,6 @@
 mixin article-img(img, data, title, link)
     .card.card_margin
-        img.card__img.card__img_grayscale(src=img alt="Обложка статьи")
+        img.card__img.card__img_mh.card__img_grayscale(src=img alt="Обложка статьи")
         .card__description
             if time === 0
             else
@@ -11,7 +11,7 @@ mixin article-img(img, data, title, link)
 
 mixin article-img-new(img, data, title, link)
     .card.card-2.card_margin
-        img.card__img.card__img_grayscale(src=img alt="Обложка статьи")
+        img.card__img.card__img_mh(src=img alt="Обложка статьи")
         .card__description
             if time === 0
             else
@@ -41,7 +41,7 @@ mixin article-no-img(data, title, link)
 
 mixin card-doctor(img, title, profession, link)
     .card.card_doctor
-        img.card__img(src= img alt="Фото специалиста")
+        img.card__img.card__img_mh(src= img alt="Фото специалиста")
         .card__description
             h3.card__title= title
             span= profession

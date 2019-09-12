@@ -1,0 +1,11 @@
+mixin banner (pic, title, text, link)
+    .amenities__head
+        .amenities__wrap
+            .amenities__pic
+                img(src= pic alt="фото")
+            .amenities__text
+                h3.title.title_white= title
+                br
+                p= text
+                span.amenities__next подробнее
+                a.amenities__link(href= link)

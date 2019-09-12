@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="libs/magnific-popup/css/magnific-popup.css">
   <link rel="stylesheet" type="text/css" href="libs/swiper/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="libs/datepicker/css/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/fancybox/css/fancybox.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -207,7 +208,7 @@
                   </label>
                 </div>
                 <div class="col-12 col-md-9 d-flex justify-content-end">
-                  <input class="popup__field inputbox" id="call-tel" type="tel" placeholder="+7-___-_______" required>
+                  <input class="popup__field inputbox" id="call-tel" type="tel" placeholder="+7-(___)-_______" required>
                 </div>
               </div>
             </div>
@@ -279,7 +280,7 @@
                       </label>
                     </div>
                     <div class="col-12 col-md-8 d-flex justify-content-end">
-                      <input class="popup__field inputbox" id="appointment-tel" type="tel" placeholder="+7-___-_______" required>
+                      <input class="popup__field inputbox" id="appointment-tel" type="tel" placeholder="+7-(___)-_______" required>
                     </div>
                   </div>
                 </div>
@@ -413,7 +414,9 @@
                 <h2 class="title title_gray">о клинике</h2>
                 <hr class="title__hr title__hr_width" />
                 <div class="article__pic-wrap">
-                  <img class="article__pic" src="img/about-us-pic.jpg" alt="Обложка статьи" />
+                  <div class="article__pic article__pic_grayscale">
+                    <img src="img/about-us-pic.jpg" alt="Обложка статьи" />
+                  </div>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet congue quam. Cras venenatis augue nunc, sed molestie orci faucibus sed. Maecenas cursus odio augue, in posuere augue iaculis eu. Aliquam vel suscipit nunc, in lobortis
                   leo. Fusce ac lacinia elit, eu euismod ligula. Suspendisse ornare venenatis condimentum. Nullam sagittis et lacus ac posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus vel dolor
@@ -516,21 +519,29 @@
                 </div>
               </section>
             </div>
-            <p class="about__text">Donec eget leo sit amet sem aliquam maximus in nec eros. Maecenas sit amet lacus vel elit malesuada vulputate. In dui nibh, viverra nec faucibus non, posuere non quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Mauris commodo elit at nisl posuere bibendum. Donec id mi pretium, porttitor felis vel, posuere arcu. Phasellus ipsum odio, venenatis sed magna in, finibus placerat arcu. Maecenas sed rutrum lectus. Vivamus eget sagittis mi,
-              at sagittis purus. Duis auctor blandit nunc nec suscipit.</p>
+            <div class="about__text">
+              <p>Donec eget leo sit amet sem aliquam maximus in nec eros. Maecenas sit amet lacus vel elit malesuada vulputate. In dui nibh, viverra nec faucibus non, posuere non quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Mauris commodo elit at nisl posuere bibendum. Donec id mi pretium, porttitor felis vel, posuere arcu. Phasellus ipsum odio, venenatis sed magna in, finibus placerat arcu. Maecenas sed rutrum lectus. Vivamus eget sagittis
+                mi, at sagittis purus. Duis auctor blandit nunc nec suscipit.</p>
+            </div>
             <div class="certificates">
               <div class="certificates__wrap">
                 <h2 class="title title_gray">сертификаты</h2>
                 <div class="row">
                   <div class="col-12 col-sm-6 col-lg-4 mb-5">
-                    <img src="img/sertificate-1.jpg" alt="Сертификат">
+                    <a href="http://geromed.workgroups.ru/assets/upload/actions/ffa25b7012875e4bca4401642bbbf5b86dea940a.jpg" data-fancybox="gallery" data-caption="фулл сертификата, тут описание">
+                      <img src="img/sertificate-1.jpg" alt="превью сертификата">
+                    </a>
                   </div>
                   <div class="col-12 col-sm-6 col-lg-4 mb-5">
-                    <img src="img/sertificate-2.jpg" alt="Сертификат">
+                    <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Panorama_of_rock_formation_near_Sedona_2013.jpg/500px-Panorama_of_rock_formation_near_Sedona_2013.jpg" data-fancybox="gallery" data-caption="фулл сертификата, тут описание">
+                      <img src="img/sertificate-2.jpg" alt="Сертификат">
+                    </a>
                   </div>
                   <div class="col-12 col-sm-6 col-lg-4 mb-5">
-                    <img src="img/sertificate-3.jpg" alt="Сертификат">
+                    <a href="https://cdn.abc.ru/upload/resize/presets/56c2ab0a5cda/catalog/3e/nj/1558749735.86633enj1zhzjzhja_spgahd45d_xvsfdvmgwyxi.jpg" data-fancybox="gallery" data-caption="фулл сертификата, тут описание">
+                      <img src="img/sertificate-3.jpg" alt="Сертификат">
+                    </a>
                   </div>
                 </div>
               </div>
@@ -570,9 +581,11 @@
             <div class="col-12 col-md-6">
               <div class="map__description">
                 <h3 class="title title_margin">где нас найти?</h3>
-                <p class="map__text">Клиника патронажа и геронтологии
-                  <br>«Геромедицина»
-                  <br>Россия, Москва, Открытое шоссе, д. 48, стр. 2</p>
+                <div class="map__text">
+                  <p>Клиника патронажа и геронтологии
+                    <br>«Геромедицина»
+                    <br>Россия, Москва, Открытое шоссе, д. 48, стр. 2</p>
+                </div>
               </div>
             </div>
             <div class="col-12 col-md-6">
@@ -665,6 +678,8 @@
   <script src="libs/lightslider/js/lightslider.min.js"></script>
   <script src="libs/magnific-popup/js/jquery.magnific-popup.min.js"></script>
   <script src="libs/swiper/js/swiper.min.js"></script>
+  <script src="libs/maskedinput/js/maskedinput.min.js"></script>
+  <script src="libs/fancybox/js/fancybox.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

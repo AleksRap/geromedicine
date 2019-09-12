@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="libs/magnific-popup/css/magnific-popup.css">
   <link rel="stylesheet" type="text/css" href="libs/swiper/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="libs/datepicker/css/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="libs/fancybox/css/fancybox.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -207,7 +208,7 @@
                   </label>
                 </div>
                 <div class="col-12 col-md-9 d-flex justify-content-end">
-                  <input class="popup__field inputbox" id="call-tel" type="tel" placeholder="+7-___-_______" required>
+                  <input class="popup__field inputbox" id="call-tel" type="tel" placeholder="+7-(___)-_______" required>
                 </div>
               </div>
             </div>
@@ -279,7 +280,7 @@
                       </label>
                     </div>
                     <div class="col-12 col-md-8 d-flex justify-content-end">
-                      <input class="popup__field inputbox" id="appointment-tel" type="tel" placeholder="+7-___-_______" required>
+                      <input class="popup__field inputbox" id="appointment-tel" type="tel" placeholder="+7-(___)-_______" required>
                     </div>
                   </div>
                 </div>
@@ -416,11 +417,13 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a class="no-opacity popup-with-form btn button-first button-first_padding" href="#form-popup-appointment">запись на прием</a>
                 </div>
               </div>
-              <p class="profile__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A elementum suspendisse sed congue lobortis id. Dui ullamcorper mauris eget vitae, donec. Sed auctor duis porta lectus
-                accumsan. Sed amet ultricies diam diam mus. Arcu curabitur in sed aliquet in id pharetra aliquet. Est a, non lobortis in lectus orci aliquam congue diam. Eleifend venenatis, augue amet elementum quis aliquam. Sed eget dictumst vitae risus
-                ridiculus mollis nisi aliquam. Velit condimentum fames neque id mollis risus, massa, risus neque,. Urna tincidunt a, malesuada tellus sed habitasse. Mauris metus eget sapien varius. Semper feugiat quam viverra faucibus non. Volutpat neque
-                risus sed facilisis a, ac.Ipsum, odio et dictum lectus phasellus egestas gravida sit. Turpis malesuada vitae et, felis, suspendisse est sed massa dolor. Sit molestie pretium non consequat sapien adipiscing. Quis aliquet odio arcu, eu vestibulum
-                quam ultricies. Risus scelerisque mattis magna mattis.</p>
+              <div class="profile__description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A elementum suspendisse sed congue lobortis id. Dui ullamcorper mauris eget vitae, donec. Sed auctor duis porta
+                  lectus accumsan. Sed amet ultricies diam diam mus. Arcu curabitur in sed aliquet in id pharetra aliquet. Est a, non lobortis in lectus orci aliquam congue diam. Eleifend venenatis, augue amet elementum quis aliquam. Sed eget dictumst
+                  vitae risus ridiculus mollis nisi aliquam. Velit condimentum fames neque id mollis risus, massa, risus neque,. Urna tincidunt a, malesuada tellus sed habitasse. Mauris metus eget sapien varius. Semper feugiat quam viverra faucibus non.
+                  Volutpat neque risus sed facilisis a, ac.Ipsum, odio et dictum lectus phasellus egestas gravida sit. Turpis malesuada vitae et, felis, suspendisse est sed massa dolor. Sit molestie pretium non consequat sapien adipiscing. Quis aliquet
+                  odio arcu, eu vestibulum quam ultricies. Risus scelerisque mattis magna mattis.</p>
+              </div>
             </div>
             <div class="our-specialist">
               <h2 class="title title_gray">Другие специалисты<br>этого направления</h2>
@@ -431,7 +434,7 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="card card_doctor">
-                      <img class="card__img" src="img/doctor-1.jpg" alt="Фото специалиста">
+                      <img class="card__img card__img_mh" src="img/doctor-1.jpg" alt="Фото специалиста">
                       <div class="card__description">
                         <h3 class="card__title">Волков<br>Генадий<br>Анатольевич</h3><span>кардиолог</span>
                         <a class="card__link_full" href="doctor-profile.html"></a>
@@ -440,7 +443,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card card_doctor">
-                      <img class="card__img" src="img/doctor-3.jpg" alt="Фото специалиста">
+                      <img class="card__img card__img_mh" src="img/doctor-3.jpg" alt="Фото специалиста">
                       <div class="card__description">
                         <h3 class="card__title">Тихомиров<br>Ян<br>Васильевич</h3><span>кардиолог</span>
                         <a class="card__link_full" href="doctor-profile.html"></a>
@@ -449,7 +452,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card card_doctor">
-                      <img class="card__img" src="img/doctor-2.jpg" alt="Фото специалиста">
+                      <img class="card__img card__img_mh" src="img/doctor-2.jpg" alt="Фото специалиста">
                       <div class="card__description">
                         <h3 class="card__title">Скулкина<br>Евангелина<br>Борисовна</h3><span>кардиолог</span>
                         <a class="card__link_full" href="doctor-profile.html"></a>
@@ -458,7 +461,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card card_doctor">
-                      <img class="card__img" src="img/doctor-1.jpg" alt="Фото специалиста">
+                      <img class="card__img card__img_mh" src="img/doctor-1.jpg" alt="Фото специалиста">
                       <div class="card__description">
                         <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
                         <a class="card__link_full" href="doctor-profile.html"></a>
@@ -467,7 +470,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card card_doctor">
-                      <img class="card__img" src="img/doctor-1.jpg" alt="Фото специалиста">
+                      <img class="card__img card__img_mh" src="img/doctor-1.jpg" alt="Фото специалиста">
                       <div class="card__description">
                         <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
                         <a class="card__link_full" href="doctor-profile.html"></a>
@@ -476,7 +479,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card card_doctor">
-                      <img class="card__img" src="img/doctor-1.jpg" alt="Фото специалиста">
+                      <img class="card__img card__img_mh" src="img/doctor-1.jpg" alt="Фото специалиста">
                       <div class="card__description">
                         <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
                         <a class="card__link_full" href="doctor-profile.html"></a>
@@ -485,7 +488,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card card_doctor">
-                      <img class="card__img" src="img/doctor-1.jpg" alt="Фото специалиста">
+                      <img class="card__img card__img_mh" src="img/doctor-1.jpg" alt="Фото специалиста">
                       <div class="card__description">
                         <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
                         <a class="card__link_full" href="doctor-profile.html"></a>
@@ -494,7 +497,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card card_doctor">
-                      <img class="card__img" src="img/doctor-1.jpg" alt="Фото специалиста">
+                      <img class="card__img card__img_mh" src="img/doctor-1.jpg" alt="Фото специалиста">
                       <div class="card__description">
                         <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
                         <a class="card__link_full" href="doctor-profile.html"></a>
@@ -503,7 +506,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="card card_doctor">
-                      <img class="card__img" src="img/doctor-1.jpg" alt="Фото специалиста">
+                      <img class="card__img card__img_mh" src="img/doctor-1.jpg" alt="Фото специалиста">
                       <div class="card__description">
                         <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
                         <a class="card__link_full" href="doctor-profile.html"></a>
@@ -534,7 +537,7 @@
         <div class="price price_margin">
           <div class="wrap-950_pd">
             <div class="wrap-950">
-              <h2 class="title title_gray title_margin">стоимость услуг</h2>
+              <h2 class="title title_gray title_margin">услуги</h2>
               <div class="price__table">
                 <div class="price__row"><span>Прием (осмотр, консультация) врача-кардиолога первичный</span><span class="price__cost">1 500₽</span>
                   <a class="card-spoiler-full" href="service-cardiology.html"></a>
@@ -751,6 +754,8 @@
   <script src="libs/lightslider/js/lightslider.min.js"></script>
   <script src="libs/magnific-popup/js/jquery.magnific-popup.min.js"></script>
   <script src="libs/swiper/js/swiper.min.js"></script>
+  <script src="libs/maskedinput/js/maskedinput.min.js"></script>
+  <script src="libs/fancybox/js/fancybox.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

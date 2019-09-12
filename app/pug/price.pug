@@ -1,4 +1,5 @@
 extends layout/layout
+include mixins/banner
 
 block head
     - var title = 'Услуги и цены';
@@ -23,15 +24,16 @@ block content
                         hr.title__hr.title__hr_width
 
 
-                        .amenities__head
-                            .amenities__pic
-                            .amenities__text
-                                span.title.title_white патронаж
-                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque viverra semper nunc pellentesque euismod. Arcu ultricies non vel elit. Venenatis leo quam cras ridiculus. Tincidunt faucibus nisl, in libero eget.
-                                span.amenities__next подробнее
-                                a.amenities__link(href="name-service-patronage.html")
+                        +banner(
+                            '../img/amenities.jpg',
+                            'патронаж',
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque viverra semper nunc pellentesque euismod. Arcu ultricies non vel elit. Текст не более трех строк',
+                            'name-service-patronage.html'
+                        )
 
-                        p.amenities__description Здесь представлены цены нашего клинического обслуживания, патронаж рассчитывается индивидуально, звоните!
+
+                        .amenities__description
+                            p Здесь представлены цены нашего клинического обслуживания, патронаж рассчитывается индивидуально, звоните!
 
 
                         <div class="accordion" id="accordionExample">

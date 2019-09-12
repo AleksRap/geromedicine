@@ -55,6 +55,11 @@
     object-fit: cover;
     object-position: 50%;
 
+    &_mh {
+      max-height: 50%;
+      min-height: 50%;
+    }
+
     &_grayscale {
       filter: grayscale(1);
     }
@@ -108,7 +113,7 @@
   }
 
   &_doctor {
-    height: auto;
+    height: 380px;
     margin-bottom: 40px;
 
     & .card__description {
@@ -130,8 +135,8 @@
 
 .card-2 {
   height: 380px;
-
   img {
+    max-height: 50%;
     min-height: 50%;
   }
 }
@@ -152,6 +157,7 @@
 
 
   .card_doctor {
+    height: 300px;
 
     & .card__title {
       font-size: 14px;
@@ -199,6 +205,7 @@
   }
 
   .card_doctor {
+    height: 250px;
 
     & .card__description {
       padding: 20px;

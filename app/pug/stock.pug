@@ -1,5 +1,6 @@
 extends layout/layout
 include mixins/cards
+include mixins/banner
 
 block head
     - var title = 'Акции';
@@ -23,19 +24,18 @@ block content
                         h2.title.title_gray акции
                         hr.title__hr.title__hr_width
 
-                        .stock
-                            .amenities__head
-                                .amenities__pic
-                                .amenities__text
-                                    span.title.title_white скидки на день рождения<br>— подарите себе здоровье!
-                                    span.amenities__next подробнее
-                                    a.amenities__link(href="stock-article.html")
+
+                        +banner(
+                            '../img/stock.jpg',
+                            'скидки на день рождения — подарите себе здоровье!',
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque viverra semper nunc pellentesque euismod. Arcu ultricies non vel elit. Текст не более трех строк',
+                            'name-service-patronage.html'
+                        )
 
 
                         .programme
                             .articles.articles_mb
                                 section.page-wrapper
-                                    h2.title.title_margin Статьи
                                     .articles_img.row
                                         - var time = 0;
                                         .col-md-6.col-12
