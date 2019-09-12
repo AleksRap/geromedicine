@@ -2214,6 +2214,14 @@ body {
   .slider .lSSlideOuter .lSPager.lSGallery li.active {
     border-radius: 0; }
 
+.certificates img {
+  width: 280px;
+  height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50%;
+     object-position: 50%; }
+
 @media (max-width: 992px) {
   .certificates {
     margin-top: 60px; }

@@ -173,6 +173,14 @@
 }
 
 
+.certificates img {
+  width: 280px;
+  height: 210px;
+  object-fit: cover;
+  object-position: 50%;
+}
+
+
 @media (max-width: 992px) {
   .certificates {
     margin-top: 60px;
