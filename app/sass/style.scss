@@ -143,6 +143,7 @@ a {
 
   & [type=search] {
     width: 100%;
+    height: calc(100% - 2px);
     text-align: right;
     padding-right: 40px;
   }
@@ -243,6 +244,10 @@ a {
   margin-top: 80px;
   margin-bottom: 260px;
 
+  &_mb {
+    margin-bottom: 135px;
+  }
+
   & input::placeholder {
     font-weight: 600;
     font-size: 14px;
@@ -253,6 +258,82 @@ a {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-left: -2px;
+  }
+
+  &__result-text {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 164%;
+    margin-bottom: 15px;
+  }
+}
+
+.search [type="search"]:focus + .btn-search_left[type="submit"] {
+  display: none;
+}
+
+.all-result {
+}
+
+.result {
+
+  &_margin {
+    margin-bottom: 130px;
+  }
+
+  &__wrap {
+    margin-top: 60px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #E9EFE8;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  &__names {
+    min-width: 185px;
+  }
+
+  &__name {
+    color: #434343;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    margin-top: 30px;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 164%;
+  }
+
+  &__words {
+    color: #679100;
+  }
+
+  & .pagination-2 {
+    border-top: 0;
+  }
+}
+
+.tags {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  color: #DA3E0D;
+  display: inline-block;
+
+  &_mt {
+    margin-top: 35px;
   }
 }
 
@@ -381,6 +462,30 @@ a {
       padding-left: 60px;
       padding-right: 5px;
     }
+  }
+
+  .result {
+
+    &_margin {
+      margin-bottom: 90px;
+    }
+
+    &__wrap {
+      margin-top: 40px;
+      padding-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__text {
+      margin-top: 20px;
+    }
+  }
+
+  .tags_mt {
+    margin-top: 24px;
   }
 
   .stock {

@@ -101,8 +101,8 @@
   background-size: contain;
 
   &_left {
-    left: 5px;
-    bottom: 10px;
+    left: 15px;
+    bottom: 14px;
     right: auto;
   }
 }
@@ -110,6 +110,15 @@
 @media (min-width: 1200px) {
   .mobil-menu {
     display: none;
+  }
+}
+
+@media( max-width: 768px) {
+  .btn-search {
+
+    &_left {
+      bottom: 5px;
+    }
   }
 }
 
