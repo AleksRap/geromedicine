@@ -128,7 +128,7 @@ gulp.task('browser-sync', function() {
 
 
 
-gulp.task('watch', ['browser-sync', 'pug', 'sass', 'js', 'survive-libs', 'survive-video', 'survive-svg'], function() {
+gulp.task('watch', ['browser-sync', 'pug', 'min-css', 'js', 'survive-libs', 'survive-video', 'survive-svg'], function() {
     gulp.watch('app/pug/**/*.pug', ['pug']); // Наблюдение за pug файлами в папке app/pug
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке app/sass
     gulp.watch('app/js/*.js', ['js']); // Наблюдение за JS файлами
