@@ -173,6 +173,7 @@ a {
 }
 
 .doc {
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 70px;
   position: relative;
@@ -186,7 +187,8 @@ a {
   }
 
   &__pic {
-    width: 25%;
+    min-width: 25%;
+    max-width: 25%;
     height: 100px;
     background: url("../svg/doc.svg") 0 50%/contain no-repeat;
   }
