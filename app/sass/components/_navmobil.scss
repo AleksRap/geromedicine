@@ -23,17 +23,13 @@
   & .nav {
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 30px;
+    margin-left: 10px;
   }
 
   & .nav-link_cabinet {
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 20px;
-
-    &::before {
-      margin-left: -15px;
-    }
   }
 
   & .nav-link_comment {
