@@ -351,10 +351,10 @@
                 </div>
               </div>
               <div class="col-12 col-lg-5 d-flex flex-column justify-content-between align-items-end">
-                <div class="popup__form-area w-100 mt-md-3 mt-lg-0 mb-md-3 mb-lg-0">
+                <div class="popup__form-area w-100 mt-3 mt-lg-0 mb-md-3 mb-lg-0">
                   <div class="datepicker" id="datepicker"></div>
                 </div>
-                <div class="popup__form-area w-100">
+                <div class="popup__form-area w-100 mt-3 mt-lg-0">
                   <div class="select-wrapper d-flex justify-content-end w-100">
                     <select class="popup__field popup__field_bb w-100" id="appointment-time">
                       <option selected>10:30-13:00</option>
@@ -384,6 +384,7 @@
                 </label><span class="required-field required-field_left popup__item-wrap popup__item-wrap_mt-30">Обязательное поле для заполнения</span>
               </div>
               <div class="col-12 col-md-5 offset-md-1">
+                <input type="hidden" id="appointment-date">
                 <input class="btn button-first button-first_mt button-first_border w-100" type="submit" value="запись на прием">
               </div>
             </div>
@@ -412,14 +413,16 @@
             <div class="wrap-950">
               <h2 class="title title_gray">правовая информация</h2>
               <hr class="title__hr title__hr_width" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet congue quam. Cras venenatis augue nunc, sed molestie orci faucibus sed. Maecenas cursus odio augue, in posuere augue iaculis eu. Aliquam vel suscipit nunc, in lobortis
-                leo. Fusce ac lacinia elit, eu euismod ligula. Suspendisse ornare venenatis condimentum. Nullam sagittis et lacus ac posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus vel dolor ac
-                libero ultricies pellentesque.</p>
-              <p>Donec laoreet suscipit risus in bibendum. Sed at sodales sem. Nullam molestie, arcu sit amet tincidunt mattis, sem felis congue metus, sed aliquam dui nulla nec diam. In lobortis nunc velit, sit amet luctus tellus mollis in. Suspendisse
-                feugiat mi id dolor mattis viverra. Nunc diam diam, egestas ut arcu quis, convallis aliquam odio. Pellentesque sodales euismod tortor, sit amet sollicitudin lorem. Nulla mattis magna eget ante aliquam, at gravida lectus venenatis. Proin
-                mauris ipsum, porta at est quis, porta scelerisque mi. In at pretium lectus.</p>
-              <p>Curabitur volutpat, risus eu rutrum condimentum, nibh diam mollis ex, in consequat sapien lectus in lorem. Pellentesque dignissim tempor erat vitae laoreet. Mauris quis porttitor nulla. Nam tincidunt placerat massa quis maximus. Cras at
-                eros a urna tincidunt vulputate et eget felis. Cras risus tortor, facilisis a tristique at, tempus et felis. Duis consequat justo eget elit suscipit viverra.</p>
+              <div class="article__text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet congue quam. Cras venenatis augue nunc, sed molestie orci faucibus sed. Maecenas cursus odio augue, in posuere augue iaculis eu. Aliquam vel suscipit nunc, in lobortis
+                  leo. Fusce ac lacinia elit, eu euismod ligula. Suspendisse ornare venenatis condimentum. Nullam sagittis et lacus ac posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus vel dolor
+                  ac libero ultricies pellentesque.</p>
+                <p>Donec laoreet suscipit risus in bibendum. Sed at sodales sem. Nullam molestie, arcu sit amet tincidunt mattis, sem felis congue metus, sed aliquam dui nulla nec diam. In lobortis nunc velit, sit amet luctus tellus mollis in. Suspendisse
+                  feugiat mi id dolor mattis viverra. Nunc diam diam, egestas ut arcu quis, convallis aliquam odio. Pellentesque sodales euismod tortor, sit amet sollicitudin lorem. Nulla mattis magna eget ante aliquam, at gravida lectus venenatis. Proin
+                  mauris ipsum, porta at est quis, porta scelerisque mi. In at pretium lectus.</p>
+                <p>Curabitur volutpat, risus eu rutrum condimentum, nibh diam mollis ex, in consequat sapien lectus in lorem. Pellentesque dignissim tempor erat vitae laoreet. Mauris quis porttitor nulla. Nam tincidunt placerat massa quis maximus. Cras at
+                  eros a urna tincidunt vulputate et eget felis. Cras risus tortor, facilisis a tristique at, tempus et felis. Duis consequat justo eget elit suscipit viverra.</p>
+              </div>
             </div>
           </div>
         </article>

@@ -35,6 +35,15 @@
 }
 
 
+@media (max-width: 1200px) {
+  .map {
+    &__description {
+      padding-left: 60px;
+    }
+  }
+}
+
+
 @media (max-width: 992px) {
   .map {
 
@@ -43,7 +52,6 @@
     }
 
     &__description {
-      padding-left: 60px;
       padding-right: 30px;
       padding-bottom: 60px;
     }

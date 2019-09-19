@@ -7,11 +7,20 @@ mixin article(title, img, text1, text2, text3)
                 .article__pic-wrap
                     .article__pic.article__pic_grayscale
                         img(src= img alt="Обложка статьи")
-            p= text1
-            if text2
-                p=text2
-            if text3
-                p=text3
+                p= text1
+
+                if text2
+                    p=text2
+                if text3
+                    p=text3
+
+            else
+                .article__text
+                    p= text1
+                    if text2
+                        p=text2
+                    if text3
+                        p=text3
 
 
 mixin article-color(title, img, text1, text2, text3)

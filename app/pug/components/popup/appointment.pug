@@ -65,9 +65,9 @@
 
 
                 .col-12.col-lg-5.d-flex.flex-column.justify-content-between.align-items-end
-                    .popup__form-area.w-100.mt-md-3.mt-lg-0.mb-md-3.mb-lg-0
+                    .popup__form-area.w-100.mt-3.mt-lg-0.mb-md-3.mb-lg-0
                         .datepicker(id="datepicker")
-                    .popup__form-area.w-100
+                    .popup__form-area.w-100.mt-3.mt-lg-0
                         .select-wrapper.d-flex.justify-content-end.w-100
                             select.popup__field.popup__field_bb.w-100(id="appointment-time")
                                 option(selected) 10:30-13:00
@@ -92,4 +92,5 @@
                         span.popup__checkbox-text Нажимая на кнопку, вы даете согласие на обработку персональных данных.
                     span.required-field.required-field_left.popup__item-wrap.popup__item-wrap_mt-30 Обязательное поле для заполнения
                 .col-12.col-md-5.offset-md-1
+                    input(type="hidden" id="appointment-date")
                     input.btn.button-first.button-first_mt.button-first_border.w-100(type="submit" value="запись на прием")

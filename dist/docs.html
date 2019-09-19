@@ -351,10 +351,10 @@
                 </div>
               </div>
               <div class="col-12 col-lg-5 d-flex flex-column justify-content-between align-items-end">
-                <div class="popup__form-area w-100 mt-md-3 mt-lg-0 mb-md-3 mb-lg-0">
+                <div class="popup__form-area w-100 mt-3 mt-lg-0 mb-md-3 mb-lg-0">
                   <div class="datepicker" id="datepicker"></div>
                 </div>
-                <div class="popup__form-area w-100">
+                <div class="popup__form-area w-100 mt-3 mt-lg-0">
                   <div class="select-wrapper d-flex justify-content-end w-100">
                     <select class="popup__field popup__field_bb w-100" id="appointment-time">
                       <option selected>10:30-13:00</option>
@@ -384,6 +384,7 @@
                 </label><span class="required-field required-field_left popup__item-wrap popup__item-wrap_mt-30">Обязательное поле для заполнения</span>
               </div>
               <div class="col-12 col-md-5 offset-md-1">
+                <input type="hidden" id="appointment-date">
                 <input class="btn button-first button-first_mt button-first_border w-100" type="submit" value="запись на прием">
               </div>
             </div>
@@ -412,8 +413,10 @@
             <div class="wrap-950">
               <h2 class="title title_gray">лицензии и документы</h2>
               <hr class="title__hr title__hr_width" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames quis et egestas dictumst rhoncus dignissim rutrum. Ac eu augue urna, cursus a a imperdiet vulputate nibh. Mauris, at facilisis est mattis commodo rhoncus posuere. Massa duis
-                vestibulum quis maecenas sit diam.</p>
+              <div class="article__text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames quis et egestas dictumst rhoncus dignissim rutrum. Ac eu augue urna, cursus a a imperdiet vulputate nibh. Mauris, at facilisis est mattis commodo rhoncus posuere. Massa duis
+                  vestibulum quis maecenas sit diam.</p>
+              </div>
             </div>
           </div>
         </article>

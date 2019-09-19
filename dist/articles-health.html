@@ -351,10 +351,10 @@
                 </div>
               </div>
               <div class="col-12 col-lg-5 d-flex flex-column justify-content-between align-items-end">
-                <div class="popup__form-area w-100 mt-md-3 mt-lg-0 mb-md-3 mb-lg-0">
+                <div class="popup__form-area w-100 mt-3 mt-lg-0 mb-md-3 mb-lg-0">
                   <div class="datepicker" id="datepicker"></div>
                 </div>
-                <div class="popup__form-area w-100">
+                <div class="popup__form-area w-100 mt-3 mt-lg-0">
                   <div class="select-wrapper d-flex justify-content-end w-100">
                     <select class="popup__field popup__field_bb w-100" id="appointment-time">
                       <option selected>10:30-13:00</option>
@@ -384,6 +384,7 @@
                 </label><span class="required-field required-field_left popup__item-wrap popup__item-wrap_mt-30">Обязательное поле для заполнения</span>
               </div>
               <div class="col-12 col-md-5 offset-md-1">
+                <input type="hidden" id="appointment-date">
                 <input class="btn button-first button-first_mt button-first_border w-100" type="submit" value="запись на прием">
               </div>
             </div>
@@ -427,8 +428,9 @@
                 <form class="form-inline form-inline_margin-left form-inline_margin-top form-inline_margin-right">
                   <div class="select">
                     <select id="selectYears">
-                      <option value="all" data-year>все</option>
-                      <option selected value="2019" data-year>2019</option>
+                      <option disabled selected>выбрать год</option>
+                      <option value="all" data-year>все года</option>
+                      <option value="2019" data-year>2019</option>
                       <option value="2018" data-year>2018</option>
                       <option value="2017" data-year>2017</option>
                       <option value="2016" data-year>2016</option>
@@ -448,7 +450,7 @@
               <div class="row">
                 <div class="col-12" data-index="direction-1" data-year-item="2019" data-card>
                   <div class="card card_horizontal card_horizontal_margin">
-                    <img class="card__img" src="img/article-img-1.jpg" alt="Обложка статьи">
+                    <img class="card__img card__img_grayscale" src="img/article-img-1.jpg" alt="Обложка статьи">
                     <div class="card__description">
                       <h3 class="card__title" data-dotdotdot="article-img">«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности'</h3><span class="card__link">читать</span>
                       <a class="card__link_full" href="article.html"></a>
@@ -457,7 +459,7 @@
                 </div>
                 <div class="col-12" data-index="direction-3" data-year-item="2017" data-card>
                   <div class="card card_horizontal card_horizontal_margin">
-                    <img class="card__img" src="img/article-img-2.jpg" alt="Обложка статьи">
+                    <img class="card__img card__img_grayscale" src="img/article-img-2.jpg" alt="Обложка статьи">
                     <div class="card__description">
                       <h3 class="card__title" data-dotdotdot="article-img">«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности'</h3><span class="card__link">читать</span>
                       <a class="card__link_full" href="article.html"></a>
@@ -466,7 +468,7 @@
                 </div>
                 <div class="col-12" data-index="direction-1" data-year-item="2018" data-card>
                   <div class="card card_horizontal card_horizontal_margin">
-                    <img class="card__img" src="img/article-img-2.jpg" alt="Обложка статьи">
+                    <img class="card__img card__img_grayscale" src="img/article-img-2.jpg" alt="Обложка статьи">
                     <div class="card__description">
                       <h3 class="card__title" data-dotdotdot="article-img">«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности'</h3><span class="card__link">читать</span>
                       <a class="card__link_full" href="article.html"></a>
@@ -475,7 +477,7 @@
                 </div>
                 <div class="col-12" data-index="direction-2" data-year-item="2016" data-card>
                   <div class="card card_horizontal card_horizontal_margin">
-                    <img class="card__img" src="img/article-img-2.jpg" alt="Обложка статьи">
+                    <img class="card__img card__img_grayscale" src="img/article-img-2.jpg" alt="Обложка статьи">
                     <div class="card__description">
                       <h3 class="card__title" data-dotdotdot="article-img">«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности'</h3><span class="card__link">читать</span>
                       <a class="card__link_full" href="article.html"></a>

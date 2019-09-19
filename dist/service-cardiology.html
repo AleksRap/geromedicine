@@ -351,10 +351,10 @@
                 </div>
               </div>
               <div class="col-12 col-lg-5 d-flex flex-column justify-content-between align-items-end">
-                <div class="popup__form-area w-100 mt-md-3 mt-lg-0 mb-md-3 mb-lg-0">
+                <div class="popup__form-area w-100 mt-3 mt-lg-0 mb-md-3 mb-lg-0">
                   <div class="datepicker" id="datepicker"></div>
                 </div>
-                <div class="popup__form-area w-100">
+                <div class="popup__form-area w-100 mt-3 mt-lg-0">
                   <div class="select-wrapper d-flex justify-content-end w-100">
                     <select class="popup__field popup__field_bb w-100" id="appointment-time">
                       <option selected>10:30-13:00</option>
@@ -384,6 +384,7 @@
                 </label><span class="required-field required-field_left popup__item-wrap popup__item-wrap_mt-30">Обязательное поле для заполнения</span>
               </div>
               <div class="col-12 col-md-5 offset-md-1">
+                <input type="hidden" id="appointment-date">
                 <input class="btn button-first button-first_mt button-first_border w-100" type="submit" value="запись на прием">
               </div>
             </div>
@@ -412,11 +413,13 @@
             <div class="wrap-950">
               <h2 class="title title_gray">Прием (осмотр, консультация) врача-кардиолога первичный</h2>
               <hr class="title__hr title__hr_width" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae proin purus erat cras. Consectetur purus euismod dignissim arcu. Phasellus dui, sagittis sit nunc. Faucibus morbi accumsan, amet lectus enim pulvinar eget urna quam. Ornare ac
-                vivamus aliquet faucibus. Id venenatis, eget accumsan, diam amet amet, est. Faucibus nibh velit convallis ullamcorper neque leo ut. Nibh morbi volutpat ac in. Neque, est sed ornare lorem curabitur tincidunt. Tristique enim donec integer
-                enim, ut quisque. Tincidunt quam facilisis ipsum, malesuada maecenas vulputate consequat. Mattis amet diam sem non ipsum consectetur eu. Leo, at libero pulvinar tortor a. Sed accumsan eleifend scelerisque cursus viverra. Condimentum sagittis
-                in id magna cursus arcu potenti. Habitasse accumsan, a ac nisi mattis ut ornare id. Tempus magna cursus elit leo lacinia. Quis quis tincidunt viverra elementum. Viverra ultrices nullam quam sit sit amet nunc, pretium potenti. A id adipiscing
-                at orci.</p>
+              <div class="article__text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae proin purus erat cras. Consectetur purus euismod dignissim arcu. Phasellus dui, sagittis sit nunc. Faucibus morbi accumsan, amet lectus enim pulvinar eget urna quam. Ornare
+                  ac vivamus aliquet faucibus. Id venenatis, eget accumsan, diam amet amet, est. Faucibus nibh velit convallis ullamcorper neque leo ut. Nibh morbi volutpat ac in. Neque, est sed ornare lorem curabitur tincidunt. Tristique enim donec integer
+                  enim, ut quisque. Tincidunt quam facilisis ipsum, malesuada maecenas vulputate consequat. Mattis amet diam sem non ipsum consectetur eu. Leo, at libero pulvinar tortor a. Sed accumsan eleifend scelerisque cursus viverra. Condimentum
+                  sagittis in id magna cursus arcu potenti. Habitasse accumsan, a ac nisi mattis ut ornare id. Tempus magna cursus elit leo lacinia. Quis quis tincidunt viverra elementum. Viverra ultrices nullam quam sit sit amet nunc, pretium potenti.
+                  A id adipiscing at orci.</p>
+              </div>
             </div>
           </div>
         </article>

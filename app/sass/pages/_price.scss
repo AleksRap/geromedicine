@@ -24,10 +24,17 @@
   }
 
   &__pic {
+    position: relative;
     width: 100%;
     height: 28vw;
     max-height: 280px;
     overflow: hidden;
+
+    & .img {
+      width: 100%;
+      height: 100%;
+      transition: transform .25s ease-in;
+    }
 
     & img {
       width: 100%;
@@ -101,7 +108,7 @@
     word-wrap: break-word;
     text-align: right;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   & .accordion {
@@ -200,6 +207,10 @@
       &:hover {
 
         & .amenities__pic {
+
+          & .img {
+            transform: scale(1.2);
+          }
 
           & img {
             transform: scale(1.2);
@@ -302,6 +313,18 @@
       font-size: 14px;
       line-height: 17px;
       letter-spacing: 0.05em;
+    }
+  }
+
+  .card-b-block {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .card-b-header {
+
+    & a {
+      font-size: 18px;
     }
   }
 

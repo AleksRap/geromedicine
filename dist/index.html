@@ -351,10 +351,10 @@
                 </div>
               </div>
               <div class="col-12 col-lg-5 d-flex flex-column justify-content-between align-items-end">
-                <div class="popup__form-area w-100 mt-md-3 mt-lg-0 mb-md-3 mb-lg-0">
+                <div class="popup__form-area w-100 mt-3 mt-lg-0 mb-md-3 mb-lg-0">
                   <div class="datepicker" id="datepicker"></div>
                 </div>
-                <div class="popup__form-area w-100">
+                <div class="popup__form-area w-100 mt-3 mt-lg-0">
                   <div class="select-wrapper d-flex justify-content-end w-100">
                     <select class="popup__field popup__field_bb w-100" id="appointment-time">
                       <option selected>10:30-13:00</option>
@@ -384,6 +384,7 @@
                 </label><span class="required-field required-field_left popup__item-wrap popup__item-wrap_mt-30">Обязательное поле для заполнения</span>
               </div>
               <div class="col-12 col-md-5 offset-md-1">
+                <input type="hidden" id="appointment-date">
                 <input class="btn button-first button-first_mt button-first_border w-100" type="submit" value="запись на прием">
               </div>
             </div>
@@ -462,27 +463,29 @@
           </div>
         </div>
       </div>
-      <div class="wrap-info-about-us">
+      <div class="wrap-info-about-us wrap-1150">
         <div class="page-wrapper">
           <div class="info">
             <div class="row no-gutters">
               <div class="col-12 col-lg-6 pr-lg-3">
                 <div class="info__wrap" onclick="location.href='price.html'">
                   <div class="info__image">
-                    <div class="info__description">
-                      <h4 class="title title_white title_info">Услуги<br>и цены</h4>
-                      <hr class="info__hr">
-                    </div>
+                    <img src="img/price.jpg" alt="Картинка">
+                  </div>
+                  <div class="info__description">
+                    <h4 class="title title_white title_info">Услуги<br>и цены</h4>
+                    <hr class="info__hr">
                   </div>
                 </div>
               </div>
               <div class="col-12 col-lg-6 pl-lg-3">
-                <div class="info__wrap" onclick="location.href='our-specialist.html'">
-                  <div class="info__image info__image_edit">
-                    <div class="info__description">
-                      <h4 class="title title_white title_info">Наши<br>доктора</h4>
-                      <hr class="info__hr">
-                    </div>
+                <div class="info__wrap" onclick="location.href='price.html'">
+                  <div class="info__image">
+                    <img src="img/doctors.jpg" alt="Картинка">
+                  </div>
+                  <div class="info__description">
+                    <h4 class="title title_white title_info">Услуги<br>и цены</h4>
+                    <hr class="info__hr">
                   </div>
                 </div>
               </div>
@@ -520,307 +523,317 @@
           </div>
         </div>
       </div>
-      <div class="page-wrapper">
-        <div class="row container-fluid">
-          <div class="col-lg-12">
-            <h2 class="title title_margin">Отзывы</h2>
+      <div class="wrap-1150">
+        <div class="page-wrapper">
+          <div class="row container-fluid">
+            <div class="col-lg-12">
+              <h2 class="title title_margin">Отзывы</h2>
+            </div>
           </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-12 col-lg-10 offset-lg-1">
-            <div class="container-fluid">
-              <section class="comments comments_margin">
-                <div class="nav">
-                  <div class="nav nav-tabs swiper-second-pagination">
-                    <div class="button-second button-second_border button-second_active slide-0" data-clinic>о клинике</div>
-                    <div class="button-second button-second_border slide-1" data-specialist>о специалистах</div>
-                  </div>
-                </div>
-                <div class="swiper-second" data-clinic-wrap>
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Виктор</h5>
-                          <time class="comments__date" datetime="2011-11">8 августа 2019</time>
-                        </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил и провел диагностику. Помог принять правильное решение о госпитализации. Утром чувствовал
-                            себя намного лучше. Спасибо!</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Оксана</h5>
-                          <time class="comments__date" datetime="2011-11">14 августа 2015</time>
-                        </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Наталья</h5>
-                          <time class="comments__date" datetime="2011-11">14 августа 2015</time>
-                        </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Маша</h5>
-                          <time class="comments__date" datetime="2011-11">14 августа 2015</time>
-                        </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Света</h5>
-                          <time class="comments__date" datetime="2011-11">14 августа 2015</time>
-                        </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Оля</h5>
-                          <time class="comments__date" datetime="2011-11">14 августа 2015</time>
-                        </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
-                        </div>
-                      </div>
+          <div class="row no-gutters">
+            <div class="col-12 col-lg-10 offset-lg-1">
+              <div class="container-fluid">
+                <section class="comments comments_margin">
+                  <div class="nav">
+                    <div class="nav nav-tabs swiper-second-pagination">
+                      <div class="button-second button-second_border button-second_active slide-0" data-clinic>о клинике</div>
+                      <div class="button-second button-second_border slide-1" data-specialist>о специалистах</div>
                     </div>
                   </div>
-                  <nav>
-                    <div class="pagination-2 pagination-2_no-border">
-                      <div class="pagination__item swiper-navigation-prev">
-                        <div class="arrow">
-                          <a class="pagination__link pagination__link_prew"></a>
+                  <div class="swiper-second" data-clinic-wrap>
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Виктор</h5>
+                            <time class="comments__date" datetime="2011-11">8 августа 2019</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил и провел диагностику. Помог принять правильное решение о госпитализации. Утром чувствовал
+                              себя намного лучше. Спасибо!</p>
+                          </div>
                         </div>
                       </div>
-                      <div class="pagination__item arrow-right swiper-navigation-next">
-                        <div class="arrow">
-                          <a class="pagination__link pagination__link_next"></a>
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Оксана</h5>
+                            <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                          </div>
                         </div>
                       </div>
-                      <button class="btn button-second button-second_padding button-second_order" onclick="location.href='feedback.html'">смотреть все</button>
-                    </div>
-                  </nav>
-                </div>
-                <div class="swiper-thrity swiper_view_off" data-specialist-wrap>
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Виктор12</h5>
-                          <time class="comments__date" datetime="2011-11">8 августа 2019</time>
-                        </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил и провел диагностику. Помог принять правильное решение о госпитализации. Утром чувствовал
-                            себя намного лучше. Спасибо!</p>
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Наталья</h5>
+                            <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Оксана12</h5>
-                          <time class="comments__date" datetime="2011-11">14 августа 2015</time>
-                        </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Наталья12</h5>
-                          <time class="comments__date" datetime="2011-11">14 августа 2015</time>
-                        </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Маша</h5>
+                            <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Маша12</h5>
-                          <time class="comments__date" datetime="2011-11">14 августа 2015</time>
-                        </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Света</h5>
+                            <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Света12</h5>
-                          <time class="comments__date" datetime="2011-11">14 августа 2015</time>
-                        </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Оля</h5>
+                            <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="comments__body">
-                        <div class="comments__names">
-                          <h5 class="comments__name">Оля12</h5>
-                          <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                    <nav>
+                      <div class="pagination-2 pagination-2_no-border">
+                        <div class="pagination__item swiper-navigation-prev">
+                          <div class="arrow">
+                            <a class="pagination__link pagination__link_prew"></a>
+                          </div>
                         </div>
-                        <div class="comments__text">
-                          <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                        <div class="pagination__item arrow-right swiper-navigation-next">
+                          <div class="arrow">
+                            <a class="pagination__link pagination__link_next"></a>
+                          </div>
                         </div>
+                        <button class="btn button-second button-second_padding button-second_order" onclick="location.href='feedback.html'">смотреть все</button>
                       </div>
-                    </div>
+                    </nav>
                   </div>
-                  <nav>
-                    <div class="pagination-2 pagination-2_no-border">
-                      <div class="pagination__item swiper-navigation-prev">
-                        <div class="arrow">
-                          <a class="pagination__link pagination__link_prew"></a>
+                  <div class="swiper-thrity swiper_view_off" data-specialist-wrap>
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Виктор12</h5>
+                            <time class="comments__date" datetime="2011-11">8 августа 2019</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил и провел диагностику. Помог принять правильное решение о госпитализации. Утром чувствовал
+                              себя намного лучше. Спасибо!</p>
+                          </div>
                         </div>
                       </div>
-                      <div class="pagination__item arrow-right swiper-navigation-next">
-                        <div class="arrow">
-                          <a class="pagination__link pagination__link_next"></a>
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Оксана12</h5>
+                            <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                          </div>
                         </div>
                       </div>
-                      <button class="btn button-second button-second_padding button-second_order" onclick="location.href='feedback.html'">смотреть все</button>
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Наталья12</h5>
+                            <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Маша12</h5>
+                            <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Света12</h5>
+                            <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="comments__body">
+                          <div class="comments__names">
+                            <h5 class="comments__name">Оля12</h5>
+                            <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                          </div>
+                          <div class="comments__text">
+                            <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </nav>
-                </div>
-              </section>
+                    <nav>
+                      <div class="pagination-2 pagination-2_no-border">
+                        <div class="pagination__item swiper-navigation-prev">
+                          <div class="arrow">
+                            <a class="pagination__link pagination__link_prew"></a>
+                          </div>
+                        </div>
+                        <div class="pagination__item arrow-right swiper-navigation-next">
+                          <div class="arrow">
+                            <a class="pagination__link pagination__link_next"></a>
+                          </div>
+                        </div>
+                        <button class="btn button-second button-second_padding button-second_order" onclick="location.href='feedback.html'">смотреть все</button>
+                      </div>
+                    </nav>
+                  </div>
+                </section>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="articles">
         <div class="articles__wrap">
-          <section class="page-wrapper container-fluid">
-            <h2 class="title title_margin">Статьи</h2>
-            <div class="articles_img row">
-              <div class="col-md-6 col-12">
-                <div class="card card_margin">
-                  <img class="card__img card__img_mh card__img_grayscale" src="img/article-img-2.jpg" alt="Обложка статьи" />
-                  <div class="card__description">
-                    <time class="card__data" datetime="2011-11">вчера</time>
-                    <h3 class="card__title" data-dotdotdot="article-img">Вакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августе</h3><a class="card__link" href="article.html">читать</a>
-                    <a class="card__link_full" href="article.html"></a>
+          <div class="wrap-1150">
+            <section class="page-wrapper container-fluid">
+              <h2 class="title title_margin">Статьи</h2>
+              <div class="articles_img row">
+                <div class="col-md-6 col-12">
+                  <div class="card card_margin">
+                    <img class="card__img card__img_mh card__img_grayscale" src="img/article-img-2.jpg" alt="Обложка статьи" />
+                    <div class="card__description">
+                      <time class="card__data" datetime="2011-11">вчера</time>
+                      <h3 class="card__title" data-dotdotdot="article-img">Вакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августе</h3><a class="card__link" href="article.html">читать</a>
+                      <a class="card__link_full" href="article.html"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="card card_margin">
+                    <img class="card__img card__img_mh card__img_grayscale" src="img/article-img-1.jpg" alt="Обложка статьи" />
+                    <div class="card__description">
+                      <time class="card__data" datetime="2011-11">21 июля</time>
+                      <h3 class="card__title" data-dotdotdot="article-img">«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности,«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности</h3><a class="card__link" href="article.html">читать</a>
+                      <a class="card__link_full" href="article.html"></a>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-12">
-                <div class="card card_margin">
-                  <img class="card__img card__img_mh card__img_grayscale" src="img/article-img-1.jpg" alt="Обложка статьи" />
-                  <div class="card__description">
-                    <time class="card__data" datetime="2011-11">21 июля</time>
-                    <h3 class="card__title" data-dotdotdot="article-img">«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности,«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности</h3><a class="card__link" href="article.html">читать</a>
-                    <a class="card__link_full" href="article.html"></a>
+              <div class="articles_no-img row">
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="card card_background card_display">
+                    <div class="card__description card__description_margin">
+                      <time class="card__data" datetime="2011-11">20 июля</time>
+                      <h3 class="card__title card__title_height" data-dotdotdot="article-no-img">Найден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозгаНайден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозгаНайден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозгаНайден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозгаНайден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозгаНайден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозга</h3><a class="card__link" href="article.html">читать</a>
+                      <a class="card__link_full" href="article.html"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="card card_background card_display">
+                    <div class="card__description card__description_margin">
+                      <time class="card__data" datetime="2011-11">20 июля</time>
+                      <h3 class="card__title card__title_height" data-dotdotdot="article-no-img">Найден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозга</h3><a class="card__link" href="article.html">читать</a>
+                      <a class="card__link_full" href="article.html"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="card card_background card_display">
+                    <div class="card__description card__description_margin">
+                      <time class="card__data" datetime="2011-11">20 июля</time>
+                      <h3 class="card__title card__title_height" data-dotdotdot="article-no-img">Найден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозга</h3><a class="card__link" href="article.html">читать</a>
+                      <a class="card__link_full" href="article.html"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-12">
+                  <div class="card card_background card_display">
+                    <div class="card__description card__description_margin">
+                      <time class="card__data" datetime="2011-11">20 июля</time>
+                      <h3 class="card__title card__title_height" data-dotdotdot="article-no-img">Найден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозга</h3><a class="card__link" href="article.html">читать</a>
+                      <a class="card__link_full" href="article.html"></a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="articles_no-img row">
-              <div class="col-lg-3 col-sm-6 col-12">
-                <div class="card card_background card_display">
-                  <div class="card__description card__description_margin">
-                    <time class="card__data" datetime="2011-11">20 июля</time>
-                    <h3 class="card__title card__title_height" data-dotdotdot="article-no-img">Найден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозгаНайден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозгаНайден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозгаНайден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозгаНайден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозгаНайден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозга</h3><a class="card__link" href="article.html">читать</a>
-                    <a class="card__link_full" href="article.html"></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6 col-12">
-                <div class="card card_background card_display">
-                  <div class="card__description card__description_margin">
-                    <time class="card__data" datetime="2011-11">20 июля</time>
-                    <h3 class="card__title card__title_height" data-dotdotdot="article-no-img">Найден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозга</h3><a class="card__link" href="article.html">читать</a>
-                    <a class="card__link_full" href="article.html"></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6 col-12">
-                <div class="card card_background card_display">
-                  <div class="card__description card__description_margin">
-                    <time class="card__data" datetime="2011-11">20 июля</time>
-                    <h3 class="card__title card__title_height" data-dotdotdot="article-no-img">Найден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозга</h3><a class="card__link" href="article.html">читать</a>
-                    <a class="card__link_full" href="article.html"></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6 col-12">
-                <div class="card card_background card_display">
-                  <div class="card__description card__description_margin">
-                    <time class="card__data" datetime="2011-11">20 июля</time>
-                    <h3 class="card__title card__title_height" data-dotdotdot="article-no-img">Найден способ быстрого обнаружения различий в ДНК донора и реципиента при пересадке костного мозга</h3><a class="card__link" href="article.html">читать</a>
-                    <a class="card__link_full" href="article.html"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
-        <div class="page-wrapper container-fluid"><a class="no-opacity btn button-second" href="articles-health.html">смотреть все</a>
+        <div class="wrap-1150">
+          <div class="page-wrapper container-fluid"><a class="no-opacity btn button-second" href="articles-health.html">смотреть все</a>
+          </div>
         </div>
       </div>
-      <div class="map map_margin">
-        <div class="page-wrapper container-fluid">
-          <div class="row w-100 no-gutters">
-            <div class="col-12 col-md-6">
-              <div class="map__description">
-                <h3 class="title title_margin">где нас найти?</h3>
-                <div class="map__text">
-                  <p>Клиника патронажа и геронтологии
-                    <br>«Геромедицина»
-                    <br>Россия, Москва, Открытое шоссе, д. 48, стр. 2</p>
+      <div class="wrap-1150">
+        <div class="map map_margin">
+          <div class="page-wrapper container-fluid">
+            <div class="row w-100 no-gutters">
+              <div class="col-12 col-md-6">
+                <div class="map__description">
+                  <h3 class="title title_margin">где нас найти?</h3>
+                  <div class="map__text">
+                    <p>Клиника патронажа и геронтологии
+                      <br>«Геромедицина»
+                      <br>Россия, Москва, Открытое шоссе, д. 48, стр. 2</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="map__img">
-                <!-- Добавить песочницу-->
-                <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae68f42cb23099a3be9a721c0a4dfc5fcc502100375ac00c6941008c9172c0c87&amp;lang=ru_RU&amp;scroll=true;"></script>
+              <div class="col-12 col-md-6">
+                <div class="map__img">
+                  <!-- Добавить песочницу-->
+                  <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae68f42cb23099a3be9a721c0a4dfc5fcc502100375ac00c6941008c9172c0c87&amp;lang=ru_RU&amp;scroll=true;"></script>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="ask-form">
-        <div class="page-wrapper container-fluid">
-          <div class="row">
-            <div class="col-md-6 col-12">
-              <div class="ask-form__title">
-                <h3 class="title title_red title_margin">появились вопросы?<br>напишите нам и мы ответим</h3>
+      <div class="w-100">
+        <div class="ask-form">
+          <div class="page-wrapper container-fluid">
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="ask-form__title">
+                  <h3 class="title title_red title_margin">появились вопросы?<br>напишите нам и мы ответим</h3>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 col-12">
-              <div class="row no-gutters">
-                <div class="col-12 col-xl-8">
-                  <form class="ask-form__form">
-                    <input type="text" placeholder="ФИО" required>
-                    <input type="text" id="email" placeholder="E-mail" required pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
-                    <textarea placeholder="Комментарий" required></textarea>
-                    <button class="button-second button-second_white-border-no-top button-second_width" type="submit">отправить</button>
-                  </form>
+              <div class="col-md-6 col-12">
+                <div class="row no-gutters">
+                  <div class="col-12 col-xl-8">
+                    <form class="ask-form__form">
+                      <input type="text" placeholder="ФИО" required>
+                      <input type="text" id="email" placeholder="E-mail" required pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
+                      <textarea placeholder="Комментарий" required></textarea>
+                      <button class="button-second button-second_white-border-no-top button-second_width" type="submit">отправить</button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
