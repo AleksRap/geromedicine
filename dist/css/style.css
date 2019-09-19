@@ -1624,11 +1624,15 @@ a.logo:hover {
     height: 380px;
     margin-bottom: 40px; }
     .card_doctor .card__description {
+      position: relative;
       font-weight: 600;
       margin: 0;
-      padding: 30px 20px 20px 20px; }
+      padding: 30px 20px 40px 20px; }
       .card_doctor .card__description span {
-        margin-top: 40px; }
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: left; }
     .card_doctor .card__title {
       font-weight: 600;
       margin: 0; }
