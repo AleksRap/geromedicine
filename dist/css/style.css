@@ -3106,9 +3106,7 @@ a {
   font-family: 'Inter', sans-serif;
   font-weight: normal;
   font-size: 18px;
-  line-height: 164%;
-  max-height: 90px;
-  overflow: hidden; }
+  line-height: 164%; }
 
 .result__words {
   color: #DA3E0D; }
