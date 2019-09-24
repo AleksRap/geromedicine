@@ -3104,10 +3104,12 @@ a {
   font-family: 'Inter', sans-serif;
   font-weight: normal;
   font-size: 18px;
-  line-height: 164%; }
+  line-height: 164%;
+  max-height: 90px;
+  overflow: hidden; }
 
 .result__words {
-  color: #679100; }
+  color: #DA3E0D; }
 
 .result .pagination-2 {
   border-top: 0; }
@@ -3119,7 +3121,7 @@ a {
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.05em;
-  color: #DA3E0D;
+  color: #679100;
   display: inline-block; }
   .tags_mt {
     margin-top: 35px; }
