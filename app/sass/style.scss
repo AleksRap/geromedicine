@@ -573,12 +573,20 @@ input:focus, textarea:focus, select:focus {
 }
 
 
-/* Обертка для буйного текстового редактора - использовать везде, где есть буйный редактор*/
-.wysiwig-content * {
+/* Обертка для текстового редактора. Чтобы использовать - тексту из редактора добавьте обертку
+с классом "wysiwig-content", а тегу body id="wysiwig-content" */
+
+body#wysiwig-content .wysiwig-content * {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 164%;
-  color: black;
+  color: #434343;
+}
+
+@media (max-width: 768px) {
+  body#wysiwig-content .wysiwig-content * {
+    font-size: 16px;
+  }
 }
