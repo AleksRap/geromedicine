@@ -156,6 +156,17 @@
   color: #F55E21;
 }
 
+@media (max-height: 768px) and (min-width: 768px){
+  .navbar-first {
+    padding-top: 20px;
+  }
+
+  .navbar-second {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
 @media (max-width: 1200px) {
   .navbar-second {
 

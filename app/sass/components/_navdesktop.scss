@@ -75,3 +75,9 @@
     display: none;
   }
 }
+
+@media (max-height: 768px) and (min-width: 768px) {
+  .dropdown-menu {
+    margin-top: 24px;
+  }
+}

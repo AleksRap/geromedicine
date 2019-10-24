@@ -342,16 +342,6 @@ a {
   }
 }
 
-.stock {
-  .amenities__pic {
-    background: url("../img/stock.jpg") 50%/100% no-repeat;
-  }
-
-  .title {
-    margin-top: 0;
-  }
-}
-
 .amenities-name {
 
   .article p:last-child {
@@ -377,12 +367,6 @@ a {
 @media (max-width: 992px) {
   .mb-200-60 {
     margin-bottom: 60px;
-  }
-
-  .stock {
-    .amenities__pic {
-      background: url("../img/stock.jpg") 50%/180% no-repeat;
-    }
   }
 }
 
@@ -540,7 +524,7 @@ a {
     }
 
     .contacts {
-      min-width: 290px;
+      min-width: 240px;
     }
   }
 }
@@ -576,4 +560,25 @@ input:focus, textarea:focus, select:focus {
   outline-width: 0!important;
   outline-style: none!important;
   box-shadow: inset 0 0 0 2px #679100 !important;
+}
+
+@media (max-height: 768px) and (min-width: 768px){
+  .docs {
+    margin-bottom: 70px;
+  }
+
+  .mb-200-60 {
+    margin-bottom: 140px;
+  }
+}
+
+
+/* Обертка для буйного текстового редактора - использовать везде, где есть буйный редактор*/
+.wysiwig-content * {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 164%;
+  color: black;
 }

@@ -135,3 +135,9 @@
     }
   }
 }
+
+@media (max-height: 768px) and (min-width: 768px) {
+  .comments_margin {
+    margin-bottom: 70px;
+  }
+}
