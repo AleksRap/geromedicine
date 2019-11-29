@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/favicon.ico">
+</head>
+
+<body style="overflow-x: hidden; margin: 0; padding: 0;">
+  <div style="width: 100vw; height: 100vh; background-color: white; display: flex; flex-direction: column; align-items: center;">
+    <div class="logo-link">
+      <img src="svg/logo2.svg" style="width: 100%; height: 100%; object-fit: contain; object-position: center;">
+    </div>
+    <div class="text-wrapper">
+      <p>На сайте проводятся технические работы</p>
+      <p>Приносим извинения за неудобства!</p>
+    </div><span class="text-span">По всем вопросам обращаться по телефону: <a href="tel:79250029936"> +7 (925) 002 99 36</a></span>
+    <style>
+      @font-face {
+          font-family: 'Akrobat';
+          src: local("Akrobat Bold"), local("Akrobat-Bold"), url("../fonts/Akrobatbold.woff2") format("woff2"), url("../fonts/Akrobatbold.woff") format("woff"), url("../fonts/Akrobatbold.ttf") format("truetype");
+          font-weight: 700;
+          font-style: normal;
+        }
+        @font-face {
+          font-family: 'Inter';
+          font-style:  normal;
+          font-weight: 400;
+          font-display: swap;
+          src: url("../fonts/Inter-Regular.woff2") format("woff2"),
+          url("../fonts/Inter-Regular.woff") format("woff");
+        }
+        
+        .logo-link {
+          max-width: 520px;
+          max-height: 320px;
+          margin-bottom: 45px;
+          margin-top: auto;
+        }
+        
+        .text-wrapper {
+          margin-bottom: auto;
+        }
+        
+        .text-wrapper p {
+          max-width: 780px;
+          width: 100%;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: 'Akrobat', sans-serif;
+          font-weight: 500;
+          font-size: 36px;
+          margin: 0;
+          color: #434343;
+        }
+        
+        .text-span {
+          text-align: center;
+          font-family: 'Inter',
+          sans-serif;
+          font-size: 18px;
+          line-height: 164%;
+          color: #434343;
+          display: inline-block;
+          margin-bottom: 80px
+        }
+        
+        .text-span a {
+          color: #434343;
+          text-decoration: none;
+          padding-left: 20px;
+        }
+        
+        @media (max-width: 768px) {
+          .logo-link {
+              width: 90%;
+          }
+        }
+        
+        @media (max-width: 576px) {
+        
+          .logo-link {
+             width: 60%;
+          }
+          .text-wrapper p {
+            font-size: 28px;
+          }
+          .text-span {
+              font-size: 16px;
+          }
+          .text-span a {
+              padding-left: 0;
+          }
+        }
+    </style>
+  </div>
+</body>
+
+</html>
