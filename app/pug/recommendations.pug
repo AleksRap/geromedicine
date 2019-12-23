@@ -11,10 +11,16 @@ block header
 block content
     main
         .page-wrapper.container-fluid
-            .breadcrumbs
-                a(href="index.html") главная
+            .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+                span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+                    a(itemprop="item" href="/") главная
+                        meta(itemprop="name" content="Главная")
+                        meta(itemprop="position" content="1")
                 span /
-                span рекомендации
+                span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+                    a(itemprop="item" href="recommendations.html") рекомендации
+                        meta(itemprop="name" content="Рекомендации")
+                        meta(itemprop="position" content="2")
 
 
             .recommendations.recommendations_margin.container-fluid

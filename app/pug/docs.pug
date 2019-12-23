@@ -11,12 +11,21 @@ block header
 block content
     main
         .page-wrapper.container-fluid
-            .breadcrumbs
-                a(href="index.html") главная
+            .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+                span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+                    a(itemprop="item" href="/") главная
+                        meta(itemprop="name" content="Главная")
+                        meta(itemprop="position" content="1")
                 span /
-                a(href="about-us.html") о клинике
+                span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+                    a(itemprop="item" href="about-us.html") о клинике
+                        meta(itemprop="name" content="О клинике")
+                        meta(itemprop="position" content="2")
                 span /
-                span лицензии и документы
+                span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+                    a(itemprop="item" href="contact.html") лицензии и документы
+                        meta(itemprop="name" content="Лицензии и документы")
+                        meta(itemprop="position" content="3")
 
             article.article
                 +article('лицензии и документы','','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames quis et egestas dictumst rhoncus dignissim rutrum. Ac eu augue urna, cursus a a imperdiet vulputate nibh. Mauris, at facilisis est mattis commodo rhoncus posuere. Massa duis vestibulum quis maecenas sit diam.')

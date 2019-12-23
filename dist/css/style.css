@@ -39,7 +39,8 @@
   color: #E9EFE8;
   background-color: #679100;
   padding: 1.3em 4em;
-  font-weight: 600; }
+  font-weight: 600;
+  text-transform: uppercase; }
   .button-first:hover {
     color: #E9EFE8; }
   .button-first_noactive {
@@ -61,7 +62,8 @@
   background: transparent;
   color: #F55E21;
   padding: 1.3em 2em;
-  font-weight: 600; }
+  font-weight: 600;
+  text-transform: uppercase; }
   .button-second:hover {
     border: 2px solid #679100;
     background-color: #679100;
@@ -91,7 +93,8 @@
   z-index: 12;
   -webkit-transition: left .25s ease-in;
   -o-transition: left .25s ease-in;
-  transition: left .25s ease-in; }
+  transition: left .25s ease-in;
+  text-transform: uppercase; }
   .button-appointment::before {
     content: '';
     width: 17px;
@@ -113,7 +116,8 @@
   z-index: 11;
   -webkit-transition: left .25s ease-in;
   -o-transition: left .25s ease-in;
-  transition: left .25s ease-in; }
+  transition: left .25s ease-in;
+  text-transform: uppercase; }
   .button-doctor-call::before {
     content: '';
     width: 17px;

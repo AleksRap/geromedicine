@@ -11,12 +11,21 @@ block header
 block content
     main
         .page-wrapper.container-fluid.amenities-name
-            .breadcrumbs
-                a(href="index.html") главная
+            .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+                span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+                    a(itemprop="item" href="/") главная
+                        meta(itemprop="name" content="Главная")
+                        meta(itemprop="position" content="1")
                 span /
-                a(href="our-specialist.html") услуги и цены
+                span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+                    a(itemprop="item" href="price.html") услуги и цены
+                        meta(itemprop="name" content="Услуги и цены")
+                        meta(itemprop="position" content="2")
                 span /
-                a(href="name-service-cardiology.html") кардиология
+                span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+                    a(itemprop="item" href="name-service-cardiology.html") кардиология
+                        meta(itemprop="name" content="Кардиология")
+                        meta(itemprop="position" content="3")
                 span /
 
             article.article
