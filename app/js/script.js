@@ -84,6 +84,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  if (document.querySelectorAll("[data-dotdotdot=article-img2]")) {
+    let wrapperOne = document.querySelectorAll("[data-dotdotdot=article-img2]");
+    let optionsOne = {
+      ellipsis: "\u2026 ",
+      height: 140
+    };
+
+    for (let i = 0; i < wrapperOne.length; i++) {
+      new Dotdotdot(wrapperOne[i], optionsOne);
+    }
+  }
+
   if (document.querySelectorAll("[data-dotdotdot=article-img-new]")) {
     let wrapperOne = document.querySelectorAll("[data-dotdotdot=article-img]");
     let optionsOne = {

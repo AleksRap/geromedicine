@@ -1,11 +1,15 @@
-mixin article-img(img, data, title, link)
-    .card.card_margin
+mixin article-img(img, data, title, link, green)
+    -var greenMode = green ? 'card_background' : ''
+    .card.card_margin(class=greenMode)
         img.card__img.card__img_mh.card__img_grayscale(src=img alt="Обложка статьи")
         .card__description
             if time === 0
             else
                 time(datetime="2011-11").card__data= data
-            h3.card__title(data-dotdotdot="article-img")= title
+            if green
+                h3.card__title(data-dotdotdot="article-img2")= title
+            else
+                h3.card__title(data-dotdotdot="article-img")= title
             a(href=link).card__link читать
             a(href=link).card__link_full
 
