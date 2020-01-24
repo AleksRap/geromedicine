@@ -1,0 +1,8 @@
+.ask-form.ask-form_white
+    .page-wrapper
+        h3.title.title_red.title_margin-40 появились вопросы?<br>напишите нам и мы ответим
+        form.ask-form__form.ask-form__form_white
+            input.ask-form__input.ask-form__input_white(type="text" placeholder="ФИО" required)
+            input.ask-form__input.ask-form__input_white(type="text" id="email" placeholder="E-mail" required pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})")
+            textarea.ask-form__textarea.ask-form__textarea_white(placeholder="Комментарий" required)
+            button.button-second.button-second_width.ask-form__button-second(type="submit") отправить
