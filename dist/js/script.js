@@ -344,6 +344,18 @@ $(document).ready(function () {
   $('#call-checkbox').on('click', function () {
     $("[value='вызов врача']").toggleClass('button-first_noactive')
   });
+
+
+  // Плавная прокрутка до якоря
+  $("a[href*='$']").click(function (e) {
+    e.preventDefault();
+    let elementClick = $(this).attr("href").split('');
+    elementClick.splice(0, 1, '#');
+    let normalName = elementClick.join('');
+    let destination = $(normalName).offset().top - 80;
+    $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 1100);
+    return false;
+  });
 });
 
 
