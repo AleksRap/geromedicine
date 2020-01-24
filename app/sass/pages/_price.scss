@@ -6,6 +6,21 @@
     margin-bottom: 80px;
   }
 
+  &__more {
+    color: #F55E21;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+
+    @media (max-width: 576px) {
+      font-size: 12px;
+    }
+
+    &:hover {
+      color: #F55E21;
+    }
+  }
+
   &__wrap {
     position: relative;
     width: 100%;
@@ -90,9 +105,6 @@
     position: absolute;
     right: 50px;
     bottom: 80px;
-  }
-
-  &__next {
     font-size: 20px;
     color: #fff;
   }
@@ -128,12 +140,18 @@
 
 .card-spoiler {
   position: relative;
-  border: 2px solid #E9EFE8;
-  border-bottom: 0;
+  background-color: #E9EFE8;
+  border-bottom: 2px solid white;
 
   &:last-child {
-    border-bottom: 2px solid #E9EFE8;
+    border-bottom: 0;
+
+    .card-b-block:last-child {
+      border-bottom: 2px solid #E9EFE8;
+    }
   }
+
+
 }
 
 .card-spoiler-full {
@@ -149,26 +167,26 @@
   padding: 20px 40px;
   position: relative;
 
-  &:hover {
-    background-color: #679100;
-    color: #fff;
-    
-    a {
-      color: #fff;
-    }
-
-    & .plus {
-      background: url("../svg/plus-white.svg") 50%/contain no-repeat;
-    }
-
-    & .plus[aria-expanded=true] {
-      background: url("../svg/minus-white.svg") 50%/contain no-repeat;
-    }
-
-    & a {
-      opacity: 1;
-    }
-  }
+  //&:hover {
+  //  background-color: #679100;
+  //  color: #fff;
+  //
+  //  a {
+  //    color: #fff;
+  //  }
+  //
+  //  & .plus {
+  //    background: url("../svg/plus-white.svg") 50%/contain no-repeat;
+  //  }
+  //
+  //  & .plus[aria-expanded=true] {
+  //    background: url("../svg/minus-white.svg") 50%/contain no-repeat;
+  //  }
+  //
+  //  & a {
+  //    opacity: 1;
+  //  }
+  //}
 
   & a {
     font-weight: 600;
@@ -191,16 +209,35 @@
 }
 
 .card-b-body{
-  padding: 15px 40px 60px 150px;
-  background-color: #E9EFE8;
+  width: 100%;
 }
 
 .card-b-block {
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 40px;
   font-weight: normal;
   font-size: 18px;
+
+  background-color: #fff;
+  border: 2px solid #E9EFE8;
+  border-bottom: 0;
+
+  &:hover {
+    background-color: #679100;
+    color: white;
+  }
+
+  &:first-child {
+    background-color: #E9EFE8;
+  }
+
+  &:last-child {
+    margin-bottom: -2px;
+  }
+
+  &_more {
+    padding-top: 5px;
+  }
 
   & .col-2 {
     min-width: 120px;
@@ -276,8 +313,8 @@
     padding: 10px 20px;
   }
 
-  .card-b-body{
-    padding: 10px 20px;
+  .card-b-block {
+    padding: 5px 20px 10px 20px;
   }
 }
 
@@ -327,7 +364,6 @@
   }
 
   .card-b-block {
-    padding-top: 12px;
     padding-bottom: 12px;
   }
 

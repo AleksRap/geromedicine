@@ -42,128 +42,112 @@ block content
                         p Здесь представлены цены нашего клинического обслуживания, патронаж рассчитывается индивидуально, звоните!
 
 
-                    <div class="accordion" id="accordionExample">
-                        <div class="card-spoiler">
-                          <div class="card-b">
-                            <div class="card-b-header" id="headingOne">
-                              <h5 class="mb-0">
-                                <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Диагностика</a>
-                                <a href="#" class="plus" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"></a>
-                                <a href="#" class="card-spoiler-full" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"></a>
-                              </h5>
-                            </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                              <div class="card-b-body">
-                                .card-b-block
+                    #accordionExample.accordion
+                        .card-spoiler
+                          .card-b
+                            #headingOne.card-b-header
+                              h5.mb-0
+                                a(href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne") Диагностика
+                                a(href="#" class="plus" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne")
+                                a(href="#" class="card-spoiler-full" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne")
+                            #collapseOne.collapse(aria-labelledby="headingOne" data-parent="#accordionExample")
+                              .card-b-body
+                                .card-b-block.card-b-block_more
                                     .row
-                                        .col.d-flex.justify-content-end.amenities__name
-                                            a(href='name-service-cardiology.html') Подробнее о направлении
+                                        .col.d-flex
+                                            a.amenities__more(href='name-service-cardiology.html') Подробнее о направлении
                                 .card-b-block
                                     a.card-spoiler-full(href="service-cardiology.html")
                                     .row
-                                        .col-12.col-sm-8
+                                        .col-8
                                             span.amenities__name Прием (осмотр, консультация) врача-кардиолога первичный
-                                        .col-12.col-sm-4.mt-1.mt-sm-0
+                                        .col-4.mt-1.mt-sm-0
                                             span.amenities__cost 1 500₽
                                 .card-b-block
                                     a.card-spoiler-full(href="service-cardiology.html")
                                     .row
-                                        .col-12.col-sm-8
+                                        .col-8
                                             span.amenities__name Прием (осмотр, консультация) врача-кардиолога повторный
-                                        .col-12.col-sm-4.mt-1.mt-sm-0
+                                        .col-4.mt-1.mt-sm-0
                                             span.amenities__cost 1 200₽
                                 .card-b-block
                                     a.card-spoiler-full(href="service-cardiology.html")
                                     .row
-                                        .col-12.col-sm-8
+                                        .col-8.col-sm-8
                                             span.amenities__name Прием, консультация врача-специалиста к.м.н.
-                                        .col-12.col-sm-4.mt-1.mt-sm-0
+                                        .col-4.mt-1.mt-sm-0
                                             span.amenities__cost 2 500₽
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card-spoiler">
-                          <div class="card-b">
-                            <div class="card-b-header" id="headingTwo">
-                              <h5 class="mb-0">
-                                <a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Кардиология</a>
-                                <a href="#" class="plus" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"></a>
-                                <a href="#" class="card-spoiler-full" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"></a>
-                            </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                              <div class="card-b-body">
-                                .card-b-block
+
+                        .card-spoiler
+                          .card-b
+                            #headingTwo.card-b-header
+                              h5.mb-0
+                                a(href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") Кардиология
+                                a(href="#" class="plus" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+                                a(href="#" class="card-spoiler-full" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+                            #collapseTwo.collapse(aria-labelledby="headingTwo" data-parent="#accordionExample")
+                              .card-b-body
+                                .card-b-block.card-b-block_more
                                     .row
-                                        .col.d-flex.justify-content-end.amenities__name
-                                            a(href='name-service-cardiology.html') Подробнее о направлении
+                                        .col.d-flex
+                                            a.amenities__more(href='name-service-cardiology.html') Подробнее о направлении
                                 .card-b-block
                                     a.card-spoiler-full(href="service-cardiology.html")
                                     .row
-                                        .col-12.col-sm-8
+                                        .col-8
                                             span.amenities__name Прием (осмотр, консультация) врача-кардиолога первичный
-                                        .col-12.col-sm-4.mt-1.mt-sm-0
+                                        .col-4.mt-1.mt-sm-0
                                             span.amenities__cost 1 500₽
                                 .card-b-block
                                     a.card-spoiler-full(href="service-cardiology.html")
                                     .row
-                                        .col-12.col-sm-8
+                                        .col-8
                                             span.amenities__name Прием (осмотр, консультация) врача-кардиолога повторный
-                                        .col-12.col-sm-4.mt-1.mt-sm-0
+                                        .col-4.mt-1.mt-sm-0
                                             span.amenities__cost 1 200₽
                                 .card-b-block
                                     a.card-spoiler-full(href="service-cardiology.html")
                                     .row
-                                        .col-12.col-sm-8
+                                        .col-8
                                             span.amenities__name Прием, консультация врача-специалиста к.м.н.
-                                        .col-12.col-sm-4.mt-1.mt-sm-0
+                                        .col-4.mt-1.mt-sm-0
                                             span.amenities__cost индивидуально
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card-spoiler">
-                          <div class="card-b">
-                            <div class="card-b-header" id="headingThree">
-                              <h5 class="mb-0">
-                                <a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Андрология</a>
-                                <a href="#" class="plus" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></a>
-                                <a href="#" class="card-spoiler-full" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"></a>
-                              </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                              <div class="card-b-body">
-                                .card-b-block
+
+                        .card-spoiler
+                          .card-b
+                            #headingThree.card-b-header
+                              h5.mb-0
+                                a(href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree") Андрология
+                                a(href="#" class="plus" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
+                                a(href="#" class="card-spoiler-full" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree")
+
+                            #collapseThree.collapse(aria-labelledby="headingThree" data-parent="#accordionExample")
+                              .card-b-body
+                                .card-b-block.card-b-block_more
                                     .row
-                                        .col.d-flex.justify-content-end.amenities__name
-                                            a(href='name-service-cardiology.html') Подробнее о направлении
+                                        .col.d-flex
+                                            a.amenities__more(href='name-service-cardiology.html') Подробнее о направлении
                                 .card-b-block
                                     a.card-spoiler-full(href="service-cardiology.html")
                                     .row
-                                        .col-12.col-sm-8
+                                        .col-8
                                             span.amenities__name Прием (осмотр, консультация) врача-кардиолога первичный
-                                        .col-12.col-sm-4.mt-1.mt-sm-0
+                                        .col-4.mt-1.mt-sm-0
                                             span.amenities__cost 2 500₽
                                 .card-b-block
                                     a.card-spoiler-full(href="service-cardiology.html")
                                     .row
-                                        .col-12.col-sm-8
+                                        .col-8
                                             span.amenities__name Прием (осмотр, консультация) врача-кардиолога повторный
-                                        .col-12.col-sm-4.mt-1.mt-sm-0
+                                        .col-4.mt-1.mt-sm-0
                                             span.amenities__cost 2 500₽
                                 .card-b-block
                                     a.card-spoiler-full(href="service-cardiology.html")
                                     .row
-                                        .col-12.col-sm-8
+                                        .col-8
                                             span.amenities__name Прием, консультация врача-специалиста к.м.н.
-                                        .col-12.col-sm-4.mt-1.mt-sm-0
+                                        .col-4.mt-1.mt-sm-0
                                             span.amenities__cost 2 500₽
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
 
 
 
