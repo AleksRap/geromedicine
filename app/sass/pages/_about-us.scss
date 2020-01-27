@@ -13,7 +13,7 @@
     & p {
 
       &:first-of-type {
-        margin-top: 100px;
+        margin-top: 80px;
       }
     }
   }
@@ -53,8 +53,7 @@
 }
 
 .directions {
-  margin-top: 80px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   margin-left: -60px;
   padding: 60px;
   border: 2px solid #E9EFE8;
@@ -94,10 +93,10 @@
 
 
 .certificates {
-  margin-top: 120px;
+  margin-top: 40px;
 
   &__wrap {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
 
   & .title {
@@ -118,7 +117,7 @@
   box-sizing: content-box;
 
   &_margin-bottom {
-    margin-bottom: 240px;
+    margin-bottom: 40px;
   }
 
   & img {

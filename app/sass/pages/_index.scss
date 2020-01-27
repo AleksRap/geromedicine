@@ -13,15 +13,15 @@ body {
   width: 100%;
 
   &_margin {
-    margin-top: 60px;
-    margin-bottom: 120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .swiper-slide {
     position: relative;
     max-width: 100vw;
     height: 460px;
-    max-height: 640px;
+    max-height: 460px;
     font-size: 18px;
     background: #fff;
     /* Center slide text vertically */
@@ -56,7 +56,7 @@ body {
     &__wrap {
       z-index: 2;
       position: absolute;
-      height: 640px;
+      height: 460px;
       width: 46%;
       left: 0;
       bottom: 0;
@@ -203,7 +203,7 @@ body {
 }
 
 .info {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 
   &__wrap {
     position: relative;
@@ -264,7 +264,7 @@ body {
   position: relative;
 
   &_margin {
-    margin-bottom: 160px;
+    margin-bottom: 100px;
   }
 
   &__background-wrap {
@@ -318,19 +318,19 @@ body {
     bottom: -63px;
 
     @media (max-width: 992px) {
-      bottom: -197px;
+      bottom: -241px;
     }
     @media (max-width: 562px) {
-      bottom: -226px;
+      bottom: -270px;
     }
     @media (max-width: 504px) {
-      bottom: -255px;
+      bottom: -299px;
     }
     @media (max-width: 365px) {
-      bottom: -284px;
+      bottom: -308px;
     }
     @media (max-width: 328px) {
-      bottom: -313px;
+      bottom: -358px;
     }
   }
 
@@ -352,11 +352,21 @@ body {
   }
 
   &__link {
+    display: inline-block;
     color: #F55E21;
     text-decoration: none;
     text-transform: uppercase;
+    border: 2px solid #E9EFE8;
+    background-color: #fff;
+    padding: 20px 15px;
+    font-weight: bold;
+
+    @media (max-width: 365px) {
+      padding: 10px;
+    }
 
     &:hover {
+      opacity: 1;
       color: #F55E21;
     }
   }
@@ -406,13 +416,13 @@ body {
 
 .articles_no-img {
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 .articles {
 
   &_mb {
-    margin-bottom: 140px;
+    margin-bottom: 40px;
   }
 
   &__wrap {

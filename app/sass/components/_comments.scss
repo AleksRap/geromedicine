@@ -5,7 +5,7 @@
   }
 
   &_margin {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
 
   &__wrap {
@@ -27,8 +27,7 @@
   }
 
   &__names {
-    padding-top: 30px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
     min-width: 185px;
   }
 
@@ -47,8 +46,6 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 164%;
-    padding-top: 30px;
-    padding-bottom: 40px;
   }
 
   & a:hover {
