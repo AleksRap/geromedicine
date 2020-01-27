@@ -1,5 +1,12 @@
 .article {
 
+  li {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+  }
+
   &__pic-wrap {
     position: relative;
     width: 100%;
@@ -61,7 +68,7 @@
 .article_margin {
 
   & p:last-child {
-    margin-bottom: 220px;
+    margin-bottom: 60px;
   }
 }
 

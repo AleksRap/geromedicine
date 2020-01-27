@@ -22,6 +22,36 @@ mixin article(title, img, text1, text2, text3)
                     if text3
                         p=text3
 
+mixin article2(title, img, text1, text2, text3)
+    .wrap-950_pd
+        .wrap-950
+            h2.title.title_gray= title
+            hr.title__hr.title__hr_width
+            if img
+                .article__pic-wrap
+                    .article__pic.article__pic_grayscale
+                        img(src= img alt="Обложка статьи")
+                p= text1
+
+                .list
+                    ul
+                        li пункт
+                        li пункт
+
+
+                if text2
+                    p=text2
+                if text3
+                    p=text3
+
+            else
+                .article__text
+                    p= text1
+                    if text2
+                        p=text2
+                    if text3
+                        p=text3
+
 
 mixin article-color(title, img, text1, text2, text3)
     .wrap-950_pd
