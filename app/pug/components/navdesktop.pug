@@ -2,52 +2,75 @@
     ul.nav.align-items-center
         li.nav-item.dropdown
             if pageId === 1
-                a.nav-link.nav-link_active.dropdown-toggle(href="about-us.html" id="navbarDropdownMenuLinkClinic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") О клинике
+                a.nav-link.nav-link_active.dropdown-toggle(href="about-us.html" id="navbarDropdownMenuLinkClinic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                    h3 О клинике
             else
-                a.nav-link.dropdown-toggle(href="about-us.html" id="navbarDropdownMenuLinkClinic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") О клинике
+                a.nav-link.dropdown-toggle(href="about-us.html" id="navbarDropdownMenuLinkClinic" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                    h3 О клинике
             .dropdown-menu(aria-labelledby="navbarDropdownMenuLinkClinic")
-                a.dropdown-item(href="about-us.html") Информация о клинике
-                a.dropdown-item(href="docs.html") Лицензия и документы
-                a.dropdown-item(href="legal-information.html") Правовая информация
+                a.dropdown-item(href="about-us.html")
+                    h3 Информация о клинике
+                a.dropdown-item(href="docs.html")
+                    h3 Лицензия и документы
+                a.dropdown-item(href="legal-information.html")
+                    h3 Правовая информация
         li.nav-item.dropdown
             if pageId === 2
-                a.nav-link.nav-link_active.dropdown-toggle(href="price.html" id="navbarDropdownMenuLinkPrise" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Услуги и цены
+                a.nav-link.nav-link_active.dropdown-toggle(href="price.html" id="navbarDropdownMenuLinkPrise" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                    h3 Услуги и цены
             else
-                a.nav-link.dropdown-toggle(href="price.html" id="navbarDropdownMenuLinkPrise" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Услуги и цены
+                a.nav-link.dropdown-toggle(href="price.html" id="navbarDropdownMenuLinkPrise" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                    h3 Услуги и цены
             .dropdown-menu(aria-labelledby="navbarDropdownMenuLinkPrise")
-                a.dropdown-item(href="price.html") Услуги и цены
-                a.dropdown-item(href="name-service-patronage.html") Патронаж
+                a.dropdown-item(href="price.html")
+                    h3 Услуги и цены
+                a.dropdown-item(href="name-service-patronage.html")
+                    h3 Патронаж
         li.nav-item
             if pageId === 3
-                a.nav-link.nav-link_active(href="programme.html") Программы
+                a.nav-link.nav-link_active(href="programme.html")
+                    h3 Программы
             else
-                a.nav-link(href="programme.html") Программы
+                a.nav-link(href="programme.html")
+                    h3 Программы
         li.nav-item
             if pageId === 4
-                a.nav-link.nav-link_active(href="our-specialist.html") Специалисты
+                a.nav-link.nav-link_active(href="our-specialist.html")
+                    h3 Специалисты
             else
-                a.nav-link(href="our-specialist.html") Специалисты
+                a.nav-link(href="our-specialist.html")
+                    h3 Специалисты
         li.nav-item
             if pageId === 5
-                a.nav-link.nav-link_active(href="stock.html") Акции
+                a.nav-link.nav-link_active(href="stock.html")
+                    h3 Акции
             else
-                a.nav-link(href="stock.html") Акции
+                a.nav-link(href="stock.html")
+                    h3 Акции
         li.nav-item.dropdown
             if pageId === 6
-                a.nav-link.nav-link_active.dropdown-toggle(href="articles-health.html" id="navbarDropdownMenuLinkArticle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Статьи
+                a.nav-link.nav-link_active.dropdown-toggle(href="articles-health.html" id="navbarDropdownMenuLinkArticle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                    h3 Статьи
             else
-                a.nav-link.dropdown-toggle(href="articles-health.html" id="navbarDropdownMenuLinkArticle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Статьи
+                a.nav-link.dropdown-toggle(href="articles-health.html" id="navbarDropdownMenuLinkArticle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                    h3 Статьи
             .dropdown-menu(aria-labelledby="navbarDropdownMenuLinkArticle")
-                a.dropdown-item(href="articles-health.html") Статьи о здоровье
-                a.dropdown-item(href="recommendations.html") Рекомендации
+                a.dropdown-item(href="articles-health.html")
+                    h3 Статьи о здоровье
+                a.dropdown-item(href="recommendations.html")
+                    h3 Рекомендации
         li.nav-item
             if pageId === 7
-                a.nav-link.nav-link_active(href="feedback.html") Отзывы
+                a.nav-link.nav-link_active(href="feedback.html")
+                    h3 Отзывы
             else
-                a.nav-link(href="feedback.html") Отзывы
+                a.nav-link(href="feedback.html")
+                    h3 Отзывы
         li.nav-item
             if pageId === 8
-                a.nav-link.nav-link_active(href="contact.html") Контакты
+                a.nav-link.nav-link_active(href="contact.html")
+                    h3 Контакты
             else
-                a.nav-link(href="contact.html") Контакты
+                a.nav-link(href="contact.html")
+                    h3 Контакты
     include button-call

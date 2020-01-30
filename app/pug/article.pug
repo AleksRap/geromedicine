@@ -30,28 +30,22 @@ block content
                 .wrap-950_pd
                     .wrap-950
                         .slider.slider_margin-bottom
-                            <ul id="lightSlider">
-                            <li data-thumb="img/slidemin1.jpg" data-src="img/slide1.jpg">
-                            .about-us__video
-                                .about-us__overlay(id="about-us__overlay")
-                                video.slider__first(poster="img/transparent" id="video_about-us")
-                                    source(src="video/video.mp4" type="video/mp4")
-                                    source(src="video/video.webm" type="video/webm")
-                                    source(src="video/video.ogv" type="video/ogg")
-                            </li>
-                            <li data-thumb="img/slidemin2.jpg" data-src="img/slide2.jpg">
-                            <img src="img/slide2.jpg" alt="Фото на слайдере"/>
-                            </li>
-                            <li data-thumb="img/slidemin3.jpg" data-src="img/slide3.jpg">
-                            <img src="img/slide3.jpg" alt="Фото на слайдере" />
-                            </li>
-                            <li data-thumb="img/slidemin4.jpg" data-src="img/slide4.jpg">
-                            <img src="img/slide4.jpg" alt="Фото на слайдере" />
-                            </li>
-                            <li data-thumb="img/doctor-1.jpg" data-src="img/doctor-1.jpg">
-                            <img src="img/doctor-1.jpg" alt="Фото на слайдере" />
-                            </li>
-                            </ul>
+                            ul#lightSlider
+                                li(data-thumb="img/slidemin1.jpg" data-src="img/slide1.jpg")
+                                    .about-us__video
+                                        .about-us__overlay(id="about-us__overlay")
+                                        video.slider__first(poster="img/transparent" id="video_about-us")
+                                            source(src="video/video.mp4" type="video/mp4")
+                                            source(src="video/video.webm" type="video/webm")
+                                            source(src="video/video.ogv" type="video/ogg")
+                                li(data-thumb="img/slidemin2.jpg" data-src="img/slide2.jpg")
+                                    img(src="img/slide2.jpg" alt="Фото на слайдере")
+                                li(data-thumb="img/slidemin3.jpg" data-src="img/slide3.jpg")
+                                    img(src="img/slide3.jpg" alt="Фото на слайдере")
+                                li(data-thumb="img/slidemin4.jpg" data-src="img/slide4.jpg")
+                                    img(src="img/slide4.jpg" alt="Фото на слайдере")
+                                li(data-thumb="img/doctor-1.jpg" data-src="img/doctor-1.jpg")
+                                    img(src="img/doctor-1.jpg" alt="Фото на слайдере")
 
         include components/ask-form
 

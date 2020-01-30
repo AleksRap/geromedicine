@@ -8,6 +8,10 @@
     padding-left: 0.4em;
     padding-right: 0.4em;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &:hover {
 
       &:before {
@@ -33,6 +37,13 @@
         height: 2px;
         background-color: #434343;
       }
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 0;
     }
   }
 }
@@ -66,6 +77,13 @@
 
   &:hover {
     background-color: transparent;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 0;
   }
 }
 

@@ -37,6 +37,16 @@
     margin-left: 0;
   }
 
+  & .nav-link {
+
+    h3 {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 0;
+    }
+  }
+
   & .button-first, & .button-second {
     margin-top: 20px;
     margin-left: 15px;
@@ -56,6 +66,7 @@
       content: '';
       position: absolute;
       right: 15px;
+      top: 18px;
       border: 0;
       width: 18px;
       height: 9px;
