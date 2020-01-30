@@ -2099,24 +2099,19 @@ body {
       @media (max-width: 992px) {
         .about-us__text_mb {
           margin-bottom: 15px; } }
-  .about-us__buttons {
+  .about-us__buttons_desktop {
     position: absolute;
     bottom: -63px; }
     @media (max-width: 992px) {
-      .about-us__buttons {
-        bottom: -241px; } }
-    @media (max-width: 562px) {
-      .about-us__buttons {
-        bottom: -270px; } }
-    @media (max-width: 504px) {
-      .about-us__buttons {
-        bottom: -299px; } }
-    @media (max-width: 365px) {
-      .about-us__buttons {
-        bottom: -308px; } }
-    @media (max-width: 328px) {
-      .about-us__buttons {
-        bottom: -358px; } }
+      .about-us__buttons_desktop {
+        display: none; } }
+  .about-us__buttons_mobile {
+    position: absolute;
+    top: 100%;
+    left: -2px; }
+    @media (min-width: 993px) {
+      .about-us__buttons_mobile {
+        display: none; } }
   .about-us__button {
     padding: 21px 65px;
     font-style: normal;
@@ -2125,6 +2120,7 @@ body {
     line-height: 17px;
     letter-spacing: 0.05em; }
   .about-us__address {
+    position: relative;
     padding: 135px 50px 110px 0; }
     @media (max-width: 992px) {
       .about-us__address {
@@ -2238,8 +2234,6 @@ body {
   .about-us__body {
     padding: 40px 20px 20px 20px;
     position: static; }
-  .about-us__buttons {
-    margin-left: -22px; }
   .info {
     margin-bottom: 30px; }
     .info__wrap {

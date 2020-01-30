@@ -314,23 +314,24 @@ body {
   }
 
   &__buttons {
-    position: absolute;
-    bottom: -63px;
 
-    @media (max-width: 992px) {
-      bottom: -241px;
+    &_desktop {
+      position: absolute;
+      bottom: -63px;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
     }
-    @media (max-width: 562px) {
-      bottom: -270px;
-    }
-    @media (max-width: 504px) {
-      bottom: -299px;
-    }
-    @media (max-width: 365px) {
-      bottom: -308px;
-    }
-    @media (max-width: 328px) {
-      bottom: -358px;
+
+    &_mobile {
+      position: absolute;
+      top: 100%;
+      left: -2px;
+
+      @media (min-width: 993px) {
+        display: none;
+      }
     }
   }
 
@@ -344,6 +345,7 @@ body {
   }
 
   &__address {
+    position: relative;
     padding: 135px 50px 110px 0;
 
     @media (max-width: 992px) {
@@ -496,10 +498,6 @@ body {
     &__body {
       padding: 40px 20px 20px 20px;
       position: static;
-    }
-
-    &__buttons {
-      margin-left: -22px;
     }
   }
 
