@@ -33,39 +33,27 @@
                                     span.required-field Направление
                             .col-12.col-md-8.d-flex.justify-content-end
                                 .select-wrapper.d-flex.justify-content-end
-                                    select.popup__field(id="appointment-direction" required)
+                                    select.popup__field.popup__field_bb(id="appointment-direction" required)
                                         option(selected disabled value="") Выбрать направление
                                         option направление 1
                                         option направление 2
                                         option направление 3
-                    .popup__form-area
-                        .row.no-gutters.w-100
-                            .col-12.col-md-4
-                                label.popup__item-wrap.h-100(for="appointment-amenities")
-                                    span.required-field Услуга
-                            .col-12.col-md-8.d-flex.justify-content-end
-                                .select-wrapper.d-flex.justify-content-end
-                                    select.popup__field(id="appointment-amenities" required)
-                                        option(selected disabled value="") Выбрать услугу
-                                        option услуга 1
-                                        option услуга 2
-                                        option услуга 3
-                    .popup__form-area
-                        .row.no-gutters.w-100
-                            .col-12.col-md-4
-                                label.popup__item-wrap.h-100(for="appointment-doctor")
-                                    span Врач
-                            .col-12.col-md-8.d-flex.justify-content-end
-                                .select-wrapper.d-flex.justify-content-end
-                                    select.popup__field.popup__field_bb(id="appointment-doctor")
-                                        option(selected disabled value="") Выбрать врача
-                                        option доктор 1
-                                        option доктор 2
-                                        option доктор 3
+                    //.popup__form-area
+                    //    .row.no-gutters.w-100
+                    //        .col-12.col-md-4
+                    //            label.popup__item-wrap.h-100(for="appointment-doctor")
+                    //                span Врач
+                    //        .col-12.col-md-8.d-flex.justify-content-end
+                    //            .select-wrapper.d-flex.justify-content-end
+                    //                select.popup__field.popup__field_bb(id="appointment-doctor")
+                    //                    option(selected disabled value="") Выбрать врача
+                    //                    option доктор 1
+                    //                    option доктор 2
+                    //                    option доктор 3
 
 
                 .col-12.col-lg-5.d-flex.flex-column.justify-content-between.align-items-end
-                    .popup__form-area.w-100.mt-3.mt-lg-0.mb-md-3.mb-lg-0
+                    .popup__form-area.w-100.mt-3.mt-lg-0.mb-md-3
                         .datepicker(id="datepicker")
                     .popup__form-area.w-100.mt-3.mt-lg-0
                         .select-wrapper.d-flex.justify-content-end.w-100
