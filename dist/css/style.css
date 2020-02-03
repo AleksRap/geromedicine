@@ -181,7 +181,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
   .article p:first-of-type {
     margin-top: 80px; }
   .article p:last-child {
@@ -436,19 +436,24 @@
     background-color: #E9EFE8; }
     .ask-form__input::-webkit-input-placeholder {
       color: #434343;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase; }
     .ask-form__input::-moz-placeholder {
       color: #434343;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase; }
     .ask-form__input:-ms-input-placeholder {
       color: #434343;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase; }
     .ask-form__input::-ms-input-placeholder {
       color: #434343;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase; }
     .ask-form__input::placeholder {
       color: #434343;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase; }
     .ask-form__input:not(:first-child) {
       border-top: 0; }
     .ask-form__input_white {
@@ -463,19 +468,24 @@
     background-color: #E9EFE8; }
     .ask-form__textarea::-webkit-input-placeholder {
       color: #434343;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase; }
     .ask-form__textarea::-moz-placeholder {
       color: #434343;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase; }
     .ask-form__textarea:-ms-input-placeholder {
       color: #434343;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase; }
     .ask-form__textarea::-ms-input-placeholder {
       color: #434343;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase; }
     .ask-form__textarea::placeholder {
       color: #434343;
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: uppercase; }
     .ask-form__textarea_white {
       border: 2px solid #E9EFE8; }
 
@@ -804,6 +814,7 @@ a.logo:hover {
     position: relative;
     padding-left: 0.4em;
     padding-right: 0.4em;
+    height: 50px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -816,19 +827,11 @@ a.logo:hover {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-    .desktop-menu .nav-link:hover:before {
-      position: absolute;
-      bottom: -5px;
-      left: 0.6em;
-      right: 0.5em;
-      content: '';
-      height: 2px;
-      background-color: #434343; }
     .desktop-menu .nav-link_active {
       position: relative; }
-      .desktop-menu .nav-link_active:before {
+      .desktop-menu .nav-link_active::before {
         position: absolute;
-        bottom: -5px;
+        bottom: -1px;
         left: 0.6em;
         right: 0.5em;
         content: '';
@@ -849,7 +852,7 @@ a.logo:hover {
   color: #F55E21; }
 
 .dropdown-menu {
-  margin-top: 62px;
+  margin-top: -1px;
   margin-left: -15px;
   padding: 1.2em 0.5em;
   background-color: #E9EFE8;
@@ -2390,8 +2393,8 @@ body {
   .directions h3 {
     font-weight: 600;
     font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px; }
+    margin-top: 20px;
+    margin-bottom: 20px; }
   .directions ul {
     list-style: none; }
   .directions li {
@@ -2400,7 +2403,7 @@ body {
     margin-bottom: 5px;
     font-weight: normal;
     font-size: 18px;
-    line-height: 220%; }
+    line-height: 180%; }
     .directions li::before {
       position: absolute;
       top: 50%;
@@ -2996,7 +2999,7 @@ body {
 
 .list ul {
   list-style: none;
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
 
 .list li {
   position: relative;
@@ -3187,6 +3190,30 @@ a {
     bottom: 0;
     right: 0;
     left: 0; }
+
+.contacts__map .map__description {
+  padding-left: 40px;
+  padding-right: 40px; }
+
+.contacts__map .map__img {
+  height: 400px; }
+
+.contacts__map .title_margin {
+  margin-bottom: 30px; }
+
+.contacts__map .container-fluid {
+  padding-left: 0;
+  padding-right: 0; }
+
+.contacts__text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 164%;
+  color: #434343; }
+  .contacts__text_mb {
+    margin-bottom: 40px; }
 
 .all-contacts {
   padding-top: 20px;
@@ -3452,3 +3479,6 @@ body#wysiwig-content .wysiwig-content * {
 @media (max-width: 768px) {
   body#wysiwig-content .wysiwig-content * {
     font-size: 16px; } }
+
+nav.navbar .dropdown:hover > .dropdown-menu {
+  display: block; }

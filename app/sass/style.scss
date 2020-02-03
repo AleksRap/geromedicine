@@ -210,6 +210,40 @@ a {
   }
 }
 
+.contacts__map {
+
+  .map__description {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .map__img {
+    height: 400px;
+  }
+
+  .title_margin {
+    margin-bottom: 30px;
+  }
+
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.contacts__text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 164%;
+  color: #434343;
+
+  &_mb {
+    margin-bottom: 40px;
+  }
+}
+
 .all-contacts {
   padding-top: 20px;
   display: flex;
@@ -590,4 +624,9 @@ body#wysiwig-content .wysiwig-content * {
   body#wysiwig-content .wysiwig-content * {
     font-size: 16px;
   }
+}
+
+// бутстрап меню открывается по наведению
+nav.navbar .dropdown:hover > .dropdown-menu {
+  display: block;
 }

@@ -132,6 +132,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     new Dotdotdot(wrapperThree, optionsThree);
   }
+
+  if (document.querySelector('[data-dotdotdot="comment"]')) {
+    let wrapperFour = document.querySelectorAll('[data-dotdotdot="comment"]');
+    let optionsFour = {
+      ellipsis: "\u2026 ",
+      height: 200,
+    };
+
+    for (let i = 0; i < wrapperFour.length; i++) {
+      new Dotdotdot(wrapperFour[i], optionsFour);
+    }
+  }
 });
 
 
