@@ -1670,8 +1670,7 @@ a.logo:hover {
     -o-object-position: 50%;
        object-position: 50%; }
     .card__img_mh {
-      max-height: 200px;
-      min-height: 200px; }
+      height: 50%; }
     .card__img_grayscale {
       -webkit-filter: grayscale(1);
               filter: grayscale(1); }
@@ -1726,10 +1725,23 @@ a.logo:hover {
       position: relative;
       font-weight: 600;
       margin: 0;
-      padding: 30px 20px 40px 20px; }
+      padding: 20px 20px 20px 20px;
+      height: 50%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      overflow-y: hidden; }
       .card_doctor .card__description span {
-        position: absolute;
-        bottom: 10px;
         width: 100%;
         text-align: left; }
     .card_doctor .card__title {
