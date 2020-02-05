@@ -21,6 +21,10 @@
     justify-content: center;
     align-items: center;
 
+    &:hover {
+      background-color: #F55E21;
+      color: white !important;
+    }
 
     &_active {
       position: relative;
@@ -74,8 +78,8 @@
   margin-bottom: 6px;
 
   &:hover {
-    background-color: transparent;
-    color: #F55E21;
+    background-color: #F55E21;
+    color: white;
   }
 
   h3 {

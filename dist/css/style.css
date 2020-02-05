@@ -796,7 +796,8 @@
       height: calc(45px * 0.7); } }
 
 a.logo:hover {
-  opacity: 1; }
+  opacity: 0.7;
+  background-color: transparent; }
 
 .desktop-menu {
   display: -webkit-box;
@@ -834,6 +835,9 @@ a.logo:hover {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+    .desktop-menu .nav-link:hover {
+      background-color: #F55E21;
+      color: white !important; }
     .desktop-menu .nav-link_active {
       position: relative; }
       .desktop-menu .nav-link_active::before {
@@ -873,8 +877,8 @@ a.logo:hover {
   margin-top: 6px;
   margin-bottom: 6px; }
   .dropdown-item:hover {
-    background-color: transparent;
-    color: #F55E21; }
+    background-color: #F55E21;
+    color: white; }
   .dropdown-item h3 {
     font-weight: 600;
     font-size: 18px;
@@ -1278,7 +1282,6 @@ a.logo:hover {
   .navbar-first_mb {
     margin-bottom: 101px; }
   .navbar-first__text {
-    min-width: 410px;
     margin-left: 35px;
     margin-right: 20px;
     margin-bottom: 0;
@@ -1496,6 +1499,9 @@ a.logo:hover {
           justify-content: space-between;
   height: 100%;
   border-right: 2px solid #E9EFE8; }
+  @media (max-width: 1200px) {
+    .footer-info {
+      padding-right: 20px; } }
   .footer-info .nav {
     margin-top: 25px;
     margin-bottom: 40px;
@@ -1561,14 +1567,18 @@ a.logo:hover {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 16px; }
+  font-size: 18px;
+  margin-left: 50px; }
   @media (max-width: 1350px) {
     .contacts {
       font-size: 14px; } }
+  @media (max-width: 768px) {
+    .contacts {
+      margin-left: 0; } }
   .contacts__title {
     margin-bottom: 38px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 24px;
     letter-spacing: 0.05em; }
   .contacts__address {
@@ -1581,11 +1591,12 @@ a.logo:hover {
       line-height: 24px; }
   .contacts__number {
     margin-bottom: 4px;
-    font-size: 24px;
-    line-height: 24px; }
+    font-size: 30px;
+    line-height: 36px; }
     @media (max-width: 1350px) {
       .contacts__number {
-        font-size: 20px; } }
+        font-size: 20px;
+        line-height: 24px; } }
   .contacts__time {
     font-weight: normal;
     font-size: 18px; }
@@ -1625,10 +1636,6 @@ a.logo:hover {
   .social-link_ok {
     background: url("../svg/ok.svg") no-repeat;
     background-size: contain; }
-
-@media (max-width: 1200px) {
-  .footer-info {
-    padding-right: 20px; } }
 
 @media (max-width: 768px) {
   .footer {
@@ -3149,7 +3156,7 @@ a {
   cursor: pointer;
   color: #434343; }
   a:hover {
-    color: #F55E21;
+    color: #434343;
     text-decoration: none; }
   a:active {
     border: 0; }
