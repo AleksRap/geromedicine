@@ -24,15 +24,16 @@
     <header class="header">
       <div class="container-fluid navbar-first no-gutters">
         <div class="page-wrapper">
-          <nav class="navbar navbar_edit navbar-expand-xl justify-content-center"><a class="navbar-first__text navbar-first__text_display mr-auto" href="contact.html">Клиника патронажа и геронтологии «Геромедицина»<br>Россия, Москва, Открытое шоссе, д. 48, стр. 2</a>
-            <div class="collapse navbar-collapse">
-              <ul class="nav justify-content-end ml-auto">
+          <nav class="navbar navbar_edit navbar-expand-xl">
+            <a class="logo header__logo" href="index.html"></a>
+            <div class="collapse navbar-collapse ml-auto">
+              <ul class="nav">
                 <li class="nav-item"><a class="nav-link nav-link_search" href="search.html">Поиск</a>
                 </li>
-                <li class="nav-item"><a class="nav-link nav-link_cabinet" href="#">Личный кабинет</a>
-                </li>
-                <li class="nav-item"><a class="nav-link nav-link_comment popup-with-form" href="#form-popup-feedback">Оставить отзыв</a>
-                </li>
+                <!--li.nav-item-->
+                <!--  a.nav-link.nav-link_cabinet(href="#") Личный кабинет-->
+                <!--li.nav-item-->
+                <!--  a.nav-link.nav-link_comment.popup-with-form(href="#form-popup-feedback") Оставить отзыв-->
               </ul>
             </div>
             <div class="link-number-wrap"><a class="link-number" href="tel:88002000000">8 800 200 00 00</a>
@@ -45,8 +46,10 @@
         <div class="page-wrapper">
           <div class="row">
             <div class="col-12">
-              <nav class="navbar navbar-expand-xl">
-                <a class="logo" href="index.html"></a>
+              <nav class="navbar navbar-expand-xl"><a class="navbar-first__text navbar-first__text_display" href="$map">Москва, Открытое шоссе, д. 48, стр. 2</a>
+                <div class="navbar__logo">
+                  <a class="logo" href="index.html"></a>
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -120,6 +123,9 @@
                         </a>
                       </li>
                     </ul>
+                    <div class="button-feedback">
+                      <a class="link_full no-opacity popup-with-form" href="#form-popup-call-feedback"></a>
+                    </div>
                     <div class="button-doctor-call">
                       <a class="link_full no-opacity popup-with-form" href="#form-popup"></a>
                     </div>
@@ -343,6 +349,69 @@
               <input class="popup__checkbox inputbox" id="call-checkbox" type="checkbox" checked><span class="popup__checkbox-fake"></span><span class="popup__checkbox-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных.</span>
             </label><span class="required-field required-field_left popup__item-wrap_mt-15">Обязательное поле для заполнения</span>
             <input class="btn button-first button-first_mt button-first_border mb-5" type="submit" value="вызов врача">
+          </form>
+        </div>
+      </div>
+      <div class="white-popup mfp-hide" id="form-popup-call-feedback">
+        <div class="button-close mfp-close"></div>
+        <div class="popup__wrap">
+          <h2 class="title title_gray">Заказать обратный звонок</h2>
+          <form class="popup__form popup__form_mt">
+            <div class="popup__form-area">
+              <div class="row no-gutters w-100">
+                <div class="col-12 col-md-3">
+                  <label class="popup__item-wrap h-100" for="call-feedback-name"><span class="required-field">Ваше имя</span>
+                  </label>
+                </div>
+                <div class="col-12 col-md-9 d-flex justify-content-end">
+                  <input class="popup__field inputbox" id="call-feedback-name" type="text" placeholder="введите имя" required>
+                </div>
+              </div>
+            </div>
+            <div class="popup__form-area">
+              <div class="row no-gutters w-100">
+                <div class="col-12 col-md-3">
+                  <label class="popup__item-wrap h-100" for="call-feedback-tel"><span class="required-field">Телефон</span>
+                  </label>
+                </div>
+                <div class="col-12 col-md-9 d-flex justify-content-end">
+                  <input class="popup__field inputbox" id="call-feedback-tel" type="tel" placeholder="+7-(___)-_______" required>
+                </div>
+              </div>
+            </div>
+            <div class="popup__form-area">
+              <div class="row no-gutters w-100">
+                <div class="col-12 col-md-3">
+                  <label class="popup__item-wrap h-100" for="call-feedback-time"><span>Удобное время для звонка</span>
+                  </label>
+                </div>
+                <div class="col-12 col-md-9 d-flex justify-content-end">
+                  <div class="select-wrapper d-flex justify-content-end">
+                    <select class="popup__field popup__field_bb" id="call-feedback-time">
+                      <option selected>10:30-13:00</option>
+                      <option>13:00-14:00</option>
+                      <option>14:30-15:00</option>
+                      <option>15:00-16:00</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup__form-area">
+              <div class="row no-gutters w-100">
+                <div class="col-12 col-md-3">
+                  <label class="popup__item-wrap mt-3" for="call-feedback-comment"><span>Сообщение</span>
+                  </label>
+                </div>
+                <div class="col-12 col-md-9 d-flex justify-content-end">
+                  <textarea class="popup__textarea popup__textarea_mt popup__field popup__field_bb inputbox" id="call-feedback-comment" placeholder="введите ваш комментарий"></textarea>
+                </div>
+              </div>
+            </div>
+            <label class="popup__item-wrap popup__item-wrap_mt-30" for="call-feedback-checkbox">
+              <input class="popup__checkbox inputbox" id="call-feedback-checkbox" type="checkbox" checked><span class="popup__checkbox-fake"></span><span class="popup__checkbox-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных.</span>
+            </label><span class="required-field required-field_left popup__item-wrap_mt-15">Обязательное поле для заполнения</span>
+            <input class="btn button-first button-first_mt button-first_border mb-5" type="submit" value="отправить">
           </form>
         </div>
       </div>
@@ -614,7 +683,7 @@
           <div class="row">
             <div class="col-12 col-md-8">
               <div class="footer-info">
-                <h3 class="footer-info__title">Клиника<br><span class="footer-info__title_upp">геромедицина</span></h3>
+                <a class="logo" href="index.html"></a>
                 <ul class="nav">
                   <li class="nav-item">
                     <a class="nav-link" href="about-us.html">

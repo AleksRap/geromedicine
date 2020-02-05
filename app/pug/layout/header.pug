@@ -1,16 +1,16 @@
 header.header
   .container-fluid.navbar-first.no-gutters
     .page-wrapper
-      nav.navbar.navbar_edit.navbar-expand-xl.justify-content-center
-        a.navbar-first__text.navbar-first__text_display.mr-auto(href="contact.html") Клиника патронажа и геронтологии «Геромедицина»<br>Россия, Москва, Открытое шоссе, д. 48, стр. 2
-        .collapse.navbar-collapse
-          ul.nav.justify-content-end.ml-auto
+      nav.navbar.navbar_edit.navbar-expand-xl
+        a.logo.header__logo(href="index.html")
+        .collapse.navbar-collapse.ml-auto
+          ul.nav
             li.nav-item
               a.nav-link.nav-link_search(href="search.html") Поиск
-            li.nav-item
-              a.nav-link.nav-link_cabinet(href="#") Личный кабинет
-            li.nav-item
-              a.nav-link.nav-link_comment.popup-with-form(href="#form-popup-feedback") Оставить отзыв
+            //li.nav-item
+            //  a.nav-link.nav-link_cabinet(href="#") Личный кабинет
+            //li.nav-item
+            //  a.nav-link.nav-link_comment.popup-with-form(href="#form-popup-feedback") Оставить отзыв
         .link-number-wrap
           a.link-number(href="tel:88002000000") 8 800 200 00 00
           br
@@ -20,7 +20,9 @@ header.header
       .row
         .col-12
           nav.navbar.navbar-expand-xl
-            include ../components/logo
+            a.navbar-first__text.navbar-first__text_display(href="$map") Москва, Открытое шоссе, д. 48, стр. 2
+            .navbar__logo
+              include ../components/logo
             button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
               span.navbar-toggler-icon
             .collapse.navbar-collapse.justify-content-end(id="navbarNavDropdown")
@@ -28,6 +30,7 @@ header.header
               include ../components/navmobil
   include ../components/popup/feedback
   include ../components/popup/doctor-call
+  include ../components/popup/call-feedback
   include ../components/popup/appointment
   include ../components/popup/thanks-feedback
   include ../components/popup/thanks-appointment

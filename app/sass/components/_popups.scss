@@ -114,6 +114,10 @@
 
   &__textarea {
     height: 100px;
+
+    &_mt {
+      margin-top: -2px;
+    }
   }
 
   &__checkbox {

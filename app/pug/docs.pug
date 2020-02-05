@@ -56,9 +56,8 @@ block content
                         .row
                             each doc in docs
                                 .col-12.col-md-6
-                                    .doc
-                                        a(href=doc.link)
-                                        .doc__pic
+                                    a.doc(href=doc.href)
+                                        .doc__pic(style="background-image: url(svg/doc.svg)")
                                         span.doc__text=doc.text
 
 

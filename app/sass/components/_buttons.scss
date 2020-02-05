@@ -70,7 +70,7 @@
   }
 }
 
-.button-appointment, .button-doctor-call {
+.button-appointment, .button-doctor-call, .button-feedback {
   position: fixed;
   width: 180px;
   height: 80px;
@@ -83,16 +83,6 @@
   z-index: 12;
   transition: left .25s ease-in;
   text-transform: uppercase;
-
-  &::before {
-    content: '';
-    width: 17px;
-    height: 80px;
-    position: fixed;
-    left: calc(100vw - 17px);
-    bottom: 0;
-    background-color: #679100;
-  }
 
   &:hover {
     left: calc(100vw - 180px);
@@ -107,15 +97,18 @@
   transition: left .25s ease-in;
   text-transform: uppercase;
 
-  &::before {
-    content: '';
-    width: 17px;
-    height: 80px;
-    position: fixed;
-    left: calc(100vw - 17px);
-    bottom: 0;
-    background-color: #F55E21;
+  &:hover {
+    left: calc(100vw - 180px);
   }
+}
+
+.button-feedback {
+  bottom: 156px;
+  left: calc(100vw - 97px);
+  background: url("../svg/button-feedback.svg") 0 0/contain no-repeat;
+  z-index: 11;
+  transition: left .25s ease-in;
+  text-transform: uppercase;
 
   &:hover {
     left: calc(100vw - 180px);

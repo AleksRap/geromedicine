@@ -10,12 +10,19 @@
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.05em;
+
+  &__logo {
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 }
 
 .navbar-first {
   background-color: #E9EFE8;
-  padding-top: 30px;
-  padding-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   &_mb {
     margin-bottom: 101px;
@@ -23,10 +30,22 @@
 
   &__text {
     min-width: 410px;
-    margin-left: 40px;
+    margin-left: 35px;
+    margin-right: 20px;
     margin-bottom: 0;
+
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+
+    font-size: 16px;
+
+    @media (max-width: 1350px) {
+      font-size: 14px;
+    }
+    @media (max-width: 1200px) {
+      margin-right: auto;
+    }
 
     &::before {
       position: absolute;
@@ -48,8 +67,8 @@
 
 .navbar-second {
   background-color: #fff;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: 2px solid #E9EFE8;
 
   &_glue {
@@ -59,13 +78,22 @@
     z-index: 11;
   }
 
-  & .navbar-toggler-icon {
+  .navbar-toggler-icon {
     width: 89px;
     height: 17px;
     background: url("../svg/menu-button.svg") no-repeat;
   }
 
-  & [aria-expanded=true] .navbar-toggler-icon {
+  .nav-item {
+    padding-left: 2px;
+    padding-right: 2px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  [aria-expanded=true] .navbar-toggler-icon {
     width: 23px;
     height: 23px;
     background: url("../svg/menu-button-close.svg") no-repeat;
@@ -74,6 +102,14 @@
 
 .navbar {
   padding: 0;
+  position: relative;
+
+  &__logo {
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
 }
 
 .navbar_edit .nav-link {
@@ -83,18 +119,14 @@
 .navbar-first .nav-item {
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 20px;
+
+  @media (max-width: 1350px) {
+    font-size: 14px;
+  }
 
   &:last-child {
     padding-right: 40px;
-  }
-}
-
-.navbar-second .nav-item {
-  padding-left: 5px;
-  padding-right: 5px;
-
-  &:last-child {
-    padding-right: 0;
   }
 }
 
@@ -150,10 +182,28 @@
   }
 }
 
+.nav {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.link-number-wrap {
+
+  @media (max-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .link-number {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 30px;
+  line-height: 36px;
   color: #F55E21;
+
+  @media (max-width: 1350px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 @media (max-height: 768px) and (min-width: 768px){

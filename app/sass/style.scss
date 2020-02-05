@@ -75,8 +75,7 @@ a {
   color: #434343;
 
   &:hover {
-    color: #434343;
-    opacity: 0.6;
+    color: #F55E21;
     text-decoration: none;
   }
 
@@ -191,7 +190,9 @@ a {
     min-width: 25%;
     max-width: 25%;
     height: 100px;
-    background: url("../svg/doc.svg") 0 50%/contain no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   &__text {

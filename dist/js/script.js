@@ -25,16 +25,10 @@ jQuery(document).ready(function ($) {
 
 // Прилипание меню после прокрутки
 document.addEventListener("DOMContentLoaded", () => {
-  let scrolHight = 80;
+  let scrolHight = 135;
 
-  if ($(window).width() < 960 && $(window).width() > 768) {
-    scrolHight = 74;
-  }
-  if ($(window).width() <= 768 && $(window).width() > 576) {
-    scrolHight = 62;
-  }
-  if ($(window).width() <= 576) {
-    scrolHight = 52;
+  if ($(window).width() <= 768) {
+    scrolHight = 78;
   }
 
   $(window).scroll(function () {
@@ -188,7 +182,8 @@ document.addEventListener("DOMContentLoaded", () => {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    }
+    },
+    slideToClickedSlide: true
   });
 });
 
@@ -354,12 +349,20 @@ jQuery(function ($) {
 
 // Проверка согласия на обработку персональных данных
 $(document).ready(function () {
+
+  if (!(document.querySelector("#call-feedback-checkbox").hasAttribute('checked'))) {
+    $("[value='отправить']").addClass('button-first_noactive')
+  }
   if (!(document.querySelector("#appointment-checkbox").hasAttribute('checked'))) {
     $("[value='запись на прием']").addClass('button-first_noactive')
   }
   if (!(document.querySelector("#call-checkbox").hasAttribute('checked'))) {
     $("[value='вызов врача']").addClass('button-first_noactive')
   }
+
+  $('#call-feedback-checkbox').on('click', function () {
+    $("[value='отправить']").toggleClass('button-first_noactive')
+  });
 
   $('#appointment-checkbox').on('click', function () {
     $("[value='запись на прием']").toggleClass('button-first_noactive')
@@ -376,7 +379,7 @@ $(document).ready(function () {
     let elementClick = $(this).attr("href").split('');
     elementClick.splice(0, 1, '#');
     let normalName = elementClick.join('');
-    let destination = $(normalName).offset().top - 80;
+    let destination = $(normalName).offset().top - 130;
     $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 1100);
     return false;
   });
