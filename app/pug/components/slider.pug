@@ -1,37 +1,35 @@
 .swiper-container.swiper-container_margin.d-none.d-xl-block
   .swiper-wrapper
-    .swiper-slide
-      img(src="img/big-slide-1.jpg" alt="slide1")
-      .row
-        .col-11.offset-1
-          .swiper-slide__wrap
-            .swiper-slide__caption
-              h2 Отличные цены на обследование
-              .swiper-slide__description МРТ, Энцефолограмма, ЭКГ
-              .swiper-slide__text от 1900000000р
-            button.button-second(onclick="location.href='name-service-cardiology.html'") подробнее
 
-    .swiper-slide
-      img(src="img/big-slide-2.jpg" alt="slide2")
-      .row
-        .col-11.offset-1
-          .swiper-slide__wrap
-            .swiper-slide__caption
-              h2 Отличные цены
-              .swiper-slide__description МРТ, Энцефолограмма, ЭКГ
-              .swiper-slide__text от 150р
-            button.button-second(onclick="location.href='name-service-cardiology.html'") подробнее
+    -
+      arrInfo = [{
+        title: 'Отличные цены на обследование',
+        description: 'МРТ, Энцефолограмма, ЭКГ',
+        price: 'от 1900000000р',
+        img: 'img/big-slide-1.jpg'
+      }, {
+        title: 'Отличные цены',
+        description: 'МРТ, Энцефолограмма, ЭКГ',
+        price: 'от 150р',
+        img: 'img/big-slide-2.jpg'
+      }, {
+        title: 'На обследование',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar arcu lectus eget convallis in nec maecenas elit. Pharetra lobortis aliquam porttitor convallis amet ut.',
+        price: 'от 900р',
+        img: 'img/big-slide-3.jpg'
+      }];
 
-    .swiper-slide
-      img(src="img/big-slide-3.jpg" alt="slide3")
-      .row
-        .col-11.offset-1
+    each item in arrInfo
+      .swiper-slide
+        .swiper-slide__wrapper
           .swiper-slide__wrap
             .swiper-slide__caption
-              h2 На обследование
-              .swiper-slide__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar arcu lectus eget convallis in nec maecenas elit. Pharetra lobortis aliquam porttitor convallis amet ut.
-              .swiper-slide__text от 900р
+              h2=item.title
+              .swiper-slide__description(data-dotdotdot="slider")=item.description
+              .swiper-slide__text=item.price
             button.button-second(onclick="location.href='name-service-cardiology.html'") подробнее
+          .swiper-slide__img
+            img(src=item.img alt="slide1")
 
 
   .page-wrapper

@@ -10,6 +10,7 @@
 @import "components/appointment";
 @import "components/specialist";
 @import "components/datepicker";
+@import "components/slider-main";
 @import "layout/header";
 @import "layout/footer";
 @import "components/cards";
@@ -68,6 +69,15 @@ main {
 .page-wrapper {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.full-wrap {
+  width: 100%;
+
+  &_bt {
+    margin-top: -2px;
+    border-top: 2px solid #E9EFE8;
+  }
 }
 
 a {

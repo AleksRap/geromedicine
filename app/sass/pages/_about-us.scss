@@ -1,9 +1,5 @@
-.wrap-950 {
-  max-width: 950px;
-  &_pd {
-    padding-left: calc(28% - 266px);
-    padding-right: calc(70% - 665px);
-  }
+.wrap-max {
+  max-width: 1200px;
 }
 
 

@@ -2,7 +2,7 @@ extends layout/layout
 include mixins/cards
 
 block head
-    - var title = 'О специалисте';
+    - var title = 'О враче';
     - var pageId = 4;
 
 block header
@@ -18,89 +18,85 @@ block content
                         meta(itemprop="position" content="1")
                 span /
                 span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
-                    a(itemprop="item" href="our-specialist.html") специалисты
-                        meta(itemprop="name" content="Специалисты")
+                    a(itemprop="item" href="our-specialist.html") наши врачи
+                        meta(itemprop="name" content="Врачи")
                         meta(itemprop="position" content="2")
 
-            .wrap-950_pd
-                .wrap-950
-                    .profile
-                        .profile__info
-                            img.profile__pic(src="img/doctor-4.jpg" alt="Фото специалиста")
-                            .profile__text
-                                h1.title.title_gray волков геннадий<br>анатольевич
-                                span Кардиолог
-                                span Стаж: 15 лет
-                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                a.no-opacity.popup-with-form.btn.button-first.button-first_padding(href="#form-popup-appointment") запись на прием
-                        .profile__description
-                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A elementum suspendisse sed congue lobortis id. Dui ullamcorper mauris eget vitae, donec. Sed auctor duis porta lectus accumsan. Sed amet ultricies diam diam mus. Arcu curabitur in sed aliquet in id pharetra aliquet. Est a, non lobortis in lectus orci aliquam congue diam. Eleifend venenatis, augue amet elementum quis aliquam. Sed eget dictumst vitae risus ridiculus mollis nisi aliquam. Velit condimentum fames neque id mollis risus, massa, risus neque,. Urna tincidunt a, malesuada tellus sed habitasse. Mauris metus eget sapien varius. Semper feugiat quam viverra faucibus non. Volutpat neque risus sed facilisis a, ac.Ipsum, odio et dictum lectus phasellus egestas gravida sit. Turpis malesuada vitae et, felis, suspendisse est sed massa dolor. Sit molestie pretium non consequat sapien adipiscing. Quis aliquet odio arcu, eu vestibulum quam ultricies. Risus scelerisque mattis magna mattis.
+            .wrap-max
+                .profile
+                    .profile__info
+                        img.profile__pic(src="img/doctor-4.jpg" alt="Фото врача")
+                        .profile__text
+                            h1.title.title_gray волков геннадий<br>анатольевич
+                            span Кардиолог
+                            span Стаж: 15 лет
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            a.no-opacity.popup-with-form.btn.button-first.button-first_padding(href="#form-popup-appointment") запись на прием
+                    .profile__description
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A elementum suspendisse sed congue lobortis id. Dui ullamcorper mauris eget vitae, donec. Sed auctor duis porta lectus accumsan. Sed amet ultricies diam diam mus. Arcu curabitur in sed aliquet in id pharetra aliquet. Est a, non lobortis in lectus orci aliquam congue diam. Eleifend venenatis, augue amet elementum quis aliquam. Sed eget dictumst vitae risus ridiculus mollis nisi aliquam. Velit condimentum fames neque id mollis risus, massa, risus neque,. Urna tincidunt a, malesuada tellus sed habitasse. Mauris metus eget sapien varius. Semper feugiat quam viverra faucibus non. Volutpat neque risus sed facilisis a, ac.Ipsum, odio et dictum lectus phasellus egestas gravida sit. Turpis malesuada vitae et, felis, suspendisse est sed massa dolor. Sit molestie pretium non consequat sapien adipiscing. Quis aliquet odio arcu, eu vestibulum quam ultricies. Risus scelerisque mattis magna mattis.
 
 
-                    .our-specialist
-                        h2.title.title_gray Другие специалисты<br>этого направления
-                        hr.title__hr
+                .our-specialist
+                    h2.title.title_gray Другие врачи<br>этого направления
+                    hr.title__hr
 
-                    include components/specialist
+                include components/specialist
 
 
 
             .price.price_margin
-                .wrap-950_pd
-                    .wrap-950
-                        h2.title.title_gray.title_margin услуги
-                        .price__table
-                            .price__row
-                                span Прием (осмотр, консультация) врача-кардиолога первичный
-                                span.price__cost 1 500₽
-                                a.card-spoiler-full(href="service-cardiology.html")
-                            .price__row
-                                span Прием (осмотр, консультация) врача-кардиолога повторный
-                                span.price__cost 1 500₽
-                                a.card-spoiler-full(href="service-cardiology.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                span.price__cost 1 500₽
-                                a.card-spoiler-full(href="service-cardiology.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                span.price__cost 1 500₽
-                                a.card-spoiler-full(href="service-cardiology.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                span.price__cost 1 500₽
-                                a.card-spoiler-full(href="service-cardiology.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                span.price__cost 1 500₽
-                                a.card-spoiler-full(href="service-cardiology.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                span.price__cost 1 500₽
-                                a.card-spoiler-full(href="service-cardiology.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                span.price__cost 1 500₽
-                                a.card-spoiler-full(href="service-cardiology.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                span.price__cost 1 500₽
-                                a.card-spoiler-full(href="service-cardiology.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                span.price__cost 1 500₽
-                                a.card-spoiler-full(href="service-cardiology.html")
+                .wrap-max
+                    h2.title.title_gray.title_margin услуги
+                    .price__table
+                        .price__row
+                            span Прием (осмотр, консультация) врача-кардиолога первичный
+                            span.price__cost 1 500₽
+                            a.card-spoiler-full(href="service-cardiology.html")
+                        .price__row
+                            span Прием (осмотр, консультация) врача-кардиолога повторный
+                            span.price__cost 1 500₽
+                            a.card-spoiler-full(href="service-cardiology.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            span.price__cost 1 500₽
+                            a.card-spoiler-full(href="service-cardiology.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            span.price__cost 1 500₽
+                            a.card-spoiler-full(href="service-cardiology.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            span.price__cost 1 500₽
+                            a.card-spoiler-full(href="service-cardiology.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            span.price__cost 1 500₽
+                            a.card-spoiler-full(href="service-cardiology.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            span.price__cost 1 500₽
+                            a.card-spoiler-full(href="service-cardiology.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            span.price__cost 1 500₽
+                            a.card-spoiler-full(href="service-cardiology.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            span.price__cost 1 500₽
+                            a.card-spoiler-full(href="service-cardiology.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            span.price__cost 1 500₽
+                            a.card-spoiler-full(href="service-cardiology.html")
 
 
         .page-wrapper.container-fluid
-            .wrap-950_pd
-                .wrap-950
-                    h2.title.title_margin.title_display.title_red Отзывы
-            .wrap-950_pd
-                .wrap-950
-                    include components/comments
+            .wrap-max
+                h2.title.title_margin.title_display.title_red Отзывы
+            .wrap-max
+                include components/comments
             
-        include components/ask-form
+
 
 
 

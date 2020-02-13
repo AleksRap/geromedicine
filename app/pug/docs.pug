@@ -51,19 +51,18 @@ block content
                 }];
 
             .docs
-                .wrap-950_pd
-                    .wrap-950
-                        .row
-                            each doc in docs
-                                .col-12.col-md-6
-                                    a.doc(href=doc.href)
-                                        .doc__pic(style="background-image: url(svg/doc.svg)")
-                                        span.doc__text=doc.text
+                .wrap-max
+                    .row
+                        each doc in docs
+                            .col-12.col-md-6
+                                a.doc(href=doc.href)
+                                    .doc__pic(style="background-image: url(svg/doc.svg)")
+                                    span.doc__text=doc.text
 
 
 
 
-        include components/ask-form
+
 
 
 

@@ -1,6 +1,7 @@
 $(function () {
   $("#datepicker").datepicker({
-    onSelect: function (dateText, inst) {
+    minDate: new Date(),
+    onSelect: function (dateText, obj) {
       $('#appointment-date').val(dateText);
     }
   });
@@ -132,6 +133,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let optionsFour = {
       ellipsis: "\u2026 ",
       height: 200,
+    };
+
+    for (let i = 0; i < wrapperFour.length; i++) {
+      new Dotdotdot(wrapperFour[i], optionsFour);
+    }
+  }
+
+  if (document.querySelector('[data-dotdotdot="slider"]')) {
+    let wrapperFour = document.querySelectorAll('[data-dotdotdot="slider"]');
+    let optionsFour = {
+      ellipsis: "\u2026 ",
+      height: 85,
     };
 
     for (let i = 0; i < wrapperFour.length; i++) {
@@ -343,6 +356,7 @@ if (document.querySelector('#selectItem')) {
 // Maskedinput
 jQuery(function ($) {
   $("#call-tel").mask("+7 (999) 999-9999");
+  $("#call-feedback-tel").mask("+7 (999) 999-9999");
   $("#appointment-tel").mask("+7 (999) 999-9999");
 });
 

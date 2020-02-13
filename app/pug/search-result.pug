@@ -21,34 +21,31 @@ block content
                         meta(itemprop="name" content="Поиск")
                         meta(itemprop="position" content="2")
 
-            .wrap-950_pd
-                .wrap-950
-                    h1.title.title_gray Поиск
-                    hr.title__hr.title__hr_margin
+            .wrap-max
+                h1.title.title_gray Поиск
+                hr.title__hr.title__hr_margin
 
             .search.search_mb
-                .wrap-950_pd
-                    .wrap-950
-                        .form-inline_wrap
-                            form.form-inline.form-inline_margin-right(id="form-search")
-                                input.form-control.form-control_no-border.flex-grow-1.pl-sm-4(type="search" placeholder="введите поисковый запрос" aria-label="Search")
-                                button.btn.btn-search.btn-search_left(type="submit")
-                            form.form-inline
-                                .select
-                                    select
-                                        option(disabled selected) выбрать раздел сайта
-                                        option все разделы сайта
-                                        option направление 1
-                                        option направление 2
-                                        option направление 3
-                                        option направление 4
-                            span.button-second найти
+                .wrap-max
+                    .form-inline_wrap
+                        form.form-inline.form-inline_margin-right(id="form-search")
+                            input.form-control.form-control_no-border.flex-grow-1.pl-sm-4(type="search" placeholder="введите поисковый запрос" aria-label="Search")
+                            button.btn.btn-search.btn-search_left(type="submit")
+                        form.form-inline
+                            .select
+                                select
+                                    option(disabled selected) выбрать раздел сайта
+                                    option все разделы сайта
+                                    option направление 1
+                                    option направление 2
+                                    option направление 3
+                                    option направление 4
+                        span.button-second найти
 
                         hr.our-specialist__hr
 
 
-                .wrap-950_pd
-                    .wrap-950.d-flex.flex-column
+                    .d-flex.flex-column
 
                         span.search__result-text по запросу «Кардиолог» найдено 25 результатов
 
@@ -66,7 +63,7 @@ block content
                                         h5.result__name Мустафьев Омар Равиольевич
                                 .result__text
                                     p <span class="result__words">Кардиолог</span>
-                                a.tags.tags_mt(href="search-result.html") #специалисты
+                                a.tags.tags_mt(href="search-result.html") #врачи
                             .result__wrap(data-index="direction-1" data-amenities-item="amenities-4" data-card)
                                 .result__names
                                     a(href="#")
@@ -87,15 +84,14 @@ block content
                                         h5.result__name Мустафьев Омар Равиольевич
                                 .result__text
                                     p <span class="result__words">Кардиолог</span>
-                                a.tags.tags_mt(href="search-result.html") #специалисты
+                                a.tags.tags_mt(href="search-result.html") #врачи
 
 
-                .wrap-950_pd.recommendations__pagination_margin_70
-                    .wrap-950
-                        include components/pagination
+                .wrap-max.recommendations__pagination_margin_70
+                    include components/pagination
 
 
-        include components/ask-form
+
 
 
 

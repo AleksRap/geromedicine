@@ -31,66 +31,62 @@ block content
                 article.article
                     +article('Патронаж', 'img/name-service.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet congue quam. Cras venenatis augue nunc, sed molestie orci faucibus sed. Maecenas cursus odio augue, in posuere augue iaculis eu. Aliquam vel suscipit nunc, in lobortis leo. Fusce ac lacinia elit, eu euismod ligula. Suspendisse ornare venenatis condimentum. Nullam sagittis et lacus ac posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus vel dolor ac libero ultricies pellentesque.', 'Donec laoreet suscipit risus in bibendum. Sed at sodales sem. Nullam molestie, arcu sit amet tincidunt mattis, sem felis congue metus, sed aliquam dui nulla nec diam. In lobortis nunc velit, sit amet luctus tellus mollis in. Suspendisse feugiat mi id dolor mattis viverra. Nunc diam diam, egestas ut arcu quis, convallis aliquam odio. Pellentesque sodales euismod tortor, sit amet sollicitudin lorem. Nulla mattis magna eget ante aliquam, at gravida lectus venenatis. Proin mauris ipsum, porta at est quis, porta scelerisque mi. In at pretium lectus.', 'Curabitur volutpat, risus eu rutrum condimentum, nibh diam mollis ex, in consequat sapien lectus in lorem. Pellentesque dignissim tempor erat vitae laoreet. Mauris quis porttitor nulla. Nam tincidunt placerat massa quis maximus. Cras at eros a urna tincidunt vulputate et eget felis. Cras risus tortor, facilisis a tristique at, tempus et felis. Duis consequat justo eget elit suscipit viverra.')
 
-            .wrap-950_pd
-                .wrap-950
-                    - var doctor = 1;
-                    include components/appointment
+            .wrap-max
+                - var doctor = 1;
+                include components/appointment
 
-                    .our-specialist
-                        h2.title.title_gray cпециалисты
-                        hr.title__hr
-
-                    include components/specialist
+                //.our-specialist
+                //    h2.title.title_gray Врачи
+                //    hr.title__hr
+                //
+                //include components/specialist
 
 
 
             .price.price_margin
-                .wrap-950_pd
-                    .wrap-950
-                        h2.title.title_gray.title_margin услуги
-                        span.price__text Услуги патронажа рассчитывается индивидуально, звоните!
-                        .price__table
-                            .price__row
-                                span Услуга патронажа
-                                a.card-spoiler-full(href="service-patronage.html")
-                            .price__row
-                                span Прием (осмотр, консультация) врача-кардиолога повторный
-                                a.card-spoiler-full(href="service-patronage.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                a.card-spoiler-full(href="service-patronage.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                a.card-spoiler-full(href="service-patronage.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                a.card-spoiler-full(href="service-patronage.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                a.card-spoiler-full(href="service-patronage.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                a.card-spoiler-full(href="service-patronage.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                a.card-spoiler-full(href="service-patronage.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                a.card-spoiler-full(href="service-patronage.html")
-                            .price__row
-                                span Прием, консультация врача-специалиста к.м.н.
-                                a.card-spoiler-full(href="service-patronage.html")
+                .wrap-max
+                    h2.title.title_gray.title_margin услуги
+                    span.price__text Услуги патронажа рассчитывается индивидуально, звоните!
+                    .price__table
+                        .price__row
+                            span Услуга патронажа
+                            a.card-spoiler-full(href="service-patronage.html")
+                        .price__row
+                            span Прием (осмотр, консультация) врача-кардиолога повторный
+                            a.card-spoiler-full(href="service-patronage.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            a.card-spoiler-full(href="service-patronage.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            a.card-spoiler-full(href="service-patronage.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            a.card-spoiler-full(href="service-patronage.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            a.card-spoiler-full(href="service-patronage.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            a.card-spoiler-full(href="service-patronage.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            a.card-spoiler-full(href="service-patronage.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            a.card-spoiler-full(href="service-patronage.html")
+                        .price__row
+                            span Прием, консультация врача к.м.н.
+                            a.card-spoiler-full(href="service-patronage.html")
 
 
         .page-wrapper.container-fluid.mb5
-            .wrap-950_pd
-                .wrap-950
-                    h2.title.title_margin.title_display Отзывы
-            .wrap-950_pd
-                .wrap-950
-                    include components/comments
+            .wrap-max
+                h2.title.title_margin.title_display Отзывы
+            .wrap-max
+                include components/comments
 
-        include components/ask-form
+
 
 
 

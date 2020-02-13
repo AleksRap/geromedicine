@@ -25,38 +25,32 @@ block content
 
 
             .amenities
-                .wrap-950_pd
-                    .wrap-950
-                        h1.title.title_gray акции
-                        hr.title__hr.title__hr_width
+                .wrap-max
+                    h1.title.title_gray акции
+                    hr.title__hr.title__hr_width
 
 
-                        +banner-img-black-background(
-                            'img/stock.jpg',
-                            'скидки на день рождения!',
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque viverra semper nunc pellentesque euismod. Arcu ultricies non vel elit. Текст не более трех строк',
-                            'name-service-patronage.html'
-                        )
+                    +banner-img-black-background(
+                        'img/stock.jpg',
+                        'скидки на день рождения!',
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque viverra semper nunc pellentesque euismod. Arcu ultricies non vel elit. Текст не более трех строк',
+                        'name-service-patronage.html'
+                    )
 
 
-                        .programme
-                            .articles.articles_mb
-                                section.page-wrapper
-                                    .articles_img.row
-                                        - var time = 0;
-                                        .col-md-6.col-12
-                                            +article-img-new('img/article-img-2.jpg','вчера', 'Комплексная проверка организма со скидкой 20%', 'stock-article.html')
-                                        .col-md-6.col-12
-                                            +article-img-new('img/article-img-1.jpg','21 июля', 'МРТ со скидкой 40% для ветеранов', 'stock-article.html')
-                                        .col-md-6.col-12
-                                            +article-img-new('img/article-img-2.jpg','вчера', 'Проверь свое сердце! Скидки на кардиологию', 'stock-article.html')
-                                        .col-md-6.col-12
-                                            +article-img-new('img/article-img-1.jpg','21 июля', 'АКЦИЯ! все кслуги патронажа со скидкой 15%', 'stock-article.html')
-
-
-
-
-        include components/ask-form
+                    .programme
+                        .articles.articles_mb
+                            section.page-wrapper
+                                .articles_img.row
+                                    - var time = 0;
+                                    .col-md-6.col-12
+                                        +article-img-new('img/article-img-2.jpg','вчера', 'Комплексная проверка организма со скидкой 20%', 'stock-article.html')
+                                    .col-md-6.col-12
+                                        +article-img-new('img/article-img-1.jpg','21 июля', 'МРТ со скидкой 40% для ветеранов', 'stock-article.html')
+                                    .col-md-6.col-12
+                                        +article-img-new('img/article-img-2.jpg','вчера', 'Проверь свое сердце! Скидки на кардиологию', 'stock-article.html')
+                                    .col-md-6.col-12
+                                        +article-img-new('img/article-img-1.jpg','21 июля', 'АКЦИЯ! все кслуги патронажа со скидкой 15%', 'stock-article.html')
 
 
 

@@ -25,41 +25,35 @@ block content
 
 
             .amenities
-                .wrap-950_pd
-                    .wrap-950
-                        h1.title.title_gray Программы
-                        hr.title__hr.title__hr_width
+                .wrap-max
+                    h1.title.title_gray Программы
+                    hr.title__hr.title__hr_width
 
 
-                        +banner-img-black-background(
-                            'img/amenities.jpg',
-                            'патронаж',
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque viverra semper nunc pellentesque euismod. Arcu ultricies non vel elit. Текст не более трех строк',
-                            'name-service-patronage.html'
-                        )
+                    +banner-img-black-background(
+                        'img/amenities.jpg',
+                        'патронаж',
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque viverra semper nunc pellentesque euismod. Arcu ultricies non vel elit. Текст не более трех строк',
+                        'name-service-patronage.html'
+                    )
 
-                        .amenities__description
-                            p Здесь представлены цены нашего клинического обслуживания, патронаж рассчитывается индивидуально, звоните!
-
-
-                        .programme
-                            .articles.articles_mb
-                                section.page-wrapper
-                                    .articles_img.row
-                                        - var time = 0;
-                                        .col-md-6.col-12
-                                            +article-img-new('img/article-img-2.jpg','вчера', 'Программа вакцинации', 'programme-vaccine.html')
-                                        .col-md-6.col-12
-                                            +article-img-new('img/article-img-1.jpg','21 июля', 'Check-up «К сердцу с любовью»', 'programme-vaccine.html')
-                                        .col-md-6.col-12
-                                            +article-img-new('img/article-img-2.jpg','вчера', 'Корпоративное обслуживание для юридических лиц', 'programme-vaccine.html')
-                                        .col-md-6.col-12
-                                            +article-img-new('img/article-img-1.jpg','21 июля', 'Check-up «К сердцу с любовью»', 'programme-vaccine.html')
+                    .amenities__description
+                        p Здесь представлены цены нашего клинического обслуживания, патронаж рассчитывается индивидуально, звоните!
 
 
-
-
-        include components/ask-form
+                    .programme
+                        .articles.articles_mb
+                            section.page-wrapper
+                                .articles_img.row
+                                    - var time = 0;
+                                    .col-md-6.col-12
+                                        +article-img-new('img/article-img-2.jpg','вчера', 'Программа вакцинации', 'programme-vaccine.html')
+                                    .col-md-6.col-12
+                                        +article-img-new('img/article-img-1.jpg','21 июля', 'Check-up «К сердцу с любовью»', 'programme-vaccine.html')
+                                    .col-md-6.col-12
+                                        +article-img-new('img/article-img-2.jpg','вчера', 'Корпоративное обслуживание для юридических лиц', 'programme-vaccine.html')
+                                    .col-md-6.col-12
+                                        +article-img-new('img/article-img-1.jpg','21 июля', 'Check-up «К сердцу с любовью»', 'programme-vaccine.html')
 
 
 

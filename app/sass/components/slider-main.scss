@@ -1,0 +1,246 @@
+.swiper-container {
+  position: relative;
+  width: 100%;
+
+  &_margin {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media (max-height: 768px) and (min-width: 768px){
+      margin-top: 30px;
+      margin-bottom: 80px;
+    }
+  }
+
+  .swiper-slide {
+    position: relative;
+    max-width: 100vw;
+    height: 460px;
+    max-height: 460px;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 1415px;
+
+    @media (max-height: 768px) and (min-width: 768px){
+      width: 1150px;
+      height: 420px;
+    }
+
+    &:not(&-active) &__wrap {
+      display: none;
+    }
+
+    &__wrapper {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+    }
+
+    &__wrap {
+      position: relative;
+
+      width: 50%;
+      height: 100%;
+
+      padding: 80px;
+
+      background-color: #E9EFE8;
+    }
+
+    &__img {
+      width: 50%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &__description {
+      margin-top: 20px;
+      margin-bottom: 30px;
+
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    &__caption {
+      width: 100%;
+      height: 100%;
+
+      padding-bottom: 50px;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    & h2 {
+      max-width: 460px;
+      text-align: left;
+      font-family: 'Akrobat', sans-serif;
+      font-size: 56px;
+      line-height: 111.5%;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: auto;
+    }
+
+    &__text-wrap {
+      display: flex;
+      align-items: baseline;
+
+      margin-top: 20px;
+
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 164%;
+
+      @media (max-height: 768px) and (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+
+    &__text {
+      font-family: 'Akrobat', sans-serif;
+      font-size: 36px;
+      line-height: 111.5%;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      @media (max-height: 768px) and (min-width: 768px) {
+        font-size: 28px;
+      }
+    }
+
+    & .row {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    & p {
+      width: 50%;
+    }
+
+    & .button-second {
+      position: absolute;
+      left: 90px;
+      bottom: 2px;
+
+      border: none;
+
+      padding: 20px 50px;
+      
+      color: #F55E21;
+      background-color: #fff;
+
+      &:hover {
+        border: none;
+        background-color: #679100;
+        color: white;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 60px;
+    right: 110px;
+
+    display:flex;
+
+    @media (max-height: 768px) and (min-width: 768px) {
+      right: 150px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 56px;
+    height: 30px;
+    margin: 0 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    opacity: 1;
+    background-color: transparent;
+
+    &::before {
+      content: '';
+      width: 56px;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+
+    &::before {
+      background-color: #F55E21;
+    }
+  }
+
+  .swiper-button-next {
+    width: 21px;
+    height: 39px;
+
+    right: 40px;
+    top: -230px;
+    transform: rotate(180deg);
+    background: url('../svg/arrow-left-gray.svg') center/contain no-repeat;
+
+    @media (max-height: 768px) and (min-width: 768px) {
+      right: 150px;
+      top: -210px;
+
+      &:focus {
+        outline: transparent;
+      }
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .swiper-button-prev {
+    width: 21px;
+    height: 39px;
+
+    left: -80px;
+    top: -230px;
+    background: url('../svg/arrow-left-gray.svg') center/contain no-repeat;
+
+    @media (max-height: 768px) and (min-width: 768px) {
+      left: 40px;
+      top: -210px;
+
+      &:focus {
+        outline: transparent;
+      }
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
