@@ -103,8 +103,8 @@
   background: url("../svg/button-appointment.svg") 0 0/contain no-repeat;
   z-index: 12;
   text-transform: uppercase;
-  -webkit-animation: hello 13.8s 9.2s infinite ease-in-out;
-          animation: hello 13.8s 9.2s infinite ease-in-out; }
+  -webkit-animation: hello 7.8s 5.2s infinite ease-in-out;
+          animation: hello 7.8s 5.2s infinite ease-in-out; }
 
 .button-doctor-call {
   bottom: 78px;
@@ -113,8 +113,8 @@
   background: url("../svg/button-doctor-call.svg") 0 0/contain no-repeat;
   z-index: 11;
   text-transform: uppercase;
-  -webkit-animation: hello 13.8s 4.6s infinite ease-in-out;
-          animation: hello 13.8s 4.6s infinite ease-in-out; }
+  -webkit-animation: hello 7.8s 2.6s infinite ease-in-out;
+          animation: hello 7.8s 2.6s infinite ease-in-out; }
 
 .button-feedback {
   bottom: 156px;
@@ -123,25 +123,25 @@
   background: url("../svg/button-feedback.svg") 0 0/contain no-repeat;
   z-index: 11;
   text-transform: uppercase;
-  -webkit-animation: hello 13.8s infinite ease-in-out;
-          animation: hello 13.8s infinite ease-in-out; }
+  -webkit-animation: hello 7.8s infinite ease-in-out;
+          animation: hello 7.8s infinite ease-in-out; }
 
 @-webkit-keyframes hello {
-  2.17% {
+  3.85% {
     opacity: 0.5;
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
-  4.34% {
+  7.7% {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1); } }
 
 @keyframes hello {
-  2.17% {
+  3.85% {
     opacity: 0.5;
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
-  4.34% {
+  7.7% {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1); } }
