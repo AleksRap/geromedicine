@@ -1,6 +1,6 @@
 mixin article-img(img, data, title, link, green)
     -var greenMode = green ? 'card_background' : ''
-    .card.card_margin(class=greenMode)
+    .card.card_h(class=greenMode)
         img.card__img.card__img_mh.card__img_grayscale(src=img alt="Обложка статьи")
         .card__description
             if time === 0
