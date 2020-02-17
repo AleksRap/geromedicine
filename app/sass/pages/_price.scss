@@ -167,26 +167,9 @@
   padding: 20px 40px;
   position: relative;
 
-  //&:hover {
-  //  background-color: #679100;
-  //  color: #fff;
-  //
-  //  a {
-  //    color: #fff;
-  //  }
-  //
-  //  & .plus {
-  //    background: url("../svg/plus-white.svg") 50%/contain no-repeat;
-  //  }
-  //
-  //  & .plus[aria-expanded=true] {
-  //    background: url("../svg/minus-white.svg") 50%/contain no-repeat;
-  //  }
-  //
-  //  & a {
-  //    opacity: 1;
-  //  }
-  //}
+  &:hover {
+    background-color: hsl(111, 18%, 85%);;
+  }
 
   & a {
     font-weight: 600;

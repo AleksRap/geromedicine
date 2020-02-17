@@ -7,6 +7,13 @@
     font-size: 18px;
   }
 
+  a {
+
+    &:hover {
+      color: #679100;
+    }
+  }
+
   &__pic-wrap {
     position: relative;
     width: 100%;
@@ -41,7 +48,7 @@
     }
   }
 
-  & p {
+  p, a {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;

@@ -1,5 +1,5 @@
 .wrap-max {
-  max-width: 1200px;
+  max-width: 1440px;
 }
 
 
@@ -265,10 +265,6 @@
 }
 
 @media (max-height: 768px) and (min-width: 768px) {
-  .wrap-950 {
-    max-width: 760px;
-  }
-
   .wrap-1150 {
     max-width: 1150px;
     margin: 0 auto;

@@ -6,7 +6,9 @@ mixin article(title, img, text1, text2, text3)
             .article__pic-wrap
                 .article__pic.article__pic_grayscale
                     img(src= img alt="Обложка статьи")
+
             p= text1
+            a(href="#") link
 
             if text2
                 p=text2
