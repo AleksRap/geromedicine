@@ -199,6 +199,10 @@
   line-height: 34px;
   color: #F55E21;
 
+  &:hover {
+    color: #A4BA04;
+  }
+
   @media (max-width: 1350px) {
     font-size: 20px;
     line-height: 24px;

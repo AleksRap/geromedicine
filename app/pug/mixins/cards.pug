@@ -29,7 +29,8 @@ mixin article-img-new(img, data, title, link)
 
 mixin article-img-horizontal(img, title, link)
     .card.card_horizontal.card_horizontal_margin
-        img.card__img.card__img_grayscale(src=img alt = "Обложка статьи")
+        .card__img.card__img_grayscale
+            img(src=img alt = "Обложка статьи")
         .card__description
             h3.card__title(data-dotdotdot="article-img")= title
             a(href=link).card__link читать
@@ -47,7 +48,8 @@ mixin article-no-img(data, title, link)
 
 mixin card-doctor(img, title, profession, link)
     .card.card_doctor
-        img.card__img.card__img_mh(src= img alt="Фото врача")
+        .card__img.card__img_mh
+            img(src= img alt="Фото врача")
         .card__description
             h3.card__title= title
             span= profession

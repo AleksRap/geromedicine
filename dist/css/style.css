@@ -1673,6 +1673,8 @@ a.logo:hover {
   font-size: 28px;
   line-height: 34px;
   color: #F55E21; }
+  .link-number:hover {
+    color: #A4BA04; }
   @media (max-width: 1350px) {
     .link-number {
       font-size: 20px;
