@@ -29,7 +29,7 @@ mixin article2(title, img, text1, text2, text3)
         hr.title__hr.title__hr_width
         if img
             .article__pic-wrap
-                .article__pic.article__pic_grayscale
+                .card__img.card__img_grayscale.article__pic_grayscale
                     img(src= img alt="Обложка статьи")
             p= text1
 
@@ -59,7 +59,8 @@ mixin article-color(title, img, text1, text2, text3)
         hr.title__hr.title__hr_width
         if img
             .article__pic-wrap
-                img.article__pic(src= img alt="Обложка статьи")
+                .article__pic
+                    img(src= img alt="Обложка статьи")
         p= text1
         if text2
             p=text2

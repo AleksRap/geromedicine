@@ -2,7 +2,7 @@ mixin banner (pic, title, text, link)
     .amenities__head
         .amenities__wrap
             .amenities__pic
-                .img(style="background: linear-gradient(180.09deg, rgba(164, 186, 4, 0) 0.25%, rgba(164, 186, 4, 0.81) 117.87%), linear-gradient(0deg, #A4BA04, #A4BA04), url('" + pic + "'); background-blend-mode: normal, multiply, normal; background-size: cover; background-position: 50%;")
+                .img(style="background: linear-gradient(180.09deg, rgba(164, 186, 4, 0) 0.25%, rgba(164, 186, 4, 0.81) 117.87%), linear-gradient(0deg, #A4BA04, #A4BA04), url('" + pic + "'); background-blend-mode: normal, multiply, normal; background-size: contain; background-position: 50%; background-repeat: no-repeat")
             .amenities__text
                 h3.title.title_white= title
                 br
