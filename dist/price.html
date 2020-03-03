@@ -36,8 +36,7 @@
                 <!--  a.nav-link.nav-link_comment.popup-with-form(href="#form-popup-feedback") Оставить отзыв-->
               </ul>
             </div>
-            <div class="link-number-wrap"><a class="link-number" href="tel:88002000000">8 800 200 00 00</a>
-              <br><a class="link-number" href="tel:88002000000">8 800 200 00 00</a>
+            <div class="link-number-wrap"><a class="link-number" href="tel:88002000000">8 800 200 00 00</a><a class="link-number" href="tel:88002000000">8 800 200 00 00</a><a class="navbar-first__text navbar-first__text_mobil" href="$map">Москва, Открытое шоссе, д. 48, стр. 2</a>
             </div>
           </nav>
         </div>
@@ -138,13 +137,15 @@
                       <input class="form-control flex-grow-1" type="search" placeholder="Поиск" aria-label="Search">
                       <button class="btn btn-search" type="submit"></button>
                     </form>
-                    <ul class="nav flex-column">
-                      <li class="nav-item"><a class="nav-link nav-link_cabinet" href="#">Личный кабинет</a>
-                      </li>
-                      <li class="nav-item"><a class="nav-link nav-link_comment popup-with-form" href="#form-popup-feedback">Оставить отзыв</a>
-                      </li>
-                    </ul>
-                    <div class="d-sm-flex pl-3 pr-3 pl-sm-0 pr-sm-0"><a class="no-opacity popup-with-form btn btn-sm lign-middle button-second w-100" href="#form-popup">Вызов врача</a><a class="no-opacity popup-with-form btn btn-sm lign-middle button-first w-100" href="#form-popup-appointment">Запись на прием</a>
+                    <!--ul.nav.flex-column
+                      //li.nav-item
+                      //    a.nav-link.nav-link_cabinet(href="#") Личный кабинет
+                      //li.nav-item
+                      //    a.nav-link.nav-link_comment.popup-with-form(href="#form-popup-feedback") Оставить отзыв
+                      -->
+                    <div class="d-lg-flex pl-3 pr-3 pl-sm-0 pr-sm-0"><a class="no-opacity popup-with-form btn btn-sm lign-middle button-second w-100" href="#form-popup-call-feedback">Заказать обратный звонок</a><a class="no-opacity popup-with-form btn btn-sm lign-middle button-second w-100" href="#form-popup">Вызов врача</a>
+                      <a
+                      class="no-opacity popup-with-form btn btn-sm lign-middle button-first w-100" href="#form-popup-appointment">Запись на прием</a>
                     </div>
                     <ul class="nav navbar-nav">
                       <li class="nav-item dropdown">
@@ -569,7 +570,8 @@
               </div>
             </div>
             <div class="amenities__description">
-              <p>Здесь представлены цены нашего клинического обслуживания, патронаж рассчитывается индивидуально, звоните!</p>
+              <p>Здесь представлены цены нашего клинического обслуживания, <b>патронаж рассчитывается индивидуально, звоните!</b>
+              </p>
             </div>
             <div class="accordion" id="accordionExample">
               <div class="card-spoiler">

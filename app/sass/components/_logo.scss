@@ -7,16 +7,26 @@
 
   background: url("../svg/logo.svg") center/contain no-repeat;
 
+  &:hover {
+    background: url("../svg/logo-green.svg") center/contain no-repeat;
+  }
+
   @media (max-width: 768px) {
-    width: 214px;
-    height: 59px;
+    width: calc(168px * 1.2);
+    height: calc(31px * 1.2);
+
+    background-image: url('../svg/logo-mobil.svg');
+
+    &:hover {
+      background-image: url('../svg/logo-mobil.svg');
+    }
   }
   @media (max-width: 576px) {
-    width: calc(196px * 0.7);
-    height: calc(45px * 0.7);
+    width: 168px;
+    height: 31px;
   }
-}
-
-a.logo:hover {
-  background: url("../svg/logo-green.svg") center/contain no-repeat;
+  @media (max-width: 345px) {
+    width: calc(168px * 0.9);
+    height: calc(31px * 0.9);
+  }
 }

@@ -54,6 +54,27 @@
       height: 25px;
       background: url("../svg/point.svg") no-repeat;
     }
+
+    &_display {
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &_mobil {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -79,7 +100,7 @@
 
   .navbar-toggler-icon {
     width: 89px;
-    height: 17px;
+    height: 22px;
     background: url("../svg/menu-button.svg") no-repeat;
   }
 
@@ -104,6 +125,8 @@
   position: relative;
 
   &__logo {
+    display: flex;
+    align-items: center;
 
     @media (min-width: 769px) {
       display: none;
@@ -187,10 +210,12 @@
 }
 
 .link-number-wrap {
+  display:flex;
+  flex-direction: column;
 
   @media (max-width: 768px) {
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    align-items:center;
   }
 }
 
@@ -233,12 +258,6 @@
   .navbar-first {
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-first__text_display {
-    display: none;
   }
 }
 

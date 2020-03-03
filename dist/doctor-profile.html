@@ -36,8 +36,7 @@
                 <!--  a.nav-link.nav-link_comment.popup-with-form(href="#form-popup-feedback") Оставить отзыв-->
               </ul>
             </div>
-            <div class="link-number-wrap"><a class="link-number" href="tel:88002000000">8 800 200 00 00</a>
-              <br><a class="link-number" href="tel:88002000000">8 800 200 00 00</a>
+            <div class="link-number-wrap"><a class="link-number" href="tel:88002000000">8 800 200 00 00</a><a class="link-number" href="tel:88002000000">8 800 200 00 00</a><a class="navbar-first__text navbar-first__text_mobil" href="$map">Москва, Открытое шоссе, д. 48, стр. 2</a>
             </div>
           </nav>
         </div>
@@ -138,13 +137,15 @@
                       <input class="form-control flex-grow-1" type="search" placeholder="Поиск" aria-label="Search">
                       <button class="btn btn-search" type="submit"></button>
                     </form>
-                    <ul class="nav flex-column">
-                      <li class="nav-item"><a class="nav-link nav-link_cabinet" href="#">Личный кабинет</a>
-                      </li>
-                      <li class="nav-item"><a class="nav-link nav-link_comment popup-with-form" href="#form-popup-feedback">Оставить отзыв</a>
-                      </li>
-                    </ul>
-                    <div class="d-sm-flex pl-3 pr-3 pl-sm-0 pr-sm-0"><a class="no-opacity popup-with-form btn btn-sm lign-middle button-second w-100" href="#form-popup">Вызов врача</a><a class="no-opacity popup-with-form btn btn-sm lign-middle button-first w-100" href="#form-popup-appointment">Запись на прием</a>
+                    <!--ul.nav.flex-column
+                      //li.nav-item
+                      //    a.nav-link.nav-link_cabinet(href="#") Личный кабинет
+                      //li.nav-item
+                      //    a.nav-link.nav-link_comment.popup-with-form(href="#form-popup-feedback") Оставить отзыв
+                      -->
+                    <div class="d-lg-flex pl-3 pr-3 pl-sm-0 pr-sm-0"><a class="no-opacity popup-with-form btn btn-sm lign-middle button-second w-100" href="#form-popup-call-feedback">Заказать обратный звонок</a><a class="no-opacity popup-with-form btn btn-sm lign-middle button-second w-100" href="#form-popup">Вызов врача</a>
+                      <a
+                      class="no-opacity popup-with-form btn btn-sm lign-middle button-first w-100" href="#form-popup-appointment">Запись на прием</a>
                     </div>
                     <ul class="nav navbar-nav">
                       <li class="nav-item dropdown">
@@ -555,8 +556,8 @@
             <div class="profile__info">
               <img class="profile__pic" src="img/doctor-4.jpg" alt="Фото врача">
               <div class="profile__text">
-                <h1 class="title title_gray">волков геннадий<br>анатольевич</h1><span>Кардиолог</span><span>Стаж: 15 лет</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a class="no-opacity popup-with-form btn button-first button-first_padding" href="#form-popup-appointment">запись на прием</a>
+                <h1 class="title title_gray">волков геннадий<br>анатольевич</h1><span>Кардиолог</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><span>Стаж: 15 лет</span><a class="no-opacity popup-with-form btn button-first button-first_padding" href="#form-popup-appointment">запись на прием</a>
               </div>
             </div>
             <div class="profile__description">
@@ -567,126 +568,11 @@
                 quam ultricies. Risus scelerisque mattis magna mattis.</p>
             </div>
           </div>
-          <div class="our-specialist">
-            <h2 class="title title_gray">Другие врачи<br>этого направления</h2>
-            <hr class="title__hr">
-          </div>
-          <div class="specialists">
-            <div class="swiper-specialist">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card card_doctor">
-                    <div class="card__img card__img_mh">
-                      <img src="img/doctor-1.jpg" alt="Фото врача">
-                    </div>
-                    <div class="card__description">
-                      <h3 class="card__title">Волков<br>Генадий<br>Анатольевич</h3><span>кардиолог</span>
-                      <a class="card__link_full" href="doctor-profile.html"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card card_doctor">
-                    <div class="card__img card__img_mh">
-                      <img src="img/doctor-3.jpg" alt="Фото врача">
-                    </div>
-                    <div class="card__description">
-                      <h3 class="card__title">Тихомиров<br>Ян<br>Васильевич</h3><span>кардиолог</span>
-                      <a class="card__link_full" href="doctor-profile.html"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card card_doctor">
-                    <div class="card__img card__img_mh">
-                      <img src="img/doctor-2.jpg" alt="Фото врача">
-                    </div>
-                    <div class="card__description">
-                      <h3 class="card__title">Скулкина<br>Евангелина<br>Борисовна</h3><span>кардиолог</span>
-                      <a class="card__link_full" href="doctor-profile.html"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card card_doctor">
-                    <div class="card__img card__img_mh">
-                      <img src="img/doctor-1.jpg" alt="Фото врача">
-                    </div>
-                    <div class="card__description">
-                      <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
-                      <a class="card__link_full" href="doctor-profile.html"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide"></div>
-                <div class="card card_doctor">
-                  <div class="card__img card__img_mh">
-                    <img src="img/doctor-1.jpg" alt="Фото врача">
-                  </div>
-                  <div class="card__description">
-                    <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
-                    <a class="card__link_full" href="doctor-profile.html"></a>
-                  </div>
-                </div>
-                <div class="swiper-slide"></div>
-                <div class="card card_doctor">
-                  <div class="card__img card__img_mh">
-                    <img src="img/doctor-1.jpg" alt="Фото врача">
-                  </div>
-                  <div class="card__description">
-                    <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
-                    <a class="card__link_full" href="doctor-profile.html"></a>
-                  </div>
-                </div>
-                <div class="swiper-slide"></div>
-                <div class="card card_doctor">
-                  <div class="card__img card__img_mh">
-                    <img src="img/doctor-1.jpg" alt="Фото врача">
-                  </div>
-                  <div class="card__description">
-                    <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
-                    <a class="card__link_full" href="doctor-profile.html"></a>
-                  </div>
-                </div>
-                <div class="swiper-slide"></div>
-                <div class="card card_doctor">
-                  <div class="card__img card__img_mh">
-                    <img src="img/doctor-1.jpg" alt="Фото врача">
-                  </div>
-                  <div class="card__description">
-                    <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
-                    <a class="card__link_full" href="doctor-profile.html"></a>
-                  </div>
-                </div>
-                <div class="swiper-slide"></div>
-                <div class="card card_doctor">
-                  <div class="card__img card__img_mh">
-                    <img src="img/doctor-1.jpg" alt="Фото врача">
-                  </div>
-                  <div class="card__description">
-                    <h3 class="card__title">Петров<br>Петр<br>Петрович</h3><span>кардиолог</span>
-                    <a class="card__link_full" href="doctor-profile.html"></a>
-                  </div>
-                </div>
-              </div>
-              <div class="specialists__navigations mt-4">
-                <nav>
-                  <div class="pagination-2 pagination-2_second">
-                    <div class="pagination__item pagination__item swiper-navigation-prev">
-                      <div class="arrow">
-                        <div class="pagination__link pagination__link_prew"></div>
-                      </div>
-                    </div>
-                    <div class="pagination__item arrow-right swiper-navigation-next">
-                      <div class="arrow">
-                        <div class="pagination__link pagination__link_next"></div>
-                      </div>
-                    </div><a class="no-opacity btn button-second button-second_padding" href="our-specialist.html">смотреть всех</a>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
+          <!--.our-specialist-->
+          <!--    h2.title.title_gray Другие врачи<br>этого направления-->
+          <!--    hr.title__hr-->
+          <!---->
+          <!--include components/specialist-->
         </div>
         <div class="price price_margin">
           <div class="wrap-max">
