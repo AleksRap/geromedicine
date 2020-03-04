@@ -1873,8 +1873,12 @@
     letter-spacing: 0.05em; }
   .contacts__address {
     margin-bottom: 18px; }
+    .contacts__address:hover {
+      color: #a4b902; }
   .contacts__email {
     margin-bottom: 12px; }
+    .contacts__email:hover {
+      color: #a4b902; }
     .contacts__email_font {
       font-weight: 600;
       font-size: 20px;
@@ -1887,6 +1891,8 @@
       .contacts__number {
         font-size: 20px;
         line-height: 24px; } }
+    .contacts__number:hover {
+      color: #a4b902; }
   .contacts__time {
     font-weight: normal;
     font-size: 18px; }

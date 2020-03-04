@@ -106,10 +106,18 @@
 
   &__address {
     margin-bottom: 18px;
+
+    &:hover {
+      color: #a4b902;
+    }
   }
 
   &__email {
     margin-bottom: 12px;
+
+    &:hover {
+      color: #a4b902;
+    }
 
     &_font {
       font-weight: 600;
@@ -126,6 +134,10 @@
     @media (max-width: 1350px) {
       font-size: 20px;
       line-height: 24px;
+    }
+
+    &:hover {
+      color: #a4b902;
     }
   }
 
