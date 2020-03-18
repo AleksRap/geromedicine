@@ -7,6 +7,12 @@
   text-transform: uppercase;
   color: #679100;
 
+  &_little {
+    @media (max-width: 1200px) {
+      font-size: 26px;
+    }
+  }
+
   &_red {
     color: #F55E21;
   }

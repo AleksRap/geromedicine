@@ -650,6 +650,9 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #679100; }
+  @media (max-width: 1200px) {
+    .title_little {
+      font-size: 26px; } }
   .title_red {
     color: #F55E21; }
   .title_white {
