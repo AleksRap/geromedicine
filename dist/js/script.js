@@ -24,8 +24,8 @@ jQuery(document).ready(function ($) {
   });
 });
 
-// Прилипание меню после прокрутки
 document.addEventListener("DOMContentLoaded", () => {
+  // Прилипание меню после прокрутки
   let scrolHight = 135;
 
   if ($(window).width() <= 768) {
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let overlay = document.getElementById('about-us__overlay');
     let vid = document.getElementById('video_about-us');
 
-    if (overlay.addEventListener) {
+    if (overlay) {
       overlay.addEventListener("click", play, false);
       vid.addEventListener("click", play, false)
     }
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   let swiperspec = new Swiper('.swiper-specialist', {
-    slidesPerView: 4,
+    slidesPerView: 6,
     initialSlide: 0,
     centeredSlides: false,
     spaceBetween: 22,
@@ -238,16 +238,19 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: '.swiper-navigation-prev',
     },
     breakpoints: {
-      320: {
+      576: {
         slidesPerView: 1,
         spaceBetween: 10
       },
-      576: {
+      768: {
         slidesPerView: 2,
         spaceBetween: 20
       },
       992: {
-        slidesPerView: 3,
+        slidesPerView: 3
+      },
+      1200: {
+        slidesPerView: 4,
         spaceBetween: 30
       }
     },

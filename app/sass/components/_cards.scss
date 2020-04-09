@@ -123,6 +123,44 @@
     }
   }
 
+  &_doctor-slider {
+
+    :active {
+      border: 2px solid #E9EFE8;
+    }
+
+    .card__img {
+      height: 185px;
+    }
+
+    .card__description {
+      height: 195px;
+
+      margin: 0;
+      padding: 30px 20px 20px 20px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      background-color:#fff;
+
+      @media (max-width: 1400px) {
+        padding: 15px;
+      }
+
+      &:hover {
+        background-color: #E9EFE8;
+      }
+    }
+
+    .card__title {
+      margin: 0;
+      max-height: 120px;
+      overflow-y: hidden;
+    }
+  }
+
   &_doctor {
     height: 200px;
     margin-bottom: 40px;

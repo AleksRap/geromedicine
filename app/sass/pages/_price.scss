@@ -191,8 +191,14 @@
   background:url("../svg/minus.svg") 50%/contain no-repeat;
 }
 
-.card-b-body{
+.card-b-body {
   width: 100%;
+
+  &_no-first {
+    .card-b-block:first-child {
+      background-color: #fff;
+    }
+  }
 }
 
 .card-b-block {

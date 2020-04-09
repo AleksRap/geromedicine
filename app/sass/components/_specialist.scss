@@ -1,6 +1,13 @@
 .specialists {
-  width: calc(100% - 2px);
+  margin-bottom: 70px;
+  padding-left: 15px;
+  padding-right: 15px;
+
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
 
   & .swiper-slide {
     width: 100%;

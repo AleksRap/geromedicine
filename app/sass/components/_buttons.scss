@@ -2,14 +2,15 @@
   position: relative;
   cursor: pointer;
   border-radius: 0;
-  color: #E9EFE8;
+  color: white;
   background-color: #679100;
   padding: 1.3em 4em;
   font-weight: 600;
   text-transform: uppercase;
 
   &:hover {
-    color: #E9EFE8;
+    color: #F55E21;
+    background-color:#E9EFE8;
   }
 
   &_noactive {
@@ -63,6 +64,14 @@
 
   &_padding {
     padding: 20px 50px;
+
+    @media (max-width: 576px) {
+      padding: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &_active {

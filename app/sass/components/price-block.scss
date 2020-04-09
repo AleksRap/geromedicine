@@ -1,0 +1,65 @@
+.price-block {
+  width: 100%;
+
+  margin-bottom: 80px;
+  padding: 30px 45px;
+
+  border: 2px solid #E9EFE8;
+
+  display:flex;
+  align-items:center;
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content:space-between;
+  }
+  @media (max-width: 768px) {
+    justify-content:center;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+
+  &__text {
+    margin-right: auto;
+
+    font-family: 'Akrobat', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: #434343;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 576px) {
+      font-size: 24px;
+    }
+  }
+
+  &__alert {
+    margin-left: 30px;
+    margin-right: 80px;
+
+    font-family: 'Inter-SemiBold', sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #f55e21;
+
+    @media (max-width: 1200px) {
+      font-size: 16px;
+      margin-right: 20px;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 20px;
+
+      text-align: center;
+    }
+  }
+}
