@@ -37,15 +37,6 @@ mixin article-img-horizontal(img, title, link)
             a(href=link).card__link_full
 
 
-mixin article-no-img(data, title, link)
-    .card.card_background.card_display
-        .card__description.card__description_margin
-            time(datetime="2011-11").card__data= data
-            h3.card__title.card__title_height(data-dotdotdot="article-no-img")= title
-            a(href=link).card__link читать
-            a(href=link).card__link_full
-
-
 mixin card-doctor(img, title, profession, link)
     .card.card_doctor
         .card__img.card__img_mh

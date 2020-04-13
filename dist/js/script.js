@@ -1,13 +1,13 @@
-$(function () {
+document.addEventListener('DOMContentLoaded', () => {
+  /** Календарь в модалке */
   $("#datepicker").datepicker({
     minDate: new Date(),
-    onSelect: function (dateText, obj) {
+    onSelect: function (dateText) {
       $('#appointment-date').val(dateText);
     }
   });
-});
 
-jQuery(document).ready(function ($) {
+  /** Модалки */
   $('.popup-with-form').magnificPopup({
     removalDelay: 300,
     mainClass: 'mfp-fade',
@@ -22,140 +22,95 @@ jQuery(document).ready(function ($) {
       }
     }
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Прилипание меню после прокрутки
-  let scrolHight = 135;
+  /** Прилипание меню после прокрутки */
+  {
+    const windowWidth = document.documentElement.clientWidth;
+    const scrollHeight = (windowWidth <= 768) ? 78 : 135;
 
-  if ($(window).width() <= 768) {
-    scrolHight = 78;
+    window.addEventListener('scroll', function () {
+      const firstMenu = document.querySelector('.navbar-first');
+      const secondMenu = document.querySelector('.navbar-second-body');
+
+      window.pageYOffset > scrollHeight
+        ? secondMenu.classList.add('navbar-second_glue')
+        : secondMenu.classList.remove('navbar-second_glue');
+
+      window.pageYOffset > scrollHeight
+        ? firstMenu.classList.add('navbar-first_mb')
+        : firstMenu.classList.remove('navbar-first_mb');
+    });
   }
 
-  $(window).scroll(function () {
-    $('.navbar-second-body').toggleClass('navbar-second_glue', $(this).scrollTop() > scrolHight);
-    $('.navbar-first').toggleClass('navbar-first_mb', $(this).scrollTop() > scrolHight);
-  });
-});
+  /** Ленивая загрузка видео */
+  {
+    const video = document.getElementById('video_about-us2');
+    const videoScrollTop = Math.ceil(video.getBoundingClientRect().top);
+    let change = false;
 
+    window.addEventListener('scroll', loadVideo);
 
-// Воспроизведение видео
-document.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById('about-us__overlay')) {
-    let overlay = document.getElementById('about-us__overlay');
-    let vid = document.getElementById('video_about-us');
+    function loadVideo() {
+      const scrollTop = window.pageYOffset;
+      const result = scrollTop * 100 / videoScrollTop;
 
-    if (overlay) {
-      overlay.addEventListener("click", play, false);
-      vid.addEventListener("click", play, false)
-    }
+      if (result > 50 && !change) {
+        change = true;
 
-    function play() {
-      if (vid.paused) {
-        vid.play();
-        vid.controls = true;
-        overlay.className = "on";
-      } else {
-        vid.pause();
-        vid.controls = false;
-        overlay.classList = "";
+        const source = video.querySelector('source');
+        const urlVideo = source.dataset.src;
+        source.setAttribute('src', urlVideo);
+        video.load();
       }
     }
   }
-});
 
+  /** Воспроизведение видео */
+  {
+    const overlay = document.getElementById('about-us__overlay');
+    const video = document.getElementById('video_about-us');
+    const video2 = document.getElementById('video_about-us2');
 
-// DotDotDot
-document.addEventListener("DOMContentLoaded", () => {
-  if (document.querySelectorAll("[data-dotdotdot=article-img]")) {
-    let wrapperOne = document.querySelectorAll("[data-dotdotdot=article-img]");
-    let optionsOne = {
-      ellipsis: "\u2026 ",
-      height: 80
-    };
+    playStopVideo(overlay, video);
+    playStopVideo(overlay, video2);
 
-    for (let i = 0; i < wrapperOne.length; i++) {
-      new Dotdotdot(wrapperOne[i], optionsOne);
+    function playStopVideo(el, video) {
+      if (video) {
+        el.addEventListener('click', () => play(el, video));
+        video.addEventListener('click', () => play(el, video));
+      }
+    }
+
+    function play(el, video) {
+      if (video.paused) {
+        video.play();
+        video.controls = true;
+        el.className = 'on';
+      } else {
+        video.pause();
+        video.controls = false;
+        el.classList = '';
+      }
     }
   }
 
-  if (document.querySelectorAll("[data-dotdotdot=article-img2]")) {
-    let wrapperOne = document.querySelectorAll("[data-dotdotdot=article-img2]");
-    let optionsOne = {
-      ellipsis: "\u2026 ",
-      height: 140
-    };
+  /** Ужимка текста. Инициализация dotdotdot */
+  {
+    const arrDotDotDot = [
+      {selector: '[data-dotdotdot=article-img]', options: {ellipsis: "\u2026 ", height: 80}},
+      {selector: '[data-dotdotdot=article-img2]', options: {ellipsis: "\u2026 ", height: 140}},
+      {selector: '[data-dotdotdot=about-body]', options: {ellipsis: "\u2026 ", height: 465, keep: '.about-us__buttons',}},
+      {selector: '[data-dotdotdot="comment"]', options: {ellipsis: "\u2026 ", height: 200,}},
+      {selector: '[data-dotdotdot="slider"]', options: {ellipsis: "\u2026 ", height: 85,}}
+    ];
 
-    for (let i = 0; i < wrapperOne.length; i++) {
-      new Dotdotdot(wrapperOne[i], optionsOne);
-    }
+    arrDotDotDot.forEach(item => {
+      const bigArticlesImg = document.querySelectorAll(item.selector);
+      if (bigArticlesImg.length) bigArticlesImg.forEach(article => new Dotdotdot(article, item.options));
+    });
   }
 
-  if (document.querySelectorAll("[data-dotdotdot=article-img-new]")) {
-    let wrapperOne = document.querySelectorAll("[data-dotdotdot=article-img]");
-    let optionsOne = {
-      ellipsis: "\u2026 ",
-      height: 80
-    };
-
-    for (let i = 0; i < wrapperOne.length; i++) {
-      new Dotdotdot(wrapperOne[i], optionsOne);
-    }
-  }
-
-  if (document.querySelectorAll("[data-dotdotdot=article-no-img]")) {
-    let wrapperTwo = document.querySelectorAll("[data-dotdotdot=article-no-img]");
-    let optionsTwo = {
-      ellipsis: "\u2026 ",
-      height: 'watch',
-      watch: true,
-    };
-
-    for (let i = 0; i < wrapperTwo.length; i++) {
-      new Dotdotdot(wrapperTwo[i], optionsTwo);
-    }
-  }
-
-
-  if (document.querySelector('[data-dotdotdot=about-body]')) {
-    let wrapperThree = document.querySelector('[data-dotdotdot=about-body]');
-    let optionsThree = {
-      ellipsis: "\u2026 ",
-      height: 465,
-      keep: '.about-us__buttons',
-    };
-
-    new Dotdotdot(wrapperThree, optionsThree);
-  }
-
-  if (document.querySelector('[data-dotdotdot="comment"]')) {
-    let wrapperFour = document.querySelectorAll('[data-dotdotdot="comment"]');
-    let optionsFour = {
-      ellipsis: "\u2026 ",
-      height: 200,
-    };
-
-    for (let i = 0; i < wrapperFour.length; i++) {
-      new Dotdotdot(wrapperFour[i], optionsFour);
-    }
-  }
-
-  if (document.querySelector('[data-dotdotdot="slider"]')) {
-    let wrapperFour = document.querySelectorAll('[data-dotdotdot="slider"]');
-    let optionsFour = {
-      ellipsis: "\u2026 ",
-      height: 85,
-    };
-
-    for (let i = 0; i < wrapperFour.length; i++) {
-      new Dotdotdot(wrapperFour[i], optionsFour);
-    }
-  }
-});
-
-
-//lightslider
-jQuery(document).ready(function ($) {
+  /** Инициализация lightslider */
   $('#lightSlider').lightSlider({
     item: 1,
     loop: true,
@@ -176,243 +131,147 @@ jQuery(document).ready(function ($) {
       }
     ]
   });
-});
 
-
-// swiper
-document.addEventListener("DOMContentLoaded", () => {
-  let swiper = new Swiper('.swiper-container', {
-    slidesPerView: 'auto',
-    initialSlide: 1,
-    centeredSlides: true,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    slideToClickedSlide: true
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  let swipers = new Swiper('.swiper-second', {
-    initialSlide: 0,
-    centeredSlides: true,
-    loop: true,
-    autoplay: true,
-    navigation: {
-      nextEl: '.swiper-navigation-next',
-      prevEl: '.swiper-navigation-prev',
-    },
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  let swipers2 = new Swiper('.swiper-thrity', {
-    initialSlide: 0,
-    centeredSlides: true,
-    loop: true,
-    autoplay: true,
-    navigation: {
-      nextEl: '.swiper-navigation-next',
-      prevEl: '.swiper-navigation-prev',
-    },
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  let swiperspec = new Swiper('.swiper-specialist', {
-    slidesPerView: 6,
-    initialSlide: 0,
-    centeredSlides: false,
-    spaceBetween: 22,
-    allowTouchMove: false,
-    navigation: {
-      nextEl: '.swiper-navigation-next',
-      prevEl: '.swiper-navigation-prev',
-    },
-    breakpoints: {
-      576: {
-        slidesPerView: 1,
-        spaceBetween: 10
+  /** Инициализация слайдеров swiper */
+  {
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      initialSlide: 1,
+      centeredSlides: true,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
       },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
-      992: {
-        slidesPerView: 3
-      },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 30
-      }
-    },
-  });
-});
-
-
-// валидация
-$(document).ready(function () {
-  let pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
-  let mail = $('#mail');
-
-  mail.blur(function () {
-    if (mail.val() != '') {
-      if (mail.val().search(pattern) == 0) {
-        $('#valid').text('Подходит');
-        $('#submit').attr('disabled', false);
-        //mail.removeClass('error').addClass('ok');
-      } else {
-        $('#valid').text('Не подходит');
-        $('#submit').attr('disabled', true);
-        //mail.addClass('ok');
-      }
-    } else {
-      $('#valid').text('Поле e-mail не должно быть пустым!');
-      mail.addClass('error');
-      $('#submit').attr('disabled', true);
-    }
-  });
-});
-
-
-// Фильтрация внутри блока отзывов
-let clinicWrap = document.querySelector('[data-clinic-wrap]');
-let specialistWrap = document.querySelector('[data-specialist-wrap]');
-
-if (document.querySelector('[data-clinic]')) {
-  document.querySelector('[data-clinic]').onclick = function () {
-    document.querySelector('[data-clinic]').classList.toggle('button-second_active');
-    document.querySelector('[data-specialist]').classList.toggle('button-second_active');
-    clinicWrap.classList.toggle('swiper_view_off');
-    specialistWrap.classList.toggle('swiper_view_off');
-  };
-}
-
-if (document.querySelector('[data-specialist]')) {
-  document.querySelector('[data-specialist]').onclick = function () {
-    document.querySelector('[data-clinic]').classList.toggle('button-second_active');
-    document.querySelector('[data-specialist]').classList.toggle('button-second_active');
-    specialistWrap.classList.toggle('swiper_view_off');
-    clinicWrap.classList.toggle('swiper_view_off');
-  };
-}
-
-
-// Фильтрация по направлениям
-let arrAll = document.querySelectorAll('[data-card]');
-
-if (document.querySelector('#selectItem')) {
-  document.querySelector('#selectItem').onchange = function () {
-    let valSel = this.value;
-
-    [].forEach.call(arrAll, function (el) {
-      el.style.display = (valSel === 'all' || valSel === el.getAttribute('data-index')) ? 'block' : 'none';
+      slideToClickedSlide: true,
+      preloadImages: false,
+      lazy: true,
+      loadOnTransitionStart: true
     });
 
-
-    // Формирование списка услуг, в зависимости от выбранного направления
-    let arrAmenities = document.querySelectorAll('[data-amenities]');
-
-    [].forEach.call(arrAmenities, function (el) {
-      el.style.display = (valSel === 'all' || valSel === el.getAttribute('data-direction')) ? 'block' : 'none';
+    let swipers = new Swiper('.swiper-second', {
+      initialSlide: 0,
+      centeredSlides: true,
+      loop: true,
+      autoplay: true,
+      navigation: {
+        nextEl: '.swiper-navigation-next',
+        prevEl: '.swiper-navigation-prev',
+      },
     });
 
+    let swipers2 = new Swiper('.swiper-thrity', {
+      initialSlide: 0,
+      centeredSlides: true,
+      loop: true,
+      autoplay: true,
+      navigation: {
+        nextEl: '.swiper-navigation-next',
+        prevEl: '.swiper-navigation-prev',
+      },
+    });
 
-    // Фильтрация по услугам, в зависимости от выбранного направления
-    let selectItem = '[data-index=' + valSel + ']';
-    let arrAllInDirection = document.querySelectorAll(selectItem);
+    let swiperspec = new Swiper('.swiper-specialist', {
+      slidesPerView: 6,
+      initialSlide: 0,
+      centeredSlides: false,
+      spaceBetween: 22,
+      allowTouchMove: false,
+      navigation: {
+        nextEl: '.swiper-navigation-next',
+        prevEl: '.swiper-navigation-prev',
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        992: {
+          slidesPerView: 3
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+      },
+      preloadImages: false,
+      lazy: true,
+      loadOnTransitionStart: true
+    });
+  }
 
-    if (document.querySelector('#selectAmenities')) {
-      document.querySelector('#selectAmenities').onchange = function () {
-        let valSelAmenities = this.value;
+  /** Плавная прокрутка до якоря */
+  const anchors = document.querySelectorAll('a[href*="$"]');
+  if (anchors.length) {
+    anchors.forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-        [].forEach.call(arrAllInDirection, function (el) {
-          el.style.display = (valSelAmenities === 'all' || valSelAmenities === el.getAttribute('data-amenities-item')) ? 'block' : 'none';
-        });
-      };
+        const elementClick = this.getAttribute('href').split('');
+        elementClick.splice(0, 1, '#');
+        const normalName = elementClick.join('');
+        const destination = $(normalName).offset().top - 130;
+
+        $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
+      })
+    });
+  }
+
+  /** Маска номера телефона на поля. Maskedinput */
+  {
+    $("#call-tel").mask("+7 (999) 999-9999");
+    $("#call-feedback-tel").mask("+7 (999) 999-9999");
+    $("#appointment-tel").mask("+7 (999) 999-9999");
+  }
+
+  /** Инициализация галереи fancybox */
+  $('[data-fancybox="gallery"]').fancybox({
+    toolbar: false,
+    transitionEffect: "zoom-in-out",
+    loop: true
+  });
+
+  /** Проверка согласия на обработку персональных данных */
+  {
+    function checkAgree() {
+      const checkbox = this;
+
+      if (checkbox && checkbox.hasAttribute('checked')) {
+        const btnSubmit = checkbox.closest('form').querySelector('[type=submit]');
+        btnSubmit.classList.toggle('button-first_noactive');
+      }
     }
 
-    // Фильтрация по годам, в зависимости от выбранного направления
-    let arrAllInYear = document.querySelectorAll(selectItem);
+    document.getElementById('call-feedback-checkbox').addEventListener('change', checkAgree);
+    document.getElementById('appointment-checkbox').addEventListener('change', checkAgree);
+    document.getElementById('call-checkbox').addEventListener('change', checkAgree);
+  }
 
-    if (document.querySelector('#selectYears')) {
-      document.querySelector('#selectYears').onchange = function () {
-        let valSelYear = this.value;
+  /** Фильтрация внутри блока отзывов */
+  {
+    const clinicWrap = document.querySelector('[data-clinic-wrap]');
+    const specialistWrap = document.querySelector('[data-specialist-wrap]');
+    const btnClinic = document.querySelector('[data-clinic]');
+    const btnSpecialist = document.querySelector('[data-specialist]');
 
-        [].forEach.call(arrAllInYear, function (el) {
-          el.style.display = (valSelYear === 'all' || valSelYear === el.getAttribute('data-year-item')) ? 'block' : 'none';
-        });
-      };
+    function toggleFeedback() {
+      btnClinic.classList.toggle('button-second_active');
+      btnSpecialist.classList.toggle('button-second_active');
+      clinicWrap.classList.toggle('swiper_view_off');
+      specialistWrap.classList.toggle('swiper_view_off');
     }
-  };
-}
 
-
-// Maskedinput
-jQuery(function ($) {
-  $("#call-tel").mask("+7 (999) 999-9999");
-  $("#call-feedback-tel").mask("+7 (999) 999-9999");
-  $("#appointment-tel").mask("+7 (999) 999-9999");
-});
-
-
-// Проверка согласия на обработку персональных данных
-$(document).ready(function () {
-
-  if (!(document.querySelector("#call-feedback-checkbox").hasAttribute('checked'))) {
-    $("[value='отправить']").addClass('button-first_noactive')
-  }
-  if (!(document.querySelector("#appointment-checkbox").hasAttribute('checked'))) {
-    $("[value='запись на прием']").addClass('button-first_noactive')
-  }
-  if (!(document.querySelector("#call-checkbox").hasAttribute('checked'))) {
-    $("[value='вызов врача']").addClass('button-first_noactive')
+    if (btnClinic) btnClinic.addEventListener('click', toggleFeedback);
+    if (btnSpecialist) btnSpecialist.addEventListener('click', toggleFeedback);
   }
 
-  $('#call-feedback-checkbox').on('click', function () {
-    $("[value='отправить']").toggleClass('button-first_noactive')
-  });
-
-  $('#appointment-checkbox').on('click', function () {
-    $("[value='запись на прием']").toggleClass('button-first_noactive')
-  });
-
-  $('#call-checkbox').on('click', function () {
-    $("[value='вызов врача']").toggleClass('button-first_noactive')
-  });
-
-
-  // Плавная прокрутка до якоря
-  $("a[href*='$']").click(function (e) {
-    e.preventDefault();
-    let elementClick = $(this).attr("href").split('');
-    elementClick.splice(0, 1, '#');
-    let normalName = elementClick.join('');
-    let destination = $(normalName).offset().top - 130;
-    $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 1100);
-    return false;
-  });
 });
-
-
-// Fancybox
-$('[data-fancybox="gallery"]').fancybox({
-  toolbar: false,
-  transitionEffect: "zoom-in-out",
-  loop: true
-});
-
-
-
-
-
-
-

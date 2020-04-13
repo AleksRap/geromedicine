@@ -29,7 +29,8 @@
               .swiper-slide__text=item.price
             button.button-second(onclick="location.href='name-service-cardiology.html'") подробнее
           .swiper-slide__img
-            img(src=item.img alt="slide1")
+            img.swiper-lazy(data-src=item.img alt="slide1" src='img/pixel.png')
+            .swiper-lazy-preloader
 
 
   .page-wrapper

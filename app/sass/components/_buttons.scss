@@ -124,6 +124,10 @@
   animation: hello 7.8s infinite ease-in-out;
 }
 
+a[href*="$"]:active {
+  border: 2px solid #E9EFE8;
+}
+
 
 @keyframes hello {
   3.85% {opacity: 0.5; transform: scale(1.1)}
