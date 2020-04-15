@@ -45,22 +45,24 @@ document.addEventListener('DOMContentLoaded', () => {
   /** Ленивая загрузка видео */
   {
     const video = document.getElementById('video_about-us2');
-    const videoScrollTop = Math.ceil(video.getBoundingClientRect().top);
-    let change = false;
+    if (video) {
+      const videoScrollTop = Math.ceil(video.getBoundingClientRect().top);
+      let change = false;
 
-    window.addEventListener('scroll', loadVideo);
+      window.addEventListener('scroll', loadVideo);
 
-    function loadVideo() {
-      const scrollTop = window.pageYOffset;
-      const result = scrollTop * 100 / videoScrollTop;
+      function loadVideo() {
+        const scrollTop = window.pageYOffset;
+        const result = scrollTop * 100 / videoScrollTop;
 
-      if (result > 50 && !change) {
-        change = true;
+        if (result > 50 && !change) {
+          change = true;
 
-        const source = video.querySelector('source');
-        const urlVideo = source.dataset.src;
-        source.setAttribute('src', urlVideo);
-        video.load();
+          const source = video.querySelector('source');
+          const urlVideo = source.dataset.src;
+          source.setAttribute('src', urlVideo);
+          video.load();
+        }
       }
     }
   }
