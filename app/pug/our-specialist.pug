@@ -2,115 +2,139 @@ extends layout/layout
 include mixins/cards
 
 block head
-    - var title = 'Наши врачи';
-    - var pageId = 4;
+  - var title = 'Наши врачи';
+  - var pageId = 4;
 
 block header
-   include layout/header
+  include layout/header
 
 block content
-    main
-        .page-wrapper
-            .container-fluid
-                .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
-                    span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
-                        a(itemprop="item" href="/") главная
-                            meta(itemprop="name" content="Главная")
-                            meta(itemprop="position" content="1")
-                    span /
-                    span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
-                        a(itemprop="item" href="our-specialist.html") наши врачи
-                            meta(itemprop="name" content="Врачи")
-                            meta(itemprop="position" content="2")
+  main
+    .page-wrapper
+      .container-fluid
+        .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+          span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+            a(itemprop="item" href="/") главная
+              meta(itemprop="name" content="Главная")
+              meta(itemprop="position" content="1")
+          span /
+          span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+            a(itemprop="item" href="our-specialist.html") наши врачи
+              meta(itemprop="name" content="Врачи")
+              meta(itemprop="position" content="2")
 
 
-            .our-specialist.container-fluid
-                .wrap-max
-                    h1.title.title_gray Наши врачи
-                    hr.title__hr.title__hr_width
+      .our-specialist.container-fluid
+        .wrap-max
+          h1.title.title_gray Наши врачи
+          hr.title__hr.title__hr_width
 
 
-                    .form-inline_wrap
-                        form.form-inline.form-inline_margin-right
-                            .select
-                               select(id="selectItem")
-                                   option(disabled selected) выбрать направление
-                                   option(value="all") все
-                                   option(value="direction-1") направление 1
-                                   option(value="direction-2") направление 2
-                                   option(value="direction-3") направление 3
-                        form.form-inline
-                            input.form-control.form-control_md_border-bottom.form-control_no-border.flex-grow-1(type="search" placeholder="поиск" aria-label="Search")
-                            button.btn.btn-search(type="submit")
+          .form-inline_wrap
+            form.form-inline.form-inline_margin-right
+              .select
+                select(id="selectItem")
+                  option(disabled selected) выбрать направление
+                  option(value="all") все
+                  option(value="direction-1") направление 1
+                  option(value="direction-2") направление 2
+                  option(value="direction-3") направление 3
+            form.form-inline
+              input.form-control.form-control_md_border-bottom.form-control_no-border.flex-grow-1(type="search" placeholder="поиск" aria-label="Search")
+              button.btn.btn-search(type="submit")
 
-                    hr.our-specialist__hr
+          hr.our-specialist__hr
 
-            .container-fluid
-                .wrap-max
-                    .row
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-1" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Волков<br>Генадий<br>Анатольевич
-                                    span кардиолог
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-1" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Тихомиров<br>Ян<br>Васильевич
-                                    span кардиолог
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-2" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Скулкина<br>Евангелина<br>Борисовна
-                                    span Главная медицинская сестра
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-1" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Петров<br>Петр<br>Петрович
-                                    span кардиолог
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-2" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Волков<br>Генадий<br>Анатольевич
-                                    span кардиолог
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-3" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Тихомиров<br>Ян<br>Васильевич
-                                    span кардиолог
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-1" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Скулкина<br>Евангелина<br>Борисовна
-                                    span кардиолог
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-2" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Петров<br>Петр<br>Петрович
-                                    span кардиолог
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-3" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Волков<br>Генадий<br>Анатольевич
-                                    span кардиолог
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-3" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Тихомиров<br>Ян<br>Васильевич
-                                    span кардиолог
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-1" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Скулкина<br>Евангелина<br>Борисовна
-                                    span кардиолог
-                        .col-6.col-sm-4.col-lg-3(data-index="direction-2" data-card)
-                            a.card.card_doctor(href='doctor-profile.html')
-                                .card__description
-                                    h3.card__title Петров<br>Петр<br>Петрович
-                                    span кардиолог
+      .container-fluid
+        .wrap-max
+          .row
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-1" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-1.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Волков<br>Генадий<br>Анатольевич
+                  span кардиолог
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-1" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-2.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Тихомиров<br>Ян<br>Васильевич
+                  span кардиолог
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-2" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-3.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Скулкина<br>Евангелина<br>Борисовна
+                  span Главная медицинская сестра
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-1" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-1.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Петров<br>Петр<br>Петрович
+                  span кардиолог
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-2" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-2.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Волков<br>Генадий<br>Анатольевич
+                  span кардиолог
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-3" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-3.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Тихомиров<br>Ян<br>Васильевич
+                  span кардиолог
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-1" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-1.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Скулкина<br>Евангелина<br>Борисовна
+                  span кардиолог
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-2" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-2.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Петров<br>Петр<br>Петрович
+                  span кардиолог
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-3" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-3.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Волков<br>Генадий<br>Анатольевич
+                  span кардиолог
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-3" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-1.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Тихомиров<br>Ян<br>Васильевич
+                  span кардиолог
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-1" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-2.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Скулкина<br>Евангелина<br>Борисовна
+                  span кардиолог
+            .col-12.col-sm-6.col-md-4.col-lg-3.mb-4(data-index="direction-2" data-card)
+              a.card.card_doctor-slider2(href='doctor-profile.html')
+                .card__img
+                  img(src='img/doctor-3.jpg' alt="Фото специалиста")
+                .card__description
+                  h3.card__title Петров<br>Петр<br>Петрович
+                  span кардиолог
 
-                .wrap-max.our-specialist_margin
-                    include components/pagination
+        .wrap-max.our-specialist_margin
+          include components/pagination
 
 
 

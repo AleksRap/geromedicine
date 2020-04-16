@@ -644,3 +644,7 @@ body#wysiwig-content .wysiwig-content * {
 nav.navbar .dropdown:hover > .dropdown-menu {
   display: block;
 }
+
+a:active.card {
+  border: 2px solid #E9EFE8;
+}
