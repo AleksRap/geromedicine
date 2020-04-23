@@ -142,6 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
       centeredSlides: true,
       spaceBetween: 30,
       loop: true,
+      autoplay: true,
+      delay: 5000,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
