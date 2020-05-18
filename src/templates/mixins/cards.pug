@@ -1,0 +1,47 @@
+mixin article-img(img, data, title, link, green)
+  -var greenMode = green ? 'card_background' : ''
+  .card.card_h(class=greenMode)
+    .card__img.card__img_mh.card__img_grayscale
+      img(src=img alt="Обложка статьи")
+    .card__description
+      if time === 0
+      else
+        time(datetime="2011-11").card__data= data
+      if green
+        h3.card__title(data-dotdotdot="article-img2")= title
+      else
+        h3.card__title(data-dotdotdot="article-img")= title
+      a(href=link).card__link читать
+      a(href=link).card__link_full
+
+mixin article-img-new(img, data, title, link)
+  .card.card-2.card_margin
+    .card__img.card__img_mh
+      img(src=img alt="Обложка статьи")
+    .card__description
+      if time === 0
+      else
+        time(datetime="2011-11").card__data= data
+      h3.card__title(data-dotdotdot="article-img")= title
+      a(href=link).card__link подробнее
+      a(href=link).card__link_full
+
+
+mixin article-img-horizontal(img, title, link)
+  .card.card_horizontal.card_horizontal_margin
+    .card__img.card__img_grayscale
+      img(src=img alt = "Обложка статьи")
+    .card__description
+      h3.card__title(data-dotdotdot="article-img")= title
+      a(href=link).card__link читать
+      a(href=link).card__link_full
+
+
+mixin card-doctor(img, title, profession, link)
+  .card.card_doctor
+    .card__img.card__img_mh
+      img(src= img alt="Фото врача")
+    .card__description
+      h3.card__title= title
+      span= profession
+      a(href=link).card__link_full

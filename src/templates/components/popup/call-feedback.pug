@@ -1,0 +1,45 @@
+#form-popup-call-feedback.white-popup.mfp-hide
+    .button-close.mfp-close
+    .popup__wrap
+        h2.title.title_gray Заказать обратный звонок
+        form.popup__form.popup__form_mt
+            .popup__form-area
+                .row.no-gutters.w-100
+                    .col-12.col-md-3
+                        label.popup__item-wrap.h-100(for="call-feedback-name")
+                            span.required-field Ваше имя
+                    .col-12.col-md-9.d-flex.justify-content-end
+                        input.popup__field.inputbox(id="call-feedback-name" type="text" placeholder="введите имя" required)
+            .popup__form-area
+                .row.no-gutters.w-100
+                    .col-12.col-md-3
+                        label.popup__item-wrap.h-100(for="call-feedback-tel")
+                            span.required-field Телефон
+                    .col-12.col-md-9.d-flex.justify-content-end
+                        input.popup__field.inputbox(id="call-feedback-tel" type="tel" placeholder="+7-(___)-_______" required)
+            .popup__form-area
+                .row.no-gutters.w-100
+                    .col-12.col-md-3
+                        label.popup__item-wrap.h-100(for="call-feedback-time")
+                            span Удобное время для звонка
+                    .col-12.col-md-9.d-flex.justify-content-end
+                        .select-wrapper.d-flex.justify-content-end
+                            select.popup__field.popup__field_bb(id="call-feedback-time")
+                                option(selected) 10:30-13:00
+                                option 13:00-14:00
+                                option 14:30-15:00
+                                option 15:00-16:00
+            .popup__form-area
+                .row.no-gutters.w-100
+                    .col-12.col-md-3
+                        label.popup__item-wrap.mt-3(for="call-feedback-comment")
+                            span Сообщение
+                    .col-12.col-md-9.d-flex.justify-content-end
+                        textarea.popup__textarea.popup__textarea_mt.popup__field.popup__field_bb.inputbox(id="call-feedback-comment" placeholder="введите ваш комментарий")
+
+            label.popup__item-wrap.popup__item-wrap_mt-30(for="call-feedback-checkbox")
+                input.popup__checkbox.inputbox(id="call-feedback-checkbox" type="checkbox" checked)
+                span.popup__checkbox-fake
+                span.popup__checkbox-text Нажимая на кнопку, вы даете согласие на обработку персональных данных.
+            span.required-field.required-field_left.popup__item-wrap_mt-15 Обязательное поле для заполнения
+            input.btn.button-first.button-first_mt.button-first_border(type="submit" value="отправить")
