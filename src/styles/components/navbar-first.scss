@@ -1,0 +1,45 @@
+.navbar-first {
+  padding: 15px;
+  background-color: $third-color;
+
+  &__content {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: initial;
+      margin-right: auto;
+    }
+  }
+
+  &__search {
+    margin-left: 20px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+    @media (min-width: 768px) {
+      align-items: flex-end;
+      margin-left: 40px;
+    }
+  }
+
+  &__address {
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}

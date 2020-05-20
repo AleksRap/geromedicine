@@ -1,7 +1,93 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
+  /**
+   * 100vh - высота без учета панелей инструментов на мобильных
+   */
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+  var header = document.querySelector('.header').clientHeight;
+  document.documentElement.style.setProperty('--header', "".concat(header, "px"));
+  /**
+   * Если видно мобильное меню
+   */
+
+  var screenWidth = document.documentElement.clientWidth;
+
+  if (screenWidth < 1200) {
+    /**
+     * Открытие мобильного меню
+     */
+    var burger = document.querySelector('.burger');
+    burger.addEventListener('click', function (event) {
+      this.classList.toggle('open');
+      this.closest('.navigation').querySelector('.navigation__content').classList.toggle('open');
+    });
+    /**
+     * Переключение открытой навигации
+     */
+
+    var navigation = document.querySelector('.navigation');
+    var arrDropdownItem = navigation.querySelectorAll('.navigation__item');
+    navigation.addEventListener('click', function (event) {
+      /**
+       * Если клик был не по пункту с дропдауном, то выходим
+       */
+      var target = event.target.closest('.navigation__item_drop');
+      if (!target) return;
+      event.preventDefault();
+      var itemOpen = target.classList.contains('open');
+      /**
+       * Закрываем все пункты
+       */
+
+      arrDropdownItem.forEach(function (item) {
+        return item.closest('.open') && item.classList.remove('open');
+      });
+      /**
+       * Открываем нужный
+       */
+
+      !itemOpen && target.classList.add('open');
+    });
+  }
+  /** Прилипание меню после прокрутки */
+
+
+  var firstMenu = document.querySelector('.navbar-first');
+  var secondMenu = document.querySelector('.navbar-second');
+  var secondMenuMb = +getComputedStyle(secondMenu).marginBottom.split('px').join('');
+  var scrollHeight = firstMenu.clientHeight;
+  var mb = secondMenu.clientHeight + secondMenuMb;
+  window.addEventListener('scroll', function () {
+    window.pageYOffset > scrollHeight ? secondMenu.classList.add('navbar-second_glue') : secondMenu.classList.remove('navbar-second_glue');
+    window.pageYOffset > scrollHeight ? firstMenu.style.marginBottom = "".concat(mb, "px") : firstMenu.style.marginBottom = '0px';
+  });
+  /** Инициализация слайдеров swiper */
+
+  var swiper = new Swiper('.swiper-main', {
+    slidesPerView: 'auto',
+    initialSlide: 1,
+    centeredSlides: true,
+    spaceBetween: 30,
+    loop: true,
+    // autoplay: true,
+    delay: 5000,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      prevEl: '.swiper-main__prev',
+      nextEl: '.swiper-main__next'
+    },
+    slideToClickedSlide: true,
+    preloadImages: false,
+    lazy: true,
+    loadOnTransitionStart: true
+  });
   /** Ужимка текста. Инициализация dotdotdot */
+
   {
     var arrDotDotDot = [{
       selector: '[data-dotdotdot=article-img]',
@@ -66,18 +152,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-  /** Прилипание меню после прокрутки */
-
-  {
-    var windowWidth = document.documentElement.clientWidth;
-    var scrollHeight = windowWidth <= 768 ? 78 : 135;
-    window.addEventListener('scroll', function () {
-      var firstMenu = document.querySelector('.navbar-first');
-      var secondMenu = document.querySelector('.navbar-second-body');
-      window.pageYOffset > scrollHeight ? secondMenu.classList.add('navbar-second_glue') : secondMenu.classList.remove('navbar-second_glue');
-      window.pageYOffset > scrollHeight ? firstMenu.classList.add('navbar-first_mb') : firstMenu.classList.remove('navbar-first_mb');
-    });
-  }
   /** Ленивая загрузка видео */
 
   {
@@ -159,27 +233,6 @@ document.addEventListener('DOMContentLoaded', function () {
   /** Инициализация слайдеров swiper */
 
   {
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      initialSlide: 1,
-      centeredSlides: true,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: true,
-      delay: 5000,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      slideToClickedSlide: true,
-      preloadImages: false,
-      lazy: true,
-      loadOnTransitionStart: true
-    });
     var swipers = new Swiper('.swiper-second', {
       initialSlide: 0,
       centeredSlides: true,

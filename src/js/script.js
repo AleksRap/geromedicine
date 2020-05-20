@@ -1,4 +1,113 @@
 document.addEventListener('DOMContentLoaded', () => {
+  /**
+   * 100vh - высота без учета панелей инструментов на мобильных
+   */
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  const header = document.querySelector('.header').clientHeight;
+  document.documentElement.style.setProperty('--header', `${header}px`);
+
+
+  /**
+   * Если видно мобильное меню
+   */
+  const screenWidth = document.documentElement.clientWidth;
+  if (screenWidth < 1200) {
+
+    /**
+     * Открытие мобильного меню
+     */
+    const burger = document.querySelector('.burger');
+    burger.addEventListener('click', function (event) {
+      this.classList.toggle('open');
+      this
+        .closest('.navigation')
+        .querySelector('.navigation__content')
+        .classList.toggle('open');
+    });
+
+    /**
+     * Переключение открытой навигации
+     */
+    const navigation = document.querySelector('.navigation');
+    const arrDropdownItem = navigation.querySelectorAll('.navigation__item');
+
+    navigation.addEventListener('click', event => {
+      /**
+       * Если клик был не по пункту с дропдауном, то выходим
+       */
+      const target = event.target.closest('.navigation__item_drop');
+      if (!target) return;
+
+      event.preventDefault();
+
+      const itemOpen = target.classList.contains('open');
+
+      /**
+       * Закрываем все пункты
+       */
+      arrDropdownItem.forEach(item => item.closest('.open') && item.classList.remove('open'));
+
+      /**
+       * Открываем нужный
+       */
+      !itemOpen && target.classList.add('open');
+    })
+  }
+
+  /** Прилипание меню после прокрутки */
+  const firstMenu = document.querySelector('.navbar-first');
+  const secondMenu = document.querySelector('.navbar-second');
+  const secondMenuMb = +getComputedStyle(secondMenu).marginBottom.split('px').join('');
+  const scrollHeight = firstMenu.clientHeight;
+  const mb = secondMenu.clientHeight + secondMenuMb;
+
+  window.addEventListener('scroll', function () {
+
+    window.pageYOffset > scrollHeight
+      ? secondMenu.classList.add('navbar-second_glue')
+      : secondMenu.classList.remove('navbar-second_glue');
+
+    window.pageYOffset > scrollHeight
+      ? firstMenu.style.marginBottom = `${mb}px`
+      : firstMenu.style.marginBottom = '0px';
+  });
+
+  /** Инициализация слайдеров swiper */
+  const swiper = new Swiper('.swiper-main', {
+    slidesPerView: 'auto',
+    initialSlide: 1,
+    centeredSlides: true,
+    spaceBetween: 30,
+    loop: true,
+    // autoplay: true,
+    delay: 5000,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '.swiper-main__prev',
+      nextEl: '.swiper-main__next'
+    },
+    slideToClickedSlide: true,
+    preloadImages: false,
+    lazy: true,
+    loadOnTransitionStart: true
+  });
+
+
+
+
+
+
+
+
+
+
+
+
   /** Ужимка текста. Инициализация dotdotdot */
   {
     const arrDotDotDot = [
@@ -38,25 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-
-  /** Прилипание меню после прокрутки */
-  {
-    const windowWidth = document.documentElement.clientWidth;
-    const scrollHeight = (windowWidth <= 768) ? 78 : 135;
-
-    window.addEventListener('scroll', function () {
-      const firstMenu = document.querySelector('.navbar-first');
-      const secondMenu = document.querySelector('.navbar-second-body');
-
-      window.pageYOffset > scrollHeight
-        ? secondMenu.classList.add('navbar-second_glue')
-        : secondMenu.classList.remove('navbar-second_glue');
-
-      window.pageYOffset > scrollHeight
-        ? firstMenu.classList.add('navbar-first_mb')
-        : firstMenu.classList.remove('navbar-first_mb');
-    });
-  }
 
   /** Ленивая загрузка видео */
   {
@@ -136,28 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /** Инициализация слайдеров swiper */
   {
-    const swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      initialSlide: 1,
-      centeredSlides: true,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: true,
-      delay: 5000,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      slideToClickedSlide: true,
-      preloadImages: false,
-      lazy: true,
-      loadOnTransitionStart: true
-    });
-
     let swipers = new Swiper('.swiper-second', {
       initialSlide: 0,
       centeredSlides: true,

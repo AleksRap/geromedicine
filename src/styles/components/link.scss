@@ -1,0 +1,72 @@
+.link {
+  text-decoration: none;
+  color: $font-color;
+
+  &_number {
+    font-size: 20px;
+    color: $fourth-color;
+    line-height: 1.2;
+
+    margin-bottom: 3px;
+
+    @media (min-width: 992px) {
+      margin-bottom: 0;
+      font-size: 28px;
+
+      &:hover {
+        color: $second-color;
+      }
+    }
+  }
+
+  &_search {
+    display: none;
+
+    @media (min-width: 992px) {
+      position: relative;
+      display: initial;
+
+      padding-left: 32px;
+      text-transform: lowercase;
+
+      &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+
+        width: 25px;
+        height: 25px;
+
+        background: url('../svg/icons/search.svg') center/contain no-repeat;
+      }
+    }
+  }
+
+  &_address {
+    font-size: 13px;
+    text-align: center;
+
+    @media (min-width: 992px) {
+      position: relative;
+
+      padding-left: 35px;
+
+      font-size: 18px;
+      text-align: left;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto 0;
+
+        width: 25px;
+        height: 25px;
+
+        background: url('../svg/icons/point.svg') center/contain no-repeat;
+      }
+    }
+  }
+}

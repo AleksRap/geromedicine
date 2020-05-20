@@ -1,0 +1,61 @@
+.navbar-second {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  height: 50px;
+
+  margin-bottom: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  background-color: #fff;
+  border-bottom: 2px solid $third-color;
+
+  @media (min-width: 768px) and (max-height: 768px) {
+    margin-top: 30px;
+  }
+
+  &_glue {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  &__content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  &__address {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: initial;
+
+      margin-right: auto;
+      font-size: 14px;
+    }
+    @media (min-width: 1350px) {
+      font-size: 18px;
+    }
+  }
+  
+  &__logo {
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  
+  &__navigation {
+    height: 100%;
+    margin-left: auto;
+  }
+}

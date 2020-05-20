@@ -1,0 +1,30 @@
+.logo {
+  display: inline-block;
+  width: 150px;
+  height: 27px;
+
+  background: url('../svg/logo/logo-mobil.svg') center/contain no-repeat;
+
+  &:hover {
+    background-image: url('../svg/logo/logo-mobil.svg');
+  }
+
+  @media (min-width: 345px) {
+    width: 168px;
+    height: 31px;
+  }
+  @media (min-width: 576px) {
+    width: 201px;
+    height: 37px;
+  }
+  @media (min-width: 768px) {
+    width: 460px;
+    height: 103px;
+
+    background-image: url("../svg/logo/logo.svg");
+
+    &:hover {
+      background-image: url("../svg/logo/logo-green.svg");
+    }
+  }
+}

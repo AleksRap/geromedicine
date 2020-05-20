@@ -1,0 +1,71 @@
+.burger {
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  align-items:center;
+
+  height: 22px;
+
+  &.open {
+
+    .burger__icon {
+      width: 30px;
+      height: 0;
+      transition: height .2s ease-in, width .2s ease-in;
+
+      &::before {
+        top: 10px;
+
+        width: 30px;
+        transform: rotate(45deg);
+        transition: transform .2s .2s ease-in, width .2s ease-in, top .2s ease-in;
+      }
+
+      &::after {
+        bottom: 10px;
+
+        width: 30px;
+        transform: rotate(-45deg);
+        transition: transform .2s .2s ease-in, width .2s ease-in, bottom .2s ease-in;
+      }
+    }
+  }
+
+  &__text {
+    margin-right: 8px;
+    text-transform: lowercase;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 2px;
+    transition: height .2s ease-in, width .2s ease-in;
+
+    background-color: $fourth-color;
+
+    &::before, &::after {
+      position: absolute;
+      content: '';
+      right: 0;
+
+      width: 40px;
+      height: 2px;
+
+      background-color: $fourth-color;
+      transition: transform .2s .4s ease-in, width .2s .2s ease-in;
+    }
+
+    &::before {
+      top: 0;
+      transition: top .2s ease-in;
+    }
+
+    &::after {
+      bottom: 0;
+      transition: bottom .2s ease-in;
+    }
+  }
+}

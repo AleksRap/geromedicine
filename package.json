@@ -11,13 +11,14 @@
   "author": "Sedov A.I <aleks.sedov@mail.ru>",
   "license": "ISC",
   "dependencies": {
-    "normalize.css": "^8.0.1",
-    "svg4everybody": "^2.1.9",
     "dotdotdot-js": "^4.0.9",
+    "intl-tel-input": "^16.0.2",
     "lg-fullscreen": "^1.1.0",
     "lightgallery": "^1.6.12",
     "lightslider": "^1.1.6",
-    "intl-tel-input": "^16.0.2"
+    "normalize.css": "^8.0.1",
+    "svg4everybody": "^2.1.9",
+    "swiper": "^5.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

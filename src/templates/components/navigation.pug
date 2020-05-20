@@ -1,0 +1,53 @@
+nav.navigation
+  button.burger.navigation__burger(type="button")
+    span.burger__text Меню
+    span.burger__icon
+
+  .navigation__content
+    .search.navigation__search
+      input.search__input(type="text" placeholder="Поиск")
+      button.search__btn
+
+    .navigation__wrap-btn
+      button.button.button_second(data-href="#form-popup-call-feedback") Заказать обратный звонок
+      button.button.button_second(data-href="#form-popup") Вызов врача
+      button.button.button_first(data-href="#form-popup-appointment") Запись на прием
+
+    ul.navigation__list
+      -
+        menu = [
+          {
+            link: 'about-us.html', text: 'О клинике', activeNum: 1, dropdown: [
+              {link: 'about-us.html', text: 'Информация о клинике'},
+              {link: 'docs.html', text: 'Лицензия и документы'},
+              {link: 'legal-information.html', text: 'Правовая информация'}
+            ]
+          },
+          {
+            link: 'price.html', text: 'Услуги и цены', activeNum: 2, dropdown: [
+              {link: 'price.html', text: 'Услуги и цены'},
+              {link: 'name-service-patronage.html', text: 'Патронаж'}
+            ]
+          },
+          {link: 'programme.html', text: 'Программы', activeNum: 3},
+          {link: 'our-specialist.html', text: 'Врачи', activeNum: 4},
+          {link: 'stock.html', text: 'Акции', activeNum: 5},
+          {
+            link: 'articles-health.html', text: 'Статьи', activeNum: 6, dropdown: [
+              {link: 'articles-health.html', text: 'Статьи о здоровье'},
+              {link: 'recommendations.html', text: 'Рекомендации'}
+            ]
+          },
+          {link: 'feedback.html', text: 'Отзывы', activeNum: 7},
+          {link: 'contact.html', text: 'Контакты', activeNum: 8},
+        ];
+
+      each item in menu
+        li.navigation__item(class= item.dropdown ? 'navigation__item_drop' : '')
+          a.navigation__link(href=item.link class= pageId === item.activeNum ? 'desktop-menu__link_active' : '')
+            h3=item.text
+          if item.dropdown
+            .navigation__dropdown
+              each subitem in item.dropdown
+                a.navigation__dropdown-link(href=subitem.link)
+                  h3=subitem.text

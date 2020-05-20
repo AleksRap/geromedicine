@@ -1,41 +1,33 @@
-.swiper-container.swiper-container_margin.d-none.d-xl-block
+.swiper-container.swiper-main
   .swiper-wrapper
-
     -
       arrInfo = [{
         title: 'Отличные цены на обследование',
         description: 'МРТ, Энцефолограмма, ЭКГ',
-        price: 'от 1900000000р',
-        img: 'img/big-slide-1.jpg'
+        img: 'images/slider/big-slide-1.jpg'
       }, {
         title: 'Отличные цены',
         description: 'МРТ, Энцефолограмма, ЭКГ',
-        price: 'от 150р',
-        img: 'img/big-slide-2.jpg'
+        img: 'images/slider/big-slide-2.jpg'
       }, {
         title: 'На обследование',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar arcu lectus eget convallis in nec maecenas elit. Pharetra lobortis aliquam porttitor convallis amet ut.',
-        price: 'от 900р',
-        img: 'img/big-slide-3.jpg'
+        img: 'images/slider/big-slide-3.jpg'
       }];
 
     each item in arrInfo
-      .swiper-slide
-        .swiper-slide__wrapper
-          .swiper-slide__wrap
-            .swiper-slide__caption
-              h2=item.title
-              .swiper-slide__description(data-dotdotdot="slider")=item.description
-              .swiper-slide__text=item.price
-            button.button-second(onclick="location.href='name-service-cardiology.html'") подробнее
-          .swiper-slide__img
-            img.swiper-lazy(data-src=item.img alt="slide1" src='img/pixel.png')
-            .swiper-lazy-preloader
+      .swiper-slide.swiper-main__slide
+        .swiper-main__content
+          .swiper-main__wrap
+            h2.swiper-main__title=item.title
+            p.swiper-main__description=item.description
+            a.button.button-second.swiper-main__btn(href="name-service-cardiology.html") Подробнее
+        .swiper-main__img
+          img.swiper-lazy(data-src=item.img alt="slide1" src='images/other/pixel.png')
+          .swiper-lazy-preloader
 
 
-  .page-wrapper
-    .row
-      .col-11.offset-1
-        .swiper-pagination
-        .swiper-button-next
-        .swiper-button-prev
+  .swiper-main__tools
+    .swiper-pagination.swiper-main__pagination
+    button.swiper-main__next
+    button.swiper-main__prev

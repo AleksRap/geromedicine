@@ -1,5 +1,4 @@
 extends layout/layout
-include mixins/cards
 include mixins/amenities-card
 
 block head
@@ -11,6 +10,49 @@ block header
 block content
   main
     include components/slider
+
+    .amenities-cards
+      h2.title.title_margin.amenities-cards__title Наша клиника предоставляет ряд услуг
+      .amenities-cards__wrap
+        -
+          amenitiesCard = [
+            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Кардиология'},
+            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Андрология'},
+            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Гастроэнтерология'},
+            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Гинекология'},
+            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Неврология'},
+            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Офтальмология'},
+            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Ревматология'},
+            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Терапия'}
+          ]
+
+        each card in amenitiesCard
+         +amenities-card(card)
+
+      .amenities-cards__hr-wrap
+        .amenities-cards__hr
+          .amenities-cards__btn
+            a(href="price.html").no-opacity.btn.button-second смотреть все
+
+    .advantages
+      .advantages__block
+      .advantages__block-content
+        h2.advantages__title Геромедицина - надежная клиника с опытными врачами
+        .advantages__list
+          .advantages__item
+            .advantages__num 35
+            .advantages__text Опытных<br>специалистов
+          .advantages__item
+            .advantages__num 20<span> лет</span>
+            .advantages__text Средний<br>стаж
+          .advantages__item
+            .advantages__num <span>более </span>600
+            .advantages__text Довольных<br>пациентов
+      .advantages__block
+
+    //include components/specialist
+
+  //- main
 
     .wrap-info-about-us.wrap-1150
       .page-wrapper
@@ -31,46 +73,7 @@ block content
                   h4.title.title_white.title_info Наши<br>доктора
                   hr.info__hr
 
-        .amenities-cards
-          h2.title.title_margin.amenities-cards__title Наша клиника предоставляет ряд услуг
-          .amenities-cards__wrap
-            -
-              amenitiesCard = [
-              {url: 'name-service-cardiology.html', img: 'img/doctors2.jpg', title: 'Кардиология'},
-              {url: 'name-service-cardiology.html', img: 'img/doctors2.jpg', title: 'Андрология'},
-              {url: 'name-service-cardiology.html', img: 'img/doctors2.jpg', title: 'Гастроэнтерология'},
-              {url: 'name-service-cardiology.html', img: 'img/doctors2.jpg', title: 'Гинекология'},
-              {url: 'name-service-cardiology.html', img: 'img/doctors2.jpg', title: 'Неврология'},
-              {url: 'name-service-cardiology.html', img: 'img/doctors2.jpg', title: 'Офтальмология'},
-              {url: 'name-service-cardiology.html', img: 'img/doctors2.jpg', title: 'Ревматология'},
-              {url: 'name-service-cardiology.html', img: 'img/doctors2.jpg', title: 'Терапия'}
-              ]
 
-            each card in amenitiesCard
-              +amenities-card(card)
-
-          .amenities-cards__hr-wrap
-            .amenities-cards__hr
-              .amenities-cards__btn
-                a(href="price.html").no-opacity.btn.button-second смотреть все
-
-        .advantages
-          .advantages__block
-          .advantages__block-content
-            h2.advantages__title Геромедицина - надежная клиника с опытными врачами
-            .advantages__list
-              .advantages__item
-                .advantages__num 35
-                .advantages__text Опытных<br>специалистов
-              .advantages__item
-                .advantages__num 20<span> лет</span>
-                .advantages__text Средний<br>стаж
-              .advantages__item
-                .advantages__num <span>более </span>600
-                .advantages__text Довольных<br>пациентов
-          .advantages__block
-
-        include components/specialist
 
         .about-us.about-us_margin.container-fluid
           .about-us__wrap
@@ -136,5 +139,6 @@ block content
 
 
 block footer
-  include layout/footer
+
+  //- include layout/footer
 

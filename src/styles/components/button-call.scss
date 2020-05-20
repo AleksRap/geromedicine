@@ -1,0 +1,107 @@
+.button-call {
+  position: fixed;
+  z-index: 2;
+  right: -100px;
+  transition: right .2s ease-in;
+
+  width: 180px;
+  height: 80px;
+
+  padding: 15px 32px 15px 82px;
+
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: $third-color;
+  text-transform: lowercase;
+
+  &:hover {
+    right: 0;
+    transition: right .2s ease-in;
+
+    .button-call__text {
+      opacity: 1;
+      transition: opacity .2s ease-in;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  &_feedback {
+    bottom: 160px;
+    background-color: $font-color;
+
+    animation: hello 18s infinite ease-in-out;
+
+    &::before {
+      width: 38px;
+      height: 39px;
+
+      left: 19px;
+
+      background-image: url('../svg/button-call/phone.svg');
+    }
+  }
+  
+  &_doctor-call {
+    bottom: 80px;
+    background-color: $fourth-color;
+
+    animation: hello 18s 6s infinite ease-in-out;
+
+    &::before {
+      width: 51px;
+      height: 41px;
+
+      left: 16px;
+
+      background-image: url('../svg/button-call/car.svg');
+    }
+  }
+  
+  &_appointment {
+    bottom: 0;
+    background-color: $first-color;
+
+    animation: hello 18s 12s infinite ease-in-out;
+
+    &::before {
+      width: 55px;
+      height: 46px;
+
+      left: 13px;
+
+      background-image: url('../svg/button-call/pen.svg');
+    }
+  }
+
+  &__text {
+    opacity: 0;
+    transition: opacity .2s ease-in;
+  }
+}
+
+@keyframes hello {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  2.77% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  5.55% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

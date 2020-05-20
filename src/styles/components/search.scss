@@ -1,0 +1,30 @@
+.search {
+  position: relative;
+  width: 100%;
+  height: 60px;
+
+  border-bottom: 2px solid $third-color;
+
+  &__input {
+    width: 100%;
+    height: 100%;
+
+    padding: 15px 40px 15px 15px;
+
+    border: none;
+    outline: none;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    margin: auto 0;
+
+    width: 20px;
+    height: 20px;
+
+    background: url('../svg/icons/search.svg') center/contain no-repeat;
+  }
+}
