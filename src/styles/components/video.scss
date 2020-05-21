@@ -1,0 +1,26 @@
+.video {
+  cursor: pointer;
+  position: relative;
+
+  &__play {
+    display: block;
+
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+
+    width: 92px;
+    height: 92px;
+
+    background: url('../svg/icons/play-button.svg') center/contain no-repeat;
+  }
+
+  &.play .video__play {
+    display: none;
+  }
+}

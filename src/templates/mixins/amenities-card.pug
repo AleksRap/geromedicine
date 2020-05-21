@@ -1,3 +1,3 @@
 mixin amenities-card(data)
-  a.amenities-card(href=data.url || '#' style=`background: linear-gradient(179.64deg, rgba(245, 94, 33, 0) -15.21%, #F55E21 113.71%), linear-gradient(0deg, #F55E21, #F55E21), url('${data.img}') center/100% no-repeat;`)
-    .amenities-card__title=data.title
+  a.amenities-card(href=data.url || '#' style=`background: linear-gradient(179.64deg, rgba(245, 94, 33, 0) -15.21%, #F55E21 113.71%), linear-gradient(0deg, #F55E21, #F55E21), url('${data.img}') center/cover no-repeat;`)
+    .title.amenities-card__title=data.title

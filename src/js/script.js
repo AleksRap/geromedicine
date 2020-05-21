@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+
   /** Прилипание меню после прокрутки */
   const firstMenu = document.querySelector('.navbar-first');
   const secondMenu = document.querySelector('.navbar-second');
@@ -63,8 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollHeight = firstMenu.clientHeight;
   const mb = secondMenu.clientHeight + secondMenuMb;
 
-  window.addEventListener('scroll', function () {
-
+  function transferNavbarSecond() {
     window.pageYOffset > scrollHeight
       ? secondMenu.classList.add('navbar-second_glue')
       : secondMenu.classList.remove('navbar-second_glue');
@@ -72,12 +72,16 @@ document.addEventListener('DOMContentLoaded', () => {
     window.pageYOffset > scrollHeight
       ? firstMenu.style.marginBottom = `${mb}px`
       : firstMenu.style.marginBottom = '0px';
-  });
+  }
+
+  transferNavbarSecond();
+  window.addEventListener('scroll', transferNavbarSecond);
+
 
   /** Инициализация слайдеров swiper */
-  const swiper = new Swiper('.swiper-main', {
+  const swiperMain = new Swiper('.swiper-main', {
     slidesPerView: 'auto',
-    initialSlide: 1,
+    initialSlide: 0,
     centeredSlides: true,
     spaceBetween: 30,
     loop: true,
@@ -96,6 +100,80 @@ document.addEventListener('DOMContentLoaded', () => {
     lazy: true,
     loadOnTransitionStart: true
   });
+
+  const swiperSpecialist = new Swiper('.swiper-specialist', {
+    initialSlide: 0,
+    spaceBetween: 30,
+    centeredSlides: false,
+    allowTouchMove: false,
+    navigation: {
+      nextEl: '.specialists__next',
+      prevEl: '.specialists__prev',
+    },
+    breakpoints: {
+      480: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      768: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      },
+      992: {
+        slidesPerView: 4
+      },
+      1200: {
+        slidesPerView: 5
+      },
+      1500: {
+        slidesPerView: 6
+      }
+    },
+    preloadImages: false,
+    lazy: true,
+    loadOnTransitionStart: true
+  });
+
+
+  /**
+   * Ленивая загрузка видео
+   * событие скролла удаляется по достижению 50% прокрутки до видео
+   */
+  const videoWrap = document.querySelector('.video');
+
+  if (videoWrap) {
+    const video = videoWrap.querySelector('video');
+    const videoScrollTop = Math.ceil(video.getBoundingClientRect().top);
+
+    window.addEventListener('scroll', loadVideo);
+
+    function loadVideo() {
+      const scrollTop = window.pageYOffset;
+
+      if (scrollTop > videoScrollTop / 2) {
+        window.removeEventListener('scroll', loadVideo);
+
+        const source = video.querySelector('source');
+        const urlVideo = source.dataset.src;
+        source.setAttribute('src', urlVideo);
+        video.load();
+
+        /** Вешаем обработчик на воспроизведение/остановку видео */
+        videoWrap.addEventListener('click', async event => {
+
+          if (video.paused) {
+            await video.play();
+            video.controls = true;
+          } else {
+            video.pause();
+            video.controls = false;
+          }
+
+          event.target.closest('.video').classList.toggle('play');
+        });
+      }
+    }
+  }
 
 
 
@@ -148,60 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /** Ленивая загрузка видео */
-  {
-    const video = document.getElementById('video_about-us2');
-    if (video) {
-      const videoScrollTop = Math.ceil(video.getBoundingClientRect().top);
-      let change = false;
-
-      window.addEventListener('scroll', loadVideo);
-
-      function loadVideo() {
-        const scrollTop = window.pageYOffset;
-        const result = scrollTop * 100 / videoScrollTop;
-
-        if (result > 50 && !change) {
-          change = true;
-
-          const source = video.querySelector('source');
-          const urlVideo = source.dataset.src;
-          source.setAttribute('src', urlVideo);
-          video.load();
-        }
-      }
-    }
-  }
-
-  /** Воспроизведение видео */
-  {
-    const overlay = document.getElementById('about-us__overlay');
-    const video = document.getElementById('video_about-us');
-    const video2 = document.getElementById('video_about-us2');
-
-    playStopVideo(overlay, video);
-    playStopVideo(overlay, video2);
-
-    function playStopVideo(el, video) {
-      if (video) {
-        el.addEventListener('click', () => play(el, video));
-        video.addEventListener('click', () => play(el, video));
-      }
-    }
-
-    function play(el, video) {
-      if (video.paused) {
-        video.play();
-        video.controls = true;
-        el.className = 'on';
-      } else {
-        video.pause();
-        video.controls = false;
-        el.classList = '';
-      }
-    }
-  }
-
   /** Инициализация lightslider */
   $('#lightSlider').lightSlider({
     item: 1,
@@ -246,38 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
         nextEl: '.swiper-navigation-next',
         prevEl: '.swiper-navigation-prev',
       },
-    });
-
-    let swiperspec = new Swiper('.swiper-specialist', {
-      slidesPerView: 6,
-      initialSlide: 0,
-      centeredSlides: false,
-      spaceBetween: 22,
-      allowTouchMove: false,
-      navigation: {
-        nextEl: '.swiper-navigation-next',
-        prevEl: '.swiper-navigation-prev',
-      },
-      breakpoints: {
-        576: {
-          slidesPerView: 1,
-          spaceBetween: 10
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        },
-        992: {
-          slidesPerView: 3
-        },
-        1200: {
-          slidesPerView: 4,
-          spaceBetween: 30
-        }
-      },
-      preloadImages: false,
-      lazy: true,
-      loadOnTransitionStart: true
     });
   }
 

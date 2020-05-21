@@ -1,0 +1,33 @@
+.specialists
+  .swiper-content.swiper-specialist
+    .swiper-wrapper.specialists__wrapper
+
+      -
+        doctorsInfo = [
+          {img: 'images/doctors/doctor-1.jpg', name: 'Волков Генадий Анатольевич', specialty: 'Врач-травматолог-ортопед'},
+          {img: 'images/doctors/doctor-3.jpg', name: 'Тихомиров Ян Васильевич', specialty: 'Кардиолог'},
+          {img: 'images/doctors/doctor-1.jpg', name: 'Зотова Наталия Александровна', specialty: 'Кардиолог'},
+          {img: 'images/doctors/doctor-1.jpg', name: 'Щекочихин-Крестовоздвиженский Иннокентий Виссалариимонович', specialty: 'Кардиолог'},
+          {img: 'images/doctors/doctor-1.jpg', name: 'Петров Петр Петрович', specialty: 'Кардиолог'},
+          {img: 'images/doctors/doctor-1.jpg', name: 'Петров Петр Петрович', specialty: 'Кардиолог'},
+          {img: 'images/doctors/doctor-1.jpg', name: 'Петров Петр Петрович', specialty: 'Кардиолог'},
+          {img: 'images/doctors/doctor-1.jpg', name: 'Петров Петр Петрович', specialty: 'Кардиолог'},
+          {img: 'images/doctors/doctor-1.jpg', name: 'Петров Петр Петрович', specialty: 'Кардиолог'}
+        ]
+
+      each card in doctorsInfo
+        .swiper-slide.specialists__slide
+          a.doctor-card(href='doctor-profile.html')
+            .doctor-card__img
+              img.swiper-lazy(data-src=card.img src='images/other/pixel.png' alt="Фото врача")
+              .swiper-lazy-preloader
+            .doctor-card__description
+              h3.doctor-card__name=card.name
+              span.doctor-card__specialty=card.specialty
+
+    nav.specialists__navigations
+      .button.button_second.specialists__arrow-prev
+        button.specialists__prev
+      .button.button_second.specialists__arrow-next
+        button.specialists__next
+      a.button.button_second.specialists__btn(href="our-specialist.html") Смотреть всех

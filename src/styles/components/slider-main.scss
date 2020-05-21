@@ -19,6 +19,7 @@
     @media (min-width: 768px) {
       position: relative;
       display: flex;
+      justify-content: space-between;
 
       width: 100%;
 
@@ -161,7 +162,7 @@
       top: 0;
       bottom: 0;
       margin: auto 0;
-      z-index: 2;
+      z-index: 1;
 
       &:hover {
         opacity: 0.6;

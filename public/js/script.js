@@ -1,5 +1,9 @@
 "use strict";
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 document.addEventListener('DOMContentLoaded', function () {
   /**
    * 100vh - высота без учета панелей инструментов на мобильных
@@ -59,15 +63,19 @@ document.addEventListener('DOMContentLoaded', function () {
   var secondMenuMb = +getComputedStyle(secondMenu).marginBottom.split('px').join('');
   var scrollHeight = firstMenu.clientHeight;
   var mb = secondMenu.clientHeight + secondMenuMb;
-  window.addEventListener('scroll', function () {
+
+  function transferNavbarSecond() {
     window.pageYOffset > scrollHeight ? secondMenu.classList.add('navbar-second_glue') : secondMenu.classList.remove('navbar-second_glue');
     window.pageYOffset > scrollHeight ? firstMenu.style.marginBottom = "".concat(mb, "px") : firstMenu.style.marginBottom = '0px';
-  });
+  }
+
+  transferNavbarSecond();
+  window.addEventListener('scroll', transferNavbarSecond);
   /** Инициализация слайдеров swiper */
 
-  var swiper = new Swiper('.swiper-main', {
+  var swiperMain = new Swiper('.swiper-main', {
     slidesPerView: 'auto',
-    initialSlide: 1,
+    initialSlide: 0,
     centeredSlides: true,
     spaceBetween: 30,
     loop: true,
@@ -86,7 +94,104 @@ document.addEventListener('DOMContentLoaded', function () {
     lazy: true,
     loadOnTransitionStart: true
   });
+  var swiperSpecialist = new Swiper('.swiper-specialist', {
+    initialSlide: 0,
+    spaceBetween: 30,
+    centeredSlides: false,
+    allowTouchMove: false,
+    navigation: {
+      nextEl: '.specialists__next',
+      prevEl: '.specialists__prev'
+    },
+    breakpoints: {
+      480: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      768: {
+        spaceBetween: 20,
+        slidesPerView: 3
+      },
+      992: {
+        slidesPerView: 4
+      },
+      1200: {
+        slidesPerView: 5
+      },
+      1500: {
+        slidesPerView: 6
+      }
+    },
+    preloadImages: false,
+    lazy: true,
+    loadOnTransitionStart: true
+  });
+  /**
+   * Ленивая загрузка видео
+   * событие скролла удаляется по достижению 50% прокрутки до видео
+   */
+
+  var videoWrap = document.querySelector('.video');
+
+  if (videoWrap) {
+    var loadVideo = function loadVideo() {
+      var scrollTop = window.pageYOffset;
+
+      if (scrollTop > videoScrollTop / 2) {
+        window.removeEventListener('scroll', loadVideo);
+        var source = video.querySelector('source');
+        var urlVideo = source.dataset.src;
+        source.setAttribute('src', urlVideo);
+        video.load();
+        /** Вешаем обработчик на воспроизведение/остановку видео */
+
+        videoWrap.addEventListener('click', /*#__PURE__*/function () {
+          var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(event) {
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    if (!video.paused) {
+                      _context.next = 6;
+                      break;
+                    }
+
+                    _context.next = 3;
+                    return video.play();
+
+                  case 3:
+                    video.controls = true;
+                    _context.next = 8;
+                    break;
+
+                  case 6:
+                    video.pause();
+                    video.controls = false;
+
+                  case 8:
+                    event.target.closest('.video').classList.toggle('play');
+
+                  case 9:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee);
+          }));
+
+          return function (_x) {
+            return _ref.apply(this, arguments);
+          };
+        }());
+      }
+    };
+
+    var video = videoWrap.querySelector('video');
+    var videoScrollTop = Math.ceil(video.getBoundingClientRect().top);
+    window.addEventListener('scroll', loadVideo);
+  }
   /** Ужимка текста. Инициализация dotdotdot */
+
 
   {
     var arrDotDotDot = [{
@@ -152,64 +257,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-  /** Ленивая загрузка видео */
-
-  {
-    var video = document.getElementById('video_about-us2');
-
-    if (video) {
-      var loadVideo = function loadVideo() {
-        var scrollTop = window.pageYOffset;
-        var result = scrollTop * 100 / videoScrollTop;
-
-        if (result > 50 && !change) {
-          change = true;
-          var source = video.querySelector('source');
-          var urlVideo = source.dataset.src;
-          source.setAttribute('src', urlVideo);
-          video.load();
-        }
-      };
-
-      var videoScrollTop = Math.ceil(video.getBoundingClientRect().top);
-      var change = false;
-      window.addEventListener('scroll', loadVideo);
-    }
-  }
-  /** Воспроизведение видео */
-
-  {
-    var playStopVideo = function playStopVideo(el, video) {
-      if (video) {
-        el.addEventListener('click', function () {
-          return play(el, video);
-        });
-        video.addEventListener('click', function () {
-          return play(el, video);
-        });
-      }
-    };
-
-    var play = function play(el, video) {
-      if (video.paused) {
-        video.play();
-        video.controls = true;
-        el.className = 'on';
-      } else {
-        video.pause();
-        video.controls = false;
-        el.classList = '';
-      }
-    };
-
-    var overlay = document.getElementById('about-us__overlay');
-
-    var _video = document.getElementById('video_about-us');
-
-    var video2 = document.getElementById('video_about-us2');
-    playStopVideo(overlay, _video);
-    playStopVideo(overlay, video2);
-  }
   /** Инициализация lightslider */
 
   $('#lightSlider').lightSlider({
@@ -252,37 +299,6 @@ document.addEventListener('DOMContentLoaded', function () {
         nextEl: '.swiper-navigation-next',
         prevEl: '.swiper-navigation-prev'
       }
-    });
-    var swiperspec = new Swiper('.swiper-specialist', {
-      slidesPerView: 6,
-      initialSlide: 0,
-      centeredSlides: false,
-      spaceBetween: 22,
-      allowTouchMove: false,
-      navigation: {
-        nextEl: '.swiper-navigation-next',
-        prevEl: '.swiper-navigation-prev'
-      },
-      breakpoints: {
-        576: {
-          slidesPerView: 1,
-          spaceBetween: 10
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        },
-        992: {
-          slidesPerView: 3
-        },
-        1200: {
-          slidesPerView: 4,
-          spaceBetween: 30
-        }
-      },
-      preloadImages: false,
-      lazy: true,
-      loadOnTransitionStart: true
     });
   }
   /** Плавная прокрутка до якоря */

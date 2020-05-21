@@ -1,0 +1,61 @@
+.doctor-card {
+  display: block;
+
+  width: 100%;
+
+  border: 2px solid $third-color;
+
+  text-decoration: none;
+  color: $font-color;
+  word-break: break-word;
+
+  &__img {
+    height: 185px;
+
+    display: flex;
+    justify-content: center;
+
+    background: url('../images/other/pattern.png') repeat;
+
+    img {
+      width: 211px;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+    height: 185px;
+
+    padding: 30px 15px 15px;
+
+    background-color: #fff;
+
+    &:hover {
+      background-color: $third-color;
+    }
+  }
+
+  &__name {
+    display: inline-block;
+
+    max-height: 110px;
+    overflow-y: hidden;
+
+    margin: 0 0 auto;
+
+    font-size: 20px;
+  }
+
+  &__specialty {
+    display: inline-block;
+    margin-top: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

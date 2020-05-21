@@ -11,92 +11,69 @@ block content
   main
     include components/slider
 
-    .amenities-cards
-      h2.title.title_margin.amenities-cards__title Наша клиника предоставляет ряд услуг
-      .amenities-cards__wrap
-        -
-          amenitiesCard = [
-            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Кардиология'},
-            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Андрология'},
-            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Гастроэнтерология'},
-            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Гинекология'},
-            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Неврология'},
-            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Офтальмология'},
-            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Ревматология'},
-            {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Терапия'}
-          ]
 
-        each card in amenitiesCard
-         +amenities-card(card)
+    .content
+      .amenities-cards
+        h2.title.amenities-cards__title Наша клиника предоставляет ряд услуг
+        .amenities-cards__wrap
+          -
+            amenitiesCard = [
+              {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Кардиология'},
+              {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Андрология'},
+              {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Гастроэнтерология'},
+              {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Гинекология'},
+              {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Неврология'},
+              {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Офтальмология'},
+              {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Ревматология'},
+              {url: 'name-service-cardiology.html', img: 'images/doctors/doctors2.jpg', title: 'Терапия'}
+            ]
 
-      .amenities-cards__hr-wrap
+          each card in amenitiesCard
+           +amenities-card(card)
+
         .amenities-cards__hr
-          .amenities-cards__btn
-            a(href="price.html").no-opacity.btn.button-second смотреть все
+          a.button.button_second.amenities-cards__btn(href="price.html") смотреть все
 
-    .advantages
-      .advantages__block
-      .advantages__block-content
-        h2.advantages__title Геромедицина - надежная клиника с опытными врачами
-        .advantages__list
-          .advantages__item
-            .advantages__num 35
-            .advantages__text Опытных<br>специалистов
-          .advantages__item
-            .advantages__num 20<span> лет</span>
-            .advantages__text Средний<br>стаж
-          .advantages__item
-            .advantages__num <span>более </span>600
-            .advantages__text Довольных<br>пациентов
-      .advantages__block
 
-    //include components/specialist
+      .advantages
+        .advantages__block
+        .advantages__block-content
+          h2.advantages__title Геромедицина - надежная клиника с опытными врачами
+          .advantages__list
+            .advantages__item
+              .advantages__num 35
+              .advantages__text Опытных<br>специалистов
+            .advantages__item
+              .advantages__num 20<span> лет</span>
+              .advantages__text Средний<br>стаж
+            .advantages__item
+              .advantages__num <span>более </span>600
+              .advantages__text Довольных<br>пациентов
+        .advantages__block
+
+
+      include components/specialists
+
+
+      .about-us
+        .video.about-us__video
+          button.video__play
+          video(poster='images/other/pixel.png')
+            source(data-src='videos/video.mp4' src='videos/video.mp4' type="video/mp4")
+        article.about-us__description
+          a.button.button_second.about-us__btn(href="about-us.html") Подробнее
+          h1.title.about-us__title Медицинский Центр "Геромедицина"
+          .about-us__text.about-us__text_description
+            p Пожилой возраст – это особое время, когда человеческий организм функционирует по-другому, а человек обязательно столкнется с определёнными проблемами, связанными со своим здоровьем. Пожилые люди и их близкое окружение часто отождествляют эти проблемы с чем то там
+        .about-us__info
+          p.about-us__text ООО «Клиника для детей и взрослых на Открытом шоссе» ПРОЕКТ: «ГЕРОМЕДИЦИНА» – клиника медицинского патронажа и гериатрии.
+          p.about-us__text Россия, Москва, Открытое шоссе, д. 48, стр. 2
+          a.button.button_second.about-us__btn-map(href="$map") Посмотреть карту проезда
+
+
 
   //- main
 
-    .wrap-info-about-us.wrap-1150
-      .page-wrapper
-        //- .info
-          .row.no-gutters
-            .col-12.col-lg-6.pr-lg-3
-              .info__wrap(onclick="location.href='price.html'")
-                .info__image
-                  img(src="img/price.jpg" alt="Картинка")
-                .info__description
-                  h4.title.title_white.title_info Услуги<br>и цены
-                  hr.info__hr
-            .col-12.col-lg-6.pl-lg-3
-              .info__wrap(onclick="location.href='our-specialist.html'")
-                .info__image
-                  img(src="img/doctors.jpg" alt="Картинка")
-                .info__description
-                  h4.title.title_white.title_info Наши<br>доктора
-                  hr.info__hr
-
-
-
-        .about-us.about-us_margin.container-fluid
-          .about-us__wrap
-            .row
-              .col-12.col-lg-5
-                .about-us__video
-                  .about-us__overlay(id="about-us__overlay")
-                  video(poster="img/pixel.png" id="video_about-us2")
-                    source(data-src='video/video.mp4' src='img/pixel.png' type="video/mp4")
-              .col-12.col-lg-4
-                article.about-us__body
-                  h1.title.title_little Медицинский Центр "Геромедицина"
-                  .about-us__text(data-dotdotdot="about-body")
-                    p Mauris pellentesque pellentesque ullamcorper. Praesent in aliquam justo. Donec fermentum, augue sed dapibus tempor, purus diam euismod justo, et interdum lacus nunc eget quam. Sed rhoncus non urna at malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in dolor fringilla, bibendum odio eget, imperdiet nisl. Aliquam molestie nunc quis ligula laoreet, et maximus urna consequat.
-                  .about-us__buttons.about-us__buttons_desktop
-                    a(href="about-us.html").no-opacity.about-us__button.btn.button-second подробнее
-              .col-12.col-lg-3
-                .about-us__address
-                  .about-us__text ООО «Клиника для детей и взрослых на Открытом шоссе»
-                  .about-us__text.about-us__text_mb Россия, Москва, Открытое шоссе, д. 48, стр. 2
-                  a.about-us__link(href="$map") Посмотреть карту проезда
-                  .about-us__buttons.about-us__buttons_mobile
-                    a(href="about-us.html").no-opacity.about-us__button.btn.button-second подробнее
 
     .wrap-1150
       .page-wrapper

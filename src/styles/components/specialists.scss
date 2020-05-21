@@ -1,0 +1,91 @@
+.specialists {
+  margin-bottom: 70px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    margin-bottom: 40px;
+  }
+
+  &__navigations {
+    display: flex;
+    border-top: 2px solid $third-color;
+  }
+
+  &__arrow-prev, &__arrow-next {
+    width: 60px;
+    height: 60px;
+
+    flex: 0 0 auto;
+
+    margin-top: -2px;
+  }
+
+  &__arrow-next {
+    margin-left: -2px;
+  }
+
+  &__prev, &__next {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: -2px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  &__prev {
+
+    &::after {
+      @include arrow(12px, 2px, 'left', $fourth-color);
+    }
+
+    &:hover {
+
+      &::after {
+        @include arrow(12px, 2px, 'left', white);
+      }
+    }
+  }
+
+  &__next {
+    margin-left: -2px;
+
+    &::after {
+      @include arrow(12px, 2px, 'right', $fourth-color);
+    }
+
+    &:hover {
+
+      &::after {
+        @include arrow(12px, 2px, 'right', white);
+      }
+    }
+  }
+
+  &__btn {
+    max-width: 240px;
+
+    margin-top: -2px;
+    margin-left: -2px;
+
+    font-size: 14px;
+
+    @media (min-width: 576px) {
+      font-size: 16px;
+    }
+  }
+}
