@@ -11,10 +11,15 @@ body {
   color: #434343;
 }
 
-main {
-  height: 10000px;
-}
-
 video {
   outline: none;
+}
+
+input, textarea, select {
+
+  &:focus {
+    position: relative;
+    outline: 2px solid $first-color;
+    z-index: 1;
+  }
 }

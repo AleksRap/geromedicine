@@ -1,0 +1,77 @@
+.articles {
+  width: 100%;
+
+  &__title {
+    color: $first-color;
+  }
+
+  &__content {
+    width: 100%;
+
+    display: grid;
+    grid-template:
+      'article-1' 380px
+      'article-2' 380px
+      'article-3' 380px
+      'article-4' 380px
+      'form' 450px
+      / 100%
+    ;
+    grid-gap: 15px;
+
+    @media (min-width: 576px) {
+      grid-template:
+        'article-1' 420px
+        'article-2' 420px
+        'article-3' 420px
+        'article-4' 420px
+        'form' 450px
+        / 100%
+      ;
+      grid-gap: 30px;
+    }
+    @media (min-width: 768px) {
+      grid-template:
+        'article-1 article-2' 450px
+        'article-3 article-4' 450px
+        'form      form     ' 525px
+        / 1fr      1fr
+      ;
+    }
+    @media (min-width: 1200px) {
+      grid-template:
+        'article-1 article-1 article-2' 450px
+        'article-3 article-4 form     ' 525px
+        / 1fr      1fr       2fr
+      ;
+    }
+
+    @for $i from 1 through 4 {
+      & > .article-card:nth-child(#{$i}) {
+        grid-area: article- + $i;
+      }
+    }
+
+    .ask-form {
+      grid-area: form;
+    }
+  }
+
+  &__footer {
+    margin-top: -2px;
+    border-top: 2px solid $third-color;
+
+    @media (min-width: 992px) {
+      margin-top: 40px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: -2px;
+
+    @media (min-width: 576px) {
+      width: 250px;
+    }
+  }
+}

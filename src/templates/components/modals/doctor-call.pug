@@ -1,0 +1,43 @@
+include ../../mixins/modal
+
++modal({
+  id: 'modal-doctor-call',
+  title: 'Заявка на вызов врача',
+  modifier: 'doctor-call'
+})
+  form.modal__form
+    .modal__areas
+      .modal__area
+        label.modal__label.modal__label_required(for="call-doctor-call-name") Ваше имя
+        input.modal__input(id="call-doctor-call-name" type="text" placeholder="введите имя" required)
+
+      .modal__area
+        label.modal__label.modal__label_required(for="call-doctor-call-tel") Телефон
+        input.modal__input(id="call-doctor-call-tel" type="tel" placeholder="+7-(___)-_______" required)
+
+      .modal__area
+        label.modal__label(for="call-doctor-call-direction") Направление
+        select.modal__select(id="call-doctor-call-direction")
+          option(selected disabled) Выберите направление
+          option Направление 1
+          option Направление 2
+          option Направление 3
+          option Направление 4
+
+      .modal__area
+        label.modal__label(for="call-doctor-call-time") Удобное время для звонка
+        select.modal__select(id="call-doctor-call-time")
+          option(selected) 10:30-13:00
+          option 13:00-14:00
+          option 14:30-15:00
+          option 15:00-16:00
+
+    .modal__checkbox
+      label.modal__label-checkbox
+        input(type="checkbox" id="doctor-call-checkbox" checked)
+        span.modal__checkbox-fake
+        span.modal__checkbox-text Нажимая на кнопку, вы даете согласие на обработку персональных данных.
+
+    span.modal__required Обязательное поле для заполнения
+
+    button.button.button_first.modal__btn(type="button") Вызов врача

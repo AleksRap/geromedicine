@@ -12,13 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
-    "dotdotdot-js": "^4.0.9",
-    "intl-tel-input": "^16.0.2",
-    "lg-fullscreen": "^1.1.0",
-    "lightgallery": "^1.6.12",
-    "lightslider": "^1.1.6",
+    "jquery": "^3.5.1",
+    "jquery.maskedinput": "^1.4.1",
     "normalize.css": "^8.0.1",
-    "svg4everybody": "^2.1.9",
     "swiper": "^5.4.1"
   },
   "devDependencies": {

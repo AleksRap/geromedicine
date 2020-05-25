@@ -1,0 +1,30 @@
+.social-links {
+  display:flex;
+
+  &__item {
+    display: block;
+
+    width: 35px;
+    height: 20px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &_youtube {
+      background-image: url("../svg/socialweb/youtube.svg");
+    }
+
+    &_vk {
+      background-image: url("../svg/socialweb/vk.svg");
+    }
+
+    &_fb {
+      background-image: url("../svg/socialweb/fb.svg");
+    }
+
+    &_ok {
+      background-image: url("../svg/socialweb/ok.svg");
+    }
+  }
+}

@@ -1,0 +1,178 @@
+.comments {
+  margin-bottom: 50px;
+
+  &__title {
+    color: $first-color;
+  }
+
+  &__wrap {
+    width: 100%;
+    max-width: 1150px;
+    overflow-x: hidden;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__swiper {
+
+    &.active {
+      display: block !important;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-bottom: -2px;
+  }
+
+  &__btn {
+
+    &:first-child {
+      margin-right: -2px;
+    }
+
+    @media (min-width: 768px) {
+      width: 230px;
+    }
+
+    &.active {
+      background-color: $third-color;
+
+      &:hover {
+        background-color: $first-color;
+      }
+    }
+  }
+
+  &__slide {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px;
+    background-color: $third-color;
+
+    @media (min-width: 576px) {
+      flex-direction: initial;
+      padding: 40px;
+    }
+    @media (min-width: 768px) {
+      flex-direction: initial;
+      padding: 40px 130px 40px 60px;
+    }
+  }
+
+  &__info {
+    width: 185px;
+    margin-bottom: 20px;
+    flex: 0 0 auto;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__name {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    font-size: 20px;
+    color: $first-color;
+
+  }
+
+  &__date {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__text {
+    height: 200px;
+    overflow-y: hidden;
+
+    line-height: 1.6;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: flex-end;
+
+    border-top: 2px solid $third-color;
+  }
+
+  &__arrow-prev, &__arrow-next {
+    width: 60px;
+    height: 60px;
+
+    flex: 0 0 auto;
+
+    margin-top: -2px;
+    margin-left: -2px;
+  }
+
+  &__prev, &__next {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  &__prev {
+
+    &::after {
+      left: 5px;
+      @include arrow(12px, 2px, 'left', $fourth-color);
+    }
+
+    &:hover {
+
+      &::after {
+        @include arrow(12px, 2px, 'left', white);
+      }
+    }
+  }
+
+  &__next {
+
+    &::after {
+      right: 5px;
+      @include arrow(12px, 2px, 'right', $fourth-color);
+    }
+
+    &:hover {
+
+      &::after {
+        @include arrow(12px, 2px, 'right', white);
+      }
+    }
+  }
+
+  &__btn-all {
+    max-width: 240px;
+    margin-top: -2px;
+
+    font-size: 14px;
+
+    @media (min-width: 576px) {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+include ../../mixins/modal
+
++modal({
+  id: 'modal-appointment',
+  title: 'Заявка на прием врача в клинике',
+  modifier: 'appointment'
+})
+  form.modal__form
+
+    .modal__wrap-appointment
+      .modal__areas.modal__areas_appointment
+        .modal__area
+          label.modal__label.modal__label_required(for="call-appointment-name") Ваше имя
+          input.modal__input(id="call-appointment-name" type="text" placeholder="введите имя" required)
+
+        .modal__area
+          label.modal__label.modal__label_required(for="call-appointment-tel") Телефон
+          input.modal__input(id="call-appointment-tel" type="tel" placeholder="+7-(___)-_______" required)
+
+        .modal__area
+          label.modal__label(for="call-appointment-direction") Направление
+          select.modal__select(id="call-appointment-direction")
+            option(selected) Направление 1
+            option Направление 2
+            option Направление 3
+            option Направление 4
+
+        .modal__area
+          label.modal__label(for="call-appointment-time") Удобное время для звонка
+          select.modal__select(id="call-appointment-time")
+            option(selected) 10:30-13:00
+            option 13:00-14:00
+            option 14:30-15:00
+            option 15:00-16:00
+
+      .modal__calendar
+        .datepicker(id="datepicker")
+
+    .modal__area.modal__area_textarea
+      label.modal__label(for="call-appointment-comment") Сообщение
+      textarea.modal__textarea(id="call-appointment-comment" placeholder="введите ваш комментарий")
+
+    .modal__footer
+      .modal__checkbox-wrap
+        .modal__checkbox
+          label.modal__label-checkbox
+            input(type="checkbox" id="appointment-checkbox" checked)
+            span.modal__checkbox-fake
+            span.modal__checkbox-text Нажимая на кнопку, вы даете согласие на обработку персональных данных.
+
+        span.modal__required Обязательное поле для заполнения
+
+      button.button.button_first.modal__btn(type="button") Запись на прием

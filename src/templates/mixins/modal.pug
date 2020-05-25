@@ -1,0 +1,7 @@
+mixin modal(data)
+  .modal(id=data.id)
+    .modal__window(data-modal="window" class=`modal__window_${data.modifier}`)
+      button.modal__btn-close(type="button" data-modal="close")
+      h5.title.modal__title=data.title
+      .modal__body
+        block

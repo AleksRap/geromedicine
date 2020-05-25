@@ -1,0 +1,38 @@
+include ../../mixins/modal
+
++modal({
+  id: 'modal-feedback',
+  title: 'Оставить отзыв',
+  modifier: 'call-feedback'
+})
+
+  form.modal__form
+    .modal__areas
+      .modal__area
+        label.modal__label.modal__label_required(for="feedback-name") Ваше имя
+        input.modal__input(id="feedback-name" type="text" placeholder="введите имя" required)
+
+      .modal__area
+        label.modal__label.modal__label_required(for="feedback-tel") Телефон
+        input.modal__input(id="feedback-tel" type="tel" placeholder="+7-(___)-_______" required)
+
+      .modal__area
+        label.modal__label(for="feedback-direction") Направление
+        select.modal__select(id="feedback-direction")
+          option(selected disabled) Выберите направление
+          option Направление 1
+          option Направление 2
+          option Направление 3
+          option Направление 4
+
+      .modal__area
+        label.modal__label(for="feedback-doctor-name") ФИО врача
+        input.modal__input(id="feedback-doctor-name" type="text" placeholder="введите ФИО врача")
+
+      .modal__area
+        label.modal__label.modal__label_required(for="feedback-comment") Комментарий
+        textarea.modal__textarea(id="feedback-comment" placeholder="введите ваш комментарий")
+
+    span.modal__required Обязательное поле для заполнения
+
+    button.button.button_first.modal__btn(type="button") Оставить отзыв

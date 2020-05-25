@@ -6,11 +6,6 @@ button {
   border: none;
   outline: none;
   background-color: transparent;
-
-  &:focus {
-    border: none;
-    outline: none;
-  }
 }
 
 .button {
@@ -35,11 +30,13 @@ button {
     background-color: $first-color;
     color: #fff;
 
-    &:hover {
-      background-color: $third-color;
-      color: $fourth-color;
+    @media (min-width: 992px) {
+      &:hover {
+        background-color: $third-color;
+        color: $fourth-color;
 
-      transition: background-color .1s ease-in;
+        transition: background-color .1s ease-in;
+      }
     }
   }
 
@@ -47,11 +44,21 @@ button {
     color: $fourth-color;
     border: 2px solid $third-color;
 
-    &:hover {
-      background-color: $first-color;
-      color: #fff;
+    @media (min-width: 992px) {
+      &:hover {
+        background-color: $first-color;
+        color: #fff;
 
-      transition: background-color .1s ease-in;
+        transition: background-color .1s ease-in;
+      }
     }
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    background-color: lightgray;
+    border-color: lightgray;
+
+    color: $font-color
   }
 }

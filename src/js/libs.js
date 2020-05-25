@@ -1,2 +1,6 @@
 @@include('./@babel/polyfill/dist/polyfill.min.js')
 @@include('./swiper/js/swiper.min.js')
+@@include('./jquery/dist/jquery.min.js')
+@@include('../src/libs/datepicker/js/jquery-ui.min.js')
+@@include('../src/libs/datepicker/js/datepicker-ru.js')
+@@include('./jquery.maskedinput/src/jquery.maskedinput.js')

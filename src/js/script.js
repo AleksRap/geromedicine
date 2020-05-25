@@ -134,6 +134,52 @@ document.addEventListener('DOMContentLoaded', () => {
     loadOnTransitionStart: true
   });
 
+  const swipersComments = new Swiper('.swiper-comments', {
+    initialSlide: 0,
+    centeredSlides: true,
+    loop: true,
+    autoplay: false,
+    navigation: {
+      nextEl: '.comments__next',
+      prevEl: '.comments__prev',
+    },
+  });
+
+  const swipersComments2 = new Swiper('.swiper-comments-2', {
+    initialSlide: 0,
+    centeredSlides: true,
+    loop: true,
+    autoplay: false,
+    navigation: {
+      nextEl: '.comments__next',
+      prevEl: '.comments__prev',
+    },
+  });
+
+  /**
+   * После инициализации всех слайдеров с комментами скрываем их
+   * видны будут только те у которых есть класс .active
+   */
+  const commentsWrap = document.querySelectorAll('.comments__swiper');
+  commentsWrap.forEach(el => el.style.display = 'none');
+
+
+  /** Табы внутри блока отзывов */
+  const clinicWrap = document.querySelector('[data-wrap="clinic"]');
+  const specialistWrap = document.querySelector('[data-wrap="specialist"]');
+  const btnClinic = document.querySelector('[data-btn="clinic"]');
+  const btnSpecialist = document.querySelector('[data-btn="specialist"]');
+
+  function toggleFeedback() {
+    btnClinic.classList.toggle('active');
+    btnSpecialist.classList.toggle('active');
+    clinicWrap.classList.toggle('active');
+    specialistWrap.classList.toggle('active');
+  }
+
+  btnClinic && btnClinic.addEventListener('click', toggleFeedback);
+  btnSpecialist && btnSpecialist.addEventListener('click', toggleFeedback);
+
 
   /**
    * Ленивая загрузка видео
@@ -176,102 +222,56 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-
-
-
-
-
-
-
-
-
-
-  /** Ужимка текста. Инициализация dotdotdot */
-  {
-    const arrDotDotDot = [
-      {selector: '[data-dotdotdot=article-img]', options: {ellipsis: "\u2026 ", height: 80}},
-      {selector: '[data-dotdotdot=article-img2]', options: {ellipsis: "\u2026 ", height: 140}},
-      {selector: '[data-dotdotdot=about-body]', options: {ellipsis: "\u2026 ", height: 232, keep: '.about-us__buttons',}},
-      {selector: '[data-dotdotdot="comment"]', options: {ellipsis: "\u2026 ", height: 200,}},
-      {selector: '[data-dotdotdot="slider"]', options: {ellipsis: "\u2026 ", height: 85,}}
-    ];
-
-    arrDotDotDot.forEach(item => {
-      const bigArticlesImg = document.querySelectorAll(item.selector);
-      if (bigArticlesImg.length) bigArticlesImg.forEach(article => new Dotdotdot(article, item.options));
-    });
-  }
-
   /** Календарь в модалке */
-  $("#datepicker").datepicker({
+  $('#datepicker').datepicker({
     minDate: new Date(),
     onSelect: function (dateText) {
       $('#appointment-date').val(dateText);
     }
   });
 
-  /** Модалки */
-  $('.popup-with-form').magnificPopup({
-    removalDelay: 300,
-    mainClass: 'mfp-fade',
-    type: 'inline',
-    focus: '#name',
-    callbacks: {
-      open: function () {
-        document.querySelector('body').classList.add('popup-view');
-      },
-      close: function () {
-        document.querySelector('body').classList.remove('popup-view');
-      }
-    }
+
+  /** Инициализация модалок */
+  const modalCallFeedback = new Modal({
+    idModal: 'modal-call-feedback',
+    selectorBtnOpen: '[data-btn="modal-call-feedback-btn"]'
   });
 
-  /** Инициализация lightslider */
-  $('#lightSlider').lightSlider({
-    item: 1,
-    loop: true,
-    gallery: true,
-    thumbItem: 4,
-    thumbMargin: 5,
-    galleryMargin: 30,
-    onAfterSlide: function () {
-      let video = document.querySelector('.slider video');
-      if (!video.paused) video.pause();
-    },
-    responsive: [
-      {
-        breakpoint: 576,
-        settings: {
-          thumbItem: 3,
-        }
-      }
-    ]
+  const modalDoctorCall = new Modal({
+    idModal: 'modal-doctor-call',
+    selectorBtnOpen: '[data-btn="modal-doctor-call-btn"]'
   });
 
-  /** Инициализация слайдеров swiper */
-  {
-    let swipers = new Swiper('.swiper-second', {
-      initialSlide: 0,
-      centeredSlides: true,
-      loop: true,
-      autoplay: true,
-      navigation: {
-        nextEl: '.swiper-navigation-next',
-        prevEl: '.swiper-navigation-prev',
-      },
-    });
+  const modalAppointment = new Modal({
+    idModal: 'modal-appointment',
+    selectorBtnOpen: '[data-btn="modal-appointment-btn"]'
+  });
 
-    let swipers2 = new Swiper('.swiper-thrity', {
-      initialSlide: 0,
-      centeredSlides: true,
-      loop: true,
-      autoplay: true,
-      navigation: {
-        nextEl: '.swiper-navigation-next',
-        prevEl: '.swiper-navigation-prev',
-      },
-    });
+  // const modalFeedback = new Modal({
+  //   idModal: 'modal-feedback',
+  //   selectorBtnOpen: '[data-btn="modal-feedback-btn"]'
+  // });
+  //
+  // const modalThanksFeedback = new Modal({
+  //   idModal: 'modal-thanks-feedback',
+  //   selectorBtnOpen: '[data-btn="modal-thanks-feedback-btn"]'
+  // });
+  //
+  // const modalThanksAppointment = new Modal({
+  //   idModal: 'modal-thanks-appointment',
+  //   selectorBtnOpen: '[data-btn="modal-thanks-appointment-btn"]'
+  // });
+
+
+  /** Проверка согласия на обработку персональных данных */
+  function checkAgree() {
+    const btn = this.closest('form').querySelector('.button');
+    btn.toggleAttribute('disabled');
   }
+  document.getElementById('call-feedback-checkbox').addEventListener('change', checkAgree);
+  document.getElementById('doctor-call-checkbox').addEventListener('change', checkAgree);
+  document.getElementById('appointment-checkbox').addEventListener('change', checkAgree);
+
 
   /** Плавная прокрутка до якоря */
   const anchors = document.querySelectorAll('a[href*="$"]');
@@ -290,52 +290,165 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
   /** Маска номера телефона на поля. Maskedinput */
-  {
-    $("#call-tel").mask("+7 (999) 999-9999");
-    $("#call-feedback-tel").mask("+7 (999) 999-9999");
-    $("#appointment-tel").mask("+7 (999) 999-9999");
-  }
+  $("#call-feedback-tel").mask("+7 (999) 999-9999");
+  $("#call-doctor-call-tel").mask("+7 (999) 999-9999");
+  $("#call-appointment-tel").mask("+7 (999) 999-9999");
+
+
+
+
+
+
+
+
+
+
+
+  // /** Ужимка текста. Инициализация dotdotdot */
+  // {
+  //   const arrDotDotDot = [
+  //     {selector: '[data-dotdotdot=article-img]', options: {ellipsis: "\u2026 ", height: 80}},
+  //     {selector: '[data-dotdotdot=article-img2]', options: {ellipsis: "\u2026 ", height: 140}},
+  //     {selector: '[data-dotdotdot=about-body]', options: {ellipsis: "\u2026 ", height: 232, keep: '.about-us__buttons',}},
+  //     {selector: '[data-dotdotdot="comment"]', options: {ellipsis: "\u2026 ", height: 200,}},
+  //     {selector: '[data-dotdotdot="slider"]', options: {ellipsis: "\u2026 ", height: 85,}}
+  //   ];
+  //
+  //   arrDotDotDot.forEach(item => {
+  //     const bigArticlesImg = document.querySelectorAll(item.selector);
+  //     if (bigArticlesImg.length) bigArticlesImg.forEach(article => new Dotdotdot(article, item.options));
+  //   });
+  // }
+
+  // /** Инициализация lightslider */
+  // $('#lightSlider').lightSlider({
+  //   item: 1,
+  //   loop: true,
+  //   gallery: true,
+  //   thumbItem: 4,
+  //   thumbMargin: 5,
+  //   galleryMargin: 30,
+  //   onAfterSlide: function () {
+  //     let video = document.querySelector('.slider video');
+  //     if (!video.paused) video.pause();
+  //   },
+  //   responsive: [
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         thumbItem: 3,
+  //       }
+  //     }
+  //   ]
+  // });
 
   /** Инициализация галереи fancybox */
-  $('[data-fancybox="gallery"]').fancybox({
+  document.querySelector('[data-fancybox="gallery"]') && $('[data-fancybox="gallery"]').fancybox({
     toolbar: false,
     transitionEffect: "zoom-in-out",
     loop: true
   });
-
-  /** Проверка согласия на обработку персональных данных */
-  {
-    function checkAgree() {
-      const checkbox = this;
-
-      if (checkbox && checkbox.hasAttribute('checked')) {
-        const btnSubmit = checkbox.closest('form').querySelector('[type=submit]');
-        btnSubmit.classList.toggle('button-first_noactive');
-      }
-    }
-
-    document.getElementById('call-feedback-checkbox').addEventListener('change', checkAgree);
-    document.getElementById('appointment-checkbox').addEventListener('change', checkAgree);
-    document.getElementById('call-checkbox').addEventListener('change', checkAgree);
-  }
-
-  /** Фильтрация внутри блока отзывов */
-  {
-    const clinicWrap = document.querySelector('[data-clinic-wrap]');
-    const specialistWrap = document.querySelector('[data-specialist-wrap]');
-    const btnClinic = document.querySelector('[data-clinic]');
-    const btnSpecialist = document.querySelector('[data-specialist]');
-
-    function toggleFeedback() {
-      btnClinic.classList.toggle('button-second_active');
-      btnSpecialist.classList.toggle('button-second_active');
-      clinicWrap.classList.toggle('swiper_view_off');
-      specialistWrap.classList.toggle('swiper_view_off');
-    }
-
-    if (btnClinic) btnClinic.addEventListener('click', toggleFeedback);
-    if (btnSpecialist) btnSpecialist.addEventListener('click', toggleFeedback);
-  }
-
 });
+
+
+/** Управляем событиями */
+class ManagementEvents {
+
+  /**
+   * На входе принимаем объект с параметрами
+   * arr   - массив куда сохраняем события
+   * el    - элемент, на который навешиваем обработчик
+   * event - событие (str)
+   * fn    - анонимная функция без вызова
+   * @param data
+   */
+  static addEventToArr(data) {
+    /** Добавляем событие в массив */
+    data.arr.push({el: data.el, event: data.event, fn: data.fn});
+
+    /** Вешаем слушатель */
+    data.el.addEventListener(data.event, data.fn);
+
+    return true
+  }
+
+  /**
+   * На входе принимаем массив событий
+   * @param arr
+   */
+  static removeEvents(arr) {
+    /** Снимаем обработчики события */
+    arr.forEach(item => {
+      item.el.removeEventListener(item.event, item.fn)
+    });
+
+    /** Очищаем массив */
+    arr.splice(0, arr.length);
+
+    return true;
+  }
+}
+
+class Modal {
+  constructor(data) {
+    this.arrEvents = [];
+    this._modal = document.getElementById(data.idModal);
+    this._modalWindow = this._modal.querySelector('[data-modal="window"]');
+
+    this._btnsOpen = document.querySelectorAll(data.selectorBtnOpen);
+    this._btnClose = this._modal.querySelector('[data-modal="close"]');
+
+    this.bind();
+  }
+
+  open() {
+    this._modal.classList.add('modal_open');
+    this._modalWindow.classList.add('modal__window_open');
+  }
+  close() {
+    this._modal.classList.remove('modal_open');
+    this._modalWindow.classList.remove('modal__window_open');
+  }
+
+  bind() {
+    /**
+     * Открытие модалки по клику на кнопку
+     */
+    this._btnsOpen.forEach(btn => {
+      ManagementEvents.addEventToArr({
+        arr: this.arrEvents,
+        el: btn,
+        event: 'click',
+        fn: () => this.open()
+      });
+    });
+
+
+    /**
+     * Закрытие модалки по клику вне нее
+     */
+    ManagementEvents.addEventToArr({
+      arr: this.arrEvents,
+      el: this._modal,
+      event: 'click',
+      fn: event => !event.target.closest('[data-modal=window]') && this.close()
+    });
+
+    /**
+     * Закрытие модалки по клику на крестик
+     */
+    ManagementEvents.addEventToArr({
+      arr: this.arrEvents,
+      el: this._btnClose,
+      event: 'click',
+      fn: () => this.close()
+    });
+  }
+
+  destroy() {
+    ManagementEvents.removeEvents(this.arrEvents);
+    this._modal.remove();
+  }
+}

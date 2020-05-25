@@ -30,9 +30,9 @@
                   <button class="search__btn"></button>
                 </div>
                 <div class="navigation__wrap-btn">
-                  <button class="button button_second" data-href="#form-popup-call-feedback">Заказать обратный звонок</button>
-                  <button class="button button_second" data-href="#form-popup">Вызов врача</button>
-                  <button class="button button_first" data-href="#form-popup-appointment">Запись на прием</button>
+                  <button class="button button_second" data-btn="modal-call-feedback-btn">Заказать обратный звонок</button>
+                  <button class="button button_second" data-btn="modal-doctor-call-btn">Вызов врача</button>
+                  <button class="button button_first" data-btn="modal-appointment-btn">Запись на прием</button>
                 </div>
                 <ul class="navigation__list">
                   <li class="navigation__item navigation__item_drop"><a class="navigation__link" href="about-us.html">
@@ -79,18 +79,15 @@
         </div>
       </div>
     </header>
-    <button class="button-call button-call_feedback" data-href="#form-popup-call-feedback"><span class="button-call__text">Заказать обратный звонок</span></button>
-    <button class="button-call button-call_doctor-call" data-href="#form-popup"><span class="button-call__text">Вызов врача</span></button>
-    <button class="button-call button-call_appointment" data-href="#form-popup-appointment"><span class="button-call__text">Запись на прием</span></button>
     <main>
       <div class="swiper-container swiper-main">
         <div class="swiper-wrapper">
           <div class="swiper-slide swiper-main__slide">
             <div class="swiper-main__content">
-              <div class="swiper-main__wrap">
+              <section class="swiper-main__wrap">
                 <h2 class="swiper-main__title">Отличные цены на обследование</h2>
                 <p class="swiper-main__description">МРТ, Энцефолограмма, ЭКГ</p><a class="button button-second swiper-main__btn" href="name-service-cardiology.html">Подробнее</a>
-              </div>
+              </section>
             </div>
             <div class="swiper-main__img"><img class="swiper-lazy" data-src="images/slider/big-slide-1.jpg" alt="slide1" src="images/other/pixel.png">
               <div class="swiper-lazy-preloader"></div>
@@ -98,10 +95,10 @@
           </div>
           <div class="swiper-slide swiper-main__slide">
             <div class="swiper-main__content">
-              <div class="swiper-main__wrap">
+              <section class="swiper-main__wrap">
                 <h2 class="swiper-main__title">Отличные цены</h2>
                 <p class="swiper-main__description">МРТ, Энцефолограмма, ЭКГ</p><a class="button button-second swiper-main__btn" href="name-service-cardiology.html">Подробнее</a>
-              </div>
+              </section>
             </div>
             <div class="swiper-main__img"><img class="swiper-lazy" data-src="images/slider/big-slide-2.jpg" alt="slide1" src="images/other/pixel.png">
               <div class="swiper-lazy-preloader"></div>
@@ -109,10 +106,10 @@
           </div>
           <div class="swiper-slide swiper-main__slide">
             <div class="swiper-main__content">
-              <div class="swiper-main__wrap">
+              <section class="swiper-main__wrap">
                 <h2 class="swiper-main__title">На обследование</h2>
                 <p class="swiper-main__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar arcu lectus eget convallis in nec maecenas elit. Pharetra lobortis aliquam porttitor convallis amet ut.</p><a class="button button-second swiper-main__btn" href="name-service-cardiology.html">Подробнее</a>
-              </div>
+              </section>
             </div>
             <div class="swiper-main__img"><img class="swiper-lazy" data-src="images/slider/big-slide-3.jpg" alt="slide1" src="images/other/pixel.png">
               <div class="swiper-lazy-preloader"></div>
@@ -126,7 +123,7 @@
         </div>
       </div>
       <div class="content">
-        <div class="amenities-cards">
+        <section class="amenities-cards">
           <h2 class="title amenities-cards__title">Наша клиника предоставляет ряд услуг</h2>
           <div class="amenities-cards__wrap"><a class="amenities-card" href="name-service-cardiology.html" style="background: linear-gradient(179.64deg, rgba(245, 94, 33, 0) -15.21%, #F55E21 113.71%), linear-gradient(0deg, #F55E21, #F55E21), url('images/doctors/doctors2.jpg') center/cover no-repeat;">
               <div class="title amenities-card__title">Кардиология</div></a><a class="amenities-card" href="name-service-cardiology.html" style="background: linear-gradient(179.64deg, rgba(245, 94, 33, 0) -15.21%, #F55E21 113.71%), linear-gradient(0deg, #F55E21, #F55E21), url('images/doctors/doctors2.jpg') center/cover no-repeat;">
@@ -139,10 +136,10 @@
               <div class="title amenities-card__title">Терапия</div></a>
           </div>
           <div class="amenities-cards__hr"><a class="button button_second amenities-cards__btn" href="price.html">смотреть все</a></div>
-        </div>
+        </section>
         <div class="advantages">
           <div class="advantages__block"></div>
-          <div class="advantages__block-content">
+          <section class="advantages__block-content">
             <h2 class="advantages__title">Геромедицина - надежная клиника с опытными врачами</h2>
             <div class="advantages__list">
               <div class="advantages__item">
@@ -150,15 +147,15 @@
                 <div class="advantages__text">Опытных<br>специалистов</div>
               </div>
               <div class="advantages__item">
-                <div class="advantages__num">20<span> лет</span></div>
+                <div class="advantages__num">20<span>лет</span></div>
                 <div class="advantages__text">Средний<br>стаж</div>
               </div>
               <div class="advantages__item">
-                <div class="advantages__num"><span>более </span>600</div>
+                <div class="advantages__num"><span>более</span>600</div>
                 <div class="advantages__text">Довольных<br>пациентов</div>
               </div>
             </div>
-          </div>
+          </section>
           <div class="advantages__block"></div>
         </div>
         <div class="specialists">
@@ -256,8 +253,432 @@
             <p class="about-us__text">Россия, Москва, Открытое шоссе, д. 48, стр. 2</p><a class="button button_second about-us__btn-map" href="$map">Посмотреть карту проезда</a>
           </div>
         </div>
+        <section class="comments">
+          <h2 class="title comments__title">Отзывы</h2>
+          <div class="comments__wrap">
+            <div class="comments__tabs">
+              <button class="button button_second comments__btn active" data-btn="clinic">О клинике</button>
+              <button class="button button_second comments__btn" data-btn="specialist">О наших врачах</button>
+            </div>
+            <div class="comments__swiper active" data-wrap="clinic">
+              <div class="swiper-content swiper-comments">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Виктор</h5>
+                      <time class="comments__date" datetime="2011-11">8 августа 2019</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Всем доброго дня! Хочу поделиться нашей историей. У нашей бабушки (78 лет) сахарный диабет и куча сопутствующих болячек. Больницы она на дух не переносит, так как там ничего толком не объясняют, но за все ругают.  То много кушаете, то пропускаете прием лекарств и все назидательным тоном. Решила по просьбе бабушки поискать врачей на дом. Наткнулась на этот сайт и решила попробовать вызвать врача на дом. Врач приехал вовремя, в назначенный день. Все подробно рассказал, пояснил, что выезд на дом осуществляют разные специалисты, в зависимости от диагноза пациента. К нам приехал терапевт, но пообещал привлечь к лечению, при необходимости,  специалиста-эндокринолога.  Рассказал все про «хлебные единицы», про то, как их считать правильно и как питаться. Общением с врачом бабушка осталась довольна, и мы дали «добро» на составление программы лечения. Через пару дней приехала очень вежливая и внимательная медсестра, взяла все необходимые анализы и на следующий день вернулась уже с готовой и правильно составленной диетой, где все уже грамотно посчитано.  Медсестра бабушке очень понравилась! Она много слышала от подружек про всяких сиделок без специального образования, а тут именно специалист, которая знает, что делает, сама следит за приемом лекарств! Уже через неделю после начала программы лечения бабушка стала чувствовать себя намного лучше! Врачи и медсестры всегда на связи. Любую проблему решают оперативно и быстро! Короче, все понравилось и мы остались довольны! Большое спасибо врачам и медсестрам вашего центра!</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Оксана</h5>
+                      <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Наталья</h5>
+                      <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Маша</h5>
+                      <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Света</h5>
+                      <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Оля</h5>
+                      <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                    </div>
+                  </div>
+                </div>
+                <nav class="comments__navigation"><a class="button button_second comments__btn-all" href="feedback.html">Смотреть все</a>
+                  <div class="button button_second comments__arrow-prev">
+                    <button class="comments__prev"></button>
+                  </div>
+                  <div class="button button_second comments__arrow-next">
+                    <button class="comments__next"></button>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div class="comments__swiper" data-wrap="specialist">
+              <div class="swiper-content swiper-comments-2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Виктор2</h5>
+                      <time class="comments__date" datetime="2011-11">8 августа 2019</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Всем доброго дня! Хочу поделиться нашей историей. У нашей бабушки (78 лет) сахарный диабет и куча сопутствующих болячек. Больницы она на дух не переносит, так как там ничего толком не объясняют, но за все ругают.  То много кушаете, то пропускаете прием лекарств и все назидательным тоном. Решила по просьбе бабушки поискать врачей на дом. Наткнулась на этот сайт и решила попробовать вызвать врача на дом. Врач приехал вовремя, в назначенный день. Все подробно рассказал, пояснил, что выезд на дом осуществляют разные специалисты, в зависимости от диагноза пациента. К нам приехал терапевт, но пообещал привлечь к лечению, при необходимости,  специалиста-эндокринолога.  Рассказал все про «хлебные единицы», про то, как их считать правильно и как питаться. Общением с врачом бабушка осталась довольна, и мы дали «добро» на составление программы лечения. Через пару дней приехала очень вежливая и внимательная медсестра, взяла все необходимые анализы и на следующий день вернулась уже с готовой и правильно составленной диетой, где все уже грамотно посчитано.  Медсестра бабушке очень понравилась! Она много слышала от подружек про всяких сиделок без специального образования, а тут именно специалист, которая знает, что делает, сама следит за приемом лекарств! Уже через неделю после начала программы лечения бабушка стала чувствовать себя намного лучше! Врачи и медсестры всегда на связи. Любую проблему решают оперативно и быстро! Короче, все понравилось и мы остались довольны! Большое спасибо врачам и медсестрам вашего центра!</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Оксана2</h5>
+                      <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Наталья2</h5>
+                      <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Маша2</h5>
+                      <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Света2</h5>
+                      <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide comments__slide">
+                    <div class="comments__info">
+                      <h5 class="comments__name">Оля2</h5>
+                      <time class="comments__date" datetime="2011-11">14 августа 2015</time>
+                    </div>
+                    <div class="comments__text">
+                      <p>Спасибо Клинике! Вечером понадобилась консультация уролога. Врач задержался на работе, чтобы дождаться пациента, не торопясь все объяснил</p>
+                    </div>
+                  </div>
+                </div>
+                <nav class="comments__navigation"><a class="button button_second comments__btn-all" href="feedback.html">Смотреть все</a>
+                  <div class="button button_second comments__arrow-prev">
+                    <button class="comments__prev"></button>
+                  </div>
+                  <div class="button button_second comments__arrow-next">
+                    <button class="comments__next"></button>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="articles">
+          <h2 class="title articles__title">Статьи</h2>
+          <div class="articles__content"><a class="article-card" href="article.html">
+              <div class="article-card__img"><img src="images/article/article-img-2.jpg" alt="Обложка статьи"/></div>
+              <div class="article-card__description">
+                <time class="article-card__date" datetime="2011-11">10 октября 2019</time>
+                <h3 class="article-card__title">Вакцина от гриппа российского производства появится на рынке в августе. Вакцина от гриппа российского производства появится на рынке в августе Вакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августеВакцина от гриппа российского производства появится на рынке в августе</h3><span class="article-card__link">читать</span>
+              </div></a><a class="article-card" href="article.html">
+              <div class="article-card__img"><img src="images/article/article-img-2.jpg" alt="Обложка статьи"/></div>
+              <div class="article-card__description">
+                <time class="article-card__date" datetime="2011-11">вчера</time>
+                <h3 class="article-card__title">«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности,«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности</h3><span class="article-card__link">читать</span>
+              </div></a><a class="article-card" href="article.html">
+              <div class="article-card__img"><img src="images/article/article-img-2.jpg" alt="Обложка статьи"/></div>
+              <div class="article-card__description article-card__description_green">
+                <time class="article-card__date" datetime="2011-11">вчера</time>
+                <h3 class="article-card__title">«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности,«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности</h3><span class="article-card__link">читать</span>
+              </div></a><a class="article-card" href="article.html">
+              <div class="article-card__img"><img src="images/article/article-img-2.jpg" alt="Обложка статьи"/></div>
+              <div class="article-card__description article-card__description_green">
+                <time class="article-card__date" datetime="2011-11">вчера</time>
+                <h3 class="article-card__title">«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности,«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности</h3><span class="article-card__link">читать</span>
+              </div></a>
+            <div class="ask-form">
+              <h3 class="title ask-form__title">Появились вопросы?<br>напишите нам и мы ответим</h3>
+              <form class="ask-form__form">
+                <input class="ask-form__input" type="text" placeholder="ФИО" required>
+                <input class="ask-form__input" type="text" id="email" placeholder="E-mail" required pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
+                <textarea class="ask-form__textarea" placeholder="Комментарий" required></textarea>
+                <button class="button button_second ask-form__btn" type="button">Отправить</button>
+              </form>
+            </div>
+          </div>
+          <div class="articles__footer"><a class="button button_second articles__btn" href="articles-health.html">Смотреть все</a></div>
+        </section>
+        <div class="map" id="map">
+          <div class="map__description">
+            <h3 class="title map__title">Где нас найти?</h3>
+            <div class="map__text">
+              <p>ООО «Клиника для детей и взрослых на Открытом шоссе» ПРОЕКТ: «ГЕРОМЕДИЦИНА» – клиника медицинского патронажа и гериатрии.</p>
+              <p>Москва, Открытое шоссе, дом 12, стр.2, эт.1</p>
+            </div>
+          </div>
+          <div class="map__img"><script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae68f42cb23099a3be9a721c0a4dfc5fcc502100375ac00c6941008c9172c0c87&amp;lang=ru_RU&amp;scroll=true"></script></div>
+        </div>
       </div>
     </main>
+    <footer class="footer">
+      <div class="content footer__content">
+        <div class="footer__info"><a class="logo footer__logo" href="index.html"></a>
+          <nav class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="about-us.html">
+                  <h3>О клинике</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="price.html">
+                  <h3>Услуги и цены</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="programme.html">
+                  <h3>Программы</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="our-specialist.html">
+                  <h3>Врачи</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="stock.html">
+                  <h3>Акции</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="articles-health.html">
+                  <h3>Статьи</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="feedback.html">
+                  <h3>Отзывы</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="contact.html">
+                  <h3>Контакты</h3></a></li>
+            </ul>
+          </nav>
+          <p class="footer__text">Сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ч. 2 ст. 437 Гражданского кодекса РФ. Чтобы получить подробную информации о стоимости услуг, обращайтесь, пожалуйста, к администраторам клиники.</p>
+        </div>
+        <div class="footer__media">
+          <div class="contacts">
+            <h4 class="contacts__title">Контакты</h4><a class="contacts__link contacts__address" href="contact.html">Россия, Москва, Открытое шоссе, д. 48, стр. 2</a><a class="contacts__link contacts__email" href="mailto:geromedicina@mail.ru">geromedicina@mail.ru</a><a class="contacts__link contacts__number" href="tel:88002000000">8 800 200 00 00</a><a class="contacts__link contacts__number" href="tel:88002000000">8 800 200 00 00</a>
+          </div>
+          <div class="social-links footer__social-links"><a class="social-links__item social-links__item_youtube" href="#"></a><a class="social-links__item social-links__item_vk" href="#"></a><a class="social-links__item social-links__item_fb" href="#"></a><a class="social-links__item social-links__item_ok" href="#"></a></div>
+        </div>
+      </div>
+    </footer>
+    <button class="button-call button-call_feedback" data-btn="modal-call-feedback-btn"><span class="button-call__text">Заказать обратный звонок</span></button>
+    <button class="button-call button-call_doctor-call" data-btn="modal-doctor-call-btn"><span class="button-call__text">Вызов врача</span></button>
+    <button class="button-call button-call_appointment" data-btn="modal-appointment-btn"><span class="button-call__text">Запись на прием</span></button>
+        <div class="modal" id="modal-call-feedback">
+          <div class="modal__window modal__window_call-feedback" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Заказать обратный звонок</h5>
+            <div class="modal__body">
+              <form class="modal__form">
+                <div class="modal__areas">
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="call-feedback-name">Ваше имя</label>
+                    <input class="modal__input" id="call-feedback-name" type="text" placeholder="введите имя" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="call-feedback-tel">Телефон</label>
+                    <input class="modal__input" id="call-feedback-tel" type="tel" placeholder="+7-(___)-_______" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="call-feedback-time">Удобное время для звонка</label>
+                    <select class="modal__select" id="call-feedback-time">
+                      <option selected>10:30-13:00</option>
+                      <option>13:00-14:00</option>
+                      <option>14:30-15:00</option>
+                      <option>15:00-16:00</option>
+                    </select>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="call-feedback-comment">Сообщение</label>
+                    <textarea class="modal__textarea" id="call-feedback-comment" placeholder="введите ваш комментарий"></textarea>
+                  </div>
+                </div>
+                <div class="modal__checkbox">
+                  <label class="modal__label-checkbox">
+                    <input type="checkbox" id="call-feedback-checkbox" checked><span class="modal__checkbox-fake"></span><span class="modal__checkbox-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных.</span>
+                  </label>
+                </div><span class="modal__required">Обязательное поле для заполнения</span>
+                <button class="button button_first modal__btn" type="button">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-doctor-call">
+          <div class="modal__window modal__window_doctor-call" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Заявка на вызов врача</h5>
+            <div class="modal__body">
+              <form class="modal__form">
+                <div class="modal__areas">
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="call-doctor-call-name">Ваше имя</label>
+                    <input class="modal__input" id="call-doctor-call-name" type="text" placeholder="введите имя" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="call-doctor-call-tel">Телефон</label>
+                    <input class="modal__input" id="call-doctor-call-tel" type="tel" placeholder="+7-(___)-_______" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="call-doctor-call-direction">Направление</label>
+                    <select class="modal__select" id="call-doctor-call-direction">
+                      <option selected disabled>Выберите направление</option>
+                      <option>Направление 1</option>
+                      <option>Направление 2</option>
+                      <option>Направление 3</option>
+                      <option>Направление 4</option>
+                    </select>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="call-doctor-call-time">Удобное время для звонка</label>
+                    <select class="modal__select" id="call-doctor-call-time">
+                      <option selected>10:30-13:00</option>
+                      <option>13:00-14:00</option>
+                      <option>14:30-15:00</option>
+                      <option>15:00-16:00</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="modal__checkbox">
+                  <label class="modal__label-checkbox">
+                    <input type="checkbox" id="doctor-call-checkbox" checked><span class="modal__checkbox-fake"></span><span class="modal__checkbox-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных.</span>
+                  </label>
+                </div><span class="modal__required">Обязательное поле для заполнения</span>
+                <button class="button button_first modal__btn" type="button">Вызов врача</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-appointment">
+          <div class="modal__window modal__window_appointment" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Заявка на прием врача в клинике</h5>
+            <div class="modal__body">
+              <form class="modal__form">
+                <div class="modal__wrap-appointment">
+                  <div class="modal__areas modal__areas_appointment">
+                    <div class="modal__area">
+                      <label class="modal__label modal__label_required" for="call-appointment-name">Ваше имя</label>
+                      <input class="modal__input" id="call-appointment-name" type="text" placeholder="введите имя" required>
+                    </div>
+                    <div class="modal__area">
+                      <label class="modal__label modal__label_required" for="call-appointment-tel">Телефон</label>
+                      <input class="modal__input" id="call-appointment-tel" type="tel" placeholder="+7-(___)-_______" required>
+                    </div>
+                    <div class="modal__area">
+                      <label class="modal__label" for="call-appointment-direction">Направление</label>
+                      <select class="modal__select" id="call-appointment-direction">
+                        <option selected>Направление 1</option>
+                        <option>Направление 2</option>
+                        <option>Направление 3</option>
+                        <option>Направление 4</option>
+                      </select>
+                    </div>
+                    <div class="modal__area">
+                      <label class="modal__label" for="call-appointment-time">Удобное время для звонка</label>
+                      <select class="modal__select" id="call-appointment-time">
+                        <option selected>10:30-13:00</option>
+                        <option>13:00-14:00</option>
+                        <option>14:30-15:00</option>
+                        <option>15:00-16:00</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="modal__calendar">
+                    <div class="datepicker" id="datepicker"></div>
+                  </div>
+                </div>
+                <div class="modal__area modal__area_textarea">
+                  <label class="modal__label" for="call-appointment-comment">Сообщение</label>
+                  <textarea class="modal__textarea" id="call-appointment-comment" placeholder="введите ваш комментарий"></textarea>
+                </div>
+                <div class="modal__footer">
+                  <div class="modal__checkbox-wrap">
+                    <div class="modal__checkbox">
+                      <label class="modal__label-checkbox">
+                        <input type="checkbox" id="appointment-checkbox" checked><span class="modal__checkbox-fake"></span><span class="modal__checkbox-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных.</span>
+                      </label>
+                    </div><span class="modal__required">Обязательное поле для заполнения</span>
+                  </div>
+                  <button class="button button_first modal__btn" type="button">Запись на прием</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-feedback">
+          <div class="modal__window modal__window_call-feedback" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Оставить отзыв</h5>
+            <div class="modal__body">
+              <form class="modal__form">
+                <div class="modal__areas">
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="feedback-name">Ваше имя</label>
+                    <input class="modal__input" id="feedback-name" type="text" placeholder="введите имя" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="feedback-tel">Телефон</label>
+                    <input class="modal__input" id="feedback-tel" type="tel" placeholder="+7-(___)-_______" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="feedback-direction">Направление</label>
+                    <select class="modal__select" id="feedback-direction">
+                      <option selected disabled>Выберите направление</option>
+                      <option>Направление 1</option>
+                      <option>Направление 2</option>
+                      <option>Направление 3</option>
+                      <option>Направление 4</option>
+                    </select>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="feedback-doctor-name">ФИО врача</label>
+                    <input class="modal__input" id="feedback-doctor-name" type="text" placeholder="введите ФИО врача">
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="feedback-comment">Комментарий</label>
+                    <textarea class="modal__textarea" id="feedback-comment" placeholder="введите ваш комментарий"></textarea>
+                  </div>
+                </div><span class="modal__required">Обязательное поле для заполнения</span>
+                <button class="button button_first modal__btn" type="button">Оставить отзыв</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-thanks-feedback">
+          <div class="modal__window modal__window_thanks-feedback" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Спасибо за Ваш отзыв!</h5>
+            <div class="modal__body">
+              <p class="modal__text">мы ценим ваше мнение</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-thanks-appointment">
+          <div class="modal__window modal__window_thanks-appointment" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Запись прошла успешно</h5>
+            <div class="modal__body">
+              <p class="modal__text">спасибо! что обратились к нам</p>
+            </div>
+          </div>
+        </div>
     <script src="js/libs.js" defer></script>
     <script src="js/script.js" defer></script>
   </body>

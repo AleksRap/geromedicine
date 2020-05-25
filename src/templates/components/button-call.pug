@@ -1,10 +1,10 @@
 -
   buttons = [
-    {modifier: 'feedback', href: '#form-popup-call-feedback', text: 'Заказать обратный звонок'},
-    {modifier: 'doctor-call', href: '#form-popup', text: 'Вызов врача'},
-    {modifier: 'appointment', href: '#form-popup-appointment', text: 'Запись на прием'}
+    {modifier: 'feedback', btn: 'modal-call-feedback-btn', text: 'Заказать обратный звонок'},
+    {modifier: 'doctor-call', btn: 'modal-doctor-call-btn', text: 'Вызов врача'},
+    {modifier: 'appointment', btn: 'modal-appointment-btn', text: 'Запись на прием'}
   ];
 
 each button in buttons
-  button.button-call(class=`button-call_${button.modifier}` data-href=button.href)
+  button.button-call(class=`button-call_${button.modifier}` data-btn=button.btn)
     span.button-call__text=button.text

@@ -1,0 +1,38 @@
+include ../../mixins/modal
+
++modal({
+  id: 'modal-call-feedback',
+  title: 'Заказать обратный звонок',
+  modifier: 'call-feedback'
+})
+  form.modal__form
+    .modal__areas
+      .modal__area
+        label.modal__label.modal__label_required(for="call-feedback-name") Ваше имя
+        input.modal__input(id="call-feedback-name" type="text" placeholder="введите имя" required)
+
+      .modal__area
+        label.modal__label.modal__label_required(for="call-feedback-tel") Телефон
+        input.modal__input(id="call-feedback-tel" type="tel" placeholder="+7-(___)-_______" required)
+
+      .modal__area
+        label.modal__label(for="call-feedback-time") Удобное время для звонка
+        select.modal__select(id="call-feedback-time")
+          option(selected) 10:30-13:00
+          option 13:00-14:00
+          option 14:30-15:00
+          option 15:00-16:00
+
+      .modal__area
+        label.modal__label(for="call-feedback-comment") Сообщение
+        textarea.modal__textarea(id="call-feedback-comment" placeholder="введите ваш комментарий")
+
+    .modal__checkbox
+      label.modal__label-checkbox
+        input(type="checkbox" id="call-feedback-checkbox" checked)
+        span.modal__checkbox-fake
+        span.modal__checkbox-text Нажимая на кнопку, вы даете согласие на обработку персональных данных.
+
+    span.modal__required Обязательное поле для заполнения
+
+    button.button.button_first.modal__btn(type="button") Отправить

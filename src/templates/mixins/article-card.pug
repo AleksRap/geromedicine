@@ -1,0 +1,9 @@
+mixin article-card(data)
+  a.article-card(href=data.url)
+    .article-card__img
+      img(src=data.img alt="Обложка статьи")
+    .article-card__description(class= data.green ? 'article-card__description_green' : '' )
+      if data.date
+        time.article-card__date(datetime="2011-11")=data.date
+      h3.article-card__title=data.title
+      span.article-card__link читать

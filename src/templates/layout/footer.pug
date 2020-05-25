@@ -1,54 +1,48 @@
-.full-wrap.full-wrap_bt
-  .page-wrapper
-    footer.footer
-      .container-fluid
-        .row
-          .col-12.col-md-8
-            .footer-info
-              a.logo(href="index.html")
-              ul.nav
-                li.nav-item
-                  a.nav-link(href="about-us.html")
-                    h3 О клинике
-                li.nav-item
-                  a.nav-link(href="price.html")
-                    h3 Услуги и цены
-                li.nav-item
-                  a.nav-link(href="programme.html")
-                    h3 Программы
-                li.nav-item
-                  a.nav-link(href="our-specialist.html")
-                    h3 Врачи
-                li.nav-item
-                  a.nav-link(href="stock.html")
-                    h3 Акции
-                li.nav-item
-                  a.nav-link(href="articles-health.html")
-                    h3 Статьи
-                li.nav-item
-                  a.nav-link(href="feedback.html")
-                    h3 Отзывы
-                li.nav-item
-                  a.nav-link(href="contact.html")
-                    h3 Контакты
-              p.footer-info__text-block Сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ч. 2 ст. 437 Гражданского кодекса РФ. Чтобы получить подробную информации о стоимости услуг, обращайтесь, пожалуйста, к администраторам клиники.
-          .col-12.col-md-4.col-lg-3.block-border-top
-            .contacts-wrap
-              .contacts
-                h4.contacts__title Контакты
-                a.contacts__address(href="contact.html") Россия, Москва, Открытое шоссе, д. 48, стр. 2
-                a.contacts__email(href="mailto:geromedicina@mail.ru") geromedicina@mail.ru
-                a.contacts__number(href="tel:88002000000") 8 800 200 00 00
-                a.contacts__number(href="tel:88002000000") 8 800 200 00 00
-                .social-links
-                  a.social-link.social-link_youtube(href="#")
-                  a.social-link.social-link_vk(href="#")
-                  a.social-link.social-link_fb(href="#")
-                  a.social-link.social-link_ok(href="#")
+footer.footer
+  .content.footer__content
+    .footer__info
+      a.logo.footer__logo(href="index.html")
+      nav.footer__navigation
+        ul.footer__list
 
-include ../components/popup/feedback
-include ../components/popup/doctor-call
-include ../components/popup/call-feedback
-include ../components/popup/appointment
-include ../components/popup/thanks-feedback
-include ../components/popup/thanks-appointment
+          -
+            list = [
+              {url: 'about-us.html', text: 'О клинике'},
+              {url: 'price.html', text: 'Услуги и цены'},
+              {url: 'programme.html', text: 'Программы'},
+              {url: 'our-specialist.html', text: 'Врачи'},
+              {url: 'stock.html', text: 'Акции'},
+              {url: 'articles-health.html', text: 'Статьи'},
+              {url: 'feedback.html', text: 'Отзывы'},
+              {url: 'contact.html', text: 'Контакты'}
+            ]
+
+          each item in list
+            li.footer__item
+              a.footer__link(href=item.url)
+                h3=item.text
+
+      p.footer__text Сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ч. 2 ст. 437 Гражданского кодекса РФ. Чтобы получить подробную информации о стоимости услуг, обращайтесь, пожалуйста, к администраторам клиники.
+
+    .footer__media
+      .contacts
+        h4.contacts__title Контакты
+        a.contacts__link.contacts__address(href="contact.html") Россия, Москва, Открытое шоссе, д. 48, стр. 2
+        a.contacts__link.contacts__email(href="mailto:geromedicina@mail.ru") geromedicina@mail.ru
+        a.contacts__link.contacts__number(href="tel:88002000000") 8 800 200 00 00
+        a.contacts__link.contacts__number(href="tel:88002000000") 8 800 200 00 00
+
+      .social-links.footer__social-links
+        a.social-links__item.social-links__item_youtube(href="#")
+        a.social-links__item.social-links__item_vk(href="#")
+        a.social-links__item.social-links__item_fb(href="#")
+        a.social-links__item.social-links__item_ok(href="#")
+
+include ../components/button-call
+
+include ../components/modals/call-feedback
+include ../components/modals/doctor-call
+include ../components/modals/appointment
+include ../components/modals/feedback
+include ../components/modals/thanks-feedback
+include ../components/modals/thanks-appointment

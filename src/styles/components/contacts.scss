@@ -1,0 +1,49 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 18px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    @media (min-width: 576px) {
+      font-size: 24px;
+    }
+    @media (min-width: 1500px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $font-color;
+
+    @media (min-width: 992px) {
+      &:hover {
+        color: $second-color;
+      }
+    }
+  }
+
+  &__address {
+    margin-bottom: 18px;
+  }
+
+  &__email {
+    margin-bottom: 12px;
+  }
+
+  &__number {
+    margin-bottom: 4px;
+    font-size: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
