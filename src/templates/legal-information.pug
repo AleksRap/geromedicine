@@ -1,0 +1,57 @@
+extends layout/layout
+include mixins/article
+
+block head
+  - var title = 'Правовая информация';
+  - var pageId = 1;
+
+block header
+  include layout/header
+
+block content
+  main
+    .content
+      .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="/") главная
+            meta(itemprop="name" content="Главная")
+            meta(itemprop="position" content="1")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="about-us.html") о клинике
+            meta(itemprop="name" content="О клинике")
+            meta(itemprop="position" content="2")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="legal-information.html") правовая информация
+            meta(itemprop="name" content="Правовая информация")
+            meta(itemprop="position" content="3")
+
+
+      +article({
+        mb: true,
+        title: 'Правовая информация',
+        text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames quis et egestas dictumst rhoncus dignissim rutrum. Ac eu augue urna, cursus a a imperdiet vulputate nibh. Mauris, at facilisis est mattis commodo rhoncus posuere. Massa duis vestibulum quis maecenas sit diam.'
+      })
+
+      -
+        docs = [
+          {
+            href: '#',
+            text: 'Документ “Описание документа”'
+          }, {
+            href: '#',
+            text: 'Документ “Описание документа2”'
+          }
+        ];
+
+      .docs
+        each doc in docs
+          a.docs__link(href=doc.href)
+            .docs__pic(style="background-image: url(svg/icons/doc.svg)")
+            span.docs__text=doc.text
+
+
+block footer
+  include layout/footer
+

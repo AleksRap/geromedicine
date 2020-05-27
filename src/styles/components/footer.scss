@@ -1,7 +1,11 @@
 .footer {
+  flex: 0 0 auto;
+  margin-top: -2px;
+
+  border-top: 2px solid $third-color;
 
   @media (min-width: 1200px) {
-    border-top: 2px solid $third-color;
+    margin-top: 0;
   }
 
   &__content {

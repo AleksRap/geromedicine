@@ -1,0 +1,68 @@
+extends layout/layout
+include mixins/article
+include mixins/price
+
+block head
+  - var title = 'Кардиология';
+  - var pageId = 2;
+
+block header
+  include layout/header
+
+block content
+  main
+    .content
+      .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="/") главная
+            meta(itemprop="name" content="Главная")
+            meta(itemprop="position" content="1")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="price.html") услуги и цены
+            meta(itemprop="name" content="Услуги и цены")
+            meta(itemprop="position" content="2")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="name-service-cardiology.html") кардиология
+            meta(itemprop="name" content="Кардиология")
+            meta(itemprop="position" content="3")
+
+
+      +article({
+        mb: true,
+        title: 'Кардиология',
+        img: 'images/article/name-service-cardiology.jpg',
+        text1: 'Заболевания сердечно-сосудистой системы лидируют среди прочей патологии, в том числе по инвалидности и смертности. Поэтому кардиолог является одним из самых актуальных специалистов в современной медицине. ',
+        text2: 'Одно из достоинств нашей клиники в том, что консультация кардиолога и обследование проходит на одной базе, при необходимости врач может присутствовать на любой диагностике. Такой подход позволяет более полно и быстро проводить обследование и ставить максимально достоверные диагнозы.',
+        text3: 'Разработка индивидуальной схемы лечения входит в стоимость платного приема врача кардиолога. При составлении терапии наши специалисты руководствуются международными рекомендациями, российскими стандартами и собственным практическим опытом. Медикаментозная терапия дополнятся физиотерапевтическими методиками.'
+      })
+
+
+      include components/advantages
+
+
+      include components/different
+
+
+      button.button.button_first.button_300(data-btn="modal-appointment-btn") запись на прием
+
+
+      -
+        info = [
+          {service: 'Прием (осмотр, консультация) врача-кардиолога первичный', price: '1 500₽'},
+          {service: 'Прием, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.', price: '1 500₽'},
+          {service: 'Прием, консультация врача к.м.н.', price: '1 500₽'},
+          {service: 'Прием, консультация врача к.м.н.', price: '10 500₽'},
+          {service: 'Прием, консультация врача к.м.н.', price: '1 500₽'}
+        ]
+
+      +price(info)
+
+
+      include components/comments
+
+
+block footer
+  include layout/footer
+

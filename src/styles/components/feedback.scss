@@ -1,0 +1,52 @@
+.feedback {
+
+  &__hr {
+    margin-bottom: 40px;
+  }
+
+  &__filter-panel {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    border-bottom: 2px solid $third-color;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__name {
+    margin-top: 0;
+    margin-bottom: 5px;
+
+    font-size: 20px;
+    color: $first-color;
+    font-weight: 600;
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 20px;
+
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  &__text {
+
+    p {
+      margin: 0;
+      line-height: 1.4;
+      font-size: 14px;
+
+      @media (min-width: 576px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

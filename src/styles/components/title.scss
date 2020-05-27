@@ -7,4 +7,12 @@
   @media (min-width: 992px) {
     font-size: 36px;
   }
+
+  &__hr {
+    width: 100%;
+    height: 2px;
+
+    background: $third-color;
+    border: none;
+  }
 }

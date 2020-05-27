@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="images/other/favicon.ico">
+    <link rel="apple-touch-icon" href="img/favicon.ico">
+    <title>Поиск</title>
+    <link rel="stylesheet" type="text/css" href="css/libs.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="navbar-first">
+        <div class="content navbar-first__content"><a class="logo navbar-first__logo" href="index.html"></a><a class="link link_search navbar-first__search" href="search.html">Поиск</a>
+          <div class="navbar-first__wrap"><a class="link link_number" href="tel:88002000000">+7 (800) 200 00 00</a><a class="link link_number" href="tel:88002000000">+7 (800) 200 00 00</a><a class="link link_address navbar-first__address" href="$map">Москва, Открытое шоссе, д. 48, стр. 2</a></div>
+        </div>
+      </div>
+      <div class="navbar-second">
+        <div class="content navbar-second__content"><a class="link link_address navbar-second__address" href="$map">Москва, Открытое шоссе, д. 48, стр. 2</a><a class="logo navbar-second__logo" href="index.html"></a>
+          <div class="navbar-second__navigation">
+            <nav class="navigation">
+              <button class="burger navigation__burger" type="button"><span class="burger__text">Меню</span><span class="burger__icon"></span></button>
+              <div class="navigation__content">
+                <div class="search navigation__search">
+                  <input class="search__input" type="text" placeholder="Поиск">
+                  <button class="search__btn"></button>
+                </div>
+                <div class="navigation__wrap-btn">
+                  <button class="button button_second" data-btn="modal-call-feedback-btn">Заказать обратный звонок</button>
+                  <button class="button button_second" data-btn="modal-doctor-call-btn">Вызов врача</button>
+                  <button class="button button_first" data-btn="modal-appointment-btn">Запись на прием</button>
+                </div>
+                <ul class="navigation__list">
+                  <li class="navigation__item navigation__item_drop"><a class="navigation__link" href="about-us.html">
+                      <h3>О клинике</h3></a>
+                    <div class="navigation__dropdown"><a class="navigation__dropdown-link" href="about-us.html">
+                        <h3>Информация о клинике</h3></a><a class="navigation__dropdown-link" href="docs.html">
+                        <h3>Лицензия и документы</h3></a><a class="navigation__dropdown-link" href="legal-information.html">
+                        <h3>Правовая информация</h3></a>
+                    </div>
+                  </li>
+                  <li class="navigation__item navigation__item_drop"><a class="navigation__link" href="price.html">
+                      <h3>Услуги и цены</h3></a>
+                    <div class="navigation__dropdown"><a class="navigation__dropdown-link" href="price.html">
+                        <h3>Услуги и цены</h3></a><a class="navigation__dropdown-link" href="name-service-patronage.html">
+                        <h3>Патронаж</h3></a>
+                    </div>
+                  </li>
+                  <li class="navigation__item"><a class="navigation__link" href="programme.html">
+                      <h3>Программы</h3></a>
+                  </li>
+                  <li class="navigation__item"><a class="navigation__link" href="our-specialist.html">
+                      <h3>Врачи</h3></a>
+                  </li>
+                  <li class="navigation__item"><a class="navigation__link" href="stock.html">
+                      <h3>Акции</h3></a>
+                  </li>
+                  <li class="navigation__item navigation__item_drop"><a class="navigation__link" href="articles-health.html">
+                      <h3>Статьи</h3></a>
+                    <div class="navigation__dropdown"><a class="navigation__dropdown-link" href="articles-health.html">
+                        <h3>Статьи о здоровье</h3></a><a class="navigation__dropdown-link" href="recommendations.html">
+                        <h3>Рекомендации</h3></a>
+                    </div>
+                  </li>
+                  <li class="navigation__item"><a class="navigation__link" href="feedback.html">
+                      <h3>Отзывы</h3></a>
+                  </li>
+                  <li class="navigation__item"><a class="navigation__link" href="contact.html">
+                      <h3>Контакты</h3></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList"><span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item" href="/">главная
+              <meta itemprop="name" content="Главная">
+              <meta itemprop="position" content="1"></a></span><span>/</span><span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item" href="search.html">поиск
+              <meta itemprop="name" content="Поиск">
+              <meta itemprop="position" content="2"></a></span></div>
+        <div class="search-page">
+          <h1 class="title">Поиск</h1>
+          <hr class="title__hr search-page__hr">
+          <div class="search-page__filter-panel">
+            <div class="filter-panel">
+              <div class="filter-panel__select">
+                <select>
+                  <option disabled selected>выбрать направление</option>
+                  <option value="all">все</option>
+                  <option value="direction-1">направление 1</option>
+                  <option value="direction-2">направление 2</option>
+                </select>
+              </div>
+              <div class="filter-panel__select">
+                <select>
+                  <option disabled selected>выбрать год</option>
+                  <option value="all">все года</option>
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                </select>
+              </div>
+              <div class="filter-panel__search">
+                <input class="filter-panel__input-search" type="text" placeholder="поиск">
+                <button class="filter-panel__btn-search"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="content footer__content">
+        <div class="footer__info"><a class="logo footer__logo" href="index.html"></a>
+          <nav class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="about-us.html">
+                  <h3>О клинике</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="price.html">
+                  <h3>Услуги и цены</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="programme.html">
+                  <h3>Программы</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="our-specialist.html">
+                  <h3>Врачи</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="stock.html">
+                  <h3>Акции</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="articles-health.html">
+                  <h3>Статьи</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="feedback.html">
+                  <h3>Отзывы</h3></a></li>
+              <li class="footer__item"><a class="footer__link" href="contact.html">
+                  <h3>Контакты</h3></a></li>
+            </ul>
+          </nav>
+          <p class="footer__text">Сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ч. 2 ст. 437 Гражданского кодекса РФ. Чтобы получить подробную информации о стоимости услуг, обращайтесь, пожалуйста, к администраторам клиники.</p>
+        </div>
+        <div class="footer__media">
+          <div class="contacts">
+            <h4 class="contacts__title">Контакты</h4><a class="contacts__link contacts__address" href="contact.html">Россия, Москва, Открытое шоссе, д. 48, стр. 2</a><a class="contacts__link contacts__email" href="mailto:geromedicina@mail.ru">geromedicina@mail.ru</a><a class="contacts__link contacts__number" href="tel:88002000000">8 800 200 00 00</a><a class="contacts__link contacts__number" href="tel:88002000000">8 800 200 00 00</a>
+          </div>
+          <div class="social-links footer__social-links"><a class="social-links__item social-links__item_youtube" href="#"></a><a class="social-links__item social-links__item_vk" href="#"></a><a class="social-links__item social-links__item_fb" href="#"></a><a class="social-links__item social-links__item_ok" href="#"></a></div>
+        </div>
+      </div>
+    </footer>
+    <button class="button-call button-call_feedback" data-btn="modal-call-feedback-btn"><span class="button-call__text">Заказать обратный звонок</span></button>
+    <button class="button-call button-call_doctor-call" data-btn="modal-doctor-call-btn"><span class="button-call__text">Вызов врача</span></button>
+    <button class="button-call button-call_appointment" data-btn="modal-appointment-btn"><span class="button-call__text">Запись на прием</span></button>
+        <div class="modal" id="modal-call-feedback">
+          <div class="modal__window modal__window_call-feedback" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Заказать обратный звонок</h5>
+            <div class="modal__body">
+              <form class="modal__form">
+                <div class="modal__areas">
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="call-feedback-name">Ваше имя</label>
+                    <input class="modal__input" id="call-feedback-name" type="text" placeholder="введите имя" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="call-feedback-tel">Телефон</label>
+                    <input class="modal__input" id="call-feedback-tel" type="tel" placeholder="+7-(___)-_______" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="call-feedback-time">Удобное время для звонка</label>
+                    <select class="modal__select" id="call-feedback-time">
+                      <option selected>10:30-13:00</option>
+                      <option>13:00-14:00</option>
+                      <option>14:30-15:00</option>
+                      <option>15:00-16:00</option>
+                    </select>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="call-feedback-comment">Сообщение</label>
+                    <textarea class="modal__textarea" id="call-feedback-comment" placeholder="введите ваш комментарий"></textarea>
+                  </div>
+                </div>
+                <div class="modal__checkbox">
+                  <label class="modal__label-checkbox">
+                    <input type="checkbox" id="call-feedback-checkbox" checked><span class="modal__checkbox-fake"></span><span class="modal__checkbox-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных.</span>
+                  </label>
+                </div><span class="modal__required">Обязательное поле для заполнения</span>
+                <button class="button button_first modal__btn" type="button">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-doctor-call">
+          <div class="modal__window modal__window_doctor-call" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Заявка на вызов врача</h5>
+            <div class="modal__body">
+              <form class="modal__form">
+                <div class="modal__areas">
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="call-doctor-call-name">Ваше имя</label>
+                    <input class="modal__input" id="call-doctor-call-name" type="text" placeholder="введите имя" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="call-doctor-call-tel">Телефон</label>
+                    <input class="modal__input" id="call-doctor-call-tel" type="tel" placeholder="+7-(___)-_______" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="call-doctor-call-direction">Направление</label>
+                    <select class="modal__select" id="call-doctor-call-direction">
+                      <option selected disabled>Выберите направление</option>
+                      <option>Направление 1</option>
+                      <option>Направление 2</option>
+                      <option>Направление 3</option>
+                      <option>Направление 4</option>
+                    </select>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="call-doctor-call-time">Удобное время для звонка</label>
+                    <select class="modal__select" id="call-doctor-call-time">
+                      <option selected>10:30-13:00</option>
+                      <option>13:00-14:00</option>
+                      <option>14:30-15:00</option>
+                      <option>15:00-16:00</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="modal__checkbox">
+                  <label class="modal__label-checkbox">
+                    <input type="checkbox" id="doctor-call-checkbox" checked><span class="modal__checkbox-fake"></span><span class="modal__checkbox-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных.</span>
+                  </label>
+                </div><span class="modal__required">Обязательное поле для заполнения</span>
+                <button class="button button_first modal__btn" type="button">Вызов врача</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-appointment">
+          <div class="modal__window modal__window_appointment" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Заявка на прием врача в клинике</h5>
+            <div class="modal__body">
+              <form class="modal__form">
+                <div class="modal__wrap-appointment">
+                  <div class="modal__areas modal__areas_appointment">
+                    <div class="modal__area">
+                      <label class="modal__label modal__label_required" for="call-appointment-name">Ваше имя</label>
+                      <input class="modal__input" id="call-appointment-name" type="text" placeholder="введите имя" required>
+                    </div>
+                    <div class="modal__area">
+                      <label class="modal__label modal__label_required" for="call-appointment-tel">Телефон</label>
+                      <input class="modal__input" id="call-appointment-tel" type="tel" placeholder="+7-(___)-_______" required>
+                    </div>
+                    <div class="modal__area">
+                      <label class="modal__label" for="call-appointment-direction">Направление</label>
+                      <select class="modal__select" id="call-appointment-direction">
+                        <option selected>Направление 1</option>
+                        <option>Направление 2</option>
+                        <option>Направление 3</option>
+                        <option>Направление 4</option>
+                      </select>
+                    </div>
+                    <div class="modal__area">
+                      <label class="modal__label" for="call-appointment-time">Удобное время для звонка</label>
+                      <select class="modal__select" id="call-appointment-time">
+                        <option selected>10:30-13:00</option>
+                        <option>13:00-14:00</option>
+                        <option>14:30-15:00</option>
+                        <option>15:00-16:00</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="modal__calendar">
+                    <div class="datepicker" id="datepicker"></div>
+                  </div>
+                </div>
+                <div class="modal__area modal__area_textarea">
+                  <label class="modal__label" for="call-appointment-comment">Сообщение</label>
+                  <textarea class="modal__textarea" id="call-appointment-comment" placeholder="введите ваш комментарий"></textarea>
+                </div>
+                <div class="modal__footer">
+                  <div class="modal__checkbox-wrap">
+                    <div class="modal__checkbox">
+                      <label class="modal__label-checkbox">
+                        <input type="checkbox" id="appointment-checkbox" checked><span class="modal__checkbox-fake"></span><span class="modal__checkbox-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных.</span>
+                      </label>
+                    </div><span class="modal__required">Обязательное поле для заполнения</span>
+                  </div>
+                  <button class="button button_first modal__btn" type="button">Запись на прием</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-feedback">
+          <div class="modal__window modal__window_call-feedback" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Оставить отзыв</h5>
+            <div class="modal__body">
+              <form class="modal__form">
+                <div class="modal__areas">
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="feedback-name">Ваше имя</label>
+                    <input class="modal__input" id="feedback-name" type="text" placeholder="введите имя" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="feedback-tel">Телефон</label>
+                    <input class="modal__input" id="feedback-tel" type="tel" placeholder="+7-(___)-_______" required>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="feedback-direction">Направление</label>
+                    <select class="modal__select" id="feedback-direction">
+                      <option selected disabled>Выберите направление</option>
+                      <option>Направление 1</option>
+                      <option>Направление 2</option>
+                      <option>Направление 3</option>
+                      <option>Направление 4</option>
+                    </select>
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label" for="feedback-doctor-name">ФИО врача</label>
+                    <input class="modal__input" id="feedback-doctor-name" type="text" placeholder="введите ФИО врача">
+                  </div>
+                  <div class="modal__area">
+                    <label class="modal__label modal__label_required" for="feedback-comment">Комментарий</label>
+                    <textarea class="modal__textarea" id="feedback-comment" placeholder="введите ваш комментарий"></textarea>
+                  </div>
+                </div><span class="modal__required">Обязательное поле для заполнения</span>
+                <button class="button button_first modal__btn" type="button">Оставить отзыв</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-thanks-feedback">
+          <div class="modal__window modal__window_thanks-feedback" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Спасибо за Ваш отзыв!</h5>
+            <div class="modal__body">
+              <p class="modal__text">мы ценим ваше мнение</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-thanks-appointment">
+          <div class="modal__window modal__window_thanks-appointment" data-modal="window">
+            <button class="modal__btn-close" type="button" data-modal="close"></button>
+            <h5 class="title modal__title">Запись прошла успешно</h5>
+            <div class="modal__body">
+              <p class="modal__text">спасибо! что обратились к нам</p>
+            </div>
+          </div>
+        </div>
+    <script src="js/libs.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+extends layout/layout
+include mixins/doctor-card
+
+block head
+  - var title = 'Наши врачи';
+  - var pageId = 4;
+
+block header
+  include layout/header
+
+block content
+  main
+    .content
+      .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="/") главная
+            meta(itemprop="name" content="Главная")
+            meta(itemprop="position" content="1")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="our-specialist.html") наши врачи
+            meta(itemprop="name" content="Врачи")
+            meta(itemprop="position" content="2")
+
+
+      .our-specialists
+        h1.title Наши врачи
+        hr.title__hr.our-specialists__hr
+
+        .our-specialists__filter-panel
+          include components/filter-panel
+
+        .our-specialists__cards
+
+          -
+            cards = [
+              {
+                img: 'images/doctors/doctor-1.jpg',
+                name: 'Волков Генадий Анатольевич',
+                specialty: 'Врач-травматолог-ортопед'
+              }, {
+                img: 'images/doctors/doctor-3.jpg',
+                name: 'Тихомиров Ян Васильевич',
+                specialty: 'Врач-педиатр'
+              }, {
+                img: 'images/doctors/doctor-1.jpg',
+                name: 'Зотова Наталия Александровна',
+                specialty: 'Врач-кардиолог'
+              }, {
+                img: 'images/doctors/doctor-1.jpg',
+                name: 'Щекочихин-Крестовоздвиженский Иннокентий Виссалариимонович',
+                specialty: 'Врач-травматолог-ортопед'
+              }, {
+                img: 'images/doctors/doctor-1.jpg',
+                name: 'Петров Петр Петрович',
+                specialty: 'Врач-травматолог'
+              }
+            ]
+
+          - for (var i = 0; i < 5; i++)
+            each card in cards
+              +doctor-card({
+                img: card.img,
+                name: card.name,
+                specialty: card.specialty
+              })
+
+
+      include components/pagination
+
+
+block footer
+  include layout/footer
+

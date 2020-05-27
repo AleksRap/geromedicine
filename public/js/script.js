@@ -127,10 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
       1500: {
         slidesPerView: 6
       }
-    },
-    preloadImages: false,
-    lazy: true,
-    loadOnTransitionStart: true
+    }
   });
   var swipersComments = new Swiper('.swiper-comments', {
     initialSlide: 0,
@@ -263,21 +260,19 @@ document.addEventListener('DOMContentLoaded', function () {
   var modalAppointment = new Modal({
     idModal: 'modal-appointment',
     selectorBtnOpen: '[data-btn="modal-appointment-btn"]'
-  }); // const modalFeedback = new Modal({
-  //   idModal: 'modal-feedback',
-  //   selectorBtnOpen: '[data-btn="modal-feedback-btn"]'
-  // });
-  //
-  // const modalThanksFeedback = new Modal({
-  //   idModal: 'modal-thanks-feedback',
-  //   selectorBtnOpen: '[data-btn="modal-thanks-feedback-btn"]'
-  // });
-  //
-  // const modalThanksAppointment = new Modal({
-  //   idModal: 'modal-thanks-appointment',
-  //   selectorBtnOpen: '[data-btn="modal-thanks-appointment-btn"]'
-  // });
-
+  });
+  var modalFeedback = new Modal({
+    idModal: 'modal-feedback',
+    selectorBtnOpen: '[data-btn="modal-feedback-btn"]'
+  });
+  var modalThanksFeedback = new Modal({
+    idModal: 'modal-thanks-feedback',
+    selectorBtnOpen: '[data-btn="modal-thanks-feedback-btn"]'
+  });
+  var modalThanksAppointment = new Modal({
+    idModal: 'modal-thanks-appointment',
+    selectorBtnOpen: '[data-btn="modal-thanks-appointment-btn"]'
+  });
   /** Проверка согласия на обработку персональных данных */
 
   function checkAgree() {
@@ -311,43 +306,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   $("#call-feedback-tel").mask("+7 (999) 999-9999");
   $("#call-doctor-call-tel").mask("+7 (999) 999-9999");
-  $("#call-appointment-tel").mask("+7 (999) 999-9999"); // /** Ужимка текста. Инициализация dotdotdot */
-  // {
-  //   const arrDotDotDot = [
-  //     {selector: '[data-dotdotdot=article-img]', options: {ellipsis: "\u2026 ", height: 80}},
-  //     {selector: '[data-dotdotdot=article-img2]', options: {ellipsis: "\u2026 ", height: 140}},
-  //     {selector: '[data-dotdotdot=about-body]', options: {ellipsis: "\u2026 ", height: 232, keep: '.about-us__buttons',}},
-  //     {selector: '[data-dotdotdot="comment"]', options: {ellipsis: "\u2026 ", height: 200,}},
-  //     {selector: '[data-dotdotdot="slider"]', options: {ellipsis: "\u2026 ", height: 85,}}
-  //   ];
-  //
-  //   arrDotDotDot.forEach(item => {
-  //     const bigArticlesImg = document.querySelectorAll(item.selector);
-  //     if (bigArticlesImg.length) bigArticlesImg.forEach(article => new Dotdotdot(article, item.options));
-  //   });
-  // }
-  // /** Инициализация lightslider */
-  // $('#lightSlider').lightSlider({
-  //   item: 1,
-  //   loop: true,
-  //   gallery: true,
-  //   thumbItem: 4,
-  //   thumbMargin: 5,
-  //   galleryMargin: 30,
-  //   onAfterSlide: function () {
-  //     let video = document.querySelector('.slider video');
-  //     if (!video.paused) video.pause();
-  //   },
-  //   responsive: [
-  //     {
-  //       breakpoint: 576,
-  //       settings: {
-  //         thumbItem: 3,
-  //       }
-  //     }
-  //   ]
-  // });
-
+  $("#call-appointment-tel").mask("+7 (999) 999-9999");
   /** Инициализация галереи fancybox */
 
   document.querySelector('[data-fancybox="gallery"]') && $('[data-fancybox="gallery"]').fancybox({
@@ -355,6 +314,19 @@ document.addEventListener('DOMContentLoaded', function () {
     transitionEffect: "zoom-in-out",
     loop: true
   });
+  /** Спойлеры услуг */
+
+  var spoilerWrap = document.querySelector('.amenities__spoilers');
+
+  if (spoilerWrap) {
+    var spoilers = document.querySelectorAll('.spoiler');
+    spoilers.forEach(function (spoiler) {
+      new Spoiler({
+        spoiler: spoiler,
+        wrap: spoilerWrap
+      });
+    });
+  }
 });
 /** Управляем событиями */
 
@@ -488,4 +460,68 @@ var Modal = /*#__PURE__*/function () {
   }]);
 
   return Modal;
+}();
+
+var Spoiler = /*#__PURE__*/function () {
+  function Spoiler(data) {
+    _classCallCheck(this, Spoiler);
+
+    this.spoiler = data.spoiler;
+    this.body = this.spoiler.querySelector('.spoiler__body');
+    this.wrap = data.wrap;
+    this.spoilers = null;
+    this.height = null;
+
+    this._initialize();
+  }
+
+  _createClass(Spoiler, [{
+    key: "open",
+    value: function open() {
+      this.spoiler.classList.add('open');
+      this.body.style.height = "".concat(this.height, "px");
+    }
+  }, {
+    key: "close",
+    value: function close() {
+      this.spoiler.classList.remove('open');
+      this.body.style.height = '0px';
+    }
+  }, {
+    key: "closeAll",
+    value: function closeAll() {
+      this.spoilers.forEach(function (spoiler) {
+        spoiler.classList.remove('open');
+        spoiler.querySelector('.spoiler__body').style.height = '0px';
+      });
+    }
+  }, {
+    key: "_initialize",
+    value: function _initialize() {
+      var _this2 = this;
+
+      this.height = this.body.clientHeight;
+      this.body.style.height = '0px';
+      /** если есть this.wrap, значит включен режим аккордеона */
+
+      if (this.wrap) this.spoilers = this.wrap.querySelectorAll('.spoiler');
+      this.spoiler.addEventListener('click', function (event) {
+        var spoiler = event.target.closest('.spoiler');
+        if (!spoiler) return;
+        /** открываем или закрываем спойлер */
+
+        var open = spoiler.classList.contains('open');
+
+        if (open) {
+          _this2.close();
+        } else {
+          _this2.wrap && _this2.closeAll();
+
+          _this2.open();
+        }
+      });
+    }
+  }]);
+
+  return Spoiler;
 }();

@@ -1,0 +1,8 @@
+mixin price(arr)
+  .price
+    h2.title услуги
+    .price__table
+      each row in arr
+        a.price__row(href="service-cardiology.html")
+          p.price__service=row.service
+          p.price__cost=row.price

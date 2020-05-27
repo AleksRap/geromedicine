@@ -1,0 +1,7 @@
+mixin article-horizontal-card(data)
+  a.article-horizontal-card(href=data.url)
+    .article-horizontal-card__img
+      img(src=data.img alt="Обложка статьи")
+    .article-horizontal-card__description
+      h3.article-horizontal-card__title=data.title
+      span.article-horizontal-card__link читать

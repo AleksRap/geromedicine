@@ -1,0 +1,135 @@
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid $third-color;
+
+  @media (min-width: 992px) {
+    flex-direction: initial;
+    height: 50px;
+  }
+
+  &__select {
+    position: relative;
+    width: 100%;
+    height: 50px;
+
+    margin-bottom: -2px;
+
+    background-color: #fff;
+
+    @media (min-width: 992px) {
+      width: initial;
+      height: initial;
+      margin-left: -2px;
+    }
+
+    select {
+      position: relative;
+
+      width: 100%;
+      height: 100%;
+
+      padding-left: 25px;
+      padding-right: 50px;
+
+      background-color: transparent;
+      border: 2px solid $third-color;
+
+      font-weight: 600;
+      font-size: 18px;
+      color: $font-color;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      @media (min-width: 992px) {
+        width: initial;
+      }
+
+      &:focus {
+        z-index: 1;
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -4px;
+      bottom: 0;
+      right: 15px;
+      margin: auto 0;
+      z-index: 1;
+
+      @include arrow(12px, 2px, 'bottom', $fourth-color);
+    }
+
+    &::placeholder {
+      font-weight: 500;
+      color: lightgray
+    }
+  }
+
+  &__search {
+    position: relative;
+    height: 50px;
+    margin-bottom: -2px;
+
+    @media (min-width: 992px) {
+      height: initial;
+      margin-left: auto;
+    }
+  }
+
+  &__input-search {
+    width: 100%;
+    height: 100%;
+
+    padding-left: 25px;
+    padding-right: 50px;
+
+    border: 2px solid $third-color;
+
+    font-weight: 600;
+    font-size: 18px;
+    color: $font-color;
+    text-align: right;
+
+    background-color: #fff;
+
+    appearance: none;
+
+    @media (min-width: 992px) {
+      border: none;
+      border-bottom: 2px solid $third-color;
+    }
+
+    &:focus {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::placeholder {
+      font-weight: 500;
+      color: lightgray
+    }
+  }
+
+  &__btn-search {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    margin: auto 0;
+    z-index: 1;
+
+    width: 20px;
+    height: 20px;
+
+    background: url('../svg/icons/search.svg') center/contain no-repeat;
+  }
+}

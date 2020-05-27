@@ -1,3 +1,5 @@
+include ../mixins/doctor-card
+
 .specialists
   .swiper-content.swiper-specialist
     .swiper-wrapper.specialists__wrapper
@@ -17,13 +19,11 @@
 
       each card in doctorsInfo
         .swiper-slide.specialists__slide
-          a.doctor-card(href='doctor-profile.html')
-            .doctor-card__img
-              img.swiper-lazy(data-src=card.img src='images/other/pixel.png' alt="Фото врача")
-              .swiper-lazy-preloader
-            .doctor-card__description
-              h3.doctor-card__name=card.name
-              span.doctor-card__specialty=card.specialty
+          +doctor-card({
+            img: card.img,
+            name: card.name,
+            specialty: card.specialty
+          })
 
     nav.specialists__navigations
       .button.button_second.specialists__arrow-prev

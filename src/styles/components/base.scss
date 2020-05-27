@@ -3,12 +3,20 @@
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
   font-family: 'Inter', Arial, sans-serif;
   font-size: 18px;
   line-height: 1.1;
   font-weight: normal;
   letter-spacing: 0.05em;
   color: #434343;
+}
+
+main {
+  flex: 1 1 auto;
 }
 
 video {

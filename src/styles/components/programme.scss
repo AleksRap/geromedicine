@@ -1,0 +1,23 @@
+.programme {
+  margin-bottom: 30px;
+
+  @media (min-width: 576px) {
+    margin-bottom: 60px;
+  }
+
+  &__hr {
+    margin-bottom: 20px;
+
+    @media (min-width: 576px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 30px;
+
+    @media (min-width: 576px) {
+      margin-bottom: 60px;
+    }
+  }
+}

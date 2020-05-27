@@ -1,0 +1,13 @@
+extends layout/layout
+
+block head
+  - var title = '404';
+
+block content
+  .error-404
+    h1.title.error-404__title 404
+    .error-404__text
+      p «Страница не найдена»
+        br
+        | Что-то пошло не так
+    a.error-404__btn.button.button_first(href="#form-popup-appointment") вернуться назад

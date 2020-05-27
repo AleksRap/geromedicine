@@ -1,0 +1,62 @@
+extends layout/layout
+include mixins/article-horizontal-card
+
+block head
+  - var title = 'Рекомендации';
+  - var pageId = 6;
+
+block header
+  include layout/header
+
+block content
+  main
+    .content
+      .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="/") главная
+            meta(itemprop="name" content="Главная")
+            meta(itemprop="position" content="1")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="recommendations.html") рекомендации
+            meta(itemprop="name" content="Рекомендации")
+            meta(itemprop="position" content="2")
+
+
+      .recommendations
+        h1.title Рекомендации
+        hr.title__hr.recommendations__hr
+
+        -
+          articles = [
+            {
+              title: '«Можно быть пожилым в 50 лет и молодым — в 90»: главный ге«Можно быть пожилым в 50 лет и молодым — в 90»: главный ге«Можно быть пожилым в 50 лет и молодым — в 90»: главный ге«Можно быть пожилым в 50 лет и молодым — в 90»: главный ге«Можно быть пожилым в 50 лет и молодым — в 90»: главный ге«Можно быть пожилым в 50 лет и молодым — в 90»: главный ге«Можно быть пожилым в 50 лет и молодым — в 90»: главный ге«Можно быть пожилым в 50 лет и молодым — в 90»: главный ге«Можно быть пожилым в 50 лет и молодым — в 90»: главный ге«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности\'',
+              img: 'images/article/article-img-1.jpg'
+            },
+            {
+              title: '«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности\'',
+              img: 'images/article/article-img-2.jpg'
+            },
+            {
+              title: '«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности\'',
+              img: 'images/article/article-img-2.jpg'
+            },
+            {
+              title: '«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности\'',
+              img: 'images/article/article-img-2.jpg'
+            }
+          ]
+
+        each article in articles
+          +article-horizontal-card({
+            title: article.title,
+            img: article.img,
+            url: 'recommendation-article.html'
+          })
+
+
+      include components/pagination
+
+
+block footer
+  include layout/footer

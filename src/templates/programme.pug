@@ -1,0 +1,66 @@
+extends layout/layout
+include mixins/article
+include mixins/article-horizontal-card
+
+block head
+  - var title = 'Программы';
+  - var pageId = 3;
+
+block header
+  include layout/header
+
+block content
+  main
+    .content
+      .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="/") главная
+            meta(itemprop="name" content="Главная")
+            meta(itemprop="position" content="1")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="programme.html") программы
+            meta(itemprop="name" content="Программы")
+            meta(itemprop="position" content="2")
+
+
+      .programme
+        h1.title Программы
+        hr.title__hr.programme__hr
+
+        .programme__description
+          p Здесь представлены цены нашего клинического обслуживания, <b>патронаж рассчитывается индивидуально, звоните!</b>
+
+        .programme__cards
+
+          -
+            articles = [
+              {
+                title: 'Программа вакцинации',
+                img: 'images/article/article-img-1.jpg'
+              },
+              {
+                title: '«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности\'',
+                img: 'images/article/article-img-2.jpg'
+              },
+              {
+                title: '«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности\'',
+                img: 'images/article/article-img-2.jpg'
+              },
+              {
+                title: '«Можно быть пожилым в 50 лет и молодым — в 90»: главный гериатр Минздрава о долгожителях и причинах мужской смертности\'',
+                img: 'images/article/article-img-2.jpg'
+              }
+            ]
+
+          each article in articles
+            +article-horizontal-card({
+              title: article.title,
+              img: article.img,
+              url: 'programme-vaccine.html'
+            })
+
+
+
+block footer
+  include layout/footer

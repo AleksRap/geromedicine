@@ -1,0 +1,34 @@
+extends layout/layout
+
+block head
+  - var title = 'Поиск';
+
+block header
+  include layout/header
+
+block content
+  main
+    .content
+      .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="/") главная
+            meta(itemprop="name" content="Главная")
+            meta(itemprop="position" content="1")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="search.html") поиск
+            meta(itemprop="name" content="Поиск")
+            meta(itemprop="position" content="2")
+
+
+      .search-page
+        h1.title Поиск
+        hr.title__hr.search-page__hr
+
+        .search-page__filter-panel
+          include components/filter-panel
+
+
+block footer
+  include layout/footer
+

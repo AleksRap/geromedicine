@@ -1,0 +1,7 @@
+mixin doctor-card(data)
+  a.doctor-card(href='doctor-profile.html')
+    .doctor-card__img
+      img(src=data.img alt="Фото врача")
+    .doctor-card__description
+      h3.doctor-card__name=data.name
+      span.doctor-card__specialty=data.specialty

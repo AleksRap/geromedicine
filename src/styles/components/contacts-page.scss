@@ -1,0 +1,25 @@
+.contacts-page {
+
+  &__text {
+
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: justify;
+
+      &:last-child {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .map {
+    height: 340px;
+    border-bottom: 2px solid $third-color;
+    margin-bottom: 50px;
+
+    &__img {
+      height: 400px;
+    }
+  }
+}

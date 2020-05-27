@@ -1,3 +1,4 @@
 @@include('./normalize.css/normalize.css')
 @@include('./swiper/css/swiper.min.css')
 @@include('../src/libs/datepicker/css/jquery-ui.min.css')
+@@include('../src/libs/fancybox/css/fancybox.min.css')

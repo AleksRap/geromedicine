@@ -1,0 +1,62 @@
+extends layout/layout
+include mixins/price
+
+block head
+  - var title = 'О враче';
+  - var pageId = 4;
+
+block header
+  include layout/header
+
+block content
+  main
+    .content
+      .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="/") главная
+            meta(itemprop="name" content="Главная")
+            meta(itemprop="position" content="1")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="our-specialist.html") наши врачи
+            meta(itemprop="name" content="Врачи")
+            meta(itemprop="position" content="2")
+
+      .profile
+        .profile__wrap
+          .profile__info
+            h1.title.profile__title
+              | волков геннадий
+              br
+              |анатольевич
+            p.profile__profession Кардиолог
+            p.profile__experience Стаж: 15 лет
+            p.profile__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            a.button.button_first.profile__btn(href="#form-popup-appointment") запись на прием
+          .profile__pic
+            img(src="images/doctors/doctor-4.jpg" alt="Фото врача")
+        .profile__description
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A elementum suspendisse sed congue lobortis id. Dui ullamcorper mauris eget vitae, donec. Sed auctor duis porta lectus accumsan. Sed amet ultricies diam diam mus. Arcu curabitur in sed aliquet in id pharetra aliquet. Est a, non lobortis in lectus orci aliquam congue diam. Eleifend venenatis, augue amet elementum quis aliquam. Sed eget dictumst vitae risus ridiculus mollis nisi aliquam. Velit condimentum fames neque id mollis risus, massa, risus neque,. Urna tincidunt a, malesuada tellus sed habitasse. Mauris metus eget sapien varius. Semper feugiat quam viverra faucibus non. Volutpat neque risus sed facilisis a, ac.Ipsum, odio et dictum lectus phasellus egestas gravida sit. Turpis malesuada vitae et, felis, suspendisse est sed massa dolor. Sit molestie pretium non consequat sapien adipiscing. Quis aliquet odio arcu, eu vestibulum quam ultricies. Risus scelerisque mattis magna mattis.
+
+
+      -
+        info = [
+          {service: 'Прием (осмотр, консультация) врача-кардиолога первичный', price: '1 500₽'},
+          {
+            service: 'Прием, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.',
+            price: '1 500₽'
+          },
+          {service: 'Прием, консультация врача к.м.н.', price: '1 500₽'},
+          {service: 'Прием, консультация врача к.м.н.', price: '10 500₽'},
+          {service: 'Прием, консультация врача к.м.н.', price: '1 500₽'}
+        ]
+
+      +price(info)
+
+
+      include components/comments
+
+
+block footer
+  include layout/footer
+

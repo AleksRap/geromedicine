@@ -4,3 +4,4 @@
 @@include('../src/libs/datepicker/js/jquery-ui.min.js')
 @@include('../src/libs/datepicker/js/datepicker-ru.js')
 @@include('./jquery.maskedinput/src/jquery.maskedinput.js')
+@@include('../src/libs/fancybox/js/fancybox.min.js')
