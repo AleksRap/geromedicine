@@ -7,7 +7,6 @@ const config      = require('../config.js');
 const {
   sass,
   autoprefixer,
-  shorthand,
   cssnano,
   rename,
   plumber,
@@ -36,7 +35,6 @@ module.exports = function styles(done) {
         }))                                                                   // При ошибках компиляции не останавливаем процесс слежения, выводим ошибку
         .pipe(gulpif((env === 'prod'), sourcemaps.init({loadMaps: true})))    // Если prod === true, то передаем существующие карты
         .pipe(sass())                                                         // Преобразуем scss в css
-        .pipe(gulpif((env === 'prod'), shorthand()))                          // Если prod === true, то сокращаем стили
         .pipe(gulpif((env === 'prod'), autoprefixer({cascade: true})))        // Если prod === true, то создаем префиксы
         .pipe(gulpif((env === 'prod'), cssnano()))                            // Если prod === true, то минимифицируем стили
         .pipe(gulpif((env === 'prod'), rename({suffix: '.min'})))             // Если prod === true, то добавляем суффикс min
