@@ -327,6 +327,13 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+  /** Соотношение сторон баннера акций */
+
+
+  var bannersStock = document.querySelectorAll('.banner-stock');
+  bannersStock.forEach(function (banner) {
+    return banner.style.height = "".concat(banner.clientWidth / 6, "px");
+  });
 });
 /** Управляем событиями */
 

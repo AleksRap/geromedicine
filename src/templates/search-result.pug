@@ -24,50 +24,39 @@ block content
         h1.title Поиск
         hr.title__hr.search-page__hr
 
-        .search-page__filter-panel
-          include components/filter-panel
+        .filter-panel.search-page__filter-panel
+          .filter-panel__search.filter-panel__search_first
+            input.filter-panel__input-search(type="text" placeholder="поиск")
+            button.filter-panel__btn-search
+          .filter-panel__select
+            select
+              option(selected) По всем разделам
+              option(value="direction-1") направление 1
+              option(value="direction-2") направление 2
 
-        .search-page__result
-          p.search__result-text по запросу «Кардиолог» найдено 25 результатов
+        .search-page__results
+          p.search-page__result-text по запросу «Кардиолог» найдено 25 результатов
 
-          .search-page__result-wrap
+          .search-page__results-wrap
+            -
+              results = [
+                {title: 'Кардиология', searchWord: 'Кардиолог', textBefore: '', textAfter: 'клиники сотрудничает с кардиохирургическими отделениями Москвы и некоторыми европейскими клиниками и направляет нуждающихся клиентов на хирургическое лечение ишемической болезни сердца ...', tag: '#направления'},
+                {title: 'В России произойдет массовое лечение сердца в разных регионах', searchWord: 'кардиолог', textBefore: '... например, гастроэнтеролог, ', textAfter: 'или дерматовенеролог. Для каждого больного разрабатывается комплексный курс лечения, включающий в себя как психотерапию, так ...', tag: '#статьи'},
+                {title: 'В России произойдет массовое лечение сердца в разных регионах', searchWord: 'кардиолог', textBefore: '... например, гастроэнтеролог, ', textAfter: 'или дерматовенеролог. Для каждого больного разрабатывается комплексный курс лечения, включающий в себя как психотерапию, так ...', tag: '#статьи'},
+                {title: 'Мустафьев Омар Равиольевич', searchWord: 'Кардиолог', textBefore: '', textAfter: '', tag: '#врачи'}
+              ];
 
-            .result__wrap(data-index="direction-1" data-amenities-item="cardiology" data-card)
-              .result__names
-                a(href="#")
-                  h5.result__name Кардиология
-              .result__text
-                p <span class="result__words">Кардиолог</span> клиники сотрудничает с кардиохирургическими отделениями Москвы и некоторыми европейскими клиниками и направляет нуждающихся клиентов на хирургическое лечение ишемической болезни сердца ...
-              a.tags.tags_mt(href="search-result.html") #направления
-
-            .result__wrap(data-index="direction-2" data-amenities-item="cardiology" data-card)
-              .result__names
-                a(href="#")
-                  h5.result__name Мустафьев Омар Равиольевич
-              .result__text
-                p <span class="result__words">Кардиолог</span>
-              a.tags.tags_mt(href="search-result.html") #врачи
-            .result__wrap(data-index="direction-1" data-amenities-item="amenities-4" data-card)
-              .result__names
-                a(href="#")
-                  h5.result__name В России произойдет массовое лечение сердца в разных регионах
-              .result__text
-                p ... например, гастроэнтеролог, <span class="result__words">кардиолог</span> или дерматовенеролог). Для каждого больного разрабатывается комплексный курс лечения, включающий в себя как психотерапию, так ...
-              a.tags.tags_mt(href="search-result.html") #статьи
-            .result__wrap(data-index="direction-3" data-amenities-item="amenities-4" data-card)
-              .result__names
-                a(href="#")
-                  h5.result__name В России произойдет массовое лечение сердца в разных регионах
-              .result__text
-                p ... например, гастроэнтеролог, <span class="result__words">кардиолог</span> или дерматовенеролог). Для каждого больного разрабатывается комплексный курс лечения, включающий в себя как психотерапию, так ...
-              a.tags.tags_mt(href="search-result.html") #статьи
-            .result__wrap(data-index="direction-3" data-amenities-item="amenities-4" data-card)
-              .result__names
-                a(href="#")
-                  h5.result__name Мустафьев Омар Равиольевич
-              .result__text
-                p <span class="result__words">Кардиолог</span>
-              a.tags.tags_mt(href="search-result.html") #врачи
+            each result in results
+              .result
+                .result__names
+                  a.result__link(href="#")
+                    h5.result__name=result.title
+                .result__text
+                  p
+                    =result.textBefore
+                    span.result__words=result.searchWord
+                    =result.textAfter
+                a.result__tag(href="search-result.html")=result.tag
 
 
       include components/pagination

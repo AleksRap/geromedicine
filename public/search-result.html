@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="shortcut icon" type="image/x-icon" href="images/other/favicon.ico">
-    <link rel="apple-touch-icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="images/other/favicon.ico">
     <title>Поиск</title>
     <link rel="stylesheet" type="text/css" href="css/libs.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -89,67 +89,53 @@
         <div class="search-page">
           <h1 class="title">Поиск</h1>
           <hr class="title__hr search-page__hr">
-          <div class="search-page__filter-panel">
-            <div class="filter-panel">
-              <div class="filter-panel__select">
-                <select>
-                  <option disabled selected>выбрать направление</option>
-                  <option value="all">все</option>
-                  <option value="direction-1">направление 1</option>
-                  <option value="direction-2">направление 2</option>
-                </select>
-              </div>
-              <div class="filter-panel__select">
-                <select>
-                  <option disabled selected>выбрать год</option>
-                  <option value="all">все года</option>
-                  <option value="2019">2019</option>
-                  <option value="2018">2018</option>
-                </select>
-              </div>
-              <div class="filter-panel__search">
-                <input class="filter-panel__input-search" type="text" placeholder="поиск">
-                <button class="filter-panel__btn-search"></button>
-              </div>
+          <div class="filter-panel search-page__filter-panel">
+            <div class="filter-panel__search filter-panel__search_first">
+              <input class="filter-panel__input-search" type="text" placeholder="поиск">
+              <button class="filter-panel__btn-search"></button>
+            </div>
+            <div class="filter-panel__select">
+              <select>
+                <option selected>По всем разделам</option>
+                <option value="direction-1">направление 1</option>
+                <option value="direction-2">направление 2</option>
+              </select>
             </div>
           </div>
-          <div class="search-page__result">
-            <p class="search__result-text">по запросу «Кардиолог» найдено 25 результатов</p>
-            <div class="search-page__result-wrap">
-              <div class="result__wrap" data-index="direction-1" data-amenities-item="cardiology" data-card>
-                <div class="result__names"><a href="#">
+          <div class="search-page__results">
+            <p class="search-page__result-text">по запросу «Кардиолог» найдено 25 результатов</p>
+            <div class="search-page__results-wrap">
+              <div class="result">
+                <div class="result__names"><a class="result__link" href="#">
                     <h5 class="result__name">Кардиология</h5></a></div>
                 <div class="result__text">
-                  <p><span class="result__words">Кардиолог</span> клиники сотрудничает с кардиохирургическими отделениями Москвы и некоторыми европейскими клиниками и направляет нуждающихся клиентов на хирургическое лечение ишемической болезни сердца ...</p>
-                </div><a class="tags tags_mt" href="search-result.html">#направления</a>
+                  <p><span class="result__words">Кардиолог</span>клиники сотрудничает с кардиохирургическими отделениями Москвы и некоторыми европейскими клиниками и направляет нуждающихся клиентов на хирургическое лечение ишемической болезни сердца ...
+                  </p>
+                </div><a class="result__tag" href="search-result.html">#направления</a>
               </div>
-              <div class="result__wrap" data-index="direction-2" data-amenities-item="cardiology" data-card>
-                <div class="result__names"><a href="#">
-                    <h5 class="result__name">Мустафьев Омар Равиольевич</h5></a></div>
-                <div class="result__text">
-                  <p><span class="result__words">Кардиолог</span></p>
-                </div><a class="tags tags_mt" href="search-result.html">#врачи</a>
-              </div>
-              <div class="result__wrap" data-index="direction-1" data-amenities-item="amenities-4" data-card>
-                <div class="result__names"><a href="#">
+              <div class="result">
+                <div class="result__names"><a class="result__link" href="#">
                     <h5 class="result__name">В России произойдет массовое лечение сердца в разных регионах</h5></a></div>
                 <div class="result__text">
-                  <p>... например, гастроэнтеролог, <span class="result__words">кардиолог</span> или дерматовенеролог). Для каждого больного разрабатывается комплексный курс лечения, включающий в себя как психотерапию, так ...</p>
-                </div><a class="tags tags_mt" href="search-result.html">#статьи</a>
+                  <p>... например, гастроэнтеролог, <span class="result__words">кардиолог</span>или дерматовенеролог. Для каждого больного разрабатывается комплексный курс лечения, включающий в себя как психотерапию, так ...
+                  </p>
+                </div><a class="result__tag" href="search-result.html">#статьи</a>
               </div>
-              <div class="result__wrap" data-index="direction-3" data-amenities-item="amenities-4" data-card>
-                <div class="result__names"><a href="#">
+              <div class="result">
+                <div class="result__names"><a class="result__link" href="#">
                     <h5 class="result__name">В России произойдет массовое лечение сердца в разных регионах</h5></a></div>
                 <div class="result__text">
-                  <p>... например, гастроэнтеролог, <span class="result__words">кардиолог</span> или дерматовенеролог). Для каждого больного разрабатывается комплексный курс лечения, включающий в себя как психотерапию, так ...</p>
-                </div><a class="tags tags_mt" href="search-result.html">#статьи</a>
+                  <p>... например, гастроэнтеролог, <span class="result__words">кардиолог</span>или дерматовенеролог. Для каждого больного разрабатывается комплексный курс лечения, включающий в себя как психотерапию, так ...
+                  </p>
+                </div><a class="result__tag" href="search-result.html">#статьи</a>
               </div>
-              <div class="result__wrap" data-index="direction-3" data-amenities-item="amenities-4" data-card>
-                <div class="result__names"><a href="#">
+              <div class="result">
+                <div class="result__names"><a class="result__link" href="#">
                     <h5 class="result__name">Мустафьев Омар Равиольевич</h5></a></div>
                 <div class="result__text">
-                  <p><span class="result__words">Кардиолог</span></p>
-                </div><a class="tags tags_mt" href="search-result.html">#врачи</a>
+                  <p><span class="result__words">Кардиолог</span>
+                  </p>
+                </div><a class="result__tag" href="search-result.html">#врачи</a>
               </div>
             </div>
           </div>

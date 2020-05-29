@@ -1,0 +1,72 @@
+extends layout/layout
+include mixins/article
+include mixins/price
+include mixins/banner-stock
+
+block head
+  - var title = 'Прием (осмотр, консультация) врача-кардиолога первичный';
+  - var pageId = 2;
+
+block header
+  include layout/header
+
+block content
+  main
+    .content
+      .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="/") главная
+            meta(itemprop="name" content="Главная")
+            meta(itemprop="position" content="1")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="price.html") услуги и цены
+            meta(itemprop="name" content="Услуги и цены")
+            meta(itemprop="position" content="2")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="name-service-cardiology.html") кардиология
+            meta(itemprop="name" content="Кардиология")
+            meta(itemprop="position" content="3")
+        span /
+
+
+      +article({
+        mb: true,
+        title: 'Прием (осмотр, консультация) врача-кардиолога первичный',
+      })
+
+
+      +banner-stock('images/banners-stock/banner-1.png')
+
+
+      include components/advantages
+
+
+      include components/different
+
+
+      .doctor-call
+        .doctor-call__text Cтоимость: от 6 650 руб.
+        .doctor-call__alert
+          | вызов осуществляется с 6:00 до 17:00
+          br
+          | вы получите ответ в течении 10 минут
+        button.button.button_first.doctor-call__btn(data-btn="modal-doctor-call-btn") Вызов врача
+
+
+      -
+        info = [
+          {service: 'Прием (осмотр, консультация) врача-кардиолога первичный', price: '1 500₽'},
+          {service: 'Прием, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.м, консультация врача к.м.н.', price: '1 500₽'},
+          {service: 'Прием, консультация врача к.м.н.', price: '1 500₽'},
+          {service: 'Прием, консультация врача к.м.н.', price: '10 500₽'},
+          {service: 'Прием, консультация врача к.м.н.', price: '1 500₽'}
+        ]
+
+      +price(info)
+
+
+block footer
+  include layout/footer
+

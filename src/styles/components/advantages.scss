@@ -17,7 +17,7 @@
 
   &__block {
     width: 95px;
-    background-color: #E9EFE8;
+    background-color: $third-color;
   }
 
   &__block-content {
@@ -103,7 +103,7 @@
     margin-right: 10px;
 
     font-size: 36px;
-    color: #F55E21;
+    color: $fourth-color;
 
     @media (min-width: 768px) {
       font-size: 48px;

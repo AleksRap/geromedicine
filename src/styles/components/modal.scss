@@ -344,7 +344,7 @@
     }
 
     .ui-datepicker-calendar thead tr {
-      background-color: #E9EFE8;
+      background-color: $third-color;
     }
 
     .ui-datepicker-calendar tbody tr td:first-child {
@@ -356,7 +356,7 @@
     }
 
     .ui-datepicker-week-end {
-      color: #F55E21;
+      color: $fourth-color;
     }
 
     .ui-datepicker td {
@@ -399,7 +399,7 @@
     }
 
     .ui-state-active {
-      background-color: #679100;
+      background-color: $first-color;
       color: #fff;
     }
   }

@@ -34,7 +34,7 @@
 
     padding: 15px;
 
-    border: 2px solid #E9EFE8;
+    border: 2px solid $third-color;
     border-bottom: none;
 
     font-size: $font-color;
@@ -75,7 +75,7 @@
     width: 100%;
     height: 300px;
 
-    border: 2px solid #E9EFE8;
+    border: 2px solid $third-color;
     border-top: none;
 
     @media (min-width: 768px) {

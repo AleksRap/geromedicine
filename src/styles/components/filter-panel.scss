@@ -83,6 +83,20 @@
       height: initial;
       margin-left: auto;
     }
+
+    &_first {
+
+      @media (min-width: 992px) {
+        height: initial;
+
+        margin-right: auto;
+        margin-left: 0;
+      }
+
+      .filter-panel__input-search {
+        text-align: left;
+      }
+    }
   }
 
   &__input-search {

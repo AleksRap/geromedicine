@@ -314,6 +314,11 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     });
   }
+
+
+  /** Соотношение сторон баннера акций */
+  const bannersStock = document.querySelectorAll('.banner-stock');
+  bannersStock.forEach(banner => banner.style.height = `${banner.clientWidth / 6}px`);
 });
 
 

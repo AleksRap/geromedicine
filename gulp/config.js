@@ -26,7 +26,7 @@ module.exports = {
     scriptsLibs:    'src/js/libs.js',
     fonts:          'src/fonts/**/*.woff',
     fontsttf:       'src/fonts/**/*.ttf',
-    img:            'src/images/**/*.{png,jpg}',
+    img:            'src/images/**/*.{png,jpg,ico}',
     svg:            ['src/svg/**/*.svg', '!src/svg/sprite/**/*.svg'],
     sprite:         'src/svg/sprite/*',
     spriteStyles:   'src/styles/sprite/',

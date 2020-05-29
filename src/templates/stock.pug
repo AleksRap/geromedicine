@@ -1,0 +1,64 @@
+extends layout/layout
+include mixins/article-card
+
+block head
+  - var title = 'Акции';
+  - var pageId = 5;
+
+block header
+  include layout/header
+
+block content
+  main
+    .content
+      .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="/") главная
+            meta(itemprop="name" content="Главная")
+            meta(itemprop="position" content="1")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="programme.html") программы
+            meta(itemprop="name" content="Программы")
+            meta(itemprop="position" content="2")
+
+
+      .stock
+        h1.title акции
+        hr.title__hr.stock__hr
+
+
+        a.banner.stock__banner(href='name-service-patronage.html')
+          .banner__pic
+            img(src='images/article/stock.jpg' alt="Картинка")
+          .banner__info
+            h3.title.banner__title Комплексная проверка организма со скидкой 20%
+            span.banner__more подробнее
+
+
+        .stock__wrap
+          -
+            stocks = [
+              {
+                img: 'images/article/article-img-2.jpg',
+                date: '10 октября 2019',
+                title: 'Комплексная проверка организма со скидкой 20%',
+                url: 'stock-article.html'
+              }, {
+                img: 'images/article/article-img-2.jpg',
+                date: '25 января 2019',
+                title: 'Комплексная проверка организма со скидкой 99%',
+                url: 'stock-article.html'
+              }, {
+                img: 'images/article/article-img-2.jpg',
+                date: 'вчера',
+                title: 'МРТ со скидкой 40% для ветеранов',
+                url: 'stock-article.html'
+              }
+            ]
+
+          each stock in stocks
+            +article-card(stock)
+
+block footer
+  include layout/footer

@@ -1,0 +1,11 @@
+.banner-stock {
+  margin-bottom: 30px;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: 576px) {
+    margin-bottom: 60px;
+  }
+}
