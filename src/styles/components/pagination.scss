@@ -35,59 +35,65 @@
       }
     }
 
-    &_disabled {
-      pointer-events: none;
-      background-color: rgba(0, 0, 0, .1);
-
-      .pagination__link {
-
-        &_prev::before,
-        &_next::before {
-          border-color: gray;
-        }
-      }
-    }
-
     &_active {
       pointer-events: none;
       background-color: $third-color;
     }
-  }
 
-  &__link {
-    position: relative;
+    &_prev,
+    &_next {
 
-    text-decoration: none;
-    color: inherit;
-    font-weight: 500;
-
-    &_prev {
-
-      &::before {
+      .pagination__link::before {
         position: absolute;
         content: '';
         top: 0;
         bottom: 0;
-        left: -4px;
+        left: 0;
         right: 0;
         margin: auto;
+      }
+    }
 
+    &_prev {
+
+      .pagination__link::before {
+        left: 7px;
         @include arrow(12px, 2px, 'left', $fourth-color);
       }
     }
 
     &_next {
 
-      &::before {
-        position: absolute;
-        content: '';
-        top: 0;
-        bottom: 0;
-        right: -4px;
-        margin: auto 0;
-
+      .pagination__link::before {
+        right: 7px;
         @include arrow(12px, 2px, 'right', $fourth-color);
       }
     }
+
+    &_disabled {
+      pointer-events: none;
+      background-color: rgba(0, 0, 0, .1);
+
+      .pagination__link {
+
+        &::before {
+          border-color: gray;
+        }
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
   }
 }
