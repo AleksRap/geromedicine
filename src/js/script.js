@@ -37,8 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
       /**
        * Если клик был не по пункту с дропдауном, то выходим
        */
-      const target = event.target.closest('.navigation__item_drop');
-      if (!target) return;
+        const target = event.target.closest('.navigation__item_drop');
+        if (!target) return;
+
+      /**
+       * Если клик был по ссылке внутри дропдауна, то выходим
+       */
+      const subItem = event.target.closest('.navigation__link');
+      if (!subItem) return;
 
       event.preventDefault();
 
