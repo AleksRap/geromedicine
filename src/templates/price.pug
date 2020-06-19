@@ -1,4 +1,5 @@
 extends layout/layout
+include mixins/banner-stock
 
 block head
   - var title = 'Услуги и цены';
@@ -20,6 +21,9 @@ block content
           a(itemprop="item" href="price.html") услуги и цены
             meta(itemprop="name" content="Услуги и цены")
             meta(itemprop="position" content="2")
+
+
+      include components/slider
 
 
       .amenities

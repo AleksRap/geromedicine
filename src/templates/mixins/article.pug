@@ -1,7 +1,12 @@
+include banner-stock
+
 mixin article(data)
   .article(class=data.mb ? 'article_mb' : '')
     h1.title.article__title=data.title
     hr.article__hr
+
+    if data.banner
+      +banner-stock('images/banners-stock/banner-1.png')
 
     if data.img
       .article__pic

@@ -213,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           if (video.paused) {
             await video.play();
+            videoWrap.style.background = 'url(../images/other/pattern.png) center repeat';
             video.controls = true;
           } else {
             video.pause();
