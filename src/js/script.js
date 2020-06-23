@@ -10,6 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /**
+   * Обложки статей в соотношении 3.6
+   */
+  const coversArticles = document.querySelectorAll('.article__pic');
+  if (coversArticles.length) coversArticles.forEach(cover => cover.style.height = `${cover.clientWidth / 3.6}px`);
+
+  /**
+   * Обложки статей в соотношении 3.6
+   */
+  const coversCardsArt = document.querySelectorAll('.article-card__img');
+  if (coversCardsArt.length) coversCardsArt.forEach(cover => cover.style.height = `${cover.clientWidth / 3.6}px`);
+
+
+  /**
    * Если видно мобильное меню
    */
   const screenWidth = document.documentElement.clientWidth;
