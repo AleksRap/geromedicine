@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const screenWidth = document.documentElement.clientWidth;
+
   /**
    * 100vh - высота без учета панелей инструментов на мобильных
    */
@@ -21,11 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const coversCardsArt = document.querySelectorAll('.article-card__img');
   if (coversCardsArt.length) coversCardsArt.forEach(cover => cover.style.height = `${cover.clientWidth / 3.6}px`);
 
+  /**
+   * Соотношение сторон баннера акций 6:1 (ПК), 330:200 (мобилки, ниже 480px)
+   */
+  const bannersStock = document.querySelectorAll('.banner-stock');
+  screenWidth <= 480
+    ? bannersStock.forEach(banner => banner.style.height = `${banner.clientWidth / 1.65}px`)
+    : bannersStock.forEach(banner => banner.style.height = `${banner.clientWidth / 6}px`);
+
 
   /**
    * Если видно мобильное меню
    */
-  const screenWidth = document.documentElement.clientWidth;
   if (screenWidth < 1200) {
 
     /**
@@ -334,11 +343,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     });
   }
-
-
-  /** Соотношение сторон баннера акций */
-  const bannersStock = document.querySelectorAll('.banner-stock');
-  bannersStock.forEach(banner => banner.style.height = `${banner.clientWidth / 6}px`);
 });
 
 
