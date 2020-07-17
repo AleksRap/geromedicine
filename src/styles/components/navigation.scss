@@ -46,6 +46,15 @@
     }
   }
 
+  &__other {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+
   &__wrap-btn {
     margin-bottom: 20px;
     padding-left: 15px;

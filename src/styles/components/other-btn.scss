@@ -1,0 +1,47 @@
+.other-btn {
+  display: block;
+  position: relative;
+
+  width: 100%;
+  min-height: 25px;
+
+  padding: 0 0 0 32px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: $font-color;
+  text-transform: lowercase;
+  text-align: left;
+  
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto 0;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  
+  @media (min-width: 1200px) {
+    display: none;
+  }
+  
+  &_feedback {
+    margin-bottom: 20px;
+    
+    &::before {
+      width: 23px;
+      height: 20px;
+
+      background-image: url('../svg/icons/feedback.svg');
+    }
+  }
+}
