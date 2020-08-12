@@ -1,6 +1,13 @@
 .link {
+  cursor: pointer;
+  margin-right: 30px;
+
   text-decoration: none;
   color: $font-color;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &_number {
     font-size: 20px;
@@ -38,6 +45,29 @@
         height: 25px;
 
         background: url('../svg/icons/search.svg') center/contain no-repeat;
+      }
+    }
+  }
+
+  &_feedback {
+    display: none;
+
+    @media (min-width: 1200px) {
+      position: relative;
+      display: initial;
+
+      padding-left: 32px;
+      text-transform: lowercase;
+
+      &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+
+        width: 25px;
+        height: 25px;
+
+        background: url('../svg/icons/feedback.svg') center/contain no-repeat;
       }
     }
   }
