@@ -13,11 +13,10 @@ mixin article(data)
         img(src=data.img alt="Обложка статьи")
 
     .article__text
-      p=data.text1
+      p !{data.text1}
 
       if data.text2
-        p=data.text2
+        p !{data.text2}
 
       if data.text3
-        p=data.text3
-      p=text3
+        p !{data.text3}

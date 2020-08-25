@@ -1,6 +1,7 @@
 extends layout/layout
 include mixins/article
 include mixins/price
+include mixins/list
 
 block head
   - var title = 'Услуга патронажа';
@@ -71,15 +72,10 @@ block content
           }
         ]
 
-      each item in list
-        section.list
-          h2.title.list__title !{item.title}
-          if (item.subtitle)
-            h3.list__subtitle !{item.subtitle}
-          ul.list__list
-            each paragraph in item.arr
-              li.list__item
-                span.list__descr=paragraph
+      +list({
+        titleCenter: true,
+        list: list
+      })
 
 
       .step.step_mb

@@ -11,6 +11,19 @@
     margin-bottom: 50px;
   }
 
+  &_green {
+    color: $first-color;
+  }
+
+  &_bold {
+    font-weight: 600;
+  }
+
+  &_m-long-liver {
+    margin-top: 15px;
+    margin-bottom: 40px;
+  }
+
   &__link {
     color: $first-color;
   }
