@@ -1,0 +1,62 @@
+.stock-cards {
+  position: relative;
+
+  margin-bottom: 30px;
+  padding-top: 30px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 50px;
+    padding-top: 45px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 380px;
+  }
+
+  &::before {
+    z-index: -2;
+    background: url('../images/patterns/white.png') center/40%;
+  }
+
+  &::after {
+    z-index: -1;
+    background: radial-gradient(62.56% 114.43% at 35.74% 34.9%, #FFFFFF 0%, #FFFFFF 100%);
+    opacity: .3;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+    }
+  }
+
+  &__footer {
+    margin-top: -2px;
+    border-top: 2px solid $third-color;
+
+    @media (min-width: 992px) {
+      margin-top: 40px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: -2px;
+
+    @media (min-width: 576px) {
+      width: 250px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.stock-cards
+  .content
+    .stock-cards__body
+      -
+        cards = [
+          {title: 'Здоровые суставы — свобода движений!', text: 'Бесплатная консультация травматолога-ортопеда', url: '#', img: 'images/cards-stock/card-1.jpg'},
+          {title: 'Скидка на УЗИ молочных желез 30%', text: 'Пройдите комплексное обследование молочных желез!', url: '#', img: 'images/cards-stock/card-2.jpg'},
+          {titleLittle: true, title: '«ДОЛГОЖИТЕЛЬ МОСКВЫ»<br>Социальный проект для москвичей в возрасте 90 лет и старше', text: 'БЕСПЛАТНО:<br>-обследование на дому<br>-лабораторное исследование<br>-план лечения', url: '#', img: 'images/cards-stock/card-3.jpg'},
+        ]
+
+      each card in cards
+        a.stock-card(href=card.url)
+          .stock-card__head
+            .stock-card__bookmark Акция
+            img(src=card.img alt='pic')
+          .stock-card__body
+            h3.stock-card__title(class=card.titleLittle ? 'stock-card__title_little' : '') !{card.title}
+            p.stock-card__text !{card.text}
+            span.stock-card__more подробнее
+
+    .stock-cards__footer
+      a.button.button_second.stock-cards__btn(href="articles-health.html") Смотреть все

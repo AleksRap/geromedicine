@@ -9,8 +9,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/other/favicon.ico">
     <link rel="apple-touch-icon" href="images/other/favicon.ico">
     <title>Кардиология</title>
-    <link rel="stylesheet" type="text/css" href="css/libs.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/libs.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
     <header class="header">
@@ -135,7 +135,20 @@
         </div>
         <div class="article article_mb">
           <h1 class="title article__title">Кардиология</h1>
-          <hr class="article__hr"/><a class="banner-stock" style="background-image: url(images/banners-stock/banner-1.png)" href="#"></a>
+          <hr class="article__hr"/>
+          <div class="swiper-container banner-stock">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide banner-stock__slide"><a class="banner-stock__link" style="background-image: url('images/banners-stock/banner-1.png')" href="#"></a></div>
+              <div class="swiper-slide banner-stock__slide"><a class="banner-stock__link" style="background-image: url('images/banners-stock/banner-2.png')" href="#"></a></div>
+              <div class="swiper-slide banner-stock__slide"><a class="banner-stock__link" style="background-image: url('images/banners-stock/banner-3.png')" href="#"></a></div>
+              <div class="swiper-slide banner-stock__slide"><a class="banner-stock__link" style="background-image: url('images/banners-stock/banner-4.png')" href="#"></a></div>
+            </div>
+            <div class="banner-stock__tools">
+              <div class="swiper-pagination banner-stock__pagination"></div>
+              <button class="banner-stock__next"></button>
+              <button class="banner-stock__prev"></button>
+            </div>
+          </div>
           <div class="article__pic"><img src="images/article/name-service-cardiology.jpg" alt="Обложка статьи"/></div>
           <div class="article__text">
             <p>Заболевания сердечно-сосудистой системы лидируют среди прочей патологии, в том числе по инвалидности и смертности. Поэтому кардиолог является одним из самых актуальных специалистов в современной медицине. </p>
@@ -624,7 +637,7 @@
             </div>
           </div>
         </div>
-    <script src="js/libs.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <script src="js/libs.min.js" defer></script>
+    <script src="js/script.min.js" defer></script>
   </body>
 </html>

@@ -1,12 +1,112 @@
 .banner-stock {
-  display: block;
   margin-bottom: 30px;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  @media (min-width: 576px) {
+  @media (min-width: 1024px) {
     margin-bottom: 60px;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: 576px) {
+      background-size: contain;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+
+    background-color: transparent;
+
+    @media (min-width: 1200px) {
+      max-width: 1440px;
+      height: 240px;
+    }
+  }
+
+  &__prev, &__next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 1;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+  }
+
+  &__prev {
+    left: 15px;
+
+    @media (min-width: 1024px) {
+      left: 30px;
+    }
+
+    &::after {
+      left: 0;
+      @include arrow(15px, 2px, 'left', white);
+
+      @media (min-width: 1024px) {
+        @include arrow(30px, 2px, 'left', white);
+      }
+    }
+  }
+
+  &__next {
+    right: 15px;
+
+    @media (min-width: 1024px) {
+      right: 30px;
+    }
+
+    &::after {
+      right: 0;
+      @include arrow(15px, 2px, 'right', white);
+
+      @media (min-width: 1024px) {
+        @include arrow(30px, 2px, 'right', white);
+      }
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+
+    margin: 0 6px;
+    border-radius: 100%;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: white;
   }
 }

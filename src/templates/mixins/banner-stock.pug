@@ -1,2 +1,23 @@
-mixin banner-stock(img)
-  a.banner-stock(style=`background-image: url(${img})` href="#")
+mixin banner-stock()
+  .swiper-container.banner-stock
+    .swiper-wrapper
+      -
+        arrInfo = [
+          'images/banners-stock/banner-1.png',
+          'images/banners-stock/banner-2.png',
+          'images/banners-stock/banner-3.png',
+          'images/banners-stock/banner-4.png'
+        ];
+
+      each item in arrInfo
+        .swiper-slide.banner-stock__slide
+          a.banner-stock__link(style=`background-image: url('${item}')` href="#")
+
+
+    .banner-stock__tools
+      .swiper-pagination.banner-stock__pagination
+      button.banner-stock__next
+      button.banner-stock__prev
+
+
+

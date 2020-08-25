@@ -9,8 +9,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/other/favicon.ico">
     <link rel="apple-touch-icon" href="images/other/favicon.ico">
     <title>Услуги и цены</title>
-    <link rel="stylesheet" type="text/css" href="css/libs.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/libs.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
     <header class="header">
@@ -89,53 +89,31 @@
               <meta itemprop="position" content="1"></a></span><span>/</span><span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item" href="price.html">услуги и цены
               <meta itemprop="name" content="Услуги и цены">
               <meta itemprop="position" content="2"></a></span></div>
-        <div class="swiper-container swiper-main">
+        <div class="swiper-container banner-stock">
           <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-main__slide">
-              <div class="swiper-main__content">
-                <section class="swiper-main__wrap">
-                  <h2 class="swiper-main__title">Отличные цены на обследование</h2>
-                  <p class="swiper-main__description">МРТ, Энцефолограмма, ЭКГ</p><a class="button button-second swiper-main__btn" href="name-service-cardiology.html">Подробнее</a>
-                </section>
-              </div>
-              <div class="swiper-main__img"><img class="swiper-lazy" data-src="images/slider/big-slide-1.jpg" alt="slide1" src="images/other/pixel.png">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide swiper-main__slide">
-              <div class="swiper-main__content">
-                <section class="swiper-main__wrap">
-                  <h2 class="swiper-main__title">Отличные цены</h2>
-                  <p class="swiper-main__description">МРТ, Энцефолограмма, ЭКГ</p><a class="button button-second swiper-main__btn" href="name-service-cardiology.html">Подробнее</a>
-                </section>
-              </div>
-              <div class="swiper-main__img"><img class="swiper-lazy" data-src="images/slider/big-slide-2.jpg" alt="slide1" src="images/other/pixel.png">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
-            <div class="swiper-slide swiper-main__slide">
-              <div class="swiper-main__content">
-                <section class="swiper-main__wrap">
-                  <h2 class="swiper-main__title">На обследование</h2>
-                  <p class="swiper-main__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar arcu lectus eget convallis in nec maecenas elit. Pharetra lobortis aliquam porttitor convallis amet ut.</p><a class="button button-second swiper-main__btn" href="name-service-cardiology.html">Подробнее</a>
-                </section>
-              </div>
-              <div class="swiper-main__img"><img class="swiper-lazy" data-src="images/slider/big-slide-3.jpg" alt="slide1" src="images/other/pixel.png">
-                <div class="swiper-lazy-preloader"></div>
-              </div>
-            </div>
+            <div class="swiper-slide banner-stock__slide"><a class="banner-stock__link" style="background-image: url('images/banners-stock/banner-1.png')" href="#"></a></div>
+            <div class="swiper-slide banner-stock__slide"><a class="banner-stock__link" style="background-image: url('images/banners-stock/banner-2.png')" href="#"></a></div>
+            <div class="swiper-slide banner-stock__slide"><a class="banner-stock__link" style="background-image: url('images/banners-stock/banner-3.png')" href="#"></a></div>
+            <div class="swiper-slide banner-stock__slide"><a class="banner-stock__link" style="background-image: url('images/banners-stock/banner-4.png')" href="#"></a></div>
           </div>
-          <div class="swiper-main__tools">
-            <div class="swiper-pagination swiper-main__pagination"></div>
-            <button class="swiper-main__next"></button>
-            <button class="swiper-main__prev"></button>
+          <div class="banner-stock__tools">
+            <div class="swiper-pagination banner-stock__pagination"></div>
+            <button class="banner-stock__next"></button>
+            <button class="banner-stock__prev"></button>
           </div>
         </div>
         <div class="amenities">
-          <h1 class="title">Прайс-лист</h1>
+          <h1 class="title">Услуги и цены</h1>
           <hr class="title__hr amenities__hr">
           <div class="amenities__description">
-            <p>Здесь представлены цены нашего клинического обслуживания,<b> патронаж рассчитывается индивидуально, звоните!</b></p>
+            <h2>Приём в клинике и вызов врача на дом</h2>
+            <p><b>Для вызова врача на дом нажмите на кнопку в правом нижнем углу - "Вызов врача".</b></p>
+            <p>Стоимость медицинского патронажа рассчитывается индивидуально в зависимости от потребностей пациента — звоните!</p>
+            <p>+7 (495) 988-77-90</p>
+            <p>+7 (925) 216-81-31</p>
+            <p>9.00 - 21.00 по будням (Пн-Пт)</p>
+            <p>10.00 - 20.00 в выходные дни (Сб, Вс.)</p>
+            <p>В праздничные и предпраздничные дни - сокращенный рабочий день.</p>
           </div>
           <div class="amenities__spoilers">
             <div class="spoiler">
@@ -146,10 +124,13 @@
               <div class="spoiler__body"><a class="spoiler__row spoiler__row_more" href="name-service-cardiology.html">
                   <div class="spoiler__more">Подробнее о направлении</div></a><a class="spoiler__row" href="service-cardiology.html">
                   <div class="spoiler__amenities">Прием (осмотр, консультация) врача-кардиолога первичный</div>
+                  <div class="spoiler__term">1 день</div>
                   <div class="spoiler__price">1 500₽</div></a><a class="spoiler__row" href="service-cardiology.html">
                   <div class="spoiler__amenities">Комплексная гериатрическая оценка</div>
+                  <div class="spoiler__term">2 дня</div>
                   <div class="spoiler__price">1 500₽</div></a><a class="spoiler__row" href="service-cardiology.html">
-                  <div class="spoiler__amenities">Прием (осмотр, консультация) врача-кардиолога первичный</div>
+                  <div class="spoiler__amenities spoiler__amenities_stock">Прием (осмотр, консультация) врача-кардиолога первичный</div>
+                  <div class="spoiler__term">10 дней</div>
                   <div class="spoiler__price">22 500₽</div></a>
               </div>
             </div>
@@ -161,11 +142,11 @@
               <div class="spoiler__body"><a class="spoiler__row spoiler__row_more" href="name-service-cardiology.html">
                   <div class="spoiler__more">Подробнее о направлении</div></a><a class="spoiler__row" href="service-cardiology.html">
                   <div class="spoiler__amenities">Прием (осмотр, консультация) врача-кардиолога первичный</div>
-                  <div class="spoiler__price">1 500₽</div></a><a class="spoiler__row" href="service-cardiology.html">
-                  <div class="spoiler__amenities">Комплексная гериатрическая оценка</div>
-                  <div class="spoiler__price">1 500₽</div></a><a class="spoiler__row" href="service-cardiology.html">
-                  <div class="spoiler__amenities">Прием (осмотр, консультация) врача-кардиолога первичный</div>
-                  <div class="spoiler__price">22 500₽</div></a>
+                  <div class="spoiler__price spoiler__price_ml-auto">1 500₽</div></a><a class="spoiler__row" href="service-cardiology.html">
+                  <div class="spoiler__amenities spoiler__amenities_stock">Комплексная гериатрическая оценка</div>
+                  <div class="spoiler__price spoiler__price_ml-auto">1 500₽</div></a><a class="spoiler__row" href="service-cardiology.html">
+                  <div class="spoiler__amenities spoiler__amenities_home">Прием (осмотр, консультация) врача-кардиолога первичный</div>
+                  <div class="spoiler__price spoiler__price_ml-auto">22 500₽</div></a>
               </div>
             </div>
             <div class="spoiler">
@@ -176,14 +157,43 @@
               <div class="spoiler__body"><a class="spoiler__row spoiler__row_more" href="name-service-cardiology.html">
                   <div class="spoiler__more">Подробнее о направлении</div></a><a class="spoiler__row" href="service-cardiology.html">
                   <div class="spoiler__amenities">Прием (осмотр, консультация) врача-кардиолога первичный</div>
-                  <div class="spoiler__price">1 500₽</div></a><a class="spoiler__row" href="service-cardiology.html">
+                  <div class="spoiler__price spoiler__price_ml-auto">1 500₽</div></a><a class="spoiler__row" href="service-cardiology.html">
                   <div class="spoiler__amenities">Комплексная гериатрическая оценка</div>
-                  <div class="spoiler__price">1 500₽</div></a><a class="spoiler__row" href="service-cardiology.html">
+                  <div class="spoiler__price spoiler__price_ml-auto">1 500₽</div></a><a class="spoiler__row" href="service-cardiology.html">
                   <div class="spoiler__amenities">Прием (осмотр, консультация) врача-кардиолога первичный</div>
-                  <div class="spoiler__price">22 500₽</div></a>
+                  <div class="spoiler__price spoiler__price_ml-auto">22 500₽</div></a>
               </div>
             </div>
+            <div class="amenities__link"><a href="#" download>Скачать полный прайс</a></div>
           </div>
+        </div>
+      </div>
+      <div class="stock-cards">
+        <div class="content">
+          <div class="stock-cards__body"><a class="stock-card" href="#">
+              <div class="stock-card__head">
+                <div class="stock-card__bookmark">Акция</div><img src="images/cards-stock/card-1.jpg" alt="pic">
+              </div>
+              <div class="stock-card__body">
+                <h3 class="stock-card__title">Здоровые суставы — свобода движений!</h3>
+                <p class="stock-card__text">Бесплатная консультация травматолога-ортопеда</p><span class="stock-card__more">подробнее</span>
+              </div></a><a class="stock-card" href="#">
+              <div class="stock-card__head">
+                <div class="stock-card__bookmark">Акция</div><img src="images/cards-stock/card-2.jpg" alt="pic">
+              </div>
+              <div class="stock-card__body">
+                <h3 class="stock-card__title">Скидка на УЗИ молочных желез 30%</h3>
+                <p class="stock-card__text">Пройдите комплексное обследование молочных желез!</p><span class="stock-card__more">подробнее</span>
+              </div></a><a class="stock-card" href="#">
+              <div class="stock-card__head">
+                <div class="stock-card__bookmark">Акция</div><img src="images/cards-stock/card-3.jpg" alt="pic">
+              </div>
+              <div class="stock-card__body">
+                <h3 class="stock-card__title stock-card__title_little">«ДОЛГОЖИТЕЛЬ МОСКВЫ»<br>Социальный проект для москвичей в возрасте 90 лет и старше</h3>
+                <p class="stock-card__text">БЕСПЛАТНО:<br>-обследование на дому<br>-лабораторное исследование<br>-план лечения</p><span class="stock-card__more">подробнее</span>
+              </div></a>
+          </div>
+          <div class="stock-cards__footer"><a class="button button_second stock-cards__btn" href="articles-health.html">Смотреть все</a></div>
         </div>
       </div>
     </main>
@@ -424,7 +434,7 @@
             </div>
           </div>
         </div>
-    <script src="js/libs.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <script src="js/libs.min.js" defer></script>
+    <script src="js/script.min.js" defer></script>
   </body>
 </html>

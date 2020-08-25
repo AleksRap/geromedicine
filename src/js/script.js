@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /** Инициализация слайдеров swiper */
-  const swiperMain = new Swiper('.swiper-main', {
+  new Swiper('.swiper-main', {
     slidesPerView: 'auto',
     initialSlide: 0,
     centeredSlides: true,
@@ -129,7 +129,27 @@ document.addEventListener('DOMContentLoaded', () => {
     loadOnTransitionStart: true
   });
 
-  const swiperSpecialist = new Swiper('.swiper-specialist', {
+  new Swiper('.banner-stock', {
+    slidesPerView: 'auto',
+    initialSlide: 0,
+    centeredSlides: true,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: true,
+    delay: 6000,
+    pagination: {
+      el: '.banner-stock__pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '.banner-stock__prev',
+      nextEl: '.banner-stock__next'
+    },
+    slideToClickedSlide: true,
+    preloadImages: false,
+  });
+
+  new Swiper('.swiper-specialist', {
     initialSlide: 0,
     spaceBetween: 30,
     centeredSlides: false,
@@ -159,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const swipersComments = new Swiper('.swiper-comments', {
+  new Swiper('.swiper-comments', {
     initialSlide: 0,
     centeredSlides: true,
     loop: true,
@@ -170,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  const swipersComments2 = new Swiper('.swiper-comments-2', {
+  new Swiper('.swiper-comments-2', {
     initialSlide: 0,
     centeredSlides: true,
     loop: true,

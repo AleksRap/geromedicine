@@ -23,17 +23,23 @@ block content
             meta(itemprop="position" content="2")
 
 
-      include components/slider
+      +banner-stock()
 
 
       .amenities
-        h1.title Прайс-лист
+        h1.title Услуги и цены
         hr.title__hr.amenities__hr
 
         .amenities__description
+          h2 Приём в клинике и вызов врача на дом
           p
-            | Здесь представлены цены нашего клинического обслуживания,
-            b  патронаж рассчитывается индивидуально, звоните!
+            b Для вызова врача на дом нажмите на кнопку в правом нижнем углу - "Вызов врача".
+          p Стоимость медицинского патронажа рассчитывается индивидуально в зависимости от потребностей пациента — звоните!
+          p +7 (495) 988-77-90
+          p +7 (925) 216-81-31
+          p 9.00 - 21.00 по будням (Пн-Пт)
+          p 10.00 - 20.00 в выходные дни (Сб, Вс.)
+          p В праздничные и предпраздничные дни - сокращенный рабочий день.
 
         .amenities__spoilers
 
@@ -42,17 +48,17 @@ block content
               {
                 sectionName: 'Вызов на дом',
                 list: [
-                  {name: 'Прием (осмотр, консультация) врача-кардиолога первичный', price: '1 500₽'},
-                  {name: 'Комплексная гериатрическая оценка', price: '1 500₽'},
-                  {name: 'Прием (осмотр, консультация) врача-кардиолога первичный', price: '22 500₽'}
+                  {name: 'Прием (осмотр, консультация) врача-кардиолога первичный', term: '1 день', price: '1 500₽'},
+                  {name: 'Комплексная гериатрическая оценка', term: '2 дня', price: '1 500₽'},
+                  {name: 'Прием (осмотр, консультация) врача-кардиолога первичный', className: 'spoiler__amenities_stock', term: '10 дней', price: '22 500₽'}
                 ]
               },
               {
                 sectionName: 'Диагностика',
                 list: [
                   {name: 'Прием (осмотр, консультация) врача-кардиолога первичный', price: '1 500₽'},
-                  {name: 'Комплексная гериатрическая оценка', price: '1 500₽'},
-                  {name: 'Прием (осмотр, консультация) врача-кардиолога первичный', price: '22 500₽'}
+                  {name: 'Комплексная гериатрическая оценка', className: 'spoiler__amenities_stock', price: '1 500₽'},
+                  {name: 'Прием (осмотр, консультация) врача-кардиолога первичный', className: 'spoiler__amenities_home', price: '22 500₽'}
                 ]
               },
               {
@@ -75,8 +81,17 @@ block content
                   .spoiler__more Подробнее о направлении
                 each item in spoiler.list
                   a.spoiler__row(href="service-cardiology.html")
-                    .spoiler__amenities=item.name
-                    .spoiler__price=item.price
+                    .spoiler__amenities(class=item.className ? item.className : '')=item.name
+                    if (item.term)
+                      .spoiler__term=item.term
+                    .spoiler__price(class=item.term ? '' : 'spoiler__price_ml-auto')=item.price
+
+
+          .amenities__link
+            a(href='#' download) Скачать полный прайс
+
+
+    include components/stock-cards
 
 
 block footer

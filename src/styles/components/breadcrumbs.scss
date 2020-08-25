@@ -1,5 +1,9 @@
 .breadcrumbs {
-  margin-bottom: 40px;
+  margin-bottom: 15px;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 40px;
+  }
 
   & a, & span {
     color: #C2C2C2;
