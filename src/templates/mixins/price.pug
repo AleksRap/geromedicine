@@ -1,8 +1,13 @@
 mixin price(arr)
   .price
-    h2.title услуги
+    if (arr.title)
+      h2.title=arr.title
     .price__table
-      each row in arr
-        a.price__row(href="service-cardiology.html")
-          p.price__service=row.service
-          p.price__cost=row.price
+      each row in arr.list
+        if(row.stock)
+          .price__row
+            p.price__stock=row.stock
+        else
+          a.price__row(href="service-cardiology.html")
+            p.price__service=row.service
+            p.price__cost=row.price

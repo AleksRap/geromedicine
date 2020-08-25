@@ -16,11 +16,27 @@
     flex-wrap: wrap;
     justify-content:space-between;
 
-    margin-bottom: 80px;
     padding: 30px 45px;
   }
   @media (min-width: 1200px) {
     justify-content: initial;
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    width: 100%;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+
+    @media (min-width: 576px) {
+      font-size: 36px;
+    }
+    @media (min-width: 1200px) {
+      width: initial;
+      margin-bottom: 0;
+    }
   }
 
   &__text {

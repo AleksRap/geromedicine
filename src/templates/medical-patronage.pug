@@ -1,0 +1,227 @@
+extends layout/layout
+include mixins/article
+include mixins/price
+
+block head
+  - var title = 'Услуга патронажа';
+  - var pageId = 2;
+
+block header
+  include layout/header
+
+block content
+  main.patronage
+    .content
+      .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="/") главная
+            meta(itemprop="name" content="Главная")
+            meta(itemprop="position" content="1")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="medical-patronage.html") медицинский патронаж
+            meta(itemprop="name" content="Медицинский патронаж")
+            meta(itemprop="position" content="2")
+
+
+      +article({
+        mb: true,
+        title: 'Медицинский патронаж',
+      })
+
+
+      .illustration.illustration_mb
+        .illustration__content
+          p.illustration__text
+            strong Медицинский патронаж —
+            | это вид медицинских услуг, которые оказываются на дому и включают в себя врачебное наблюдение, анализы и диагностику, помощь медицинских сестер. Медицинский патронаж позволяет контролировать самочувствие больного, отказаться от госпитализации и проводить лечение в привычных для него условиях.
+            br
+            br
+            | Мы оказываем медицинскую помощь на дому маломобильным пациентам всех возрастов, людям с инвалидностью и пожилым. Наши врачи и мед. сестры помогают родственникам больных организовать правильный уход за больным и реабилитировать его после тяжелых заболеваний.
+          button.button.button_first.illustration__button(data-btn="modal-doctor-call-btn") Оставить заявку
+        .illustration__pic
+          img(src='images/article/patronage.jpg' alt='pic')
+
+
+      include components/advantages
+
+      -
+        list = [
+          {
+            title: 'Медицинский патронаж – это комплексная регулярная<br>медицинская помощь на дому',
+            subtitle: 'Он включает следующие услуги:',
+            arr: [
+              'консультация врача-гериатра на дому;',
+              'консультации врачей-специалистов (реабилитолога, невролога, психиатра, кардиолога и т.д.);',
+              'диагностические процедуры на дому (анализы, ЭКГ, УЗИ и т.д.);',
+              'инъекции, капельницы, лечебный массаж, сопровождения пациента на прогулках и другие лечебные манипуляции; ',
+              'помощь в быту (профилактика пролежней, гигиенические процедуры, кормление и т.д.).',
+            ]
+          },
+          {
+            title: 'Мы готовы помочь в разных ситуациях',
+            arr: [
+              'Вам нужна разовая или периодическая медицинская помощь по уходу в быту за пожилым/больным/человеком с инвалидностью.',
+              'Вашему близкому требуются регулярные медицинские процедуры в виде капельниц, уколов и т.д.',
+              'Для контроля болезни необходимо регулярно сдавать анализы, но пациент не может часто посещать клинику.',
+              'Ваш близкий нуждается в постоянном врачебном наблюдении, но не имеет возможности регулярно приходить на консультации.',
+              'Ваш близкий борется с болезнью и нуждается в помощи команды врачей-специалистов на дому.',
+              'Вы ухаживаете за больным самостоятельно, но хотите, чтобы врач всегда был на связи и помогал в организации правильного ухода.',
+            ]
+          }
+        ]
+
+      each item in list
+        section.list
+          h2.title.list__title !{item.title}
+          if (item.subtitle)
+            h3.list__subtitle !{item.subtitle}
+          ul.list__list
+            each paragraph in item.arr
+              li.list__item
+                span.list__descr=paragraph
+
+
+      .step.step_mb
+        .step__pic
+          img(src='images/other/step.png' alt='step')
+        ul.step__list
+          -
+            steps = [
+              {num: 'Шаг 1.', title: 'Выберите программу', text: 'Каждый пациент уникален, поэтому в рамках каждой из программ мы практикуем индивидуальный подход и предлагаем гибкие условия.<br><br>Стратегию патронажа помогает определить главный врач клиники, <strong>кандидат медицинских наук</strong>, терапевт, кардиолог и гериатр <strong>Игорь Викторович Цупко.</strong><br><br>Чтобы осмотреть больного и предложить оптимальную патронажную программу, врач может приехать к Вам домой или проконсультировать в клинике.'},
+              {num: 'Шаг 2.', title: 'Отрегулируйте выбранную программу под Ваши потребности и возможности', text: 'Мы предлагаем гибкие условия и цены на все патронажные программы. Вы можете обговорить с врачом, какие именно услуги Вам нужны и отрегулировать цену.'},
+              {num: 'Шаг 3.', title: 'Позвоните нам, чтобы заказать услугу'},
+            ]
+
+          each step in steps
+            li.step__item
+              span.title.step__num=step.num
+              h5.step__title !{step.title}
+              if (step.text)
+                p.step__text !{step.text}
+
+
+    .three-cards.three-cards_mb
+      .content
+        h2.title.three-cards__title Программы медицинского патронажа
+        .three-cards__wrap
+          -
+            cards = [
+              {
+                title: 'Интенсивный<br>патронаж',
+                list: [
+                  'Регулярные диагностические исследования на дому (контроль веса, уровня глюкозы, МНО, ЭКГ, УЗИ и т.д.);',
+                  'Осмотры врача на дому от 1 раза день до 1 раза в неделю в зависимости от необходимости;',
+                  'Лечебные процедуры на дому от нескольких раз в день до одного раза в неделю в зависимости от необходимости;',
+                  'Постоянная связь по телефону с пациентом и его родственниками.',
+                ]
+              },
+              {
+                title: 'Патронаж средней<br>интенсивности',
+                list: [
+                  'Осмотр врача на дому 1 раз в 2-4 недели;',
+                  'Лечебные процедуры на дому раз в 5-10 дней (при необходимости чаще);',
+                  'Регулярные диагностические исследования на дому (контроль веса, уровня глюкозы, МНО, ЭКГ, УЗИ и т.д.);',
+                  'Постоянная связь по телефону с пациентом и его родственниками.',
+                ],
+                className: ['card_main']
+              },
+              {
+                title: 'Патронаж-<br>мониторинг',
+                list: [
+                  'Осмотр врача на дому 1 раз 1-3 месяца в зависимости от необходимости;',
+                  'Диагностические и лечебные процедуры при необходимости; ',
+                  'Постоянная телефонная связь с пациентом и его родственниками.',
+                ]
+              },
+            ]
+
+          each card in cards
+
+            - var cls = [];
+            - card.className && card.className.forEach(item => cls.push(item));
+
+            .card(class=cls.join(' '))
+              h3.card__title !{card.title}
+              .list.list_red.card__list
+                ul.list__list
+                  each item in card.list
+                    li.list__item=item
+              .card__btns
+                button.button.button_first Заказать<br>программу
+                button.button.button_second Отрегулировать<br>программу
+
+
+
+    .content
+      .frame.frame_mb
+        .frame__content
+          .frame__head
+            .frame__titles
+              h2.frame__title.title.title_red Нужна сиделка?
+              h3.frame__subtitle Обращайтесь к нашему партнеру
+            .frame__partner
+              .frame__logo-descr
+                .frame__logo-text
+                a.frame__link(href='#') перейти на сайт партнера
+              .frame__logo
+          .frame__body
+            ul.frame__list
+              -
+                list = [
+                  {className: ['frame__pic_bed'], title: 'Для лежачих больных: ', text: 'кормление, контроль приема медикаментов, патронажная служба, сопровождение в мед. учреждение, транспортировка;'},
+                  {className: ['frame__pic_night'], title: 'Ночной уход:', text: 'приготовление еды, уборка, совместный досуг, обучение компьютерной грамотности;'},
+                  {className: ['frame__pic_lunch'], title: 'Дневной уход:', text: 'покупка продуктов, прогулки, физкультура, общение, гигиена и уход за телом. '},
+                  {className: ['frame__pic_write'], text: 'регулярные отчеты с видео и фото, телефонная связь с родственниками.'}
+                ]
+
+              each item in list
+
+                - var cls = [];
+                - item.className && item.className.forEach(item => cls.push(item));
+
+                li.frame__item
+                  .frame__pic(class=cls.join(' '))
+                  if (item.title)
+                    h6.frame__little-title=item.title
+                  else
+                    .frame__little-title=item.title
+                  p.frame__text=item.text
+
+
+      .doctor-call
+        .doctor-call__title.title.title_green У Вас возникли вопросы по выбору программы?
+        button.button.button_ml-auto.button_salad.doctor-call__btn(data-btn="modal-call-feedback-btn") Нужна консультация
+
+    .costs
+      .content
+        h2.title.costs__title Цены
+        -
+          info = {
+            list: [
+              {service: 'Консультация на дому', price: '7 200₽'},
+              {service: 'Консультация в клинике', price: '2 690₽'},
+              {stock: 'При приобретении программы консультация БЕСПЛАТНА!'}
+            ]
+          };
+
+        +price(info)
+
+
+    .content
+      h2.title.title_center Наша главная ценность — здоровье наших пациентов
+      p.text Если Вашим близким необходим медицинский патронаж, позвоните нам по телефону или оставьте заявку на обратный звонок. Наши специалисты помогут выбрать оптимальную программу и сориентируют по цене.
+
+      .content__btn-wrap
+        a.button.button_red(href='tel:+74959887790') Позвонить
+        button.button.button_first(data-btn="modal-call-feedback-btn") Заказать<br>обратный звонок
+
+      p.text
+        | За услугами сиделки Вы можете обратиться в «
+        a.text__link(href='#') Бюро добра
+        | ». Мы ручаемся за ответственность и добросовестность сотрудников данной компании!
+
+
+block footer
+  include layout/footer
+

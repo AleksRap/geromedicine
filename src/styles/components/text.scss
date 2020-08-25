@@ -1,0 +1,17 @@
+.text {
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: initial;
+
+  @media (min-width: 1024px) {
+    margin-top: 35px;
+    margin-bottom: 50px;
+  }
+
+  &__link {
+    color: $first-color;
+  }
+}

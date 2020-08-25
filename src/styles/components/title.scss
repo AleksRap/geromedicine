@@ -8,6 +8,18 @@
     font-size: 36px;
   }
 
+  &_red {
+    color: $fourth-color;
+  }
+
+  &_green {
+    color: $first-color;
+  }
+
+  &_center {
+    text-align: center;
+  }
+
   &__hr {
     width: 100%;
     height: 2px;
