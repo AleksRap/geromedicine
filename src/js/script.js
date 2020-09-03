@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
    * Если видно мобильное меню
    */
   if (screenWidth < 1200) {
-
     /**
      * Открытие мобильного меню
      */
@@ -47,6 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .closest('.navigation')
         .querySelector('.navigation__content')
         .classList.toggle('open');
+
+      this.classList.contains('open')
+        ? document.querySelector('body').style.overflow = 'hidden'
+        : document.querySelector('body').style.overflow = 'initial';
     });
 
     /**
@@ -85,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /** Прилипание меню после прокрутки */
+  /** Прилипание меню после прокрутки и изменение высоты мобильного меню */
   const firstMenu = document.querySelector('.navbar-first');
   const secondMenu = document.querySelector('.navbar-second');
   const secondMenuMb = +getComputedStyle(secondMenu).marginBottom.split('px').join('');
@@ -102,8 +105,29 @@ document.addEventListener('DOMContentLoaded', () => {
       : firstMenu.style.marginBottom = '0px';
   }
 
+  const menuMobile = document.querySelector('.navigation__content');
+  const navbarSecond = document.querySelector('.navbar-second');
+
+  function setHeightMenuMobile() {
+    if (screenWidth < 1200) {
+      const topOffsetNavbarSecond = navbarSecond.getBoundingClientRect().top;
+
+      /** Рассчитываем высоту меню */
+      menuMobile.style.height = topOffsetNavbarSecond > 0
+        ? window.innerHeight - (navbarSecond.clientHeight + topOffsetNavbarSecond) + 'px'
+        : window.innerHeight - navbarSecond.clientHeight + 'px';
+    }
+  }
+
   transferNavbarSecond();
-  window.addEventListener('scroll', transferNavbarSecond);
+  setHeightMenuMobile();
+
+  window.addEventListener('scroll', () => {
+    setHeightMenuMobile();
+    transferNavbarSecond();
+  });
+
+  window.onresize = setHeightMenuMobile;
 
 
   /** Инициализация слайдеров swiper */

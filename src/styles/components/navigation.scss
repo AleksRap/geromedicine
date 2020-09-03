@@ -19,11 +19,14 @@
     left: 0;
 
     width: 100%;
-    min-height: calc(var(--vh, 1vh) * 100 - var(--header));
+    overflow-y: auto;
+    overflow-x: hidden;
 
     background-color: #fff;
 
     @media (min-width: 1200px) {
+      overflow: initial;
+
       display: block;
       position: initial;
 
