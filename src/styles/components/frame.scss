@@ -279,4 +279,36 @@
       text-transform: uppercase;
     }
   }
+
+  &__body {
+
+    &_achivment {
+      position: relative;
+      min-height: 240px;
+
+      @media (min-width: 1024px) {
+        padding-right: 340px;
+      }
+
+      &::before {
+
+        @media (min-width: 1024px) {
+          position: absolute;
+          content: '';
+          bottom: 60px;
+          right: 40px;
+
+          width: 220px;
+          height: 220px;
+
+          background: url('../svg/icons/achivment.svg') center/contain no-repeat;
+        }
+        @media (min-width: 1360px) {
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+        }
+      }
+    }
+  }
 }

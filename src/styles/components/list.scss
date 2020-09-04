@@ -19,6 +19,10 @@
     &_center {
       margin: 0 auto 25px auto;
     }
+
+    &_green {
+      color: $first-color;
+    }
   }
 
   &__subtitle {
@@ -41,6 +45,8 @@
     margin-bottom: 15px;
     padding-left: 30px;
 
+    word-break: break-all;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -56,6 +62,17 @@
 
       border-radius: 100%;
       background-color: $third-color;
+    }
+
+    &_check {
+      font-weight: 600;
+
+      &::before {
+        width: 25px;
+        height: 15px;
+
+        background: url('../svg/icons/two-check.svg') center/contain no-repeat;
+      }
     }
   }
 

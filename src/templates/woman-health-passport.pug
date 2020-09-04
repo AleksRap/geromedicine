@@ -1,0 +1,215 @@
+extends layout/layout
+include mixins/article
+include mixins/price
+include mixins/list
+include mixins/business-card
+include mixins/doctor-info
+
+block head
+  - var title = 'Услуга патронажа';
+  - var pageId = 2;
+
+block header
+  include layout/header
+
+block content
+  main.patronage
+    .content
+      .breadcrumbs(itemscope="" itemtype="http://schema.org/BreadcrumbList")
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="/") главная
+            meta(itemprop="name" content="Главная")
+            meta(itemprop="position" content="1")
+        span /
+        span(itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem")
+          a(itemprop="item" href="medical-patronage.html") медицинский патронаж
+            meta(itemprop="name" content="Медицинский патронаж")
+            meta(itemprop="position" content="2")
+
+
+      +article({
+        mb: true,
+        title: 'Паспорт женского здоровья',
+      })
+
+
+      .illustration.illustration_mb
+        .illustration__content
+          p.illustration__text
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus ipsum metus, ultrices tellus cras. A cursus facilisi amet elit nascetur. At augue tincidunt tortor augue. Aliquet velit aliquam mattis enim. Nec felis suspendisse leo viverra. Ut lorem aliquet enim amet. Ut aliquet hendrerit libero sed enim ipsum. At urna pellentesque convallis quis ut lacinia magna non.
+            br
+            br
+            | Mi arcu adipiscing placerat sit id non quis dui. Ut vel orci, mauris nisi, pharetra sem nulla nunc. Vel odio ac orci sit a. Pellentesque neque malesuada sed enim purus. Feugiat fermentum, non fermentum vel lorem turpis ut at nisi. Felis turpis id.
+          button.button.button_first.illustration__button(data-btn="modal-doctor-call-btn") Оставить заявку
+        .illustration__pic
+          img(src='images/article/patronage.jpg' alt='pic')
+
+
+      -
+        list = [
+          {
+            title: 'Что включает в себя «паспорт женского здоровья»?',
+            subtitle: 'Прием (осмотр, консультация) врача-гинеколога первичный:',
+            arr: [
+              'общий осмотр;',
+              'осмотр наружных половых органов;',
+              'осмотр при помощи зеркал;',
+              'бимануальное влагалищное исследование;',
+              'осмотр молочных желез;',
+              'консультация врача акушера-гинеколога.',
+            ]
+          },
+          {
+            subtitle: 'Инструментальная диагностика:',
+            arr: [
+              'комплексное УЗИ малого таза двумя датчиками(абдоминальным(конвекс) и влагалищным) — на 5 - 7 день цикла или в задержку;',
+              'УЗИ молочных желез;',
+              'расширенная кольпоскопия(эндоскоп с видеокамерой позволяет визуализировать исследуемый участок на экране монитора).',
+            ]
+          },
+          {
+            subtitle: 'Лабораторные исследования:',
+            arr: [
+              'микроскопическое исследование окрашенного нативного мазка – бактериоскопия;',
+              'общий анализ крови с лейкоцитарной формулой + СОЭ;',
+              'общий анализ мочи(с микроскопией осадка);',
+              'ТТГ(тиреотропный гормон);',
+              'Т4 свободный;',
+              'коагулограмма;',
+              'витамин Д(25ОН);',
+              'ферритин;',
+              'ФСГ(фолликулостимулирующий гормон гипофиза) +ЛГ(лютеинизирующий гормон гипофиза);',
+              'эстрадиол;',
+              'АМТ(антимюллеров гормон) — оценка фолликулярного резерва.',
+            ]
+          },
+          {
+            subtitle: 'Цитологические исследования и микроскопия:',
+            arr: [
+              'Исследование соскобов шейки матки и цервикального канала (ПАП-тест).',
+            ]
+          },
+          {
+            subtitle: 'Прием (осмотр, консультация) врача-гинеколога повторный по результатам обследования. Пациентке выдается письменное заключение и рекомендаций.',
+            arr: []
+          },
+          {
+            subtitle: 'Дополнительные услуги: ',
+            arr: [
+              'взятие крови из вены;',
+              'взятие материала для ПЦР диагностики: фемофлор скрининг — это тест - система для определения количественного и качественного состава влагалищной флоры методом обнаружения ДНК бактерий;',
+              'исследование на микробиоценоз влагалища с определением чувствительности к антибиотикам;',
+              'забор материала для лабораторных исследований.',
+            ]
+          }
+        ]
+
+      +list({
+        titleCenter: true,
+        listCategoryNumber: true,
+        list: list
+      })
+
+
+      .vs.vs_mb
+        .vs__first
+          h3.vs__title 40 000 Р
+          p.vs__text суммарная стоимость всех<br>анализов и процедур
+        .vs__second
+          h3.vs__title 23 300 Р
+          p.vs__text стоимость тех же анализов и процедур по программе
+          span.vs__text.vs__text_big «Паспорт женского здоровья»
+          .vs__icon
+
+
+      .frame.frame_mb
+        .frame__content
+          .frame__body.frame__body_achivment
+            -
+              list = [
+                {
+                  title: 'Преимущества нашей программы',
+                  arr: [
+                    'Занимает всего 1 - 2 дня',
+                    'Включает только необходимые исследования',
+                    'Построена на принципах доказательной медицины',
+                    'Осмотр, консультации, диагностику и лечение проводят высококвалифицированные врачи',
+                    'В клинике используется лучшее диагностическое оборудование',
+                  ]
+                }
+              ]
+
+            +list({
+              titleCenter: true,
+              titleGreen: true,
+              listCategoryNumber: true,
+              dotCheck: true,
+              list: list
+            })
+
+
+      .programme-price.programme-price_mb
+        .programme-price__text
+          h6.programme-price__subtitle Цена программы
+          h4.programme-price__title «Паспорт женского здоровья»
+        .programme-price__cost 23 300 Р
+
+
+      .advantages
+        .advantages__block
+        section.advantages__block-content
+          h2.advantages__title Возможно обследование на дому! Стоимость визита медицинских специалистов не включена в стоимость программы.
+          .content__btn-wrap
+            a.button.button_red(href='tel:+74959887790') Позвонить
+            button.button.button_first(data-btn="modal-call-feedback-btn") Заказать<br>обратный звонок
+        .advantages__block
+
+
+      .doctor-call
+        .doctor-call__title.title.title_green У Вас возникли вопросы по выбору программы?
+        button.button.button_ml-auto.button_salad.doctor-call__btn(data-btn="modal-call-feedback-btn") Нужна консультация
+
+
+      +business-card()
+        .business-card__doctors
+          -
+            doctors = [
+              {
+                img: 'images/doctors/doc-circle-1.png',
+                name: 'Хошукоева Асият Зульчифовна',
+                profession: 'Акушер-гинеколог',
+                experience: 'Стаж работы — 38 лет',
+                descr: 'Окончила медицинский факультет Кабардино-Балкарского государственного университета в 1977 г., доктор медицинских наук, профессор ФГБОУ ВО РНИМУ им. Н. И. Пирогова'
+              },
+              {
+                img: 'images/doctors/doc-circle-2.png',
+                name: 'Кузнецова Марина Николаевна',
+                profession: 'Акушер-гинеколог',
+                experience: 'Стаж работы — 18 лет',
+                descr: 'Окончила Самарский государственный медицинский университет в 2002 г.'
+              },
+            ]
+
+          each doctor in doctors
+            +doctor-info(doctor)
+
+
+      +business-card()
+        .business-card__content
+          .business-card__text-wrap
+            h3.business-card__title
+              | Заболело сердце?
+              br
+              span.business-card__title.business-card__title_little Не ждите когда уже будет поздно
+            span.business-card__text.business-card__text_mt Ваш врач
+            span.business-card__name Цупко Игорь Викторович
+            span.business-card__text Терапевт, кардиолог, гериатр
+            span.business-card__text Стаж работы — 25 лет
+            p.business-card__descr Окончил Кубанскую государственную медицинскую академию в 1997 г.
+          .business-card__photo
+            img(src='images/doctors/doc.png' alt='doc')
+
+
+block footer
+  include layout/footer
+

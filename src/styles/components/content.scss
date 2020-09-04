@@ -13,10 +13,13 @@
   }
 
   &__btn-wrap {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    font-family: 'Inter', Arial, sans-serif;
 
     @media (min-width: 768px) {
       flex-direction: row;

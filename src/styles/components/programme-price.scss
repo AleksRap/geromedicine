@@ -1,0 +1,59 @@
+.programme-price {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+
+  padding: 15px;
+
+  font-family: 'Akrobat', Arial, sans-serif;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+
+  background: radial-gradient(62.56% 114.43% at 35.74% 34.9%, #FF6230 0%, rgba(255, 98, 48, 0) 100%), url('../images/patterns/orange.png');
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  @media (min-width: 1024px) {
+    padding: 35px 70px;
+  }
+
+  &_mb {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    flex: 0 0 auto;
+    margin-right: 30px;
+  }
+
+  &__cost {
+    flex: 0 0 auto;
+    margin-left: auto;
+    font-size: 50px;
+
+    @media (min-width: 1024px) {
+      font-size: 83px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+
+    font-size: 18px;
+
+    @media (min-width: 1024px) {
+      font-size: 24px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+
+    @media (min-width: 1024px) {
+      font-size: 36px;
+    }
+  }
+}

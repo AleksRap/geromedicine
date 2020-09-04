@@ -1,0 +1,9 @@
+mixin doctor-info(data)
+  .doctor-info
+    .doctor-info__img
+      img(src=data.img alt='photo')
+    .doctor-info__info
+      h4.doctor-info__name=data.name
+      span.doctor-info__text=data.profession
+      span.doctor-info__text=data.experience
+      p.doctor-info__descr=data.descr

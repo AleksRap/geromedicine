@@ -1,0 +1,109 @@
+.vs {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  background: linear-gradient(191.27deg, #FF6A29 37.52%, #CE2F03 92.08%);
+
+  font-family: 'Akrobat', Arial, sans-serif;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @media (min-width: 1360px) {
+    flex-direction: row;
+    height: 270px;
+  }
+
+  &_mb {
+    margin-bottom: 40px;
+  }
+
+  &__first {
+    height: 100%;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: radial-gradient(60% 320% at 85% 20%, rgba(164, 186, 4, .6) 0%, #608D00 100%), url('../images/other/pattern.png') center/150%;
+
+    @media (min-width: 1360px) {
+      width: 45%;
+      clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+    }
+  }
+
+  &__second {
+    position: relative;
+
+    padding: 15px;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 1360px) {
+      width: 55%;
+    }
+  }
+
+  &__icon {
+    display: none;
+
+    @media (min-width: 1360px) {
+      display: block;
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-65%);
+      margin: auto 0;
+
+      width: 150px;
+      height: 150px;
+
+      background: url('../svg/icons/vs.svg') center/contain no-repeat;
+
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    font-size: 50px;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      font-size: 105px;
+    }
+  }
+
+  &__text {
+    max-width: 95%;
+    margin: 0;
+
+    font-size: 16px;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      font-size: 28px;
+    }
+
+    &_big {
+      font-size: 24px;
+
+      @media (min-width: 1024px) {
+        font-size: 36px;
+      }
+    }
+  }
+}

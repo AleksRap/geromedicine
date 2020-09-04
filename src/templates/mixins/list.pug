@@ -1,11 +1,15 @@
 mixin list(data)
 
-  each item in data.list
-    section.list
-      h2.title.list__title(class=data.titleCenter ? 'list__title_center' : '') !{item.title}
+  each item, index in data.list
+    .list
+      if (data.title)
+        h2.title.list__title(class=data.titleCenter ? 'list__title_center' : '', class=data.titleGreen ? 'list__title_green' : '') !{item.title}
       if (item.subtitle)
-        h3.list__subtitle !{item.subtitle}
+        if (data.listCategoryNumber)
+          h3.list__subtitle !{index + 1}. !{item.subtitle}
+        else
+          h3.list__subtitle !{item.subtitle}
       ul.list__list
         each paragraph in item.arr
-          li.list__item
+          li.list__item(class=data.dotCheck ? 'list__item_check' : '')
             span.list__descr=paragraph
