@@ -2,7 +2,7 @@ mixin list(data)
 
   each item, index in data.list
     .list
-      if (data.title)
+      if (item.title)
         h2.title.list__title(class=data.titleCenter ? 'list__title_center' : '', class=data.titleGreen ? 'list__title_green' : '') !{item.title}
       if (item.subtitle)
         if (data.listCategoryNumber)
